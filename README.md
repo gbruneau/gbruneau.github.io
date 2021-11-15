@@ -1,4 +1,4 @@
-# gbruneau.github.io
+# Guy Bruneau @ gbruneau.github.io
 
 Applications Guy Bruneau
 
