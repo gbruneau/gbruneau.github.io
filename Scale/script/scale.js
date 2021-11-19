@@ -14,7 +14,7 @@
      var labelList=[];
      var myLang = getLang();
 
-    myLang = "FR"; // Force french
+    //myLang = "FR"; // Force french
 
      function getLang() {
          var r=fallbackLanguage;
