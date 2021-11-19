@@ -27,7 +27,7 @@
 {"ObjectEn":"Quasar J0313–1806 Distance","ObjectFr":"Distance du quasar le plus loins (J0313–1806)","SizeInMeter":1.26679181028e+26,"URL":"https://en.wikipedia.org/wiki/J0313%E2%80%931806"},
 {"ObjectEn":"Magelan Cluster distance","ObjectFr":"Distance du nuage de magellan","SizeInMeter":1.542099e+21,"URL":"https://en.wikipedia.org/wiki/Large_Magellanic_Cloud"},
 {"ObjectEn":"Observable universe diameter","ObjectFr":"Diamètre de l'univer visible","SizeInMeter":8.8e26,"URL":"https://en.wikipedia.org/wiki/Observable_universe"},
-{"ObjectEn":"NML Cygni Star diameter","ObjectFr":"Diametre de l'étoile NML Cygni","SizeInMeter":1647545172000,"URL":"none.html"},
+{"ObjectEn":"NML Cygni Star diameter","ObjectFr":"Diametre de l'étoile NML Cygni","SizeInMeter":1647545172000,"URL":"https://en.wikipedia.org/wiki/NML_Cygni"},
 {"ObjectEn":"Oort cloud diameter (outer shell)","ObjectFr":"Diamètre du nuage de Oort","SizeInMeter":2.9517e+16,"URL":"https://en.wikipedia.org/wiki/Oort_cloud"},
 
 {"ObjectEn":"Hydrogen atom Diameter","ObjectFr":"Diamètre d'un atome d'hydrogene","SizeInMeter":5.29177210903e-11  , "URL":"https://en.wikipedia.org/wiki/Bohr_radius"},
@@ -40,27 +40,36 @@
 {"ObjectEn":"Mercury Diameter","ObjectFr":"Diamètre de Mercure","SizeInMeter":4880000,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
 {"ObjectEn":"Mercury Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Mercure","SizeInMeter":1.15818E+11	,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
 {"ObjectEn":"Mercury to sun","ObjectFr":"Distance Mercure-soleil","SizeInMeter":57909000000	,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+
 {"ObjectEn":"Venus Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Vénus","SizeInMeter":1.19687E+11,"URL":"https://en.wikipedia.org/wiki/Venus"},
 {"ObjectEn":"Venus Diameter","ObjectFr":"Diamètre de Vénus","SizeInMeter":12103600,"URL":"https://en.wikipedia.org/wiki/Venus"},
-{"ObjectEn":"Venus to sun","ObjectFr":"Distance Vénus-Soleil","SizeInMeter":59843500000	,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Venus to sun","ObjectFr":"Distance Vénus-Soleil","SizeInMeter":59843500000	,"URL":"https://en.wikipedia.org/wiki/Venus"},
+
 {"ObjectEn":"Earth Orbit Diameter","ObjectFr":"Diamètre de l'orbite de la terre","SizeInMeter":2.99195E+11,"URL":"https://en.wikipedia.org/wiki/Earth"},
 {"ObjectEn":"Earth Diameter","ObjectFr":"Diamètre de la terre","SizeInMeter":12742200,"URL":"https://en.wikipedia.org/wiki/Earth"},
-{"ObjectEn":"Earth to sun","ObjectFr":"Distance Terre-Soleil","SizeInMeter":1.49598E+11,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Earth to sun","ObjectFr":"Distance Terre-Soleil","SizeInMeter":1.49598E+11,"URL":"https://en.wikipedia.org/wiki/Earth"},
+
 {"ObjectEn":"Mars Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Mars","SizeInMeter":4.559E+11	,"URL":"https://en.wikipedia.org/wiki/Mars"},
 {"ObjectEn":"Mars Diameter","ObjectFr":"Diamètre de Mars","SizeInMeter":6792400,"URL":"https://en.wikipedia.org/wiki/Mars"},
-{"ObjectEn":"Mars to sun","ObjectFr":"Distance Mars-Soleil","SizeInMeter":2.2795E+11,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Mars to sun","ObjectFr":"Distance Mars-Soleil","SizeInMeter":2.2795E+11,"URL":"https://en.wikipedia.org/wiki/Mars"},
+
 {"ObjectEn":"Jupiter Orbit Radius","ObjectFr":"Diamètre de l'orbite de Jupiter","SizeInMeter":1.55714E+12,"URL":"https://en.wikipedia.org/wiki/Jupiter"},
 {"ObjectEn":"Jupiter Diameter","ObjectFr":"Diamètre de Jupiter","SizeInMeter":1.429840E+08,"URL":"https://en.wikipedia.org/wiki/Jupiter"},
-{"ObjectEn":"Jupiter to sun","ObjectFr":"Distance Jupiter-Soleil","SizeInMeter":7.7857E+11,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Jupiter to sun","ObjectFr":"Distance Jupiter-Soleil","SizeInMeter":7.7857E+11,"URL":"https://en.wikipedia.org/wiki/Jupiter"},
+
 {"ObjectEn":"Saturn Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Saturne","SizeInMeter":2.86705E+12,"URL":"https://en.wikipedia.org/wiki/Saturn"},
 {"ObjectEn":"Saturn Diameter","ObjectFr":"Diamètre de Saturne","SizeInMeter":1.205360E+08,"URL":"https://en.wikipedia.org/wiki/Saturn"},
-{"ObjectEn":"Saturn to sun","ObjectFr":"Distance Saturn-Soleil","SizeInMeter":1.43353E+12,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Saturn to sun","ObjectFr":"Distance Saturn-Soleil","SizeInMeter":1.43353E+12,"URL":"https://en.wikipedia.org/wiki/Saturn"},
+
 {"ObjectEn":"Uranus Orbit Diameter","ObjectFr":"Diamètre de l'orbite d'Uranus","SizeInMeter":4.74195E+12,"URL":"https://en.wikipedia.org/wiki/Uranus"},
 {"ObjectEn":"Uranus diameter","ObjectFr":"Diamètre d'Uranus","SizeInMeter":5.111800E+07,"URL":"https://en.wikipedia.org/wiki/Uranus"},
-{"ObjectEn":"Uranus to sun","ObjectFr":"Distance Uranus-Soleil","SizeInMeter":2.37098E+12,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Uranus to sun","ObjectFr":"Distance Uranus-Soleil","SizeInMeter":2.37098E+12,"URL":"https://en.wikipedia.org/wiki/Uranus"},
+
 {"ObjectEn":"Neptune Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Neptune","SizeInMeter":9.0000000E+12,"URL":"https://en.wikipedia.org/wiki/Neptune"},
 {"ObjectEn":"Neptune Diameter","ObjectFr":"Diamètre de Neptune","SizeInMeter":4.952800E+07 ,"URL":"https://en.wikipedia.org/wiki/Neptune"},
-{"ObjectEn":"Uranus to sun","ObjectFr":"Distance Uranus-Soleil","SizeInMeter":4.5E+12,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Neptune to sun","ObjectFr":"Distance Neptune-Soleil","SizeInMeter":4.5E+12,"URL":"https://en.wikipedia.org/wiki/Neptune"},
+
+
 {"ObjectEn":"Moon Orbit Diameter","ObjectFr":"Diamètre de l'orbite de la lune","SizeInMeter":7.6800000E+08 ,"URL":"https://en.wikipedia.org/wiki/Moon"},
 {"ObjectEn":"Moon Diameter","ObjectFr":"Diamètre de la Lune","SizeInMeter":3.474800E+06	,"URL":"https://en.wikipedia.org/wiki/Moon"},
 {"ObjectEn":"Moon to Earth","ObjectFr":"Distance Lune-Terre","SizeInMeter":384000000,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
