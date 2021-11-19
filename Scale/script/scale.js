@@ -14,7 +14,7 @@
      var labelList=[];
      var myLang = getLang();
 
-    //myLang = "FR"; // Force french
+    myLang = "FR"; // Force french
 
      function getLang() {
          var r=fallbackLanguage;
@@ -159,9 +159,9 @@
              let obj2 = getObjectByName(ob2Name);
              var ratio = obj2.SizeInMeter / obj1.SizeInMeter;
              if (ratio < 1)
-                 ratioText = "1:" + (1 / ratio).toPrecision(4);
+                 ratioText = "1 : " + (1 / ratio).toPrecision(4);
              else
-                 ratioText = ratio.toPrecision(4) + ":1";
+                 ratioText = ratio.toPrecision(4) + " : 1";
 
              console.log("Ratio:",ratio)    ;
 
