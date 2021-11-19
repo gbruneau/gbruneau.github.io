@@ -1,0 +1,88 @@
+{
+	"ObjectList" :
+[
+{"ObjectEn":"1 Micron","ObjectFr":"1 Micron","SizeInMeter":1e-6,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Millimeter (mm)","ObjectFr":"1 Millimètre (mm)","SizeInMeter":0.001,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Kilometer (Km) ","ObjectFr":"1 Kilomètre (Km)","SizeInMeter":1000,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Meter","ObjectFr":"1 Mètre","SizeInMeter":1,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+
+
+{"ObjectEn":"Typogaphic Point","ObjectFr":"Point typogaphique","SizeInMeter":0.0003528,"URL":"https://en.wikipedia.org/wiki/Point_(typography)"},
+{"ObjectEn":"Ping Pong Ball Diameter","ObjectFr":"Le diamètre d'une balle de ping pong","SizeInMeter":0.04,"URL":"https://en.wikipedia.org/wiki/Table_tennis"},
+{"ObjectEn":"Tennis Ball Diameter","ObjectFr":"Le diamètre d'une balle de tennis","SizeInMeter":0.067,"URL":"https://en.wikipedia.org/wiki/Tennis#Balls"},
+{"ObjectEn":"Soccer Ball Diameter","ObjectFr":"Le diamètre d'un balon de soccer","SizeInMeter":0.69,"URL":"https://en.wikipedia.org/wiki/Ball_(association_football)#Size_and_weight"},
+{"ObjectEn":"Marble Diameter","ObjectFr":"Le diamètre d'une bille","SizeInMeter":0.015,"URL":"https://www.marblecollecting.com/"},
+{"ObjectEn":"Grain of sand","ObjectFr":"Grain de sable","SizeInMeter":0.000415,"URL":"https://en.wikipedia.org/wiki/Grain_size"},
+
+{"ObjectEn":"Orange","ObjectFr":"Orange","SizeInMeter":70e-3,"URL":"https://askinglot.com/what-size-is-an-orange"},
+{"ObjectEn":"Raisin","ObjectFr":"Raisin","SizeInMeter": 0.01  ,"URL":"https://en.wikipedia.org/wiki/Raisin"},
+{"ObjectEn":"Watermelon","ObjectFr":"Melon d'eau","SizeInMeter": 0.3  ,"URL":"https://www.ics-agri.com/ouverturepdf.php?file=product-watermelon-semadonis-1463567253.pdf"},
+
+{"ObjectEn":"Horizon distance","ObjectFr":"Distance de l'horizon","SizeInMeter":5000,"URL":"https://en.wikipedia.org/wiki/Horizon"},
+{"ObjectEn":"Centre Vidéotron Quebec City (diameter)","ObjectFr":"Diamètre du centre vidéotron (Québec)","SizeInMeter":170,"URL":"https://gbruneau.github.io/BestMap/#18/46.82802/-71.24791"},
+
+{"ObjectEn":"Nearest Star Distance (Alpha Centauri)","ObjectFr":"Distance de l'étoile la plus proche (Alpha Centauri)","SizeInMeter":4.1343E+16,"URL":"https://en.wikipedia.org/wiki/Alpha_Centauri"},
+{"ObjectEn":"Nearest Galaxy, Andromeda (M31)","ObjectFr":"Distance la galaxie d'andromède (M31)","SizeInMeter":2.361E+22,"URL":"https://en.wikipedia.org/wiki/Andromeda_Galaxy"},
+{"ObjectEn":"Milky way stellar disk diameter","ObjectFr":"Diamètre du disque stellaire de la voie lacté","SizeInMeter":1.135288e+21,"URL":"https://www.sciencenews.org/article/astronomers-have-found-edge-milky-way-size"},
+{"ObjectEn":"Quasar J0313–1806 Distance","ObjectFr":"Distance du quasar le plus loins (J0313–1806)","SizeInMeter":1.26679181028e+26,"URL":"https://en.wikipedia.org/wiki/J0313%E2%80%931806"},
+{"ObjectEn":"Magelan Cluster distance","ObjectFr":"Distance du nuage de magellan","SizeInMeter":1.542099e+21,"URL":"https://en.wikipedia.org/wiki/Large_Magellanic_Cloud"},
+{"ObjectEn":"Observable universe diameter","ObjectFr":"Diamètre de l'univer visible","SizeInMeter":8.8e26,"URL":"https://en.wikipedia.org/wiki/Observable_universe"},
+{"ObjectEn":"NML Cygni Star diameter","ObjectFr":"Diametre de l'étoile NML Cygni","SizeInMeter":1647545172000,"URL":"none.html"},
+{"ObjectEn":"Oort cloud diameter (outer shell)","ObjectFr":"Diamètre du nuage de Oort","SizeInMeter":2.9517e+16,"URL":"https://en.wikipedia.org/wiki/Oort_cloud"},
+
+{"ObjectEn":"Hydrogen atom Diameter","ObjectFr":"Diamètre d'un atome d'hydrogene","SizeInMeter":5.29177210903e-11  , "URL":"https://en.wikipedia.org/wiki/Bohr_radius"},
+{"ObjectEn":"Caesium atom Diameter","ObjectFr":"Diamètre d'un atome de cesium","SizeInMeter":5.300000E-10, "URL":"https://en.wikipedia.org/wiki/Caesium"},
+{"ObjectEn":"Lead 208 Atom Nucleus","ObjectFr":"Noyaux d'un atome de plomb 208","SizeInMeter":6.34e-15,"URL":"https://www.sciencedirect.com/topics/physics-and-astronomy/lead-isotopes"},
+
+
+{"ObjectEn":"Light Year","ObjectFr":"Une année lumière","SizeInMeter":9.4607e15,"URL":"https://en.wikipedia.org/wiki/Light-year"},
+
+{"ObjectEn":"Mercury Diameter","ObjectFr":"Diamètre de Mercure","SizeInMeter":4880000,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Mercury Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Mercure","SizeInMeter":1.15818E+11	,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Mercury to sun","ObjectFr":"Distance Mercure-soleil","SizeInMeter":57909000000	,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Venus Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Vénus","SizeInMeter":1.19687E+11,"URL":"https://en.wikipedia.org/wiki/Venus"},
+{"ObjectEn":"Venus Diameter","ObjectFr":"Diamètre de Vénus","SizeInMeter":12103600,"URL":"https://en.wikipedia.org/wiki/Venus"},
+{"ObjectEn":"Venus to sun","ObjectFr":"Distance Vénus-Soleil","SizeInMeter":59843500000	,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Earth Orbit Diameter","ObjectFr":"Diamètre de l'orbite de la terre","SizeInMeter":2.99195E+11,"URL":"https://en.wikipedia.org/wiki/Earth"},
+{"ObjectEn":"Earth Diameter","ObjectFr":"Diamètre de la terre","SizeInMeter":12742200,"URL":"https://en.wikipedia.org/wiki/Earth"},
+{"ObjectEn":"Earth to sun","ObjectFr":"Distance Terre-Soleil","SizeInMeter":1.49598E+11,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Mars Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Mars","SizeInMeter":4.559E+11	,"URL":"https://en.wikipedia.org/wiki/Mars"},
+{"ObjectEn":"Mars Diameter","ObjectFr":"Diamètre de Mars","SizeInMeter":6792400,"URL":"https://en.wikipedia.org/wiki/Mars"},
+{"ObjectEn":"Mars to sun","ObjectFr":"Distance Mars-Soleil","SizeInMeter":2.2795E+11,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Jupiter Orbit Radius","ObjectFr":"Diamètre de l'orbite de Jupiter","SizeInMeter":1.55714E+12,"URL":"https://en.wikipedia.org/wiki/Jupiter"},
+{"ObjectEn":"Jupiter Diameter","ObjectFr":"Diamètre de Jupiter","SizeInMeter":1.429840E+08,"URL":"https://en.wikipedia.org/wiki/Jupiter"},
+{"ObjectEn":"Jupiter to sun","ObjectFr":"Distance Jupiter-Soleil","SizeInMeter":7.7857E+11,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Saturn Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Saturne","SizeInMeter":2.86705E+12,"URL":"https://en.wikipedia.org/wiki/Saturn"},
+{"ObjectEn":"Saturn Diameter","ObjectFr":"Diamètre de Saturne","SizeInMeter":1.205360E+08,"URL":"https://en.wikipedia.org/wiki/Saturn"},
+{"ObjectEn":"Saturn to sun","ObjectFr":"Distance Saturn-Soleil","SizeInMeter":1.43353E+12,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Uranus Orbit Diameter","ObjectFr":"Diamètre de l'orbite d'Uranus","SizeInMeter":4.74195E+12,"URL":"https://en.wikipedia.org/wiki/Uranus"},
+{"ObjectEn":"Uranus diameter","ObjectFr":"Diamètre d'Uranus","SizeInMeter":5.111800E+07,"URL":"https://en.wikipedia.org/wiki/Uranus"},
+{"ObjectEn":"Uranus to sun","ObjectFr":"Distance Uranus-Soleil","SizeInMeter":2.37098E+12,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Neptune Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Neptune","SizeInMeter":9.0000000E+12,"URL":"https://en.wikipedia.org/wiki/Neptune"},
+{"ObjectEn":"Neptune Diameter","ObjectFr":"Diamètre de Neptune","SizeInMeter":4.952800E+07 ,"URL":"https://en.wikipedia.org/wiki/Neptune"},
+{"ObjectEn":"Uranus to sun","ObjectFr":"Distance Uranus-Soleil","SizeInMeter":4.5E+12,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Moon Orbit Diameter","ObjectFr":"Diamètre de l'orbite de la lune","SizeInMeter":7.6800000E+08 ,"URL":"https://en.wikipedia.org/wiki/Moon"},
+{"ObjectEn":"Moon Diameter","ObjectFr":"Diamètre de la Lune","SizeInMeter":3.474800E+06	,"URL":"https://en.wikipedia.org/wiki/Moon"},
+{"ObjectEn":"Moon to Earth","ObjectFr":"Distance Lune-Terre","SizeInMeter":384000000,"URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"},
+{"ObjectEn":"Sun diameter","ObjectFr":"Diamètre du Soleil","SizeInMeter":1.391400E+09,"URL":"https://en.wikipedia.org/wiki/Sun"},
+
+{"ObjectEn":"Average Amino Acid size","ObjectFr":"Taille moyene d'un acide aminé","SizeInMeter":7E-10,"URL":"http://book.bionumbers.org/how-big-are-biochemical-nuts-and-bolts/"},
+{"ObjectEn":"Covid-19 Virus","ObjectFr":"Virus Covid-19","SizeInMeter":1.05E-08,"URL":"https://www.news-medical.net/health/The-Size-of-SARS-CoV-2-Compared-to-Other-Things.aspx"},
+{"ObjectEn":"Blod Cell Diameter","ObjectFr":"Diamètre d'une cellule rouge","SizeInMeter":7.20E-06,"URL":"https://en.wikipedia.org/wiki/Red_blood_cell"},
+{"ObjectEn":"Amoeba","ObjectFr":"Amibe","SizeInMeter":2.65E-06,"URL":"https://en.wikipedia.org/wiki/Amoeba"},
+
+{"ObjectEn":"1 Centimeter","ObjectFr":"1 Centimètre","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+
+{"ObjectEn":"Montreal-Paris","ObjectFr":"Montréal-Paris","SizeInMeter":5540e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-CDG&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
+{"ObjectEn":"Montreal-Quebec","ObjectFr":"Montréal-Québec","SizeInMeter":233e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-YQB&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
+{"ObjectEn":"Montreal-Tokyo","ObjectFr":"Montréal-Tokyo","SizeInMeter": 10378e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-NRT&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
+{"ObjectEn":"Montreal-Atlanta","ObjectFr":"Montréal-Atlanta","SizeInMeter": 1600e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-ATL&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
+{"ObjectEn":"Montreal-Sidney","ObjectFr":"Montréal-Sidney","SizeInMeter":16020e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-SYD&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
+
+{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":1.616255e-35,"URL":"https://en.wikipedia.org/wiki/Planck_length"},
+{"ObjectEn":"Picometer","ObjectFr":"Picomètre","SizeInMeter":1e-12,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Femtometer","ObjectFr":"Femtomètre","SizeInMeter":1e-15,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Attometer","ObjectFr":"Attomètre","SizeInMeter":1e-18,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
+
+]
+}

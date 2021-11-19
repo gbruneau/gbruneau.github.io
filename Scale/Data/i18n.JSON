@@ -1,0 +1,15 @@
+{
+	"Labels" :
+[
+ {"ID":1,"LabelEn":"Scale Length","LabelFr":"Changement d'échèle"}
+,{"ID":2,"LabelEn":"Scale","LabelFr":"Échèle"}
+,{"ID":3,"LabelEn":"If","LabelFr":"Si"}
+,{"ID":4,"LabelEn":"is the size of","LabelFr":"est de la taille de"}
+,{"ID":5,"LabelEn":"then",	"LabelFr":"alors"}
+,{"ID":6,"LabelEn":"ratio",	"LabelFr":"proportion"}
+,{"ID":7,"LabelEn":"Object",	"LabelFr":"Objet"}
+,{"ID":8,"LabelEn":"Size",	"LabelFr":"Grandeur"}
+,{"ID":9,"LabelEn":"Scaled",	"LabelFr":"Proportioné"}
+,{"ID":10,"LabelEn":"Size in meter",	"LabelFr":"Grandeur en mètres"}
+]
+}

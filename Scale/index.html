@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<HEAD>
+    <link rel="stylesheet" href="Style/scale.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="./script/scale.js"></script>
+
+
+    </script>
+</HEAD>
+
+<BODY>
+    <h1 data-label-id="1" ></h1>
+
+
+
+    <div id='formHeader'>
+        <div data-label-id="3" class="formLabel"  ></div>
+        <div><input id="obj1"  class="objInput"    onchange="rebuildTable()"></div>
+        <div data-label-id="4"  class="formLabel"></div>
+        <div><input id="obj2" class="objInput"  onchange="rebuildTable()"></div>
+        <div data-label-id="6"  class="formLabel"></div>
+        <div id="fldRatio"></div>
+    </div>
+
+    <table  class="responsive-table">
+        <thead>
+            <tr >
+                <th data-label-id="7"></th>
+                <th data-label-id="10"></th>
+                <th data-label-id="8"></th>
+                <th data-label-id="9"></th>
+            </tr>
+        </thead>
+        </thead>
+        <tfoot>
+            <tr >
+                <th data-label-id="7"></th>
+                <th data-label-id="10"></th>
+                <th data-label-id="8"></th>
+                <th data-label-id="9"></th>
+            </tr>
+        </tfoot>
+    </table>
+</BODY>
+</HTML>
