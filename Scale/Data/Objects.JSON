@@ -1,10 +1,14 @@
 {
 	"ObjectList" :
 [
-{"ObjectEn":"1 Micron","ObjectFr":"1 Micron","SizeInMeter":1e-6,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Micron (μm)","ObjectFr":"1 Micron (μm)","SizeInMeter":1e-6,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 {"ObjectEn":"1 Millimeter (mm)","ObjectFr":"1 Millimètre (mm)","SizeInMeter":0.001,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 {"ObjectEn":"1 Kilometer (Km) ","ObjectFr":"1 Kilomètre (Km)","SizeInMeter":1000,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"1 Meter","ObjectFr":"1 Mètre","SizeInMeter":1,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Meter (m)","ObjectFr":"1 Mètre (m)","SizeInMeter":1,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Centimeter (cm)","ObjectFr":"1 Centimètre (cm)","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Picometer (pm)","ObjectFr":"Picomètre (pm)","SizeInMeter":1e-12,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Femtometer (fm)","ObjectFr":"Femtomètre (fm)","SizeInMeter":1e-15,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Attometer (am)","ObjectFr":"Attomètre (am)","SizeInMeter":1e-18,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 
 
 {"ObjectEn":"Typogaphic Point","ObjectFr":"Point typogaphique","SizeInMeter":0.0003528,"URL":"https://en.wikipedia.org/wiki/Point_(typography)"},
@@ -83,7 +87,6 @@
 {"ObjectEn":"Blod Cell Diameter","ObjectFr":"Diamètre d'une cellule rouge","SizeInMeter":7.20E-06,"URL":"https://en.wikipedia.org/wiki/Red_blood_cell"},
 {"ObjectEn":"Amoeba","ObjectFr":"Amibe","SizeInMeter":2.65E-06,"URL":"https://en.wikipedia.org/wiki/Amoeba"},
 
-{"ObjectEn":"1 Centimeter","ObjectFr":"1 Centimètre","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 
 {"ObjectEn":"Montreal-Paris","ObjectFr":"Montréal-Paris","SizeInMeter":5540e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-CDG&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 {"ObjectEn":"Montreal-Quebec","ObjectFr":"Montréal-Québec","SizeInMeter":233e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-YQB&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
@@ -91,10 +94,7 @@
 {"ObjectEn":"Montreal-Atlanta","ObjectFr":"Montréal-Atlanta","SizeInMeter": 1600e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-ATL&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 {"ObjectEn":"Montreal-Sidney","ObjectFr":"Montréal-Sidney","SizeInMeter":16020e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-SYD&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 
-{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":1.616255e-35,"URL":"https://en.wikipedia.org/wiki/Planck_length"},
-{"ObjectEn":"Picometer","ObjectFr":"Picomètre","SizeInMeter":1e-12,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"Femtometer","ObjectFr":"Femtomètre","SizeInMeter":1e-15,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"Attometer","ObjectFr":"Attomètre","SizeInMeter":1e-18,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
+{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":1.616255e-35,"URL":"https://en.wikipedia.org/wiki/Planck_length"}
 
 ]
 }
