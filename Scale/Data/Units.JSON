@@ -1,24 +1,24 @@
 {
 	"Units" :
 [
-{"UnitSymbolFr":"M Al","UnitSymbolEn":"M ly","SizeInMeter":9.4607e21},
-{"UnitSymbolFr":"K Al","UnitSymbolEn":"K ly","SizeInMeter":9.4607e18},
+{"UnitSymbolFr":"x 10⁹ Al","UnitSymbolEn":"x 10⁹ ly","SizeInMeter":9.4607e24},
+{"UnitSymbolFr":"x 10⁶ Al","UnitSymbolEn":"x 10⁶ ly","SizeInMeter":9.4607e21},
+{"UnitSymbolFr":"x 10³ Al","UnitSymbolEn":"x 10³ ly","SizeInMeter":9.4607e18},
 {"UnitSymbolFr":"Al","UnitSymbolEn":"l y","SizeInMeter":9.4607e15},
-{"UnitSymbolFr":"x 10⁹ Km","UnitSymbolEn":"10⁹ Km","SizeInMeter":1e12},
-{"UnitSymbolFr":"x 10⁶ Km","UnitSymbolEn":"10⁶ Km","SizeInMeter":1e9},
-{"UnitSymbolFr":"(1000 Km)","UnitSymbolEn":"(1000 Km)","SizeInMeter":1000000},
+{"UnitSymbolFr":"x 10⁹ Km","UnitSymbolEn":"x 10⁹ Km","SizeInMeter":1e12},
+{"UnitSymbolFr":"x 10⁶ Km","UnitSymbolEn":"x 10⁶ Km","SizeInMeter":1e9},
+{"UnitSymbolFr":"x 10³ Km","UnitSymbolEn":"x 10³ Km","SizeInMeter":1000000},
 {"UnitSymbolFr":"Km","UnitSymbolEn":"Km","SizeInMeter":1000},
 {"UnitSymbolFr":"m","UnitSymbolEn":"m","SizeInMeter":1},
 {"UnitSymbolFr":"cm","UnitSymbolEn":"cm","SizeInMeter":0.01},
 {"UnitSymbolFr":"mm","UnitSymbolEn":"mm","SizeInMeter":0.001},
-{"UnitSymbolFr":"μm","UnitSymbolEn":"μm","SizeInMeter":1e-6},
-{"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":1e-9},
+{"UnitSymbolFr":"μm (10⁻⁶m)","UnitSymbolEn":"μm (10⁻⁶m)","SizeInMeter":1e-6},
+{"UnitSymbolFr":"nm (10⁻⁹m)","UnitSymbolEn":"nm (10⁻⁹m)","SizeInMeter":1e-9},
 {"UnitSymbolFr":"pm (10⁻¹²m)","UnitSymbolEn":"pm (10⁻¹²m)","SizeInMeter":1e-12},
 {"UnitSymbolFr":"fm (10⁻¹⁵m)","UnitSymbolEn":"fm (10⁻¹⁵m)","SizeInMeter":1e-15},
 {"UnitSymbolFr":"am (10⁻¹⁸m)","UnitSymbolEn":"am (10⁻¹⁸m)","SizeInMeter":1e-18},
 {"UnitSymbolFr":"zm (10⁻²¹m)","UnitSymbolEn":"zm (10⁻²¹m)","SizeInMeter":1e-21},
 {"UnitSymbolFr":"ym (10⁻²⁴m)","UnitSymbolEn":"am (10⁻²⁴m)","SizeInMeter":1e-24},
-{"UnitSymbolFr":"nm (10⁻⁹m)","UnitSymbolEn":"nm (10⁻⁹m)","SizeInMeter":1e-9},
 {"UnitSymbolFr":"ℓP","UnitSymbolEn":"ℓP","SizeInMeter":1.616255e-35}
 ]
 }
