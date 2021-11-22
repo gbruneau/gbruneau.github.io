@@ -15,6 +15,9 @@
   --tableFR: #000;
   --tableLabelBG:  rgb(87, 198, 206);
   --tableLabelFG: #333;
+
+  --inputBG: #fff;
+  --inputFG: #000;
 }
 
 
@@ -29,7 +32,9 @@ body {
 
 .objInput {
   width: 75%;
-  font-size: 2vw;
+  font-size: 3vw;
+  color: var(--inputFG);
+  background-color: var(--inputBG);
 }
 
 
@@ -41,7 +46,7 @@ table {
   width: 100%;
   table-layout: fixed;
   background-color: var(--tableBG);
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: var(--tableFR);
   text-shadow: 2px 2px 2px #777;
 }
@@ -73,15 +78,11 @@ table th {
 @media screen and (max-width: 800px) {
   table {
     border: 0;
-    width: 166%;
-    font-size: 2vw;
+    width: 100%;
+    font-size: 3vw;
   }
 
 
-  table caption {
-    font-size: 1.3em;
-  }
-  
   table thead ,table tfoot {
     border: none;
     clip: rect(0 0 0 0);
@@ -121,9 +122,9 @@ table th {
 
 #formHeader {
   display: grid;
-  grid:  auto / auto auto ;
+  grid:  auto / 25% auto ;
   grid-gap: 1px;
-  font-size: 2.5vw;
+  font-size: 3vw;
 }
 
 
