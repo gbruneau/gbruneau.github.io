@@ -6,3 +6,4 @@ Applications Guy Bruneau
 
 * [BestMap](https://gbruneau.github.io/BestMap) 
 * [Scale](https://gbruneau.github.io/Scale) 
+* [Oblique Strategies](https://gbruneau.github.io/Oblique/)
