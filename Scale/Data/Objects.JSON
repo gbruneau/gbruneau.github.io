@@ -1,14 +1,10 @@
 {
 	"ObjectList" :
 [
-{"ObjectEn":"1 Micron (μm)","ObjectFr":"1 Micron (μm)","SizeInMeter":1e-6,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Micron","ObjectFr":"1 Micron","SizeInMeter":1e-6,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 {"ObjectEn":"1 Millimeter (mm)","ObjectFr":"1 Millimètre (mm)","SizeInMeter":0.001,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 {"ObjectEn":"1 Kilometer (Km) ","ObjectFr":"1 Kilomètre (Km)","SizeInMeter":1000,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"1 Meter (m)","ObjectFr":"1 Mètre (m)","SizeInMeter":1,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"1 Centimeter (cm)","ObjectFr":"1 Centimètre (cm)","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"Picometer (pm)","ObjectFr":"Picomètre (pm)","SizeInMeter":1e-12,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"Femtometer (fm)","ObjectFr":"Femtomètre (fm)","SizeInMeter":1e-15,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
-{"ObjectEn":"Attometer (am)","ObjectFr":"Attomètre (am)","SizeInMeter":1e-18,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Meter","ObjectFr":"1 Mètre","SizeInMeter":1,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 
 
 {"ObjectEn":"Typogaphic Point","ObjectFr":"Point typogaphique","SizeInMeter":0.0003528,"URL":"https://en.wikipedia.org/wiki/Point_(typography)"},
@@ -22,12 +18,15 @@
 {"ObjectEn":"Raisin","ObjectFr":"Raisin","SizeInMeter": 0.01  ,"URL":"https://en.wikipedia.org/wiki/Raisin"},
 {"ObjectEn":"Watermelon","ObjectFr":"Melon d'eau","SizeInMeter": 0.3  ,"URL":"https://www.ics-agri.com/ouverturepdf.php?file=product-watermelon-semadonis-1463567253.pdf"},
 
+{"ObjectEn":"Average car lenght","ObjectFr":"Longueur moyene d'une voiture","SizeInMeter": 4.5 ,"URL":"https://www.nadaguides.com/Cars/Shopping-Guides/how-long-is-the-average-car"},
+{"ObjectEn":"Average semi truck lenght","ObjectFr":"Longueur moyene d'un camion remorque","SizeInMeter": 21.3 ,"URL":"https://schneiderjobs.com/blog/how-long-is-a-semi-truck-fun-facts"},
+
 {"ObjectEn":"Horizon distance","ObjectFr":"Distance de l'horizon","SizeInMeter":5000,"URL":"https://en.wikipedia.org/wiki/Horizon"},
 {"ObjectEn":"Centre Vidéotron Quebec City (diameter)","ObjectFr":"Diamètre du centre vidéotron (Québec)","SizeInMeter":170,"URL":"https://gbruneau.github.io/BestMap/#18/46.82802/-71.24791"},
 
 {"ObjectEn":"Nearest Star Distance (Alpha Centauri)","ObjectFr":"Distance de l'étoile la plus proche (Alpha Centauri)","SizeInMeter":4.1343E+16,"URL":"https://en.wikipedia.org/wiki/Alpha_Centauri"},
 {"ObjectEn":"Nearest Galaxy, Andromeda (M31)","ObjectFr":"Distance la galaxie d'andromède (M31)","SizeInMeter":2.361E+22,"URL":"https://en.wikipedia.org/wiki/Andromeda_Galaxy"},
-{"ObjectEn":"Milky way stellar disk diameter","ObjectFr":"Diamètre du disque stellaire de la voie lacté","SizeInMeter":1.135288e+21,"URL":"https://www.sciencenews.org/article/astronomers-have-found-edge-milky-way-size"},
+{"ObjectEn":"Milky way galacy stellar disk diameter","ObjectFr":"Diamètre du disque stellaire de la galaxie voie lacté","SizeInMeter":1.135288e+21,"URL":"https://www.sciencenews.org/article/astronomers-have-found-edge-milky-way-size"},
 {"ObjectEn":"Quasar J0313–1806 Distance","ObjectFr":"Distance du quasar le plus loins (J0313–1806)","SizeInMeter":1.26679181028e+26,"URL":"https://en.wikipedia.org/wiki/J0313%E2%80%931806"},
 {"ObjectEn":"Magelan Cluster distance","ObjectFr":"Distance du nuage de magellan","SizeInMeter":1.542099e+21,"URL":"https://en.wikipedia.org/wiki/Large_Magellanic_Cloud"},
 {"ObjectEn":"Observable universe diameter","ObjectFr":"Diamètre de l'univer visible","SizeInMeter":8.8e26,"URL":"https://en.wikipedia.org/wiki/Observable_universe"},
@@ -87,6 +86,7 @@
 {"ObjectEn":"Blod Cell Diameter","ObjectFr":"Diamètre d'une cellule rouge","SizeInMeter":7.20E-06,"URL":"https://en.wikipedia.org/wiki/Red_blood_cell"},
 {"ObjectEn":"Amoeba","ObjectFr":"Amibe","SizeInMeter":2.65E-06,"URL":"https://en.wikipedia.org/wiki/Amoeba"},
 
+{"ObjectEn":"1 Centimeter","ObjectFr":"1 Centimètre","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 
 {"ObjectEn":"Montreal-Paris","ObjectFr":"Montréal-Paris","SizeInMeter":5540e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-CDG&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 {"ObjectEn":"Montreal-Quebec","ObjectFr":"Montréal-Québec","SizeInMeter":233e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-YQB&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
@@ -94,7 +94,10 @@
 {"ObjectEn":"Montreal-Atlanta","ObjectFr":"Montréal-Atlanta","SizeInMeter": 1600e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-ATL&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 {"ObjectEn":"Montreal-Sidney","ObjectFr":"Montréal-Sidney","SizeInMeter":16020e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-SYD&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 
-{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":1.616255e-35,"URL":"https://en.wikipedia.org/wiki/Planck_length"}
+{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":1.616255e-35,"URL":"https://en.wikipedia.org/wiki/Planck_length"},
+{"ObjectEn":"Picometer","ObjectFr":"Picomètre","SizeInMeter":1e-12,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Femtometer","ObjectFr":"Femtomètre","SizeInMeter":1e-15,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"Attometer","ObjectFr":"Attomètre","SizeInMeter":1e-18,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
 
 ]
 }

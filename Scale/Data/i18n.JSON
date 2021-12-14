@@ -11,5 +11,6 @@
 ,{"ID":8,"LabelEn":"Size",	"LabelFr":"Grandeur"}
 ,{"ID":9,"LabelEn":"Scaled",	"LabelFr":"Proportioné"}
 ,{"ID":10,"LabelEn":"Size in meter",	"LabelFr":"Grandeur en mètres"}
+,{"ID":11,"LabelEn":"Magnitude",	"LabelFr":"Environ"}
 ]
 }
