@@ -44,6 +44,8 @@ table {
   font-size: 1.5vw;
   color: var(--tableFR);
   text-shadow: 2px 2px 2px #777;
+  font-weight: bold;
+  
 }
 
 table caption {
@@ -69,6 +71,8 @@ table th {
   background-color: var(--tableLabelBG);
   color: var(--tableLabelFG);
 }
+
+/* ========================= SMALL SCREEN ============ */
 
 @media screen and (max-width: 800px) {
   table {
@@ -117,7 +121,7 @@ table th {
   }
 }
 
-/* Layout */
+/* ===================== Layout ========================*/
 
 #formHeader {
   display: grid;
