@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <HTML>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <HEAD>
     <link rel="stylesheet" href="style/scale.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -24,44 +25,44 @@
     <link rel="apple-touch-icon" sizes="180x180" href="style/images/logo/logo-180.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="style/images/logo/logo-144.png">
-    <meta name="msapplication-config" content="style/images/logo/browserconfig.xml">    
+    <meta name="msapplication-config" content="style/images/logo/browserconfig.xml">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    <script src="./script/scale.js"></script>
-
-
+    <script  type="module"  src="./script/scale.js"></script>
     </script>
 </HEAD>
 
 <BODY>
-    <h1 data-label-id="1" ></h1>
+    <h1 data-label-id="1"></h1>
 
-
-
-    <div id='formHeader'>
-        <div data-label-id="3" class="formLabel"  ></div>
-        <div><input id="obj1"  class="objInput"    onchange="rebuildTable()"></div>
-        <div data-label-id="4"  class="formLabel"></div>
-        <div><input id="obj2" class="objInput"  onchange="rebuildTable()"></div>
-        <div data-label-id="6"  class="formLabel"></div>
-        <div id="fldRatio"></div>
+    <div id="langSelect" >
+    <select id="lang"">
+    </select>
     </div>
-
-    <table  class="responsive-table">
+    <div id='formHeader'>
+        <div data-label-id="3" class="formLabel"></div>
+        <div><input id="obj1" class="objInput" ></div>
+        <div data-label-id="4" class="formLabel"></div>
+        <div><input id="obj2" class="objInput" ></div>
+        <div data-label-id="6" class="formLabel"></div>
+        <div id="fldRatio"></div>
+     
+    </div>
+    <table class="responsive-table">
         <thead>
-            <tr >
+            <tr>
                 <th data-label-id="7"></th>
                 <th data-label-id="10"></th>
                 <th data-label-id="8"></th>
                 <th data-label-id="9"></th>
                 <th data-label-id="11"></th>
-                        </tr>
+            </tr>
         </thead>
         </thead>
         <tfoot>
-            <tr >
+            <tr>
                 <th data-label-id="7"></th>
                 <th data-label-id="10"></th>
                 <th data-label-id="8"></th>
@@ -71,4 +72,5 @@
         </tfoot>
     </table>
 </BODY>
+
 </HTML>
