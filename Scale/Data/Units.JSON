@@ -1,11 +1,12 @@
 {
 	"Units" :
 [
-{"UnitSymbolFr":"M Al","UnitSymbolEn":"M ly","SizeInMeter":9.4607e21},
+{"UnitSymbolFr":"(10⁹ Al)","UnitSymbolEn":"(10⁹ ly)","SizeInMeter":9.4607e24},
+{"UnitSymbolFr":"(10⁶ Al)","UnitSymbolEn":"(10⁶ ly)","SizeInMeter":9.4607e21},
 {"UnitSymbolFr":"K Al","UnitSymbolEn":"K ly","SizeInMeter":9.4607e18},
 {"UnitSymbolFr":"Al","UnitSymbolEn":"l y","SizeInMeter":9.4607e15},
-{"UnitSymbolFr":"G Km","UnitSymbolEn":"G Km","SizeInMeter":1e12},
-{"UnitSymbolFr":"M Km","UnitSymbolEn":"M Km","SizeInMeter":1e9},
+{"UnitSymbolFr":"(10⁹ Km)","UnitSymbolEn":"(10⁹ Km)","SizeInMeter":1e12},
+{"UnitSymbolFr":"(10⁶ Km)","UnitSymbolEn":"(10⁶ Km) Km","SizeInMeter":1e9},
 {"UnitSymbolFr":"(1000 Km)","UnitSymbolEn":"(1000 Km)","SizeInMeter":1000000},
 {"UnitSymbolFr":"Km","UnitSymbolEn":"Km","SizeInMeter":1000},
 {"UnitSymbolFr":"m","UnitSymbolEn":"m","SizeInMeter":1},

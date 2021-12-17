@@ -24,6 +24,9 @@
 {"ObjectEn":"Horizon distance","ObjectFr":"Distance de l'horizon","SizeInMeter":5000,"URL":"https://en.wikipedia.org/wiki/Horizon"},
 {"ObjectEn":"Centre Vidéotron Quebec City (diameter)","ObjectFr":"Diamètre du centre vidéotron (Québec)","SizeInMeter":170,"URL":"https://gbruneau.github.io/BestMap/#18/46.82802/-71.24791"},
 
+
+{"ObjectEn":"Most distant known galaxy (GN-z11)","ObjectFr":"Distance de la galaxie la plus éloignée (GN-z11)","SizeInMeter":3.02743375123e+26,"URL":"https://en.wikipedia.org/wiki/GN-z11"},
+
 {"ObjectEn":"Nearest Star Distance (Alpha Centauri)","ObjectFr":"Distance de l'étoile la plus proche (Alpha Centauri)","SizeInMeter":4.1343E+16,"URL":"https://en.wikipedia.org/wiki/Alpha_Centauri"},
 {"ObjectEn":"Nearest Galaxy, Andromeda (M31)","ObjectFr":"Distance la galaxie d'andromède (M31)","SizeInMeter":2.361E+22,"URL":"https://en.wikipedia.org/wiki/Andromeda_Galaxy"},
 {"ObjectEn":"Milky way galacy stellar disk diameter","ObjectFr":"Diamètre du disque stellaire de la galaxie voie lacté","SizeInMeter":1.135288e+21,"URL":"https://www.sciencenews.org/article/astronomers-have-found-edge-milky-way-size"},
