@@ -73,9 +73,7 @@ PC-14,PC,-14,RC,Rez-de-chaussé,Salle de Bain RC,Prise de courant,,A-04,Rasoir
 PC-15,PC,-15,RC,Rez-de-chaussé,Chambre - NO,Prise de courant,,A-04,
 PC-16,PC,-16,RC,Rez-de-chaussé,Chambre - NO,Prise de courant,,A-04,
 PC-19,PC,-19,RC,Rez-de-chaussé,Chambre - NE,Prise de courant,,A-04,
-PC-20,PC,-20,RC,Rez-de-chaussé,Chambre - NE,Prise de courant,,A-04,
 PC-21,PC,-21,RC,Rez-de-chaussé,Chambre - NE,Prise de courant,,A-04,
-PC-22,PC,-22,RC,Rez-de-chaussé,Chambre - E,Prise de courant,,A-04,
 PC-23,PC,-23,RC,Rez-de-chaussé,Chambre - E,Prise de courant,,A-04,
 PC-24,PC,-24,RC,Rez-de-chaussé,Chambre - E,Prise de courant,,A-18,
 PC-25,PC,-25,CB,Cabanon,Cabanon,Prise de courant,IT-18,A-04,
@@ -88,7 +86,6 @@ PC-31,PC,-31,SS,Sous-Sol,Salle de Séjour,Prise de courant,,A-05,
 PC-32,PC,-32,SS,Sous-Sol,Salle de Séjour,Prise de courant,,A-04,TV 
 PC-33,PC,-33,SS,Sous-Sol,Salle de Séjour,Prise de courant,,A-04,DVD
 PC-34,PC,-34,SS,Sous-Sol,Salle de Séjour,Prise de courant,,A-19,
-US-04,US,-04,SS,Sous-Sol,Salle de Séjour,Prise avec USB,,A-19,
 PC-36,PC,-36,SS,Sous-Sol,Salle de Séjour,Prise de courant,,A-19,
 PC-37,PC,-37,SS,Sous-Sol,Bureau,Prise de courant,,A-15,
 PC-38,PC,-38,SS,Sous-Sol,Bureau,Prise de courant,,A-15,
@@ -164,6 +161,9 @@ TH-04,TH,-04,SS,Sous-Sol,Bureau,Thermostat,CA-04,A-20-21,Thermostat
 US-01,US,-01,RC,Rez-de-chaussé,Cuisine,Prise avec USB,,A-06,
 US-02,US,-02,RC,Rez-de-chaussé,Chambre - NO,Prise avec USB,,A-04,
 US-03,US,-03,RC,Rez-de-chaussé,Chambre - NO,Prise avec USB,,A-04,
+US-04,US,-04,SS,Sous-Sol,Salle de Séjour,Prise avec USB,,A-19,
+US-05,US,-05,RC,Rez-de-chaussé,Chambre - E,Prise avec USB,,A-04,
+US-06,US,-06,RC,Rez-de-chaussé,Chambre - NE,Prise avec USB,,A-04,
 VE-01,VE,-01,RC,Rez-de-chaussé,Garage,Valve Extérieur,VI-02,Eau,Valve
 VE-02,VE,-02,RC,Rez-de-chaussé,Mur Extérieur - O,Valve Extérieur,,Eau,Valve
 VE-03,VE,-03,SS,Sous-Sol,Mur Extérieur - E,Valve Extérieur,,Eau,Valve
