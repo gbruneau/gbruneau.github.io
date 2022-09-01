@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test Panel for Leaflet</title>
-  <script type="module" crossorigin src="./assets/index.0e980372.js"></script>
-  <link rel="stylesheet" href="./assets/index.82be2578.css">
+  <script type="module" crossorigin src="./assets/index.ba275d84.js"></script>
+  <link rel="stylesheet" href="./assets/index.75586832.css">
 </head>
 
 <body>
@@ -42,20 +42,16 @@
             <div class="sidepanel-tab-content" data-tab-content="tab-2">
               <h2>Map Tools</h2>
               <p>SHIFT + Mouse weel to rotate</p>
-              <div>
-                <label for="fTitle">Map Name:</label>
-                <input type="text" id="fTitle" name="fTitle">
-              </div>
               <div class="BM-Button" id="btFlipMarker">Marker</div>
               <div class="BM-Button" id="btRotateNorth">⬆ Back to north</div>
-              <div class="BM-Button" id="goHere">Go to current position</div>
+              <div class="BM-Button" id="btGoHere">Go to current position</div>
               <h2>Open in</h2>
               <div class="BM-GOURL-Container">
-                <div id="goGoogle" class="BM-GOURL-Bt" >
+                <div id="btGoGoogle" class="BM-GOURL-Bt" >
                   <img  src="./layerIcons/GoogleMap.png">
                   <div  class="BM-GOURL-Bt-Name">Google Map</div>
                </div>
-                <div id="goOSM" class="BM-GOURL-Bt" >
+                <div id="btGoOSM" class="BM-GOURL-Bt" >
                    <img  src="./layerIcons/Mapnik.png">
                    <div  class="BM-GOURL-Bt-Name">Open Street Map</div>
                 </div>
@@ -65,14 +61,41 @@
             </div>
             <div class="sidepanel-tab-content" data-tab-content="tab-3">
               <h1>Best Map: <span id="curTitle"></span></h1>
-              <p id="cLat">Latitude: <span id="curLat" >0</span></p>
-              <p id="cLng">Longitude: <span id="curLng" >0</span></p>
-              <p id="cZoom">Zoom: <span id="curZoom" >0</span></p>
-              <p id="cRot">Rotation: <span id="currot" contenteditable="true">0</span></p>
-              <p id="cLayID">Layer ID: <span id="curLayID" >0</span></p>
-              <p id="cLayName">Base map: <span id="curLayName" >0</span></p>
-              <p id="cHAsMarker">Marker: <span id="curHasMarker" >false</span></p>
+              <div class="BM-Input">
+                <label for="fTitle">Map Name:</label>
+                <input type="text" id="fTitle" name="fTitle" disabled="true">
+              </div>
+              <div class="BM-Input">
+                <label for="fLayer">Base Map:</label>
+                <input type="text" id="fLayer" name="fLayer" disabled="true">
+              </div>
+
+
+              <div class="BM-Input">
+                <label for="fRot">Map Rotation:</label>
+                <input type="text" id="fRot" name="fRot" disabled="true">
+              </div>
+              <div class="BM-Input">
+                <label for="fLat">Latitude:</label>
+                <input type="text" id="fLat" name="fLat" disabled="true">
+              </div>
+              <div class="BM-Input">
+                <label for="fLng">Longitude:</label>
+                <input type="text" id="fLng" name="fLng" disabled="true">
+              </div>
+              <div class="BM-Input">
+                <label for="fZoom">Zoom:</label>
+                <input type="text" id="fZoom" name="fZoom" disabled="true">
+              </div>
               <p></p>
+              <div class="BM-Input">
+                <label for="fLayerID">Base Map ID:</label>
+                <input type="text" id="fLayerID" name="fLayerID" disabled="true">
+              </div>
+
+              <div class="BM-Button" id="btEdit">Edit</div>
+              <div class="BM-Button" id="btEditSave">Save</div>
+              <div class="BM-Button" id="btEditCancel">Cancel</div>
 
             </div>
             <!-- [...] -->
