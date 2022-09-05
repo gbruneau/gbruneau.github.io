@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test Panel for Leaflet</title>
   <script type="module" crossorigin src="./assets/index.b8853195.js"></script>
-  <link rel="stylesheet" href="./assets/index.75586832.css">
+  <link rel="stylesheet" href="./assets/index.b62832b5.css">
 </head>
 
 <body>
@@ -40,27 +40,8 @@
               <div id="BM-Layer-Nav-Panel"></div>
             </div>
             <div class="sidepanel-tab-content" data-tab-content="tab-2">
-              <h2>Map Tools</h2>
-              <p>SHIFT + Mouse weel to rotate</p>
-              <div class="BM-Button" id="btFlipMarker">Marker</div>
-              <div class="BM-Button" id="btRotateNorth">⬆ Back to north</div>
-              <div class="BM-Button" id="btGoHere">Go to current position</div>
-              <h2>Open in</h2>
-              <div class="BM-GOURL-Container">
-                <div id="btGoGoogle" class="BM-GOURL-Bt" >
-                  <img  src="./layerIcons/GoogleMap.png">
-                  <div  class="BM-GOURL-Bt-Name">Google Map</div>
-               </div>
-                <div id="btGoOSM" class="BM-GOURL-Bt" >
-                   <img  src="./layerIcons/Mapnik.png">
-                   <div  class="BM-GOURL-Bt-Name">Open Street Map</div>
-                </div>
-              </div>  
-              <h2>Share</h2>
-              <div id="shareToClipboard" class="BM-Button" >Share to clipboard</div>
-              <div id="shareToMail" class="BM-Button" >Share to e-mail</div>
-            </div>
-            <div class="sidepanel-tab-content" data-tab-content="tab-3">
+
+
               <h1>Best Map: <span id="curTitle"></span></h1>
               <div class="BM-Input">
                 <label for="fTitle">Map Name:</label>
@@ -97,6 +78,44 @@
               <div class="BM-Button" id="btEdit">Edit</div>
               <div class="BM-Button" id="btEditSave">Save</div>
               <div class="BM-Button" id="btEditCancel">Cancel</div>
+
+              <h2>Map Tools</h2>
+              <p>SHIFT + Mouse weel to rotate</p>
+              <div class="BM-Button" id="btFlipMarker">Marker</div>
+              <div class="BM-Button" id="btRotateNorth">⬆ Back to north</div>
+              <div class="BM-Button" id="btGoHere">Go to current position</div>
+              <h2>Open in</h2>
+              <div class="BM-GOURL-Container">
+                <div id="btGoGoogle" class="BM-GOURL-Bt">
+                  <img src="./layerIcons/GoogleMap.png">
+                  <div class="BM-GOURL-Bt-Name">Google Map</div>
+                </div>
+                <div id="btGoOSM" class="BM-GOURL-Bt">
+                  <img src="./layerIcons/Mapnik.png">
+                  <div class="BM-GOURL-Bt-Name">Open Street Map</div>
+                </div>
+              </div>
+              <h2>Share</h2>
+              <div id="shareToClipboard" class="BM-Button">Share to clipboard</div>
+              <div id="shareToMail" class="BM-Button">Share to e-mail</div>
+
+            </div>
+            <div class="sidepanel-tab-content" data-tab-content="tab-3">
+
+              <div class="BM-Input">
+                <label>Author:</label>
+                <input type="text" disabled="true" value="Guy Bruneau">
+              </div>
+
+              <div class="BM-Input">
+                <label>E-Mail:</label>
+                <a href="mailto:guy.bruneau@gmail.com?subject=BestMap">guy@gmail.com</a>
+              </div>
+
+              <div class="BM-Input">
+                <label>Git:</label>
+                <a href="https://github.com/gbruneau" target="gitHub">github.com/gbruneau</a>
+              </div>
 
             </div>
             <!-- [...] -->
