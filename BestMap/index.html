@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./assets/bestmaplogo-310.620b69e9.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test Panel for Leaflet</title>
-  <script type="module" crossorigin src="./assets/index.4a75a5f4.js"></script>
-  <link rel="stylesheet" href="./assets/index.468ad311.css">
+  <script type="module" crossorigin src="./assets/index.3fa8b2c3.js"></script>
+  <link rel="stylesheet" href="./assets/index.6ca77f62.css">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
             <div class="sidepanel-tab-content" data-tab-content="tab-2">
 
 
-              <h1>Best Map: <span id="curTitle"></span></h1>
+
               <div class="BM-Input">
                 <label for="fTitle">Map Name:</label>
                 <input type="text" id="fTitle" name="fTitle" disabled="true">
@@ -55,21 +55,20 @@
 
               <div class="BM-Input">
                 <label for="fRot">Map Rotation:</label>
-                <input type="text" id="fRot" name="fRot" disabled="true">
+                <input type="number" id="fRot" name="fRot" disabled="true" min="0" max="360" step="15">
               </div>
               <div class="BM-Input">
                 <label for="fLat">Latitude:</label>
-                <input type="text" id="fLat" name="fLat" disabled="true">
+                <input type="number" id="fLat" name="fLat" disabled="true"  min="-90" max="90" step="15">
               </div>
               <div class="BM-Input">
                 <label for="fLng">Longitude:</label>
-                <input type="text" id="fLng" name="fLng" disabled="true">
+                <input type="number" id="fLng" name="fLng" disabled="true" min="-180" max="180" step="15">
               </div>
               <div class="BM-Input">
                 <label for="fZoom">Zoom:</label>
-                <input type="text" id="fZoom" name="fZoom" disabled="true">
+                <input type="number" id="fZoom" name="fZoom" disabled="true" min="0" max="22">
               </div>
-              <p></p>
               <div class="BM-Input">
                 <label for="fLayerID">Base Map ID:</label>
                 <input type="text" id="fLayerID" name="fLayerID" disabled="true">
@@ -83,12 +82,11 @@
 
               <div id="searchFld" class="BM-Input">
                 <label for="fSearch">Search:</label>
-                <input type="text" id="fSearch" name="fSearch" value="">
+                <input type="text" id="fSearch" name="fSearch" value="" placeholder="99 Rue untel,ville,province,pays">
               </div>
 
               <p>SHIFT + Mouse weel to rotate</p>
               <div class="BM-Button" id="btFlipMarker">Marker</div>
-              <div class="BM-Button" id="btRotateNorth">⬆ Back to north</div>
               <div class="BM-Button" id="btGoHere">Go to current position</div>
               <h2>Open in</h2>
               <div class="BM-GOURL-Container">
@@ -108,6 +106,11 @@
 
             </div>
             <div class="sidepanel-tab-content" data-tab-content="tab-3">
+              <h1>Best Map: <span id="curTitle"></span></h1>
+              <div class="BM-Input">
+                <label>Build:</label>
+                <input id="buildFld" type="text" disabled="true" value="0">
+              </div>
 
               <div class="BM-Input">
                 <label>Author:</label>
