@@ -3,24 +3,88 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="ColorPkrIcon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color Pkr</title>
-  <script type="module" crossorigin src="./assets/index.8b6b8894.js"></script>
-  <link rel="stylesheet" href="./assets/index.9c379bcb.css">
+  <script type="module" crossorigin src="./assets/index.62641263.js"></script>
+  <link rel="stylesheet" href="./assets/index.aa9891b6.css">
 </head>
 
 <body>
   <div id="toolbarcontainer">
     <nav id="toolbar">
       <div id="btSave"><span class="fa fa-floppy-disk"></span></div>
-      <div id="btLoad"><span class="fa-solid fa-folder-open"></span></div>
+      <div id="btLoad"><span class="fa-solid fa-undo"></span></div>
       <div id="btReset"><span class="fa-regular fa-file"></span></div>
       <div id="btRandom"><span class="fa-solid fa-shuffle"></span></div>
       <div id="btFlipBG"><span class="fa-solid fa-star-half-stroke"></span></div>
+      <div id="btMix1"><span class="fa-solid  fa-signal"></span></div>
+      <div id="btMix2"><span class="fa-solid  fa-mortar-pestle"></span></div>
     </nav>
   </div>
-  <div id="colorPanel">--Color Panel Placeholder--</div>
+  <div id="colorPanel">
+    <div id="colMix1" class="aTab">
+      <!-- HSL Mixer-->
+
+      <div id="mhsl1" class="paletteColor">
+        <input id="inColorHslMix" class="inColor" type="color" value="#808080"
+          style="background-color: rgb(238, 238, 238); border-color: rgb(200, 76, 76);">
+        <div class="hexColor">#c84c4c</div>
+        <div class="rgbColor">rgb(200,76,76)</div>
+        <div class="hslColor100">hsl(0,52%,54%)</div>
+        <div class="hslColor255">hsl(0,135,138)</div>
+      </div>
+
+      <div class="MixHSLInput">
+        <label for="inHSLSteps">Steps</label>
+        <input id="inHSLSteps" type="number" min="2" value="2" max="99" size="2"><br>
+        <label for="inH">ΔH</label>
+        <input id="inH" type="number" min="-360" max="360" step="30" value="0" size="3"><br>
+        <label for="inS">ΔS</label>
+        <input id="inS" type="number" min="-100" max="100" step="10" value="0" size="3">%<br>
+        <label for="inL">ΔL</label>
+        <input id="inL" type="number" min="-100" max="100" step="10" value="0" size="3">%
+      </div>
+      <div id="hslMixPaletteContainer"></div>
+    </div>
+
+    <!-- Two Color Mixer-->
+    <div id="colMix2" class="aTab" style="display:none ;">
+      
+      <div id="mixC1" class="paletteColor">
+        <input id="inColorMix1" class="inColor" type="color" value="#808080"
+          style="background-color: rgb(238, 238, 238); border-color: rgb(200, 76, 76);">
+        <div class="hexColor">#c84c4c</div>
+        <div class="rgbColor">rgb(200,76,76)</div>
+        <div class="hslColor100">hsl(0,52%,54%)</div>
+        <div class="hslColor255">hsl(0,135,138)</div>
+      </div>
+      <div id="mixC2" class="paletteColor">
+        <input id="inColorMix2" class="inColor" type="color" value="#808080"
+          style="background-color: rgb(238, 238, 238); border-color: rgb(200, 76, 76);">
+        <div class="hexColor">#c84c4c</div>
+        <div class="rgbColor">rgb(200,76,76)</div>
+        <div class="hslColor100">hsl(0,52%,54%)</div>
+        <div class="hslColor255">hsl(0,135,138)</div>
+      </div>
+
+      <div class="colMix2Input">
+        <label for="inMix2Steps">Steps</label>
+        <input id="inMix2Steps" type="number" min="2" value="2" max="99" size="2"><br>
+            
+        <label for="inMix2Mode">Mode</label>
+        <select id="inMix2Mode" name="cars" value="RGB">
+          <option value="RGB">RGB</option>
+          <option value="HSL">HSL</option>
+        </select>
+      </div>
+
+      <div id="Mix2PaletteContainer"></div>
+
+
+    </div>
+  </div>
+
   <div id="colPalette"></div>
   
 </body>
