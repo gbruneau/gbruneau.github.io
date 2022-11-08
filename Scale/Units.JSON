@@ -5,7 +5,9 @@
 {"UnitSymbolFr":"(10⁶ Al)","UnitSymbolEn":"(10⁶ ly)","SizeInMeter":9.4607e21},
 {"UnitSymbolFr":"K Al","UnitSymbolEn":"K ly","SizeInMeter":9.4607e18},
 {"UnitSymbolFr":"Al","UnitSymbolEn":"l y","SizeInMeter":9.4607e15},
-{"UnitSymbolFr":"(10⁹ Km)","UnitSymbolEn":"(10⁹ Km)","SizeInMeter":1e12},
+{"UnitSymbolFr":"jl","UnitSymbolEn":"l d","SizeInMeter":25902068371200},
+
+{"UnitSymbolFr":"UA","UnitSymbolEn":"AU","SizeInMeter":1.496e11},
 {"UnitSymbolFr":"(10⁶ Km)","UnitSymbolEn":"(10⁶ Km)","SizeInMeter":1e9},
 {"UnitSymbolFr":"(1000 Km)","UnitSymbolEn":"(1000 Km)","SizeInMeter":1000000},
 {"UnitSymbolFr":"Km","UnitSymbolEn":"Km","SizeInMeter":1000},

@@ -48,6 +48,45 @@
 {"ObjectEn":"NML Cygni Star diameter","ObjectFr":"Diametre de l'étoile NML Cygni","SizeInMeter":1647545172000,"URL":"https://en.wikipedia.org/wiki/NML_Cygni"},
 {"ObjectEn":"Oort cloud diameter (outer shell)","ObjectFr":"Diamètre du nuage de Oort","SizeInMeter":2.9517e+16,"URL":"https://en.wikipedia.org/wiki/Oort_cloud"},
 
+{"ObjectEn":"Whirlpool Galaxy (M51) distance","ObjectFr":"Distance de M51 ou galaxie du Tourbillon","SizeInMeter":2.932827e+23,"URL":"https://en.wikipedia.org/wiki/Whirlpool_Galaxy"},
+
+{"ObjectEn":"Sombrero Galaxy (M104) distance","ObjectFr":"Distance de M105 ou la galaxie du sombrero","SizeInMeter":2.942287e+23,"URL":"https://en.wikipedia.org/wiki/Sombrero_Galaxy"},
+
+{"ObjectEn":"Local group diameter","ObjectFr":"Diamètre du groupe local","SizeInMeter":9e+22,"URL":"https://en.wikipedia.org/wiki/Local_Group"},
+
+
+
+{"ObjectEn":"Heliosphre distance from the sun","ObjectFr":"Distance de l'héliosphere du soleil","SizeInMeter":1.84e+13,"URL":"https://economictimes.indiatimes.com/definition/heliopause"},
+
+{"ObjectEn":"Solar system diameter (heliosphere)","ObjectFr":"Diamètre du système solaire (héliosphère)","SizeInMeter":3.68e+13,"URL":"https://economictimes.indiatimes.com/definition/heliopause"},
+
+
+
+{"ObjectEn":"Distance to Sirius","ObjectFr":"Distance de Sirius","SizeInMeter":6.443704e+16,"URL":"https://starlust.org/the-brightest-stars-in-the-night-sky/"},
+{"ObjectEn":"Distance to Arcturus","ObjectFr":"Distance de Arcturus","SizeInMeter":3.468304e+17,"URL":"https://starlust.org/the-brightest-stars-in-the-night-sky/"},
+{"ObjectEn":"Distance to Vega","ObjectFr":"Distance de Vega","SizeInMeter":2.369913e+17,"URL":"https://starlust.org/the-brightest-stars-in-th1e-night-sky/"},
+{"ObjectEn":"Distance to Rigel","ObjectFr":"Distance de Rigel","SizeInMeter":7.284763e+18,"URL":"https://starlust.org/the-brightest-stars-in-the-night-sky/"},
+
+
+{"ObjectEn":"Distance to V762 Cassiopeia","ObjectFr":"Distance de V762 Cassiopeia","SizeInMeter":2.615041e+19,"URL":"https://www.universeguide.com/star/5926/v762cassiopeiae"},
+
+
+{"ObjectEn":"Distance to Betelgeuse","ObjectFr":"Distance de Betelgeuse","SizeInMeter":5.184480e+18,"URL":"https://en.wikipedia.org/wiki/Betelgeuse"},
+
+
+{"ObjectEn":"Diameter of Sirius","ObjectFr":"Diamètre de Sirius","SizeInMeter":2.37929E+09,"URL":"https://en.wikipedia.org/wiki/Sirius"},
+{"ObjectEn":"Diameter of Aldebaran","ObjectFr":"Diamètre de Aldebaran","SizeInMeter":6.27521E+10,"URL":"https://en.wikipedia.org/wiki/Aldebaran"},
+{"ObjectEn":"Diameter of Betelgeuse","ObjectFr":"Diamètre de Betelgeuse","SizeInMeter":1.06303E+12,"URL":"https://en.wikipedia.org/wiki/Betelgeuse"},
+
+{"ObjectEn":"Diameter of VY Canis Majoris","ObjectFr":"Diamètre de VY Canis Majoris","SizeInMeter":1.97579E+12,"URL":"https://fr.wikipedia.org/wiki/VY_Canis_Majoris"},
+
+
+
+
+
+{"ObjectEn":"Distance to Orion nebulae","ObjectFr":"Distance de la nébuleuse d'Orion","SizeInMeter":1.271522e+19,"URL":"https://en.wikipedia.org/wiki/Orion_Nebula"},
+
+
 {"ObjectEn":"Hydrogen atom Diameter","ObjectFr":"Diamètre d'un atome d'hydrogene","SizeInMeter":5.29177210903e-11  , "URL":"https://en.wikipedia.org/wiki/Bohr_radius"},
 {"ObjectEn":"Caesium atom Diameter","ObjectFr":"Diamètre d'un atome de cesium","SizeInMeter":5.300000E-10, "URL":"https://en.wikipedia.org/wiki/Caesium"},
 {"ObjectEn":"Lead 208 Atom Nucleus","ObjectFr":"Noyaux d'un atome de plomb 208","SizeInMeter":6.34e-15,"URL":"https://www.sciencedirect.com/topics/physics-and-astronomy/lead-isotopes"},
@@ -101,7 +140,7 @@
 {"ObjectEn":"Blod Cell Diameter","ObjectFr":"Diamètre d'une cellule rouge","SizeInMeter":7.20E-06,"URL":"https://en.wikipedia.org/wiki/Red_blood_cell"},
 {"ObjectEn":"Amoeba","ObjectFr":"Amibe","SizeInMeter":2.65E-06,"URL":"https://en.wikipedia.org/wiki/Amoeba"},
 
-{"ObjectEn":"1 Centimeter","ObjectFr":"1 Centimètre","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
+{"ObjectEn":"1 Centimeter (cm)","ObjectFr":"1 Centimètre (cm)","SizeInMeter":0.01,"URL":"https://en.wikipedia.org/wiki/International_System_of_Units"},
 
 {"ObjectEn":"Montreal-Paris","ObjectFr":"Montréal-Paris","SizeInMeter":5540e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-CDG&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},
 {"ObjectEn":"Montreal-Quebec","ObjectFr":"Montréal-Québec","SizeInMeter":233e+3,"URL":"http://www.gcmap.com/mapui?P=YUL-YQB&PM=b%3Aringb12%3Ared%2B%25N&MS=bm&PC=red&PW=3&DU=km"},

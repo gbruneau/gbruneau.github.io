@@ -1,13 +1,13 @@
 {
   "index.html": {
-    "file": "assets/index.fbbda6d5.js",
+    "file": "assets/index.62d76c30.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
       "_vendor.62917bef.js"
     ],
     "css": [
-      "assets/index.a256e635.css"
+      "assets/index.40048d64.css"
     ],
     "assets": [
       "assets/scMicro.5e3649af.jpg",
@@ -15,6 +15,7 @@
       "assets/scTravel.cde300bc.jpg",
       "assets/scPlanet.ead3b321.jpg",
       "assets/scSolar.fd7a499f.jpg",
+      "assets/scGalaxy.5c4fb482.jpg",
       "assets/scCosmic.71d766dd.jpg"
     ]
   },
