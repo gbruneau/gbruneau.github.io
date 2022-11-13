@@ -1,0 +1,25 @@
+{
+  "index.html": {
+    "file": "assets/index.4281f468.js",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_vendor.62917bef.js"
+    ],
+    "css": [
+      "assets/index.40048d64.css"
+    ],
+    "assets": [
+      "assets/scMicro.5e3649af.jpg",
+      "assets/scHuman.3299d202.jpg",
+      "assets/scTravel.cde300bc.jpg",
+      "assets/scPlanet.ead3b321.jpg",
+      "assets/scSolar.fd7a499f.jpg",
+      "assets/scGalaxy.5c4fb482.jpg",
+      "assets/scCosmic.71d766dd.jpg"
+    ]
+  },
+  "_vendor.62917bef.js": {
+    "file": "assets/vendor.62917bef.js"
+  }
+}
