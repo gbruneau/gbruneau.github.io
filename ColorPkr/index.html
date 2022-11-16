@@ -7,18 +7,23 @@
   <link rel="icon" type="image/svg+xml" href="ColorPkrIcon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color Pkr</title>
-  <script type="module" crossorigin src="./assets/index.d079d9ab.js"></script>
-  <link rel="stylesheet" href="./assets/index.76370a58.css">
+  <script type="module" crossorigin src="./assets/index.a07f142d.js"></script>
+  <link rel="stylesheet" href="./assets/index.fdcd40bf.css">
 </head>
 
 <body>
   <div id="toolbarcontainer">
     <nav id="toolbar">
       <div id="btSave"><span class="fa fa-floppy-disk" title="Save"></span></div>
+      <div id="btDownload"><span class="fa-solid fa-download" title="Download"></span></div>
+      <div id="btUpload"><span class="fa-solid fa-upload" title="Upload"></span></div>
+
       <div id="btLoad"><span class="fa-solid fa-undo" title="Undo"></span></div>
+
       <div id="btReset"><span class="fa-regular fa-file" title="Clear Palette"></span></div>
       <div id="btRandom"><span class="fa-solid fa-shuffle" title="Random Color"></span></div>
       <div id="btFlipBG"><span class="fa-solid fa-star-half-stroke" title="Dark Mode"></span></div>
+
       <nav style="flex-basis: 50px;"></nav>
       <div id="btMix1" class="btTab btTabOn"><span class="fa-solid  fa-signal" title="HSL Color Shift"></span></div>
       <div id="btMix2" class="btTab "><span class="fa-solid  fa-mortar-pestle" title="Color Mixer"></span></div>
@@ -28,11 +33,11 @@
     </nav>
   </div>
   <!-- About Box-->
-  <div id="aboutBox">
-    <div id="aboutHeader">
+  <div id="aboutBox" class="dlgBox">
+    <div class="dlgHeader">
       <h1>ColrPkr</h1>
       <img src="./assets/ColorPkrIcon.b5e2f756.svg" width="128px" height="128px">
-      <p id="aboutTitle">A handy color picker and color palette manager</p>
+      <p class="dlgTitle">A handy color picker and color palette manager</p>
     </div>
     <p><strong>Build</strong>: <span id="aboutBoxBuild"></span></p>
     <p><strong>Author</strong>: <a href="mailto:guy.bruneau@gmail?subject=About%20ColorPkr">Guy Bruneau</a></p>
@@ -107,21 +112,47 @@
         -->
       </div>
       <div id="textPaletteContainer">
-           <div id="tb01" class="textColorBox"></div>
-           <div id="tb02" class="textColorBox"></div>
-           <div id="tb03" class="textColorBox"></div>
-           <div id="tb04" class="textColorBox"> </div>
-           <div id="tb05" class="textColorBox"></div>
-           <div id="tb06" class="textColorBox"></div>
-           <div id="tb07" class="textColorBox"></div>
-           <div id="tb08" class="textColorBox"></div>
-           <div id="tb09" class="textColorBox"></div>
-           <div id="tb10" class="textColorBox"></div>
-           
+        <div id="tb01" class="textColorBox"></div>
+        <div id="tb02" class="textColorBox"></div>
+        <div id="tb03" class="textColorBox"></div>
+        <div id="tb04" class="textColorBox"> </div>
+        <div id="tb05" class="textColorBox"></div>
+        <div id="tb06" class="textColorBox"></div>
+        <div id="tb07" class="textColorBox"></div>
+        <div id="tb08" class="textColorBox"></div>
+        <div id="tb09" class="textColorBox"></div>
+        <div id="tb10" class="textColorBox"></div>
+
       </div>
     </div>
   </div>
   <div id="colPalette"></div>
+  <!-- UPLOAD DIALOG -->
+  <div id="dlgUpload" class="dlgBox" style="display:none ;">
+    <div class="dlgHeader">
+      <h3>Load Palette File</h3>
+    </div>
+    <label for="colorFile">File</label>
+    <input id="colorFile" type="file" accept=".json"/>
+    <div class="dlgButtons">
+      <button id="btCancelUpload">Cancel</button>
+      <button id="btDoUpload">Upload</button>
+    </div>
+  </div>
+  <!-- DOWNLOAD DIALOG -->
+  <div id="dlgDownload" class="dlgBox" style="display:none ;">
+    <div class="dlgHeader">
+      <h3>Download Palette</h3>
+    </div>
+      <label for="chkExclud">Exclude Color</label>
+      <input id="chkExclude" type="checkbox" />
+    <label for="colExclude">Color</label>
+    <input id="colExclude" value="#808080" disabled type="color" />
+    <div class="dlgButtons">
+      <button id="btCancelDownload">Cancel</button>
+      <button id="btDoDownload">Download</button>
+    </div>
+  </div>
   
 </body>
 
