@@ -1,11 +1,8 @@
 {
   "index.html": {
-    "file": "assets/index.c7aca0cc.js",
+    "file": "assets/index.ba0aba11.js",
     "src": "index.html",
     "isEntry": true,
-    "imports": [
-      "_vendor.62917bef.js"
-    ],
     "css": [
       "assets/index.40048d64.css"
     ],
@@ -18,8 +15,5 @@
       "assets/scGalaxy.5c4fb482.jpg",
       "assets/scCosmic.71d766dd.jpg"
     ]
-  },
-  "_vendor.62917bef.js": {
-    "file": "assets/vendor.62917bef.js"
   }
 }
