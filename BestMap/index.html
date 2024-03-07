@@ -6,9 +6,10 @@
   <link rel="icon" type="image/svg+xml" href="./assets/bestmaplogo-310.620b69e9.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
-  <script type="module" crossorigin src="./assets/index.f3e95f81.js"></script>
+  <script type="module" crossorigin src="./assets/index.4f208d21.js"></script>
   <link rel="stylesheet" href="./assets/index.fb49d45a.css">
 </head>
+
 <body>
   <div id="map">
     <div id="panelID" class="sidepanel" aria-label="side panel" aria-hidden="false">
@@ -44,7 +45,7 @@
             <div class="sidepanel-tab-content" data-tab-content="tab-layer">
               <div id="BM-Layer-Nav-Panel"></div>
             </div>
-             <!--  Info TAB-->
+            <!--  Info TAB-->
             <div class="sidepanel-tab-content" data-tab-content="tab-info">
               <div class="BM-Input">
                 <label for="fTitle">Map Name:</label>
@@ -59,7 +60,7 @@
                 <input type="number" id="fRot" name="fRot" disabled="true" min="0" max="360" step="15">
               </div>
 
-<!--  TO SHOW TEMP VALUE IF  NECESSARY 
+              <!--  TO SHOW TEMP VALUE IF  NECESSARY 
               <div class="BM-Input">
                 <label for="ftmp">tmp:</label>
                 <input type="number" id="ftmp" name="ftmp" disabled="true" >
@@ -68,7 +69,7 @@
 
               <div class="BM-Input">
                 <label for="fLat">Latitude:</label>
-                <input type="number" id="fLat" name="fLat" disabled="true"  min="-90" max="90" step="15">
+                <input type="number" id="fLat" name="fLat" disabled="true" min="-90" max="90" step="15">
               </div>
               <div class="BM-Input">
                 <label for="fLng">Longitude:</label>
@@ -107,7 +108,7 @@
               <div class="BM-Button" id="btGoHere" title="Go tu current position"></div>
               <div class="BM-Button" id="btTrack" title="Track position"></div>
               <div class="BM-Button" id="btMeasure" title="Measure"></div>
-                  <h2>Open in</h2>
+              <h2>Open in</h2>
               <div class="BM-GOURL-Container">
                 <div id="btGoGoogle" class="BM-GOURL-Bt">
                   <img src="./layerIcons/GoogleMap.png">
@@ -123,6 +124,11 @@
                   <img src="./layerIcons/Mapnik.png">
                   <div class="BM-GOURL-Bt-Name">Open in Street Map</div>
                 </div>
+                <div id="btGoBing" class="BM-GOURL-Bt">
+                  <img src="./layerIcons/BingMap.png">
+                  <div class="BM-GOURL-Bt-Name">Open in Bing</div>
+                </div>
+
 
               </div>
 
