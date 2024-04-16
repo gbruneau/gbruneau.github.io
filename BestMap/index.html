@@ -6,12 +6,25 @@
   <link rel="icon" type="image/svg+xml" href="./assets/bestmaplogo-310.620b69e9.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
-  <script type="module" crossorigin src="./assets/index.4f208d21.js"></script>
-  <link rel="stylesheet" href="./assets/index.fb49d45a.css">
+  
+  <script type="module" crossorigin src="./assets/index.b277d6b7.js"></script>
+  <link rel="stylesheet" href="./assets/index.e58640fa.css">
 </head>
 
 <body>
   <div id="map">
+    <div id="dlgUpload" class="dlgBox">
+      <div class="dlgHeader">
+        <h3>Import Favorites File</h3>
+      </div>
+      <label for="favFile">File</label>
+      <input id="favFile" type="file" accept=".json" />
+      <div class="dlgButtons">
+        <button id="btFavCancelUpload">Cancel</button>
+        <button id="btFavDoUpload">Upload</button>
+      </div>
+    </div>
+    <!-- Main Block  -->
     <div id="panelID" class="sidepanel" aria-label="side panel" aria-hidden="false">
       <div class="sidepanel-inner-wrapper">
         <nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
@@ -31,6 +44,14 @@
                 Information
               </a>
             </li>
+
+            <li class="sidepanel-tab">
+              <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-fav">
+                Favorites
+              </a>
+            </li>
+
+
             <li class="sidepanel-tab">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-about">
                 About
@@ -133,6 +154,27 @@
               </div>
 
             </div>
+            <!--  ABOUT Favorites -->
+            <div class="sidepanel-tab-content" data-tab-content="tab-fav">
+              <h1>Favorites saved places</h1>
+              <div class="BM-Button" id="btFavAdd" title="Add current place and view">Add</div>
+              <div class="BM-Button" id="btFavUndo" title="Undo changes">Undo</div>
+              <div class="BM-Button" id="btFavSave" title="Save changes">Save</div>
+              <div class="BM-Button" id="btFavExport" title="Export to BestMap JSON file">Export</div>
+              <div class="BM-Button" id="btFavImport" title="Import BestMap JSON file">Import</div>
+              <table class="BM-Table">
+                <thead>
+                  <tr>
+                    <th title="Place name" id="headFavPlace">Place</th>
+                    <th title="View the location" width="40px">View</th>
+                    <th title="Update URL with current location and view">Update</th>
+                    <th title="Delete this place">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="FavTable">
+                </tbody>
+              </table>
+            </div>
             <!--  ABOUT TAB-->
             <div class="sidepanel-tab-content" data-tab-content="tab-about">
               <h1>Best Map: <span id="curTitle"></span></h1>
@@ -166,7 +208,6 @@
       </div>
     </div>
   </div>
-  
 </body>
 
 </html>
