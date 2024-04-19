@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
   
-  <script type="module" crossorigin src="./assets/index.fb1d7310.js"></script>
-  <link rel="stylesheet" href="./assets/index.07a62086.css">
+  <script type="module" crossorigin src="./assets/index.1e6d2d3b.js"></script>
+  <link rel="stylesheet" href="./assets/index.f6d19a30.css">
 </head>
 
 <body>
@@ -17,11 +17,14 @@
       <div class="dlgHeader">
         <h3>Import Favorites File</h3>
       </div>
-      <label for="favFile">File</label>
-      <input id="favFile" type="file" accept=".json" />
+      <input type="file" id="btSelFavFile" accept=".json">
+      <label class="BM-Button" for="btSelFavFile">Select file</label>
+      <div id="selectedFavFileName"></div>
       <div class="dlgButtons">
-        <button id="btFavCancelUpload">Cancel</button>
-        <button id="btFavDoUpload">Upload</button>
+        <button id="btFavCancelUpload" class="BM-Button">Cancel</button>
+        <button id="btFavDoUpload" class="BM-Button" style="display:none">
+          Upload
+        </button>
       </div>
     </div>
     <!-- Main Block  -->
@@ -29,32 +32,31 @@
       <div class="sidepanel-inner-wrapper">
         <nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
           <ul class="sidepanel-tabs">
-            <li class="sidepanel-tab">
+            <li class="sidepanel-tab" title="Layer Selector">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-layer">
-                Layers
+                <img src="./icons/tabLayer.png" class="Icon-Small">
               </a>
             </li>
-            <li class="sidepanel-tab">
+            <li class="sidepanel-tab" title="Tools">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-tools">
-                Tools
+                <img src="./icons/tabTools.png" class="Icon-Small">
               </a>
             </li>
-            <li class="sidepanel-tab">
+            <li class="sidepanel-tab" title="Current Position">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-info">
-                Information
+                <img src="./icons/tabCurrent.png" class="Icon-Small">
               </a>
             </li>
 
-            <li class="sidepanel-tab">
+            <li class="sidepanel-tab" title="Favorites Places">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-fav">
-                Favorites
+                <img src="./icons/tabFav.png" class="Icon-Small">
               </a>
             </li>
 
-
-            <li class="sidepanel-tab">
+            <li class="sidepanel-tab" title="About BestMap">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-about">
-                About
+                <img src="./icons/tabAbout.png" class="Icon-Small">
               </a>
             </li>
             <!-- [...] -->
@@ -80,14 +82,6 @@
                 <label for="fRot">Map Rotation:</label>
                 <input type="number" id="fRot" name="fRot" disabled="true" min="0" max="360" step="15">
               </div>
-
-              <!--  TO SHOW TEMP VALUE IF  NECESSARY 
-              <div class="BM-Input">
-                <label for="ftmp">tmp:</label>
-                <input type="number" id="ftmp" name="ftmp" disabled="true" >
-              </div>
--->
-
               <div class="BM-Input">
                 <label for="fLat">Latitude:</label>
                 <input type="number" id="fLat" name="fLat" disabled="true" min="-90" max="90" step="15">
@@ -105,25 +99,22 @@
                 <input type="text" id="fLayerID" name="fLayerID" disabled="true">
               </div>
 
-              <div class="BM-Button" id="btEdit">Edit</div>
-              <div class="BM-Button" id="btEditSave">Save</div>
-              <div class="BM-Button" id="btEditCancel">Cancel</div>
+              <div class="BM-Button BM-Small-Button" id="btEdit" title="Edit Current Position"><img
+                  src="./icons/Edit.png" class="Icon-Small"></div>
+              <div class="BM-Button BM-Small-Button" id="btEditSave" title="Save Changes"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqCAMAAACbSil8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURQAAABREWBRGVhVFVxU/VRVGVxcsURtWbCFmgiZ3lyyHrTWjj0XRq1X/x6nNcHEAAAAEdFJOUwBAgL+jVN0MAAAACXBIWXMAADLAAAAywAEoZFrbAAAEUUlEQVR4Xu3bcXuTMBSFcVqstG5+/68rkLM+lpElN3BCcznvP85Ve/MzgdZNu2SXW8P11wsYGTUtnbtCkqp96VjWzrqQZm2sE2mG1Y00eYYdSW89TOt5kv68rb6ktxtYK3mTxrfVnTR6tfqTxqgOpRGqR+n6fcmndI3qVLpC9Sr9TnUr/Ub1K11SHUsX1HzprwPDEqzBGDLs6e8DwxKsATlnOb2YekhYgjUop0zX6d8DwxKsgTlmuyNh6iFhCdbgtEpbphqlDVOt0napZmmzVLu0VWqBtFFqibRNapG0SWqZtEkqfrSGqehjpU88tn9YgrVdqJ/45EsfeHD/MMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNXQiauWwBGuiJsPUQ8ISrImaDFMPCUuwJmoyTD0kLMGaqMkw9ZCwBGuiJsPUQ8ISrImaDFMPCUuwVkr9PDAswVoptcFE9ZioHhPVY6J6TFSPieoxUT0mqsdE9ZiovIbhHhrwiWrVpA7D489Ldb3VqMNj4UR3PM6vEnW5n/93r6StQv0JOvWogq1ATUGnalj51Ds0ifhYOjVjS0N0K5mac3ifkV95uNQBiMy4VirVKCVbmVSzlGslUgukVCuRarkjPXvgNxPiUTNfT5fxXnNo1EIp0UqjYuEF4Ql2j0Ut3lTe5UqibpDS7sLvSCVtK4e6Scra1rekcraVQ8WSi8PT7BuFunFTSSeYQo28JcQXgF9a/6WUE0yhYsGLVtcf+VPBo7vGoEbOr4XKOMFvSmWcYAbVsvzGqVjuMguVcbGKuqXYF1pMVMJ9SdQtnYgae1uoXV2P8BUmHeAtieqRqndLLqmR5Vuoq792YwzqDn+JY3w3g0GN3JcsVMJdiUI90RdcohfgSnhoEeW7cRRq7JU1u3aosZeb7PA0+8ahRs5lbpzvJnOoG08wnmXnONRt28rZVBZ107biOfaORN3yHSrSptKoG44wnmD3aNTiI8x4TzhHo5YeYdbxZVLLjjBPyqSWWBl/T/2KSbVbmVIu1WqlSslUm5UrZVMt92HiHWmOTc23sqV86m3Iwj5o7xye8alZG0vf0rEa1CS2BrQW9Sdsnf/mOFaLGrlmHxWu0a/qUade/k3hyKznHKtLnRvm8JOKHUA9KlE9JqrHRPWYqB4T1WOiekxUj4nqMVE9JqrHRPWYqB4T1WOiekxUj3U9PvDfeaj9eajX7oKP3HfpTnNf6rqzbOt1pJ7kap2k59jW8UqduuKnjpuP75R761Pq/Qz3OL3I8ca+QqcuV3+34r5/7mjX/QPoBGoX1Dx4ugAAAABJRU5ErkJggg==" class="Icon-Small"></div>
+              <div class="BM-Button BM-Small-Button" id="btEditCancel" title="Cancel"><img src="./assets/Cancel.454b20d3.png" class="Icon-Small"></div>
               <h2>Share</h2>
-              <div id="shareToClipboard" class="BM-Button">BestMap to clipboard</div>
-              <div id="shareGmap" class="BM-Button">Google Map to clipboard</div>
-              <div id="shareToMail" class="BM-Button">BestMap to e-mail</div>
-
+              <div id="shareToClipboard" class="BM-Button" title="Share to Clipboard"></div>
+              <div id="shareToMail" class="BM-Button" title="Share by e-mail"></div>
             </div>
 
             <!--  TOOL TAB-->
             <div class="sidepanel-tab-content" data-tab-content="tab-tools">
               <h2>Map Tools</h2>
-
               <div id="searchFld" class="BM-Input">
                 <label for="fSearch">Search:</label>
                 <input type="text" id="fSearch" name="fSearch" value="" placeholder="99 Rue untel,ville,province,pays">
               </div>
-
               <p>SHIFT + Mouse weel to rotate</p>
               <div class="BM-Button" id="btFlipMarker" title="Marker"></div>
               <div class="BM-Button" id="btGoHere" title="Go tu current position"></div>
@@ -135,12 +126,10 @@
                   <img src="./layerIcons/GoogleMap.png">
                   <div class="BM-GOURL-Bt-Name">Open in Google Map</div>
                 </div>
-
                 <div id="btGoGoogleEarth" class="BM-GOURL-Bt">
                   <img src="./icons/GoogleEarth.png">
                   <div class="BM-GOURL-Bt-Name">Open in Google Earth</div>
                 </div>
-
                 <div id="btGoOSM" class="BM-GOURL-Bt">
                   <img src="./layerIcons/Mapnik.png">
                   <div class="BM-GOURL-Bt-Name">Open in Street Map</div>
@@ -149,20 +138,30 @@
                   <img src="./layerIcons/BingMap.png">
                   <div class="BM-GOURL-Bt-Name">Open in Bing</div>
                 </div>
-
-
               </div>
-
             </div>
-            <!--  ABOUT Favorites -->
+            <!--  Favorites -->
             <div class="sidepanel-tab-content" data-tab-content="tab-fav">
               <h1>Favorites saved places</h1>
-              <div class="BM-Button" id="btFavAdd" title="Add current place and view">Add</div>
-              <div class="BM-Button" id="btFavUndo" title="Undo changes">Undo</div>
-              <div class="BM-Button" id="btFavSave" title="Save changes">Save</div>
-              <div class="BM-Button" id="btFavExport" title="Export to BestMap JSON file">Export</div>
-              <div class="BM-Button" id="btFavImport" title="Import BestMap JSON file">Import</div>
-              <table id="FavTable"  class="BM-Table">
+
+              <div class="BM-Button  BM-Small-Button" id="btFavUndo" title="Undo changes"><img src="./icons/undoFav.png"
+                class="Icon-Small"></div>
+
+              <div class="BM-Button  BM-Small-Button" id="btFavSave" title="Save changes"><img src="./icons/saveFav.png"
+                class="Icon-Small"></div>
+
+<div class="btSpacer"></div>
+             
+              <div class="BM-Button  BM-Small-Button" id="btFavImport" title="Import BestMap JSON file"><img
+                  src="./icons/importFav.png" class="Icon-Small"></div>
+              <div class="BM-Button BM-Small-Button" id="btFavExport" title="Export to BestMap JSON file"><img
+                  src="./icons/exportFav.png" class="Icon-Small"></div>
+                  <div class="btSpacer"></div>
+
+                  <div class="BM-Button BM-Small-Button" id="btFavAdd" title="Add current place and view"><img
+                    src="./icons/addFav.png" class="Icon-Small"></div>
+
+                  <table id="FavTable" class="BM-Table">
                 <thead>
                   <tr>
                     <th title="Place name" id="headFavPlace">Place</th>
@@ -177,7 +176,7 @@
             </div>
             <!--  ABOUT TAB-->
             <div class="sidepanel-tab-content" data-tab-content="tab-about">
-              <h1>Best Map: <span id="curTitle"></span></h1>
+              <h1>Best Map</h1>
               <div class="BM-Input">
                 <label>Build:</label>
                 <input id="buildFld" type="text" disabled="true" value="0">
