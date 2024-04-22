@@ -7,12 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
   
-  <script type="module" crossorigin src="./assets/index.953f6d66.js"></script>
-  <link rel="stylesheet" href="./assets/index.9b91f352.css">
+  <script type="module" crossorigin src="./assets/index.d042b221.js"></script>
+  <link rel="stylesheet" href="./assets/index.29d00318.css">
 </head>
 
 <body>
   <div id="map">
+    <!-- Dialog Box for Import-->
     <div id="dlgUpload" class="dlgBox">
       <div class="dlgHeader">
         <h3>Import Favorites File</h3>
@@ -25,6 +26,17 @@
         <button id="btFavDoUpload" class="BM-Button" style="display:none">
           Upload
         </button>
+      </div>
+    </div>
+    <!-- Dialog Box for confirm-->
+    <div id="dlgconfirm" class="dlgBox">
+      <div class="dlgHeader">
+        <h3>Confirm</h3>
+      </div>
+      <div id="conQuestion"></div>
+      <div class="dlgButtons">
+        <button id="btConfYes" class="BM-Button">Yes</button>
+        <button id="btConfNo" class="BM-Button">No</button>
       </div>
     </div>
     <!-- Main Block  -->
