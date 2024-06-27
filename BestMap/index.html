@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
   
-  <script type="module" crossorigin src="./assets/index.ed3c47ea.js"></script>
+  <script type="module" crossorigin src="./assets/index.2888dbdb.js"></script>
   <link rel="stylesheet" href="./assets/index.a36f71d6.css">
 </head>
 
@@ -16,14 +16,14 @@
     <!-- Dialog Box for Import-->
     <div id="dlgUpload" class="dlgBox">
       <div class="dlgHeader">
-        <h3>Import Favorites File</h3>
+        <h3 data-label="impfavfile">Import Favorites File</h3>
       </div>
       <input type="file" id="btSelFavFile" accept=".json">
-      <label class="BM-Button" for="btSelFavFile">Select file</label>
+      <label class="BM-Button" for="btSelFavFile" data-label="selfav">Select file</label>
       <div id="selectedFavFileName"></div>
       <div class="dlgButtons">
-        <button id="btFavCancelUpload" class="BM-Button">Cancel</button>
-        <button id="btFavDoUpload" class="BM-Button" style="display:none">
+        <button id="btFavCancelUpload" class="BM-Button" data-label="cancel">Cancel</button>
+        <button id="btFavDoUpload" class="BM-Button" style="display:none" data-label="upload">
           Upload
         </button>
       </div>
@@ -31,12 +31,12 @@
     <!-- Dialog Box for confirm-->
     <div id="dlgconfirm" class="dlgBox">
       <div class="dlgHeader">
-        <h3>Confirm</h3> 
+        <h3 data-label="confirm">Confirm</h3>
       </div>
       <div id="conQuestion"></div>
       <div class="dlgButtons">
-        <button id="btConfYes" class="BM-Button">Yes</button>
-        <button id="btConfNo" class="BM-Button">No</button>
+        <button id="btConfYes" class="BM-Button" data-label="yes">Yes</button>
+        <button id="btConfNo" class="BM-Button" data-label="no">No</button>
       </div>
     </div>
     <!-- Main Block  -->
@@ -44,29 +44,35 @@
       <div class="sidepanel-inner-wrapper">
         <nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
           <ul class="sidepanel-tabs">
-            <li class="sidepanel-tab" title="Layer Selector">
+            <li class="sidepanel-tab" data-title="layerselec" title="Layer Selector">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-layer">
                 <img src="./icons/tabLayer.png" class="Icon-Small">
               </a>
             </li>
-            <li class="sidepanel-tab" title="Overlay Selector">
+            <li class="sidepanel-tab" title="Overlay Selector" data-title="overlaysel">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-overlay">
                 <img src="./icons/Overlay.png" class="Icon-Small">
               </a>
             </li>
-            <li class="sidepanel-tab" title="Tools">
+            <li class="sidepanel-tab" title="Tools" data-title="tools">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-tools">
                 <img src="./icons/tabTools.png" class="Icon-Small">
               </a>
             </li>
 
-            <li class="sidepanel-tab" title="Favorites Places">
+            <li class="sidepanel-tab" title="Favorites Places" data-title="favplace">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-fav">
                 <img src="./icons/tabFav.png" class="Icon-Small">
               </a>
             </li>
 
-            <li class="sidepanel-tab" title="About BestMap">
+            <li class="sidepanel-tab" data-title="pref" title="pref">
+              <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-pref">
+                <img src="./icons/pref.png" class="Icon-Small">
+              </a>
+            </li>
+
+            <li class="sidepanel-tab" title="About BestMap" data-title="aboutbm">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-about">
                 <img src="./icons/tabAbout.png" class="Icon-Small">
               </a>
@@ -83,87 +89,102 @@
             <!--  Overlay -->
 
             <div class="sidepanel-tab-content" data-tab-content="tab-overlay">
-              <div id="BM-Overlay-Nav-Panel">Overlay Here</div>
+              <h1 data-label="overlay"></h1>
+              <div id="BM-Overlay-Nav-Panel"></div>
             </div>
 
             <!--  TOOL TAB-->
             <div class="sidepanel-tab-content" data-tab-content="tab-tools">
-              <h2>Map Tools</h2>
+              <h2 data-label="maptools">Map Tools</h2>
               <div id="searchFld" class="BM-Input">
-                <label for="fSearch">Search:</label>
-                <input type="text" id="fSearch" name="fSearch" value="" placeholder="99 Rue untel,ville,province,pays">
+                <label for="fSearch" data-label="search">Search:</label>
+                <input type="text" id="fSearch" name="fSearch" value="" data-placeholder="addrexample"
+                  placeholder="99 Rue untel,ville,province,pays">
               </div>
-              <p>SHIFT + Mouse weel to rotate</p>
-              <div class="BM-Button" id="btFlipMarker" title="Marker"></div>
-              <div class="BM-Button" id="btGoHere" title="Go tu current position"></div>
-              <div class="BM-Button" id="btTrack" title="Track position"></div>
-              <div class="BM-Button" id="btMeasure" title="Measure"></div>
-              <h2>Open in</h2>
+              <p data-label="weeelzoom"></p>
+              <div class="BM-Button" id="btFlipMarker" title="Marker" data-title="marker"></div>
+              <div class="BM-Button" id="btGoHere"  data-title="gocurpos" ></div>
+              <div class="BM-Button" id="btTrack" data-title="trackpos"></div>
+              <div class="BM-Button" id="btMeasure" data-title="measure"></div>
+              <h2 data-label="openin">Open in</h2>
               <div class="BM-GOURL-Container">
                 <div id="btGoGoogle" class="BM-GOURL-Bt">
                   <img src="./layerIcons/GoogleMap.png">
-                  <div class="BM-GOURL-Bt-Name">Open in Google Map</div>
+                  <div class="BM-GOURL-Bt-Name">Google Map</div>
                 </div>
                 <div id="btGoGoogleEarth" class="BM-GOURL-Bt">
                   <img src="./icons/GoogleEarth.png">
-                  <div class="BM-GOURL-Bt-Name">Open in Google Earth</div>
+                  <div class="BM-GOURL-Bt-Name">Google Earth</div>
                 </div>
                 <div id="btGoOSM" class="BM-GOURL-Bt">
                   <img src="./layerIcons/Mapnik.png">
-                  <div class="BM-GOURL-Bt-Name">Open in Street Map</div>
+                  <div class="BM-GOURL-Bt-Name">Street Map</div>
                 </div>
                 <div id="btGoBing" class="BM-GOURL-Bt">
                   <img src="./layerIcons/BingMap.png">
-                  <div class="BM-GOURL-Bt-Name">Open in Bing</div>
+                  <div class="BM-GOURL-Bt-Name">Bing</div>
                 </div>
               </div>
             </div>
             <!--  Favorites -->
             <div class="sidepanel-tab-content" data-tab-content="tab-fav">
-              <h1>Favorites saved places</h1>
-              <div class="BM-Button  BM-Small-Button" id="btFavSave" title="Save changes"><img src="./icons/saveFav.png"
+              <h1 data-label="favsaved">Favorites saved places</h1>
+              <div class="BM-Button  BM-Small-Button" id="btFavSave" data-title="savechange"><img src="./icons/saveFav.png"
                   class="Icon-Small"></div>
-              <div class="BM-Button  BM-Small-Button" id="btFavUndo" title="Undo changes"><img src="./icons/undoFav.png"
+              <div class="BM-Button  BM-Small-Button" id="btFavUndo" data-title="undo"><img src="./icons/undoFav.png"
                   class="Icon-Small"></div>
               <div class="btSpacer"></div>
 
-              <div class="BM-Button  BM-Small-Button" id="btFavImport" title="Import BestMap JSON file"><img
+              <div class="BM-Button  BM-Small-Button" id="btFavImport" data-title="impJSON"><img
                   src="./icons/importFav.png" class="Icon-Small"></div>
-              <div class="BM-Button BM-Small-Button" id="btFavExport" title="Export to BestMap JSON file"><img
+              <div class="BM-Button BM-Small-Button" id="btFavExport" data-title="expJSON"><img
                   src="./icons/exportFav.png" class="Icon-Small"></div>
               <div class="btSpacer"></div>
-              <div class="BM-Button BM-Small-Button" id="btFavToGeoJSON" title="Export to GeoJSON file"><img
-                src="./icons/exportGeoJSON.png" class="Icon-Small"></div>
+              <div class="BM-Button BM-Small-Button" id="btFavToGeoJSON" data-title="expGeoJSON"><img
+                  src="./icons/exportGeoJSON.png" class="Icon-Small"></div>
 
               <div class="btSpacer"></div>
 
-              <div class="BM-Button BM-Small-Button" id="btFavAdd" title="Add current place and view"><img
+              <div class="BM-Button BM-Small-Button" id="btFavAdd" data-title="addviewtofav"><img
                   src="./icons/addFav.png" class="Icon-Small"></div>
 
               <table id="FavTable" class="BM-Table">
                 <thead>
                   <tr>
-                    <th title="Place name" id="headFavPlace">Place</th>
-                    <th title="View the location" width="40px">View</th>
-                    <th title="Update URL with current location and view">Update</th>
-                    <th title="Delete this place">Delete</th>
+                    <th data-title="placename" id="headFavPlace" data-label="place">Place</th>
+                    <th data-title="golocation" width="40px" data-label="view">View</th>
+                    <th data-title="updateview" data-label="update">Update</th>
+                    <th data-title="delplace" data-label="delete">Delete</th>
                   </tr>
                 </thead>
                 <tbody id="FavTableBody">
                 </tbody>
               </table>
             </div>
+            <!-- Preferences tab -->
+            <div class="sidepanel-tab-content" data-tab-content="tab-pref">
+              <h1 data-label="pref">pref</h1>
+              <label for="languageDropdown" data-label="chooselang">Choose a language:</label>
+              <select id="languageDropdown" name="language">
+              </select>
+              <hr>
+              <div class="BM-Button BM-Small-Button" id="btPrefSave" data-title="savechange"><img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqCAMAAACbSil8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURQAAABREWBRGVhVFVxU/VRVGVxcsURtWbCFmgiZ3lyyHrTWjj0XRq1X/x6nNcHEAAAAEdFJOUwBAgL+jVN0MAAAACXBIWXMAADLAAAAywAEoZFrbAAAEUUlEQVR4Xu3bcXuTMBSFcVqstG5+/68rkLM+lpElN3BCcznvP85Ve/MzgdZNu2SXW8P11wsYGTUtnbtCkqp96VjWzrqQZm2sE2mG1Y00eYYdSW89TOt5kv68rb6ktxtYK3mTxrfVnTR6tfqTxqgOpRGqR+n6fcmndI3qVLpC9Sr9TnUr/Ub1K11SHUsX1HzprwPDEqzBGDLs6e8DwxKsATlnOb2YekhYgjUop0zX6d8DwxKsgTlmuyNh6iFhCdbgtEpbphqlDVOt0napZmmzVLu0VWqBtFFqibRNapG0SWqZtEkqfrSGqehjpU88tn9YgrVdqJ/45EsfeHD/MMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNXQiauWwBGuiJsPUQ8ISrImaDFMPCUuwJmoyTD0kLMGaqMkw9ZCwBGuiJsPUQ8ISrImaDFMPCUuwVkr9PDAswVoptcFE9ZioHhPVY6J6TFSPieoxUT0mqsdE9ZiovIbhHhrwiWrVpA7D489Ldb3VqMNj4UR3PM6vEnW5n/93r6StQv0JOvWogq1ATUGnalj51Ds0ifhYOjVjS0N0K5mac3ifkV95uNQBiMy4VirVKCVbmVSzlGslUgukVCuRarkjPXvgNxPiUTNfT5fxXnNo1EIp0UqjYuEF4Ql2j0Ut3lTe5UqibpDS7sLvSCVtK4e6Scra1rekcraVQ8WSi8PT7BuFunFTSSeYQo28JcQXgF9a/6WUE0yhYsGLVtcf+VPBo7vGoEbOr4XKOMFvSmWcYAbVsvzGqVjuMguVcbGKuqXYF1pMVMJ9SdQtnYgae1uoXV2P8BUmHeAtieqRqndLLqmR5Vuoq792YwzqDn+JY3w3g0GN3JcsVMJdiUI90RdcohfgSnhoEeW7cRRq7JU1u3aosZeb7PA0+8ahRs5lbpzvJnOoG08wnmXnONRt28rZVBZ107biOfaORN3yHSrSptKoG44wnmD3aNTiI8x4TzhHo5YeYdbxZVLLjjBPyqSWWBl/T/2KSbVbmVIu1WqlSslUm5UrZVMt92HiHWmOTc23sqV86m3Iwj5o7xye8alZG0vf0rEa1CS2BrQW9Sdsnf/mOFaLGrlmHxWu0a/qUade/k3hyKznHKtLnRvm8JOKHUA9KlE9JqrHRPWYqB4T1WOiekxUj4nqMVE9JqrHRPWYqB4T1WOiekxUj3U9PvDfeaj9eajX7oKP3HfpTnNf6rqzbOt1pJ7kap2k59jW8UqduuKnjpuP75R761Pq/Qz3OL3I8ca+QqcuV3+34r5/7mjX/QPoBGoX1Dx4ugAAAABJRU5ErkJggg==" class="Icon-Small"></div>
+              <div class="BM-Button BM-Small-Button" id="btPrefCancel" data-title="undo"><img
+                  src="./assets/Cancel.454b20d3.png" class="Icon-Small"></div>
+
+            </div>
             <!--  ABOUT TAB-->
             <div class="sidepanel-tab-content" data-tab-content="tab-about">
               <h1>Best Map</h1>
-            <div  Class="AboutLogo"><img src="./assets/BestMap-logo.891922c1.png"></div>
+              <div Class="AboutLogo"><img src="./assets/BestMap-logo.891922c1.png"></div>
               <div class="BM-Input">
                 <label>Build:</label>
                 <input id="buildFld" type="text" disabled="true" value="0">
               </div>
 
               <div class="BM-Input">
-                <label>Author:</label>
+                <label data-label="autor">Author:</label>
                 <input type="text" disabled="true" value="Guy Bruneau">
               </div>
 
@@ -179,43 +200,43 @@
               <hr>
 
               <div class="BM-Input">
-                <label for="fTitle">Map Name:</label>
+                <label for="fTitle" data-label="mapname">Map Name:</label>
                 <input type="text" id="fTitle" name="fTitle" disabled="true">
               </div>
               <div class="BM-Input">
-                <label for="fLayer">Base Map:</label>
+                <label for="fLayer" data-label="basemap">Base Map:</label>
                 <input type="text" id="fLayer" name="fLayer" disabled="true">
               </div>
               <div class="BM-Input">
-                <label for="fRot">Map Rotation:</label>
+                <label for="fRot" data-label="rotation">Map Rotation:</label>
                 <input type="number" id="fRot" name="fRot" disabled="true" min="0" max="360" step="15">
               </div>
               <div class="BM-Input">
-                <label for="fLat">Latitude:</label>
+                <label for="fLat" data-label="lat">Latitude:</label>
                 <input type="number" id="fLat" name="fLat" disabled="true" min="-90" max="90" step="15">
               </div>
               <div class="BM-Input">
-                <label for="fLng">Longitude:</label>
+                <label for="fLng" data-label="lng">Longitude:</label>
                 <input type="number" id="fLng" name="fLng" disabled="true" min="-180" max="180" step="15">
               </div>
               <div class="BM-Input">
-                <label for="fZoom">Zoom:</label>
+                <label for="fZoom" data-label="zoom">Zoom:</label>
                 <input type="number" id="fZoom" name="fZoom" disabled="true" min="0" max="22">
               </div>
               <div class="BM-Input">
-                <label for="fLayerID">Base Map ID:</label>
+                <label for="fLayerID" data-label="bmid">Base Map ID:</label>
                 <input type="text" id="fLayerID" name="fLayerID" disabled="true">
               </div>
 
-              <div class="BM-Button BM-Small-Button" id="btEdit" title="Edit Current Position"><img
+              <div class="BM-Button BM-Small-Button" id="btEdit" data-title="editcurpos"><img
                   src="./icons/Edit.png" class="Icon-Small"></div>
-              <div class="BM-Button BM-Small-Button" id="btEditSave" title="Save Changes"><img
+              <div class="BM-Button BM-Small-Button" id="btEditSave" data-title="savechange"><img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqCAMAAACbSil8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURQAAABREWBRGVhVFVxU/VRVGVxcsURtWbCFmgiZ3lyyHrTWjj0XRq1X/x6nNcHEAAAAEdFJOUwBAgL+jVN0MAAAACXBIWXMAADLAAAAywAEoZFrbAAAEUUlEQVR4Xu3bcXuTMBSFcVqstG5+/68rkLM+lpElN3BCcznvP85Ve/MzgdZNu2SXW8P11wsYGTUtnbtCkqp96VjWzrqQZm2sE2mG1Y00eYYdSW89TOt5kv68rb6ktxtYK3mTxrfVnTR6tfqTxqgOpRGqR+n6fcmndI3qVLpC9Sr9TnUr/Ub1K11SHUsX1HzprwPDEqzBGDLs6e8DwxKsATlnOb2YekhYgjUop0zX6d8DwxKsgTlmuyNh6iFhCdbgtEpbphqlDVOt0napZmmzVLu0VWqBtFFqibRNapG0SWqZtEkqfrSGqehjpU88tn9YgrVdqJ/45EsfeHD/MMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNXQiauWwBGuiJsPUQ8ISrImaDFMPCUuwJmoyTD0kLMGaqMkw9ZCwBGuiJsPUQ8ISrImaDFMPCUuwVkr9PDAswVoptcFE9ZioHhPVY6J6TFSPieoxUT0mqsdE9ZiovIbhHhrwiWrVpA7D489Ldb3VqMNj4UR3PM6vEnW5n/93r6StQv0JOvWogq1ATUGnalj51Ds0ifhYOjVjS0N0K5mac3ifkV95uNQBiMy4VirVKCVbmVSzlGslUgukVCuRarkjPXvgNxPiUTNfT5fxXnNo1EIp0UqjYuEF4Ql2j0Ut3lTe5UqibpDS7sLvSCVtK4e6Scra1rekcraVQ8WSi8PT7BuFunFTSSeYQo28JcQXgF9a/6WUE0yhYsGLVtcf+VPBo7vGoEbOr4XKOMFvSmWcYAbVsvzGqVjuMguVcbGKuqXYF1pMVMJ9SdQtnYgae1uoXV2P8BUmHeAtieqRqndLLqmR5Vuoq792YwzqDn+JY3w3g0GN3JcsVMJdiUI90RdcohfgSnhoEeW7cRRq7JU1u3aosZeb7PA0+8ahRs5lbpzvJnOoG08wnmXnONRt28rZVBZ107biOfaORN3yHSrSptKoG44wnmD3aNTiI8x4TzhHo5YeYdbxZVLLjjBPyqSWWBl/T/2KSbVbmVIu1WqlSslUm5UrZVMt92HiHWmOTc23sqV86m3Iwj5o7xye8alZG0vf0rEa1CS2BrQW9Sdsnf/mOFaLGrlmHxWu0a/qUade/k3hyKznHKtLnRvm8JOKHUA9KlE9JqrHRPWYqB4T1WOiekxUj4nqMVE9JqrHRPWYqB4T1WOiekxUj3U9PvDfeaj9eajX7oKP3HfpTnNf6rqzbOt1pJ7kap2k59jW8UqduuKnjpuP75R761Pq/Qz3OL3I8ca+QqcuV3+34r5/7mjX/QPoBGoX1Dx4ugAAAABJRU5ErkJggg==" class="Icon-Small"></div>
-              <div class="BM-Button BM-Small-Button" id="btEditCancel" title="Cancel"><img
+              <div class="BM-Button BM-Small-Button" id="btEditCancel" data-title="cancel"><img
                   src="./assets/Cancel.454b20d3.png" class="Icon-Small"></div>
               <h2>Share</h2>
-              <div id="shareToClipboard" class="BM-Button" title="Share to Clipboard"></div>
-              <div id="shareToMail" class="BM-Button" title="Share by e-mail"></div>
+              <div id="shareToClipboard" class="BM-Button" data-title="shareclipboard"></div>
+              <div id="shareToMail" class="BM-Button" data-title="shareemail"></div>
 
 
 
