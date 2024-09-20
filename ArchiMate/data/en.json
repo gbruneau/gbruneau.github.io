@@ -1,5 +1,5 @@
 {
-  "maintitle": "ArchiMate 3 Cheat Sheet",
+  "maintitle": "ArchiMate 3.2 Cheat Sheet",
   "sellang": "Language",
   "contrib": "Contributors", 
 
@@ -55,10 +55,10 @@
   "motie2": "Driver: Represents an external or internal condition that motivates an organization to define its goals and implement the changes necessary to achieve them.",
   "motie3": "Assessment: Represents the result of an analysis of the state of affairs of the enterprise with respect to some driver",
   "motie4": "Goal: Represents a high-level statement of intent, direction, or desired end state for an organization and its stakeholders.",
-  "motie5": "Outcome: Represents an end result.",
+  "motie5": "Outcome: An outcome represents an end result, effect, or consequence of a certain state of affairs.",
   "motie6": "Principle: Represents a statement of intent defining a general property that applies to any system in a certain context in the architecture.",
   "motie7": "Requirement: Represents a statement of need defining a property that applies to a specific system as described by the architecture.",
-  "motie8": "Constraint: Represents a factor that limits the realization of goals.",
+  "motie8": "Constraint: Represents a limitation on aspects of the architecture, its implementation process, or its realization.",
   "motie9": "Meaning: Represents the knowledge or expertise present in, or the interpretation given to, a concept in a particular context.",
   "motie10": "Value: Represents the relative worth, utility, or importance of a concept.",
   "motiex1": "Stakeholder, Driver, and Assessmen",
@@ -78,6 +78,7 @@
   "strad2" : "Capability:  Represents an ability that an active structure element, such as an organization, person, or system, possesses.", 
   "strad3" : "Course of action: Represents an approach or plan for configuring some capabilities and resources of the enterprise, undertaken to achieve a goal.",
   "strad4" : "Location: Represents a physical location.",
+  "strad5" : "Value Stream: A value stream represents a sequence of activities that create an overall result for a customer, stakeholder, or end user.",
 
   "busi" : "Business Layer",
   "busic1": "Section",
@@ -100,14 +101,14 @@
 
 
   "busid1" : "Business Process: Represents a sequence of business behaviors that achieves a specific result such as a defined set of products or business services.",
-  "busid2" : "Business Function: Represents a collection of business behavior based on a chosen set of criteria (typically required business resources and/or competencies), closely aligned to an organization, but not necessarily explicitly governed by the organization.",
+  "busid2" : "Business Function: Represents a collection of business behavior based on a chosen set of criteria such as required business resources and/or competencies, and is managed or performed as a whole.",
   "busid3" : "Business Interaction: Represents a unit of collective business behavior performed by (a collaboration of) two or more business actors, business roles, or business collaborations.",
   "busid4" : "Business Event: Represents an organizational state change.",
   "busid5" : "Business Service: Represents explicitly defined behavior that a business role, business actor, or business collaboration exposes to its environment.",
   "busid6" : "Business Object: Represents a concept used within a particular business domain.",
   "busid7" : "Contract: Represents a formal or informal specification of an agreement between a provider and a consumer that specifies the rights and obligations associated with a product and establishes functional and non-functional parameters for interaction.",
   "busid8" : "Representation: Represents a perceptible form of the information carried by a business object.",
-  "busid9" : "Product: Represents a coherent collection of services and/or passive structure elements, accompanied by a contract/set of agreements, which is offered as a whole to (internal or external) customers.",
+  "busid9" : "Product: A product represents a coherent collection of services and/or passive structure elements, accompanied by a contract, which is offered as a whole to (internal or external) customers.",
 
   "app" : "Application Layer", 
   "appc1": "Section",

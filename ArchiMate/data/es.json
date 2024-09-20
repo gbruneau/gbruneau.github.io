@@ -1,5 +1,5 @@
 {
-  "maintitle": "Hoja de trucos de ArchiMate 3",
+  "maintitle": "Hoja de trucos de ArchiMate 3.2",
   "sellang": "Idioma",
   "contrib": "Contribuyentes", 
 
@@ -55,10 +55,10 @@
   "motie2": "Impulsor (Driver): Representa una condición externa o interna que motiva a una organización a definir sus objetivos e implementar los cambios necesarios para alcanzarlos.",
   "motie3": "Evaluación  (Assessment): Representa el resultado de un análisis del estado de los asuntos de la empresa con respecto a algún impulsor.",
   "motie4": "Objetivo (Goal): Representa una declaración de alto nivel de intención, dirección o estado final deseado para una organización y sus partes interesadas.",
-  "motie5": "Resultado (Outcome): Representa un resultado final.",
+  "motie5": "Resultado (Outcome): Representa un resultado final, efecto o consecuencia de un determinado estado de cosas.",
   "motie6": "Principio (Principle): Representa una declaración de intención que define una propiedad general que se aplica a cualquier sistema en un cierto contexto en la arquitectura.",
   "motie7": "Requisito (Requirement): Representa una declaración de necesidad que define una propiedad que se aplica a un sistema específico según lo descrito por la arquitectura.",
-  "motie8": "Restricción (Constraint): Representa un factor que limita la realización de objetivos.",
+  "motie8": "Restricción (Constraint): Representa una limitación en aspectos de la arquitectura, su proceso de implementación o su realización.",
   "motie9": "Significado (Meaning): Representa el conocimiento o la experiencia presente en, o la interpretación dada a, un concepto en un contexto particular.",
   "motie10": "Valor (Value): Representa el valor relativo, utilidad o importancia de un concepto.",
   "motiex1": "Participante, Impulsor y Evaluación",
@@ -78,6 +78,7 @@
   "strad2": "Capacidad (Capability): Representa una habilidad que posee un elemento de estructura activa, como una organización, persona o sistema.",
   "strad3": "Curso de acción (Course of action): Representa un enfoque o plan para configurar algunas capacidades y recursos de la empresa, realizado para alcanzar un objetivo.",
   "strad4": "Ubicación (Location): Representa un lugar físico.",
+  "strad5" : "Flujo de valor: Representa una secuencia de actividades que crean un resultado general para un cliente, una parte interesada o un usuario final.",
 
   "busi": "Negocios",
   "busic1": "Sección",
@@ -99,14 +100,14 @@
   "busia4": "Interfaz de Negocio (Business Interface): Representa un punto de acceso donde un servicio de negocios está disponible para el entorno.",
 
   "busid1": "Proceso Empresarial: Representa una secuencia de comportamientos empresariales que logra un resultado específico, como un conjunto definido de productos o servicios empresariales.",
-  "busid2": "Función Empresarial: Representa una colección de comportamientos empresariales basada en un conjunto elegido de criterios (típicamente recursos y/o competencias empresariales requeridas), estrechamente alineada con una organización, pero no necesariamente gobernada explícitamente por la organización.",
+  "busid2": "Función Empresarial: Representa una colección de comportamientos empresariales basada en un conjunto elegido de criterios (típicamente recursos y/o com",
   "busid3": "Interacción Empresarial: Representa una unidad de comportamiento empresarial colectivo realizado por (una colaboración de) dos o más actores empresariales, roles empresariales o colaboraciones empresariales.",
   "busid4": "Evento Empresarial: Representa un cambio de estado organizativo.",
   "busid5": "Servicio Empresarial: Representa un comportamiento explícitamente definido que un rol empresarial, actor empresarial o colaboración empresarial expone a su entorno.",
   "busid6": "Objeto Empresarial: Representa un concepto utilizado dentro de un dominio empresarial particular.",
   "busid7": "Contrato: Representa una especificación formal o informal de un acuerdo entre un proveedor y un consumidor que especifica los derechos y obligaciones asociados con un producto y establece parámetros funcionales y no funcionales para la interacción.",
   "busid8": "Representación: Representa una forma perceptible de la información llevada por un objeto empresarial.",
-  "busid9": "Producto: Representa una colección coherente de servicios y/o elementos pasivos de estructura, acompañada de un contrato/conjunto de acuerdos, que se ofrece en su totalidad a los clientes (internos o externos).",
+  "busid9": "Producto: Representa un conjunto coherente de servicios y/o elementos de estructura pasiva, acompañado de un contrato, que se ofrece en su conjunto a clientes (internos o externos).",
 
    "app": "Aplicación",
    "appc1": "Sección",
@@ -157,7 +158,7 @@
   "phy": "Física",
   "phyc1": "Sección",
   "phyc2": "Ícono",
-  "phyc3": "Ejemplos de Capa Tecnológica",
+  "phyc3": "Ejemplos de Capa Física",
   "phyr1": "Estructura<br>Activa",
   "phyr3": "Elemento<br>de<br>Estructura<br>Pasiva",
 
