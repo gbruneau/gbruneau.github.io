@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Archimate Cheat Sheet</title>
+    <link rel="icon" type="image/x-icon" href="./images/logoAM.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="lib/zoom-by-ironex.min.js"></script>
+
+</head>
+
+<body>
+    <!-- === Dialog Box for Relationships === -->
+
+    <div id="diagRef" data-t9n-t="relt" title="Relationships Reference" class="gbDialog">
+        <table class="" autofocus>
+            <thead>
+                <tr>
+                    <th colspan="2" rowspan="1" scope="col" data-t9n="relc1">Structural</th>
+                    <th colspan="2" rowspan="1" scope="col" data-t9n="relc2">Dependency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/relCompose.png" data-t9n-t="relt1" /><br />
+                        <span data-t9n="relt1n">Composition</span>
+                    </td>
+                    <td> <img src="images/relAgregate.png" data-t9n-t="relt2"><br />
+                        <span data-t9n="relt2n">Aggregation</span>
+                        <br>
+                    </td>
+                    <td> <img src="images/relServe.png" data-t9n-t="relt3">
+                        <br><span data-t9n="relt3n">Serving</span>
+                    </td>
+                    <td><img src="images/relAccess.png" data-t9n-t="relt4">
+                        <br><span data-t9n="relt4n">Access</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="images/relAssigne.png" data-t9n-t="relt5">
+                        <br><span data-t9n="relt5n">Assigment</span>
+                    </td>
+                    <td><img src="images/relRealise.png" data-t9n-t="relt6">
+                        <br><span data-t9n="relt6n">Realization</span>
+                    </td>
+                    <td><img src="images/relInfluence.png" data-t9n-t="relt7">
+                        <br><span data-t9n="relt7n">Influence</span>
+                    </td>
+                    <td><img src="images/relAssoc.png" data-t9n-t="relt8">
+                        <br><span data-t9n="relt8n">Association</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" rowspan="1" scope="col" data-t9n="relc3">Dynamic</th>
+                    <th colspan="1" rowspan="1" scope="col" data-t9n="relc4">Other</th>
+                    <th colspan="1" rowspan="1" scope="col" data-t9n="relc5">Connectors</th>
+                </tr>
+                <tr>
+                    <td><img src="images/relSpecialize.jpg" data-t9n-t="relt9">
+                        <br><span data-t9n="relt9n">Triggering</span>
+                    </td>
+                    <td><img src="images/relFlow.png" data-t9n-t="relt10">
+                        <br><span data-t9n="relt10n">Flow</span>
+                    </td>
+                    <td><img src="images/relSpecialize.jpg" data-t9n-t="relt11">
+                        <br><span data-t9n="relt11n">Specialization</span>
+                    </td>
+                    <td><img src="images/relJunction.png" data-t9n-t="relt12">
+                        <br><span data-t9n="relt12n">Junction</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- === Main Layout === -->
+
+    <h1 class="mainTitle" data-t9n="maintitle">ArchiMate 3 Cheat Sheet</h1>
+    <div class="gbLang">
+        <label for="langSelector" data-t9n="sellang">Select Language: </label>
+        <select id="langSelector"></select>
+    </div>
+    <div class="gbHelp">?</div>
+
+
+    <div id="layers">
+        <!-- Vertical Tabs titles-->
+        <ul>
+            <li id="tIntro"><a href="#introContent" data-t9n="intro">Introduction</a></li>
+            <li id="tMeta"><a href="#metaContent" data-t9n="meta">Metamodel</a></li>
+            <li id="tMotiv"><a href="#motivationLayerContent" data-t9n="moti">Motivation</a></li>
+            <li id="tStrat"><a href="#stratLayerContent" data-t9n="stra">Strategy</a></li>
+            <li id="tBusi"><a href="#bLayerContent" data-t9n="busi">Business Layer</a></li>
+            <li id="tApp"><a href="#appLayerContent" data-t9n="app">Application Layer</a></li>
+            <li id="tTech"><a href="#techLayerContent" data-t9n="tech">Technology Layer</a></li>
+            <li id="tPhy"><a href="#phyLayerContent" data-t9n="phy">Physical Layer</a></li>
+            <li id="tImp"><a href="#impLayerContent" data-t9n="imp">Implementation<br>and Migration</a></li>
+
+            <li id="tOther"><a href="#otherContent" data-t9n="oth">Other</a></li>
+
+            <li id="tAbout"><a href="#aboutContent" data-t9n="about">About A3CC</a></li>
+        </ul>
+
+        <!-- === INTRODUCTION -->
+
+        <div id="introContent" class="gbContent">
+            <span data-t9n="intros1">This cheat sheet is a brief overview of the Archimate Standard for
+                Architecture.</span><br><span data-t9n="intros2">Please refer to the </span><a
+                href="https://pubs.opengroup.org/architecture/archimate32-doc/" target="openGroup"
+                data-t9n="intros3">Official Archimate 3 Reference from the Open Group</a> <span data-t9n="intros4">for
+                more information and detail.</span><br><span data-t9n="intros5">On all the examples, you can use the
+                mouse weel to zomm in/zoom out.</span><br><br> <span data-t9n="intros6">Enjoy.</span><br>
+            <br><a class="signatureGB" href="https://www.linkedin.com/in/guybruneau1964" target="linkedin">Guy
+                Bruneau</a><br>
+            <img data-t9n-img="allLayers" class="arcBigDiagram"><br><span data-t9n="intros7">The ArchiMate Full
+                Framework</span>
+        </div>
+
+        <!-- === Metamodel ===-->
+
+        <div id="metaContent" class="gbContent">
+            <img class="arcBigDiagram" data-t9n-img="metamodel"><br><span data-t9n="metas1">Overview of the
+                metamodel</span>
+        </div>
+
+        <!-- === MOTIVATION ===-->
+
+        <div id="motivationLayerContent">
+            <table class="layerTable">
+                <thead>
+                    <tr>
+                        <th scope="col" data-t9n="motic1">Section</th>
+                        <th scope="col" data-t9n="motic2">Icon</th>
+                        <th scope="col" data-t9n="motic3">Motivation Aspect Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="motir1">Elements</td>
+                        <td>
+                            <img data-t9n-img="mStakeholder" class="arcElem" data-t9n-t="motie1"><br>
+                            <img data-t9n-img="mDriver" class="arcElem" data-t9n-t="motie2"><br>
+                            <img data-t9n-img="mAssesment" class="arcElem" data-t9n-t="motie3"><br>
+                            <img data-t9n-img="mGoal" class="arcElem" data-t9n-t="motie4"><br>
+                            <img data-t9n-img="mOutcome" class="arcElem" data-t9n-t="motie5"><br>
+                            <img data-t9n-img="mPrinciple" class="arcElem" data-t9n-t="motie6"><br>
+                            <img data-t9n-img="mRequirement" class="arcElem" data-t9n-t="motie7"><br>
+                            <img data-t9n-img="mConstraint" class="arcElem" data-t9n-t="motie8"><br>
+                            <img data-t9n-img="mMeaning" class="arcElem" data-t9n-t="motie9"><br>
+                            <img data-t9n-img="mValue" class="arcElem" data-t9n-t="motie10">
+                        </td>
+                        <td colspan="1" rowspan="0">
+                            <div class="gbTabs">
+                                <ul>
+                                    <li><a href="#mExample1">1</a></li>
+                                    <li><a href="#mExample2">2</a></li>
+                                    <li><a href="#mExample3">3</a></li>
+                                </ul>
+                                <div id="mExample1">
+                                    <h3 data-t9n="motiex1">Stakeholder, Driver, and Assessment</h3>
+                                    <img data-t9n-img="mExample1" class="arcExample">
+                                </div>
+                                <div id="mExample2">
+                                    <h3 data-t9n="motiex2">Goal, Outcome, Principle, Requirement, and Constraint</h3>
+                                    <img data-t9n-img="mExample2" class="arcExample">
+                                </div>
+                                <div id="mExample3">
+                                    <h3 data-t9n="motiex3">Meaning and Value</h3>
+                                    <img data-t9n-img="mExample3" class="arcExample">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- === STRATEGY  ===-->
+        <div id="stratLayerContent">
+            <table class="layerTable">
+                <thead>
+                    <tr>
+                        <th scope="col" data-t9n="strac1">Section</th>
+                        <th scope="col" data-t9n="strac2">Icon</th>
+                        <th scope="col" data-t9n="strac3">Strategy Layer Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="strar1">Active<br>Structure</td>
+                        <td><img data-t9n-img="sResource" class="arcElem" data-t9n-t="strad1"></td>
+                        <td colspan="1" rowspan="0">
+                            <div class="gbTabs">
+                                <ul>
+                                    <li><a href="#sExample1">1</a></li>
+                                    <li><a href="#sExample2">2</a></li>
+                                </ul>
+                                <div id="sExample1">
+                                    <h3 data-t9n="strae1">Capability, Resource, and Course of Action</h3>
+                                    <img data-t9n-img="sExample1" class="arcExample">
+                                </div>
+                                <div id="sExample2">
+                                    <h3 data-t9n="strae2">Value Stream with Capability Cross-Mapping</h3>
+                                    <img data-t9n-img="sExample2" class="arcExample">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="strar2">Behavior<br>Element</td>
+                        <td><img data-t9n-img="sCapability" class="arcElem" data-t9n-t="strad2">
+                            <br>
+                            <img data-t9n-img="sValueStream" class="arcElem" data-t9n-t="strad5">
+                            <br>
+                            <img data-t9n-img="sCourseOfAction" class="arcElem" data-t9n-t="strad3">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- === Busines === -->
+        <div id="bLayerContent">
+
+            <table class="layerTable">
+                <thead>
+                    <tr>
+                        <th scope="col" data-t9n="busic1">Section</th>
+                        <th scope="col" data-t9n="busic2">Icon</th>
+                        <th scope="col" data-t9n="busic3">Business Layer Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="busir1">Active<br>Structure</td>
+                        <td>
+                            <img data-t9n-img="bActor" class="arcElem" data-t9n-t="busia1"><br>
+                            <img data-t9n-img="bRole" class="arcElem" data-t9n-t="busia2"><br>
+                            <img data-t9n-img="bColl" class="arcElem" data-t9n-t="busia3"><br>
+                            <img data-t9n-img="bInterface" class="arcElem" data-t9n-t="busia4">
+                        </td>
+                        <td colspan="1" rowspan="0">
+                            <div class="gbTabs">
+                                <ul>
+                                    <li><a href="#bExample1">1</a></li>
+                                    <li><a href="#bExample2">2</a></li>
+                                    <li><a href="#bExample3">3</a></li>
+                                    <li><a href="#bExample4">4</a></li>
+                                </ul>
+                                <div id="bExample1">
+                                    <h3 data-t9n="busie1">Business Active Structure Elements</h3>
+                                    <img data-t9n-img="bExample1" class="arcExample">
+                                </div>
+                                <div id="bExample2">
+                                    <h3 data-t9n="busie2">Business Behavior Elements</h3>
+                                    <img data-t9n-img="bExample2" class="arcExample">
+                                </div>
+                                <div id="bExample3">
+                                    <h3 data-t9n="busie3">Business Passive Structure Elements</h3>
+                                    <img data-t9n-img="bExample3" class="arcExample">
+                                </div>
+                                <div id="bExample4">
+                                    <h3 data-t9n="busie4">Business Composite Element: Product</h3>
+                                    <img data-t9n-img="bExample4" class="arcExample">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="busir2">Behavior<br>Element</td>
+                        <td>
+                            <img data-t9n-img="bProcess" class="arcElem" data-t9n-t="busid1"><br>
+                            <img data-t9n-img="bFunction" class="arcElem" data-t9n-t="busid2"><br>
+                            <img data-t9n-img="bInterraction" class="arcElem" data-t9n-t="busid3"><br>
+                            <img data-t9n-img="bEvent" class="arcElem" data-t9n-t="busid4"><br>
+                            <img data-t9n-img="bService" class="arcElem" data-t9n-t="busid5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n-t="busir3">Passive<br>Structure<br>Element</td>
+                        <td>
+                            <img data-t9n-img="bObject" class="arcElem" data-t9n-t="busid6"><br>
+                            <img data-t9n-img="bContract" class="arcElem" data-t9n-t="busid7"><br>
+                            <img data-t9n-img="bRepresentation" class="arcElem" data-t9n-t="busid8">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="busir4">Composite<br>Element</td>
+                        <td>
+                            <img data-t9n-img="bProduct" class="arcElem" data-t9n-t="busid9">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <!-- === APPLICATION ===-->
+        <div id="appLayerContent">
+            <table class="layerTable">
+                <thead>
+                    <tr>
+                        <th scope="col" data-t9n="appc1">Section</th>
+                        <th scope="col" data-t9n="appc2">Icon</th>
+                        <th scope="col" data-t9n="appc3">Application Layer Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="appr1">Active<br>Structure</td>
+                        <td>
+                            <img data-t9n-img="appComponent" class="arcElem" data-t9n-t="appd1">
+                            <br>
+                            <img data-t9n-img="appCollaboration" class="arcElem" data-t9n-t="appd2">
+                            <br>
+                            <img data-t9n-img="appInterface" class="arcElem" data-t9n-t="appd3">
+                        </td>
+                        <td colspan="1" rowspan="0">
+                            <div class="gbTabs">
+                                <ul>
+                                    <li><a href="#appExample1">1</a></li>
+                                    <li><a href="#appExample2">2</a></li>
+                                    <li><a href="#appExample3">3</a></li>
+                                </ul>
+                                <div id="appExample1">
+                                    <h3 data-t9n="appe1">Application Active Structure Elements</h3>
+                                    <img data-t9n-img="appExample1" class="arcExample">
+                                </div>
+                                <div id="appExample2">
+                                    <h3 data-t9n="appe2">Application Behavior Elements</h3>
+                                    <img data-t9n-img="appExample2" class="arcExample">
+                                </div>
+                                <div id="appExample3">
+                                    <h3 data-t9n="appe3">Application Passive Structure Elements</h3>
+                                    <img data-t9n-img="appExample3" class="arcExample">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="appr2">Behavior<br>Element</td>
+                        <td>
+                            <img data-t9n-img="appFunction" class="arcElem" data-t9n-t="appd4">
+                            <br>
+                            <img data-t9n-img="appInteraction" class="arcElem" data-t9n-t="appd5">
+                            <br>
+                            <img data-t9n-img="appProcess" class="arcElem" data-t9n-t="appd6">
+                            <br>
+                            <img data-t9n-img="appEvent" class="arcElem" data-t9n-t="appd7">
+                            <br>
+                            <img data-t9n-img="appService" class="arcElem" data-t9n-t="appd8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="appr3">Passive<br>Structure<br>Element</td>
+                        <td>
+                            <img data-t9n-img="appDataObj" class="arcElem" data-t9n-t="appd9">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- === TECHNOLOGY === -->
+        <div id="techLayerContent">
+            <table class="layerTable">
+                <thead>
+                    <tr>
+                        <th scope="col" data-t9n="techc1">Section</th>
+                        <th scope="col" data-t9n="techc2">Icon</th>
+                        <th scope="col" data-t9n="techc3">Technology Layer Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="techr1">Active<br>Structure</td>
+                        <td>
+                            <img data-t9n-img="tNode" class="arcElem" data-t9n-t="techd1">
+                            <br>
+                            <img data-t9n-img="tDevice" class="arcElem" data-t9n-t="techd2">
+                            <br>
+                            <img data-t9n-img="tSoftware" class="arcElem" data-t9n-t="techd3">
+                            <br>
+                            <img data-t9n-img="tColllaboration" class="arcElem" data-t9n-t="techd4">
+                            <br>
+                            <img data-t9n-img="tInterface" class="arcElem" data-t9n-t="techd5">
+                            <br>
+                            <img data-t9n-img="tPath" class="arcElem" data-t9n-t="techd6">
+                            <br>
+                            <img data-t9n-img="tNetwork" class="arcElem" data-t9n-t="techd7">
+
+                        </td>
+                        <td colspan="1" rowspan="0">
+                            <div class="gbTabs">
+                                <ul>
+                                    <li><a href="#tExample1">1</a></li>
+                                    <li><a href="#tExample2">2</a></li>
+                                    <li><a href="#tExample3">3</a></li>
+                                </ul>
+                                <div id="tExample1">
+                                    <h3>Technology Active Structure Elements</h3>
+                                    <img data-t9n-img="tExample1" class="arcExample">
+                                </div>
+                                <div id="tExample2">
+                                    <h3>Technology Behavior Elements</h3>
+                                    <img data-t9n-img="tExample2" class="arcExample">
+                                </div>
+                                <div id="tExample3">
+                                    <h3>Technology Passive Structure Element: Artifact</h3>
+                                    <img data-t9n-img="tExample3" class="arcExample">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="techr2">Behavior<br>Element</td>
+                        <td>
+                            <img data-t9n-img="tFunction" class="arcElem" data-t9n-t="techd8">
+                            <br>
+                            <img data-t9n-img="tProcess" class="arcElem" data-t9n-t="techd9">
+                            <br>
+                            <img data-t9n-img="tInterraction" class="arcElem" data-t9n-t="techd10">
+                            <br>
+                            <img data-t9n-img="tEvent" class="arcElem" data-t9n-t="techd11">
+                            <br>
+                            <img data-t9n-img="tService" class="arcElem" data-t9n-t="techd12">
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="techr3">Passive<br>Structure<br>Element</td>
+                        <td>
+                            <img data-t9n-img="tArtifact" class="arcElem" data-t9n-t="techd13">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- PHYSICAL LAYER-->
+
+        <div id="phyLayerContent">
+            <table class="layerTable">
+                <thead>
+                    <tr>
+                        <th scope="col" data-t9n="phyc1">Section</th>
+                        <th scope="col" data-t9n="phyc2">Icon</th>
+                        <th scope="col" data-t9n="phyc3">Physical Layer Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="1" rowspan="1" data-t9n="phyr1">Active<br>Structure</td>
+                        <td>
+                            <img data-t9n-img="tEquipment" class="arcElem" data-t9n-t="phyd1">
+                            <br>
+                            <img data-t9n-img="tFacility" class="arcElem" data-t9n-t="phyd2">
+                            <br>
+                            <img data-t9n-img="tDistNetwork" class="arcElem" data-t9n-t="phyd3">
+                            <br>
+                        </td>
+                        <td colspan="1" rowspan="0">
+                            <div class="gbTabs">
+                                <ul>
+                                    <li><a href="#tExample4">1</a></li>
+                                </ul>
+                                <div id="tExample4">
+                                    <h3 data-t9n="phye1">Physical Elements</h3>
+                                    <img data-t9n-img="tExample4" class="arcExample">
+                                </div>
+                            </div>
+        </div>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" data-t9n="phyr3">Passive<br>Structure<br>Element</td>
+            <td>
+                <img data-t9n-img="tMaterial" class="arcElem" data-t9n-t="phyd4">
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!--  IMPLEMENTATION LAYER-->
+
+    <div id="impLayerContent">
+        <table class="layerTable">
+            <thead>
+                <tr>
+                    <th scope="col" data-t9n="impc1">Section</th>
+                    <th scope="col" data-t9n="impc2">Icon</th>
+                    <th scope="col" data-t9n="impc3">Implementation and Migration Layer Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="1" rowspan="1" data-t9n="impr1">Active<br>Structure</td>
+                    <td>
+                        <img data-t9n-img="impWorkPak" class="arcElem" data-t9n-t="impd1">
+                        <img data-t9n-img="impDeliverable" class="arcElem" data-t9n-t="impd2">
+                        <img data-t9n-img="impEvent" class="arcElem" data-t9n-t="impd3">
+                        <img data-t9n-img="impPlateau" class="arcElem" data-t9n-t="impd4">
+                        <img data-t9n-img="impGap" class="arcElem" data-t9n-t="impd5">
+                    </td>
+                    <td colspan="1" rowspan="0">
+                        <div class="gbTabs">
+                            <ul>
+                                <li><a href="#impExample1">1</a></li>
+                            </ul>
+                            <div id="impExample1">
+                                <h3>Implementation and Migration Elements</h3>
+                                <img data-t9n-img="impExample1" class="arcExample">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div id="otherContent" class="gbContent">
+        <table class="layerTable">
+            <thead>
+                <tr>
+                    <th scope="col" data-t9n="othc1">Section</th>
+                    <th scope="col" data-t9n="othc2">Icon</th>
+                    <th scope="col" data-t9n="othc3">Other Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="1" rowspan="1" data-t9n="othr1">Autre</td>
+                    <td>
+                        <img data-t9n-img="oLocation" class="arcElem" data-t9n-t="othd1">
+                        <img data-t9n-img="oGrouping" class="arcElem" data-t9n-t="othd2">
+                    </td>
+                    <td colspan="1" rowspan="0">
+                        <div class="gbTabs">
+                            <ul>
+                                <li><a href="#othExample1">1</a></li>
+                            </ul>
+                            <div id="othExample1">
+                                <h3 data-t9n="othe1">Location and group</h3>
+                                <img data-t9n-img="oExample1" class="arcExample">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="aboutContent">
+        <div class="gbContent">
+            <h3>Archimate Cheat Sheet V1.3</h3>
+            <br>What's new
+            <br>&bull; Multiple languages support (English, Français, Español) including examples
+            <br>
+            <br>TODO
+            <br>&bull; Common Viewpoints
+            <br><br>
+            <hr>
+            <h3>Guy Bruneau</h3>
+            Solution Architect<br>
+            <a href="https://www.linkedin.com/in/guybruneau1964" target="linkedin">Linkedin</a>&nbsp;&bull;&nbsp;
+            <a href="https://gbruneau.github.io/" target="github">GitHub</a><br>
+            <br>
+            <hr>
+            <h3>Translations</h3>
+            <table class="contrib">
+                <thead>
+                    <tr>
+                        <th data-t9n="sellang">Langue</th>
+                        <th data-t9n="contrib">Contributeurs</th>
+                    </tr>
+                </thead>
+                <tbody id="tContrib">
+                </tbody>
+            </table>
+            <hr>
+            <a href="https://pubs.opengroup.org/architecture/archimate32-doc/" target="openGroup">Official Archimate 3.2
+                Reference from the Open Group. </a>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+<script src="app.js" />
+</script>
+
+</html>
