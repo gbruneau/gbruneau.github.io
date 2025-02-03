@@ -28,5 +28,15 @@
         "url": "https://www.linkedin.com/in/guybruneau1964/"
       }
     ]
+  },
+  {
+    "code": "ru",
+    "name": "Русский",
+    "contributors": [
+      {
+        "translator": "Denis Zagitov",
+        "url": "https://www.linkedin.com/in/DenisZagitov/"
+      }
+    ]
   }
 ]
