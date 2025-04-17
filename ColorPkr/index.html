@@ -7,12 +7,13 @@
   <link rel="icon" type="image/svg+xml" href="ColorPkrIcon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color Pkr</title>
-  <script type="module" crossorigin src="./assets/index.3e6d8983.js"></script>
-  <link rel="stylesheet" href="./assets/index.06ead879.css">
+  <script type="module" crossorigin src="./assets/index.d8336ded.js"></script>
+  <link rel="stylesheet" href="./assets/index.31f80343.css">
 </head>
 
 <body>
   <div id="toolbarcontainer">
+    <!-- Toolbar -->
     <nav id="toolbar">
       <div id="btSave"><span class="fa fa-floppy-disk" title="Save"></span></div>
       <div id="btDownload"><span class="fa-solid fa-download" title="Download"></span></div>
@@ -25,12 +26,12 @@
       <div id="btFlipBG"><span class="fa-solid fa-star-half-stroke" title="Dark Mode"></span></div>
 
       <nav style="flex-basis: 50px;"></nav>
-      <div id="btMix1" class="btTab btTabOn"><span class="fa-solid  fa-signal" title="HSL Color Slider"></span></div>
-      <div id="btMix2" class="btTab "><span class="fa-solid  fa-mortar-pestle" title="Color Mixer"></span></div>
-      <div id="btMix3" class="btTab "><span class="fa-solid  fa-blender" title="Color Blender"></span></div>
-      <div id="btMix4" class="btTab "><span class="fa-solid  fa-bong" title="Color Boil"></span></div>
+      <div id="btMix1" class="btTab"><span class="fa-solid  fa-signal" title="HSL Color Slider"></span></div>
+      <div id="btMix2" class="btTab"><span class="fa-solid  fa-mortar-pestle" title="Color Gradiant"></span></div>
+      <div id="btMix3" class="btTab"><span class="fa-solid  fa-wrench" title="Fix HSL Properties"></span></div>
+      <div id="btMix4" class="btTab"><span class="fa-solid  fa-blender" title="Blend HSL Properties"></span></div>
 
-      <div id="btTextTry" class="btTab "><span class="fa-solid  fa-font" title="Text Sample Testing"></span></div>
+      <div id="btTextTry" class="btTab "><span class="fa-solid  fa-font" title="Foreground to Background Colour Test"></span></div>
       <nav style="flex-basis: 50px;"></nav>
       <div id="btAbout" class="btTab "><span class="fa-solid  fa-circle-info" title="About ColorPkr"></span></div>
     </nav>
@@ -60,6 +61,7 @@
       </div>
 
       <div class="MixHSLInput">
+        <label >HSL&nbsp;Slider</label><br>     
         <label for="inHSLSteps">Steps</label>
         <input id="inHSLSteps" type="number" min="2" value="5" max="99" size="2"><br>
         <label for="inH">ΔH</label>
@@ -93,6 +95,7 @@
       </div>
 
       <div class="colMix2Input">
+        <label >Color&nbsp;Gradient</label><br> 
         <label for="inMix2Steps">Steps</label>
         <input id="inMix2Steps" type="number" min="2" value="5" max="99" size="2"><br>
       </div>
@@ -108,6 +111,7 @@
         <div class="hslColor255">hsl(113,126,127)</div>
       </div>
       <div class="MixBLNInput">
+        <label >Fix&nbsp;HSL&nbsp;Properties</label><br> 
         <label for="inBlnColors">Colors</label>
         <input id="inBlnColors" type="number" min="1" value="6" max="99" size="2" title="Number of colors"><br>
 
@@ -138,6 +142,7 @@
         <div class="hslColor100">hsl(160.1,49.8%,50%)</div>
         <div class="hslColor255">hsl(113,126,127)</div>
       </div>
+      <label >Blend&nbsp;HSL&nbsp;Properties</label><br> 
       <div id="BoilerPaletteContainer"></div>
     </div>
     <!-- Lorem Ipsum -->
@@ -148,6 +153,7 @@
       <div id="textCol2" class="paletteColor">
         <input id="inColorText2" class="inColor" type="color" value="#00ffff" draggable="true">
       </div>
+      <label >Foreground&nbsp;to&nbsp;Background Colour&nbsp;Test</label><br> 
       <div id="textPaletteContainer">
         <div id="tb01" class="textColorBox"></div>
         <div id="tb02" class="textColorBox"></div>
