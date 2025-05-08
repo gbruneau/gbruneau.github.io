@@ -1,0 +1,33 @@
+{
+  "index.html": {
+    "file": "assets/index-DHyBCm0A.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-BVJ_9L61.css"
+    ],
+    "assets": [
+      "assets/favicon-CWT_Ywvj.png",
+      "assets/DamagedShip-IQRJiP4l.png",
+      "assets/SunkenShip-BIrRp62a.png",
+      "assets/navalnazi-C4LYM16E.png"
+    ]
+  },
+  "public/DamagedShip.png": {
+    "file": "assets/DamagedShip-IQRJiP4l.png",
+    "src": "public/DamagedShip.png"
+  },
+  "public/SunkenShip.png": {
+    "file": "assets/SunkenShip-BIrRp62a.png",
+    "src": "public/SunkenShip.png"
+  },
+  "public/favicon.png": {
+    "file": "assets/favicon-CWT_Ywvj.png",
+    "src": "public/favicon.png"
+  },
+  "public/navalnazi.png": {
+    "file": "assets/navalnazi-C4LYM16E.png",
+    "src": "public/navalnazi.png"
+  }
+}
