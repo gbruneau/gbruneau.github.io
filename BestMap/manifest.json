@@ -1,8 +1,11 @@
 {
   "index.html": {
-    "file": "assets/index.fd70561d.js",
+    "file": "assets/index.cbaa06ff.js",
     "src": "index.html",
     "isEntry": true,
+    "imports": [
+      "_vendor.70f0e448.js"
+    ],
     "css": [
       "assets/index.4d9fe182.css"
     ],
@@ -10,5 +13,8 @@
       "assets/goMyPosition.a1fba2a7.png",
       "assets/toClipboard.a5dce033.png"
     ]
+  },
+  "_vendor.70f0e448.js": {
+    "file": "assets/vendor.70f0e448.js"
   }
 }
