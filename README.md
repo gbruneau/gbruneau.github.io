@@ -1,10 +1,7 @@
-# Guy Bruneau @ gbruneau.github.io
-
-Guy Bruneau
-Solution Architect
+# Guy Bruneau
+## Solution Architect
 
 Applications 
-
 
 [Home](https://gbruneau.github.io)
 
