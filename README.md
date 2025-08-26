@@ -1,6 +1,3 @@
-# Guy Bruneau
-## Solution Architect
-
 Applications 
 
 [Home](https://gbruneau.github.io)
