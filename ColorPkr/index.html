@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="ColorPkrIcon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color Pkr</title>
-  <script type="module" crossorigin src="./assets/index.d154149b.js"></script>
+  <script type="module" crossorigin src="./assets/index.8cd905c5.js"></script>
   <link rel="stylesheet" href="./assets/index.83679597.css">
 </head>
 
@@ -15,9 +15,10 @@
   <div id="toolbarcontainer">
     <!-- Toolbar -->
     <nav id="toolbar">
-      <div id="btSave"><span class="fa fa-floppy-disk" title="Save"></span></div>
-      <div id="btDownload"><span class="fa-solid fa-download" title="Download"></span></div>
-      <div id="btUpload"><span class="fa-solid fa-upload" title="Upload"></span></div>
+      <div id="btUpload"><span class="fa-solid fa-folder-open" title="Open"></span></div>
+      <div id="btDownload"><span class="fa-solid fa-floppy-disk" title="Save"></span></div>
+      <div id="btCommit"><span class="fa fa-check" title="Commit"></span></div>
+
 
       <div id="btLoad"><span class="fa-solid fa-undo" title="Undo"></span></div>
 
@@ -25,14 +26,16 @@
       <div id="btRandom"><span class="fa-solid fa-shuffle" title="Random Color"></span></div>
       <div id="btFlipBG"><span class="fa-solid fa-star-half-stroke" title="Dark Mode"></span></div>
       <div id="btFlipSize"><span class="fa-solid fa-minimize" title="Minimize Color Square"></span></div>
-      
+
       <nav style="flex-basis: 50px;"></nav>
-      <div id="btMix1" class="btTab"><span class="fa-solid  fa-arrow-up-right-dots" title="HSL Color Slider"></span></div>
+      <div id="btMix1" class="btTab"><span class="fa-solid  fa-arrow-up-right-dots" title="HSL Color Slider"></span>
+      </div>
       <div id="btMix2" class="btTab"><span class="fa-solid  fa-signal" title="Color Gradiant"></span></div>
       <div id="btMix3" class="btTab"><span class="fa-solid  fa-wrench" title="Fix HSL Properties"></span></div>
       <div id="btMix4" class="btTab"><span class="fa-solid  fa-blender" title="Blend HSL Properties"></span></div>
 
-      <div id="btTextTry" class="btTab "><span class="fa-solid  fa-font" title="Foreground to Background Colour Test"></span></div>
+      <div id="btTextTry" class="btTab "><span class="fa-solid  fa-font"
+          title="Foreground to Background Colour Test"></span></div>
       <nav style="flex-basis: 50px;"></nav>
       <div id="btAbout" class="btTab "><span class="fa-solid  fa-circle-info" title="About ColorPkr"></span></div>
     </nav>
@@ -62,7 +65,7 @@
       </div>
 
       <div class="MixHSLInput">
-        <label >HSL&nbsp;Slider</label><br>     
+        <label>HSL&nbsp;Slider</label><br>
         <label for="inHSLSteps">Steps</label>
         <input id="inHSLSteps" type="number" min="2" value="5" max="99" size="2"><br>
         <label for="inH">ΔH</label>
@@ -96,7 +99,7 @@
       </div>
 
       <div class="colMix2Input">
-        <label >Color&nbsp;Gradient</label><br> 
+        <label>Color&nbsp;Gradient</label><br>
         <label for="inMix2Steps">Steps</label>
         <input id="inMix2Steps" type="number" min="3" value="6" max="99" size="2"><br>
       </div>
@@ -112,7 +115,7 @@
         <div class="hslColor255">hsl(113,126,127)</div>
       </div>
       <div class="MixBLNInput">
-        <label >Fix&nbsp;HSL&nbsp;Properties</label><br> 
+        <label>Fix&nbsp;HSL&nbsp;Properties</label><br>
         <label for="inBlnColors">Colors</label>
         <input id="inBlnColors" type="number" min="1" value="6" max="99" size="2" title="Number of colors"><br>
 
@@ -143,7 +146,7 @@
         <div class="hslColor100">hsl(160.1,49.8%,50%)</div>
         <div class="hslColor255">hsl(113,126,127)</div>
       </div>
-      <label >Blend&nbsp;HSL&nbsp;Properties</label><br> 
+      <label>Blend&nbsp;HSL&nbsp;Properties</label><br>
       <div id="BoilerPaletteContainer"></div>
     </div>
     <!-- Lorem Ipsum -->
@@ -154,7 +157,7 @@
       <div id="textCol2" class="paletteColor">
         <input id="inColorText2" class="inColor" type="color" value="#00ffff" draggable="true">
       </div>
-      <label >Foreground&nbsp;to&nbsp;Background Colour&nbsp;Test</label><br> 
+      <label>Foreground&nbsp;to&nbsp;Background Colour&nbsp;Test</label><br>
       <div id="textPaletteContainer">
         <div id="tb01" class="textColorBox"></div>
         <div id="tb02" class="textColorBox"></div>
@@ -176,19 +179,19 @@
   <!-- UPLOAD DIALOG -->
   <div id="dlgUpload" class="dlgBox" style="display:none ;">
     <div class="dlgHeader">
-      <h3>Load Palette File</h3>
+      <h3>Open Palette File</h3>
     </div>
     <label for="colorFile">File</label>
     <input id="colorFile" type="file" accept=".json" />
     <div class="dlgButtons">
       <button id="btCancelUpload">Cancel</button>
-      <button id="btDoUpload">Upload</button>
+      <button id="btDoUpload">Open</button>
     </div>
   </div>
   <!-- DOWNLOAD DIALOG -->
   <div id="dlgDownload" class="dlgBox" style="display:none ;">
     <div class="dlgHeader">
-      <h3>Download Palette</h3>
+      <h3>Save Palette</h3>
     </div>
     <label for="chkExclud">Exclude Color</label>
     <input id="chkExclude" type="checkbox" />
@@ -196,7 +199,7 @@
     <input id="colExclude" value="#808080" disabled type="color" />
     <div class="dlgButtons">
       <button id="btCancelDownload">Cancel</button>
-      <button id="btDoDownload">Download</button>
+      <button id="btDoDownload">Save</button>
     </div>
   </div>
   
