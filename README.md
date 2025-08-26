@@ -15,4 +15,4 @@ Contact
 Publications
 * [Gustave Bruneau: Une Vie](https://www.amazon.ca/Une-Vie-autres-Gustave-Bruneau/dp/B0CJLCLTPV)
 * [Gustave Bruneau: Pilot Officer J 53003](https://sway.cloud.microsoft/XPJQQOcNbIh9Xnjx)
-* 
+* [Atlas Minero Peru 2008](https://gbruneau.github.io/Document/Atlas%20Minero%20Peru%202008.pdf)
