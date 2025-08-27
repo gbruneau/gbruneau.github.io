@@ -3,3 +3,4 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Guy Bruneau
 description: Solution Architect
+permalink: /404.html
