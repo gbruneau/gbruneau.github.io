@@ -1,0 +1,33 @@
+{
+  "index.html": {
+    "file": "assets/index-BUoVxEnn.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-DuVE8Ybn.css"
+    ],
+    "assets": [
+      "assets/goMyPosition-PjqtUdrb.png",
+      "assets/toClipboard-CUVrXIbk.png",
+      "assets/BestMap-logo-CZZGZZcw.png",
+      "assets/Cancel-CsWPBe_r.png"
+    ]
+  },
+  "public/icons/Cancel.png": {
+    "file": "assets/Cancel-CsWPBe_r.png",
+    "src": "public/icons/Cancel.png"
+  },
+  "public/icons/goMyPosition.png": {
+    "file": "assets/goMyPosition-PjqtUdrb.png",
+    "src": "public/icons/goMyPosition.png"
+  },
+  "public/icons/toClipboard.png": {
+    "file": "assets/toClipboard-CUVrXIbk.png",
+    "src": "public/icons/toClipboard.png"
+  },
+  "style/images/logo/BestMap-logo.png": {
+    "file": "assets/BestMap-logo-CZZGZZcw.png",
+    "src": "style/images/logo/BestMap-logo.png"
+  }
+}
