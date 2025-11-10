@@ -4,12 +4,12 @@
     "src": "image/logo.png"
   },
   "index.html": {
-    "file": "assets/index-BYws-RGv.js",
+    "file": "assets/index-B1YSWCQK.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-C2xzJ8OI.css"
+      "assets/index-B7Hl4HJK.css"
     ],
     "assets": [
       "assets/scMicro-CreeZnVw.jpg",
@@ -17,7 +17,7 @@
       "assets/scTravel-O_6X6NcO.jpg",
       "assets/scPlanet-DFK4gn_f.jpg",
       "assets/scSolar-DVzy85Dd.jpg",
-      "assets/scGalaxy-CZrcoH90.jpg",
+      "assets/scGalaxy-9u073pco.jpg",
       "assets/scCosmic-BfnhBrts.jpg",
       "assets/logo-DNQlhdJn.png"
     ]
@@ -27,7 +27,7 @@
     "src": "style/images/scCosmic.jpg"
   },
   "style/images/scGalaxy.jpg": {
-    "file": "assets/scGalaxy-CZrcoH90.jpg",
+    "file": "assets/scGalaxy-9u073pco.jpg",
     "src": "style/images/scGalaxy.jpg"
   },
   "style/images/scHuman.jpg": {
