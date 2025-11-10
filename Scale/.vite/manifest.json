@@ -1,0 +1,53 @@
+{
+  "image/logo.png": {
+    "file": "assets/logo-DNQlhdJn.png",
+    "src": "image/logo.png"
+  },
+  "index.html": {
+    "file": "assets/index-BYws-RGv.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-C2xzJ8OI.css"
+    ],
+    "assets": [
+      "assets/scMicro-CreeZnVw.jpg",
+      "assets/scHuman-PeTrmzye.jpg",
+      "assets/scTravel-O_6X6NcO.jpg",
+      "assets/scPlanet-DFK4gn_f.jpg",
+      "assets/scSolar-DVzy85Dd.jpg",
+      "assets/scGalaxy-CZrcoH90.jpg",
+      "assets/scCosmic-BfnhBrts.jpg",
+      "assets/logo-DNQlhdJn.png"
+    ]
+  },
+  "style/images/scCosmic.jpg": {
+    "file": "assets/scCosmic-BfnhBrts.jpg",
+    "src": "style/images/scCosmic.jpg"
+  },
+  "style/images/scGalaxy.jpg": {
+    "file": "assets/scGalaxy-CZrcoH90.jpg",
+    "src": "style/images/scGalaxy.jpg"
+  },
+  "style/images/scHuman.jpg": {
+    "file": "assets/scHuman-PeTrmzye.jpg",
+    "src": "style/images/scHuman.jpg"
+  },
+  "style/images/scMicro.jpg": {
+    "file": "assets/scMicro-CreeZnVw.jpg",
+    "src": "style/images/scMicro.jpg"
+  },
+  "style/images/scPlanet.jpg": {
+    "file": "assets/scPlanet-DFK4gn_f.jpg",
+    "src": "style/images/scPlanet.jpg"
+  },
+  "style/images/scSolar.jpg": {
+    "file": "assets/scSolar-DVzy85Dd.jpg",
+    "src": "style/images/scSolar.jpg"
+  },
+  "style/images/scTravel.jpg": {
+    "file": "assets/scTravel-O_6X6NcO.jpg",
+    "src": "style/images/scTravel.jpg"
+  }
+}

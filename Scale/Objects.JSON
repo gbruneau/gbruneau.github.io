@@ -1,22 +1,20 @@
 [
-{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":"0.000000000","URL":"https://en.wikipedia.org/wiki/Planck_length"},
-{"ObjectEn":"Attometer","ObjectFr":"Attomètre","SizeInMeter":"0.00000","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
+{"ObjectEn":"Planck Length","ObjectFr":"Distance de Planck","SizeInMeter":"1.6e-35","URL":"https://www.phys.unsw.edu.au/einsteinlight/jw/module6_Planck.htm"},
+{"ObjectEn":"Attometer","ObjectFr":"Attomètre","SizeInMeter":"1.0e-18","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
 ,
-{"ObjectEn":"Femtometer","ObjectFr":"Femtomètre","SizeInMeter":"0.00000","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
-,
-{"ObjectEn":"Neutron","ObjectFr":"Neutron","SizeInMeter":"0.00000","URL":"https://en.wikipedia.org/wiki/Neutron"},
-{"ObjectEn":"Proton","ObjectFr":"Proton","SizeInMeter":"0.000000000","URL":"https://www.nature.com/articles/d41586-019-03432-4"},
+{"ObjectEn":"Neutron","ObjectFr":"Neutron","SizeInMeter":"1.0e-15","URL":"https://en.wikipedia.org/wiki/Neutron"},
+{"ObjectEn":"Proton","ObjectFr":"Proton","SizeInMeter":"8.4e-16","URL":"https://www.nature.com/articles/d41586-019-03432-4"},
 {"ObjectEn":"Lead 208 Atom Nucleus","ObjectFr":"Noyaux d'un atome de plomb 208","SizeInMeter":"6.34e-15","URL":"https://www.sciencedirect.com/topics/physics-and-astronomy/lead-isotopes"},
-{"ObjectEn":"1 Picometer (pm)","ObjectFr":"1 Picomètre (pm)","SizeInMeter":"0.00000","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
+{"ObjectEn":"1 Picometer (pm)","ObjectFr":"1 Picomètre (pm)","SizeInMeter":"1.0e-12","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
 ,
-{"ObjectEn":"Electron","ObjectFr":"Electron","SizeInMeter":"0.00000","URL":"https://journals.aps.org/pr/abstract/10.1103/PhysRev.14.20"},
-{"ObjectEn":"Hydrogen atom Diameter","ObjectFr":"Diamètre d'un atome d'hydrogene","SizeInMeter":"0.000000000","URL":"https://en.wikipedia.org/wiki/Bohr_radius"}
+{"ObjectEn":"Electron","ObjectFr":"Electron","SizeInMeter":"2.8e-15","URL":"https://journals.aps.org/pr/abstract/10.1103/PhysRev.14.20"},
+{"ObjectEn":"Hydrogen atom Diameter","ObjectFr":"Diamètre d'un atome d'hydrogene","SizeInMeter":"1.06e-10","URL":"https://en.wikipedia.org/wiki/Bohr_radius"}
 ,
 {"ObjectEn":"Water Molecule (H₂O)","ObjectFr":"Molécule d'eau (H₂O)","SizeInMeter":"2.82e-10","URL":"https://yourhomewaterfilters.com/how-small-is-a-water-molecule/"}
 ,
-{"ObjectEn":"Caesium atom Diameter","ObjectFr":"Diamètre d'un atome de cesium","SizeInMeter":"0.00000","URL":"https://en.wikipedia.org/wiki/Caesium"}
+{"ObjectEn":"Caesium atom Diameter","ObjectFr":"Diamètre d'un atome de cesium","SizeInMeter":"2.6e-10","URL":"https://en.wikipedia.org/wiki/Caesium"}
 ,
-{"ObjectEn":"Average Amino Acid size","ObjectFr":"Taille moyene d'un acide aminé","SizeInMeter":"0.00000","URL":"http://book.bionumbers.org/how-big-are-biochemical-nuts-and-bolts/"}
+{"ObjectEn":"Average Amino Acid size","ObjectFr":"Taille moyene d'un acide aminé","SizeInMeter":"3.4e-10","URL":"http://book.bionumbers.org/how-big-are-biochemical-nuts-and-bolts/"}
 ,
 {"ObjectEn":"1 Nanometer (1nm)","ObjectFr":"1 Nanomètre (nm)","SizeInMeter":"1.00e-09","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
 ,
