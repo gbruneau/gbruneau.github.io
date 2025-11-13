@@ -1,22 +1,37 @@
-
 [
-{"UnitSymbolFr":"(10⁹ Al)","UnitSymbolEn":"(10⁹ ly)","SizeInMeter":9.4607e24},
-{"UnitSymbolFr":"(10⁶ Al)","UnitSymbolEn":"(10⁶ ly)","SizeInMeter":9.4607e21},
-{"UnitSymbolFr":"K Al","UnitSymbolEn":"K ly","SizeInMeter":9.4607e18},
-{"UnitSymbolFr":"Al","UnitSymbolEn":"l y","SizeInMeter":9.4607e15},
-{"UnitSymbolFr":"jl","UnitSymbolEn":"l d","SizeInMeter":25902068371200},
-{"UnitSymbolFr":"UA","UnitSymbolEn":"AU","SizeInMeter":1.496e11},
-{"UnitSymbolFr":"(10⁶ Km)","UnitSymbolEn":"(10⁶ Km)","SizeInMeter":1e9},
-{"UnitSymbolFr":"(1000 Km)","UnitSymbolEn":"(1000 Km)","SizeInMeter":1000000},
-{"UnitSymbolFr":"Km","UnitSymbolEn":"Km","SizeInMeter":1000},
-{"UnitSymbolFr":"m","UnitSymbolEn":"m","SizeInMeter":1},
-{"UnitSymbolFr":"cm","UnitSymbolEn":"cm","SizeInMeter":0.01},
-{"UnitSymbolFr":"mm","UnitSymbolEn":"mm","SizeInMeter":0.001},
-{"UnitSymbolFr":"μm","UnitSymbolEn":"μm","SizeInMeter":1e-6},
-{"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":1e-9},
-{"UnitSymbolFr":"pm","UnitSymbolEn":"pm","SizeInMeter":1e-12},
-{"UnitSymbolFr":"fm","UnitSymbolEn":"fm","SizeInMeter":1e-15},
-{"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":1e-9},
-{"UnitSymbolFr":"ℓP","UnitSymbolEn":"ℓP","SizeInMeter":1.616255e-35}
-]
+{"UnitSymbolFr":"ℓP","UnitSymbolEn":"ℓP","SizeInMeter":"1.616255E-35","UnitNameFr":"Longueur de Planck","UnitNameEn":"Planck Length","UnitDescFr":"≈1.6 × 10⁻³⁵ m","UnitDescEn":"≈1.6 × 10⁻³⁵ m"}
+,
+{"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":"1E-18","UnitNameFr":"Atomètre","UnitNameEn":"Atometre","UnitDescFr":"10⁻¹⁸ m","UnitDescEn":"10⁻¹⁸ m"}
+,
+{"UnitSymbolFr":"fm","UnitSymbolEn":"fm","SizeInMeter":"1E-15","UnitNameFr":"Femtomètre","UnitNameEn":"Femtometre","UnitDescFr":"10⁻¹⁵ m","UnitDescEn":"10⁻¹⁵ m"}
+,
+{"UnitSymbolFr":"pm","UnitSymbolEn":"pm","SizeInMeter":"1E-12","UnitNameFr":"Picomètre","UnitNameEn":"Picometre","UnitDescFr":"10⁻¹² m","UnitDescEn":"10⁻¹² m"}
+,
+{"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":"0.000000001","UnitNameFr":"Nanomètre","UnitNameEn":"Nanometre","UnitDescFr":"10⁻⁹ m","UnitDescEn":"10⁻⁹ m"}
+,
+{"UnitSymbolFr":"μm","UnitSymbolEn":"μm","SizeInMeter":"0.000001","UnitNameFr":"Micromètre","UnitNameEn":"Micrometre","UnitDescFr":"10⁻⁶ m","UnitDescEn":"10⁻⁶ m"}
+,
+{"UnitSymbolFr":"mm","UnitSymbolEn":"mm","SizeInMeter":"0.001","UnitNameFr":"Milimètre","UnitNameEn":"Milimeter","UnitDescFr":"1/1000 m","UnitDescEn":"1/1000 m"}
+,
+{"UnitSymbolFr":"cm","UnitSymbolEn":"cm","SizeInMeter":"0.01","UnitNameFr":"Centimètre","UnitNameEn":"Centimetre","UnitDescFr":"1/100 m","UnitDescEn":"1/100 m"}
+,
+{"UnitSymbolFr":"m","UnitSymbolEn":"m","SizeInMeter":"1","UnitNameFr":"Mètre","UnitNameEn":"Meter","UnitDescFr":"Mètre","UnitDescEn":"Meter"}
+,
+{"UnitSymbolFr":"Km","UnitSymbolEn":"Km","SizeInMeter":"1000","UnitNameFr":"Kilomètre","UnitNameEn":"Kilometre","UnitDescFr":"1000 m","UnitDescEn":"1000 m"}
+,
+{"UnitSymbolFr":"(1000 Km)","UnitSymbolEn":"(1000 Km)","SizeInMeter":"1000000","UnitNameFr":"Mille Km","UnitNameEn":"Thousands of Km","UnitDescFr":"Mille Km","UnitDescEn":"Thousands of Km"},
+{"UnitSymbolFr":"(10⁶ Km)","UnitSymbolEn":"(10⁶ Km)","SizeInMeter":"1000000000","UnitNameFr":"Million de Km","UnitNameEn":"Milllion of Km","UnitDescFr":"Million de Km","UnitDescEn":"Milllion of Km"}
+,
+{"UnitSymbolFr":"UA","UnitSymbolEn":"AU","SizeInMeter":"149600000000","UnitNameFr":"Unité Astronomique","UnitNameEn":"Astronomical Unit","UnitDescFr":"La distance moyenne Terre-Soleil (≈149 × 10⁶ Km)","UnitDescEn":"The average Earth-Sun distance (≈149 × 10⁶ Km)"}
+,
+{"UnitSymbolFr":"jl","UnitSymbolEn":"l d","SizeInMeter":"25902068371200","UnitNameFr":"Jour-Lumière","UnitNameEn":"Light-Day","UnitDescFr":"Distance parcourue par la lumiere pendant un jour (≈25.9 × 10⁹ Km)","UnitDescEn":"Distance traveled by light in one day (≈25.9 × 10⁹ Km)"}
+,
+{"UnitSymbolFr":"Al","UnitSymbolEn":"l y","SizeInMeter":"9.4607E+015","UnitNameFr":"Années lumière","UnitNameEn":"Light years","UnitDescFr":"Distance parcourue par la lumiere pendant un an (≈9.46 × 10¹² Km)","UnitDescEn":"Distance traveled by light in one year (≈9.46 × 10¹² Km)"}
+,
+{"UnitSymbolFr":"K Al","UnitSymbolEn":"K ly","SizeInMeter":"9.4607E+018","UnitNameFr":"Millier d’années lumière","UnitNameEn":"Thousands of light-years","UnitDescFr":"Distance parcourue par la lumiere pendant mille ans (≈9.46 × 10¹⁵ Km)","UnitDescEn":"Distance traveled by light in a thousand years (≈9.46 × 10¹⁵ Km)"}
+,
+{"UnitSymbolFr":"M Al","UnitSymbolEn":"M ly","SizeInMeter":"9.4607E+021","UnitNameFr":"Million d’années lumière","UnitNameEn":"Million of light years","UnitDescFr":"Distance parcourue par la lumiere pendant un millions  d'années (≈9.46 × 10¹⁸ Km)","UnitDescEn":"Distance traveled by light in one million years (≈9.46 × 10¹⁸ Km)"}
+,
+{"UnitSymbolFr":"G Al","UnitSymbolEn":"G ly","SizeInMeter":"9.4607E+024","UnitNameFr":"Milliard d’années lumière","UnitNameEn":"Billions of light year","UnitDescFr":"Distance parcourue par la lumiere pendant un milliard d'années (≈9.46 × 10²¹ Km)","UnitDescEn":"Distance traveled by light in one billion years (≈9.46 × 10²¹ Km)"}
 
+]
