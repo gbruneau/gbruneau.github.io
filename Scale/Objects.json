@@ -27,6 +27,8 @@
 {"IsDistance":"false","ObjectEn":"Grain of icing sugar","ObjectFr":"Grain de sucre en poudre","SizeInMeter":"2.40e-05","URL":"https://en.wikipedia.org/wiki/Sucrose"},
 {"IsDistance":"false","ObjectEn":"Human air width","ObjectFr":"Diamètre d'un cheveux","SizeInMeter":"0.000075","URL":"https://en.wikipedia.org/wiki/Hair's_breadth"}
 ,
+{"IsDistance":"false","ObjectEn":"Large dust mites","ObjectFr":"Gros acariens de poussière","SizeInMeter":"0.000170","URL":"https://www.clearstream.ca/micron-size-comparison-chart"}
+,
 {"IsDistance":"false","ObjectEn":"Typographic Point or dot","ObjectFr":"Point typogaphique","SizeInMeter":"0.0003530","URL":"https://en.wikipedia.org/wiki/Point_(typography)"},
 {"IsDistance":"false","ObjectEn":"Grain of sand","ObjectFr":"Grain de sable","SizeInMeter":"0.000415","URL":"https://en.wikipedia.org/wiki/Grain_size"},
 {"IsDistance":"false","ObjectEn":"Grain of table sugar","ObjectFr":"Grain de sucre de table","SizeInMeter":"0.0005","URL":"https://en.wikipedia.org/wiki/Sucrose"},
