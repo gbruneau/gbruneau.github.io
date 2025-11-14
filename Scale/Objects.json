@@ -56,6 +56,7 @@
 ,
 {"IsDistance":"true","ObjectEn":"1 Meter (m)","ObjectFr":"1 Mètre (m)","SizeInMeter":"1","URL":"https://en.wikipedia.org/wiki/International_System_of_Units"}
 ,
+{"IsDistance":"false","ObjectEn":"Average Human Height","ObjectFr":"Taille moyene d'un humain","SizeInMeter":"1.63","URL":"https://ourworldindata.org/human-height"},
 {"IsDistance":"false","ObjectEn":"Average car lenght","ObjectFr":"Longueur moyene d'une voiture","SizeInMeter":"4.5","URL":"https://www.nadaguides.com/Cars/Shopping-Guides/how-long-is-the-average-car"},
 {"IsDistance":"false","ObjectEn":"Average semi truck lenght","ObjectFr":"Longueur moyene d'un camion remorque","SizeInMeter":"21.3","URL":"https://schneiderjobs.com/blog/how-long-is-a-semi-truck-fun-facts"},
 {"IsDistance":"false","ObjectEn":"Montreal Biosphere Diameter","ObjectFr":"Diamètre de la Biosphère de Montréal","SizeInMeter":"76","URL":"https://en.wikipedia.org/wiki/Montreal_Biosphere"}
