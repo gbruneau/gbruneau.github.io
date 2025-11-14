@@ -2,14 +2,14 @@
 [
  {"id":1,"LabelEn":"Scale Length","LabelFr":"Changement d'échèle"}
 ,{"id":2,"LabelEn":"Scale","LabelFr":"Échèle"}
-,{"id":3,"LabelEn":"If","LabelFr":"Si"}
-,{"id":4,"LabelEn":"is the size of","LabelFr":"est de la taille de"}
+,{"id":3,"LabelEn":"From","LabelFr":"De"}
+,{"id":4,"LabelEn":"To","LabelFr":"À"}
 ,{"id":5,"LabelEn":"then",	"LabelFr":"alors"}
-,{"id":6,"LabelEn":"the ratio is",	"LabelFr":"la proportion est"}
+,{"id":6,"LabelEn":"Ratio",	"LabelFr":"Proportion"}
 ,{"id":7,"LabelEn":"Object",	"LabelFr":"Objet"}
 ,{"id":8,"LabelEn":"Size",	"LabelFr":"Grandeur"}
 ,{"id":9,"LabelEn":"Scaled",	"LabelFr":"Proportioné"}
-,{"id":10,"LabelEn":"Size in meter",	"LabelFr":"Grandeur en mètres"}
-,{"id":11,"LabelEn":"Magnitude",	"LabelFr":"Taille approximative"}
+,{"id":10,"LabelEn":"In meter",	"LabelFr":"En mètres"}
+,{"id":11,"LabelEn":"Magnitude",	"LabelFr":"Taille"}
 ,{"id":12,"LabelEn":"Ⓣ",	"LabelFr":"Ⓣ"}
 ]
