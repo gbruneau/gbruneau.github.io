@@ -313,8 +313,8 @@
 
     <script>
         // JavaScript to play audio on page load
-        const audio = new Audio('human_error.wav');
-        audio.preload = 'auto';
+        const audio = new Audio('human_error.flac');   
+                audio.preload = 'auto';
         // Attempt to play audio when the DOM is fully loaded
         window.addEventListener('DOMContentLoaded', () => {
             audio.play().catch(error => {
