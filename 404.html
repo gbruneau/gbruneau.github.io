@@ -308,7 +308,15 @@
         </g>
     </svg>
 
+<script>
+const audio = new Audio('./hal9000.mp3');
+audio.preload = 'auto';
 
+document.addEventListener('click', (event) => {
+ audio.play()}
+);
+
+</script>
 
 </body>
 
