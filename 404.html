@@ -25,7 +25,7 @@
 
 
         @media only screen and (orientation: portrait) {
-             #e4a {
+            #e4a {
                 position: fixed;
                 width: 20dvw;
                 height: 20dvw;
@@ -308,15 +308,21 @@
         </g>
     </svg>
 
-<script>
-const audio = new Audio('hal9000.mp3');
-audio.preload = 'auto';
-
-document.body.addEventListener('click', (event) => {
- audio.play()}
-);
-
-</script>
+    <script>
+        // JavaScript to play audio on page load
+        const audio = new Audio('halcantdo.mp3');
+        audio.preload = 'auto';
+        // Attempt to play audio when the DOM is fully loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            audio.play().catch(error => {
+                // If autoplay is blocked, wait for a user interaction
+                document.body.addEventListener('click', (event) => {
+                    audio.play()
+                }
+                );
+            });
+        });
+    </script>
 
 </body>
 
