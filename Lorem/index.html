@@ -3,27 +3,36 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="romanflag.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lorem</title>
-  <script type="module" crossorigin src="./assets/index-Bmod9O43.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CeYFqPIi.css">
+  <script type="module" crossorigin src="./assets/index-BZlX-LjB.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C29ICYXr.css">
 </head>
 
 <body>
-  <h2>Loremizer </h2>
-  <p>Version: <span id="version"></span></p>
+  <header>
+    <div>
+      <h2>Loremizer</h2>
+      <p>Version: <span id="version"></span></p>
+    </div>
+    <div>
+      <img src="romanflag.svg" alt="">
+    </div>
+  </header>
+  <section>
+    <label for="inputText">Input:</label>
+    <textarea id="inputText" placeholder='Enter text'></textarea>
+    <div id="bts">
+      <button id="encodeBtn">Enlorem</button>
+      <button id="decodeBtn">Delorem</button>
+    </div>
+  </section>
+  <section>
+    <label for="resultText">Output:</label>
+    <textarea id="resultText" readonly></textarea>
+  </section>
 
-  <label for="inputText">Input:</label>
-  <textarea id="inputText" placeholder='Enter text'></textarea>
-  <div id="bts">
-    <button id="encodeBtn">Enlorem</button>
-    <button id="decodeBtn">Delorem</button>
-  </div>
-
-<br>
-  <label for="resultText">Output:</label>
-  <textarea id="resultText" readonly></textarea>
 </body>
 
 </html>
