@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Entete de l'encyclop&eacute;die</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body background="bgarticle.jpg" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+    <tr> 
+      <td width="20%" background="mapbg.JPG">&nbsp;</td>
+      <td width="80%">
+        <div align="center">
+          
+        <p><a href="encyclopedie.htm" target="_top"><img src="l.gif" width="42" height="42" alt="L"><img src="a.gif" width="42" height="42" alt="a"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <a href="encyclopedie.htm" target="_top"><img src="g.gif" width="42" height="42" alt="G"><img src="r.gif" width="42" height="42" alt="r"><img src="a.gif" width="42" height="42" alt="a"><img src="n.gif" width="42" height="42" alt="n"><img src="d.gif" width="42" height="42" alt="d"><img src="e.gif" width="42" height="42" alt="e"></a></p>
+          <p><br>
+          <a href="encyclopedie.htm" target="_top"><img src="e.gif" width="42" height="42" alt="E"><img src="n.gif" width="42" height="42" alt="n"><img src="c.gif" width="42" height="42" alt="c"><img src="y.gif" width="42" height="42" alt="y"><img src="c.gif" width="42" height="42" alt="c"><img src="l.gif" width="42" height="42" alt="l"><img src="o.gif" width="42" height="42" alt="o"><img src="p.gif" width="42" height="42" alt="p"><img src="e.gif" width="42" height="42" alt="&eacute;"><img src="d.gif" width="42" height="42" alt="d"><img src="i.gif" width="42" height="42" alt="i"><img src="e.gif" width="42" height="42" alt="e"></a></p>
+          <p><br>
+          <a href="encyclopedie.htm" target="_top"><img src="i.gif" width="42" height="42" alt="I"><img src="m.gif" width="42" height="42" alt="m"><img src="p.gif" width="42" height="42" alt="p"><img src="e.gif" width="42" height="42" alt="&eacute;"><img src="r.gif" width="42" height="42" alt="r"><img src="i.gif" width="42" height="42" alt="i"><img src="a.gif" width="42" height="42" alt="a"><img src="l.gif" width="42" height="42" alt="l"><img src="e.gif" width="42" height="42" alt="e"></a></p>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

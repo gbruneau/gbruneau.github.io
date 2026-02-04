@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p>
+  <script language="JavaScript">
+function GetLanguage()
+{
+if (navigator.appName == 'Netscape')
+   var language = navigator.language;
+else
+   var language = navigator.browserLanguage;
+var langname = ''
+if (language.indexOf('en') > -1) langname = 'Anglais';
+else if (language.indexOf('nl') > -1) langname = 'Hollandais';
+else if (language.indexOf('fr') > -1) langname = 'français';
+else if (language.indexOf('de') > -1) langname = 'Allemand';
+else if (language.indexOf('ja') > -1) langname = 'Japonais';
+else if (language.indexOf('it') > -1) langname = 'Italien';
+else if (language.indexOf('pt') > -1) langname = 'Portuguais';
+else if (language.indexOf('es') > -1) langname = 'Espagnol';
+else if (language.indexOf('sv') > -1) langname= 'Suedois';
+else if (language.indexOf('zh') > -1) langname = 'Chinois';
+else langname = 'Anglais';
+return langname
+}
+
+function GetColors()
+{
+  return Math.pow (2, window.screen.colorDepth);
+}
+
+function GetOS()
+{
+if (navigator.appVersion.indexOf("95") !=-1) return "Windows 95/98";
+else if (navigator.appVersion.indexOf("16") !=-1) return "Windows 3.1";
+else if (navigator.appVersion.indexOf("PCC") !=-1) return "Apple McIntosh";
+else if (navigator.appVersion.indexOf("SunOS") !=-1) return "SunOS";
+else if (navigator.appVersion.indexOf("Linux") !=-1) return "Linux";
+else if (navigator.appVersion.indexOf("HP") !=-1) return "HP Unix";
+else if (navigator.appVersion.indexOf("NT") !=-1) return "Windows NT";
+else return "Inconnue"
+}
+
+function GetResolution()
+{
+var x=window.screen.availWidth;
+var y=window.screen.availHeight;
+return x + 'x' + y
+}
+
+
+function GetBrowser()
+{
+return navigator.appName
+}
+
+
+function GetHistory()
+{
+var times=history.length;
+var i=0;
+while (i<times){
+    document.write(history[i] + '<br>');
+    i++
+   }
+}
+
+
+GetHistory();
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../style.css" rel="Stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#330000" text="#CCCC00" link="#CCCC00" vlink="#CCCC00" alink="#CCCC00">
+<table width="100%" border="0">
+  <tr>
+    <td width="5%" valign="top"><img src="p04.jpg" width="395" height="591"></td>
+    <td valign="top" width="95%">
+      <div align="center"> 
+        <p>Livre du Tout<br>
+          IV - Mol&eacute;cule <span class="un">Un</span>iverselle</p>
+        <hr>
+      </div>
+      <ol>
+        <li>Mol&eacute;cule <span class="un">un</span>iverselle</li>
+        <li>Mod&egrave;le th&eacute;orique Derik-86</li>
+        <li>Plucnurp</li>
+        <li>Symbole chimique Mo2U9B7UN9G</li>
+        <li>Etat &#151; Nom usuel<br>
+          Solide &#151; Combustible sonnore<br>
+          Liquide &#151; Huile de vie<br>
+          Gazeux &#151; Espace-Temps<br>
+          Visqueux &#151; Moton effervescent<br>
+          Fraitt (en dessous de z&eacute;ro absolut) &#151; Gogodendron-Turbine<br>
+        </li>
+      </ol>
+      <hr>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Ceremonie Imp&eacute;riale</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" background="flagbg.jpg" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+<div align="center">
+  <p><img src="ceremonie.jpg" width="613" height="416" border="8" usemap="#drapeau"> 
+  </p>
+  <table width="629" border="1" bgcolor="#FF0000">
+    <tr>
+      <td height="146"> 
+        <div align="center">
+          <p><font size="4" color="#FFFFFF"><i> Sous l'oeil attentif de l'empereur, 
+            le maréchal Trouduk remet au général Quapoutte la médaille de l'ordre 
+            du tuyaux d'or pour sa magnifique victoire contre les <a href="bataille.htm" target="_top">Zanzabries</a>.</i></font></p>
+          <p><font color="#FFFFFF"><i><font size="4">Pour célébrer cet heureux 
+            événement le peuple déploie de nombreux <a href="ledrapeau.htm" target="_top">drapeaux</a> 
+            impériaux.</font></i></font></p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p><font size="4"></font></p>
+</div>
+<map name="drapeau">
+  <area shape="rect" coords="488,4,514,59" href="ledrapeau.htm" target="_top">
+  <area shape="rect" coords="228,19,246,67" href="ledrapeau.htm" target="_top">
+  <area shape="rect" coords="167,26,191,62" href="ledrapeau.htm" target="_top">
+  <area shape="poly" coords="136,14,159,24,160,84,141,77,136,17" href="ledrapeau.htm" target="_top">
+</map>
+</body>
+</html>

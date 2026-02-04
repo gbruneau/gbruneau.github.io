@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="ambassade.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><img src="usine3.jpg" width="400" height="267"> </p>
+  <p><font size="6">Usine de recyclage</font><br>
+    <font size="4">PDans un souci de protection de l'environnement, <br>
+    l'ambassadeur a insist&eacute; pour que la r&eacute;sidence soit munie de 
+    cette usine de recyclage. <br>
+    L'ambassade en Chicoutimi est la premi&egrave;re ambassade verte de l'empire. 
+    </font><font size="4"><br>
+    <a href="p11.html"><img src="backblack.gif" width="65" height="24" border="0"></a><a href="p01.html"><img src="nextblack.gif" width="65" height="24" border="0"></a> 
+    </font></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Cadavres Exquis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<frameset rows="111,416" cols="*" border="0" framespacing="0" frameborder="NO" bordercolor="#000000"> 
+  <frame name="Titre" marginwidth="0" marginheight="0" frameborder="NO" scrolling="NO" src="cadavretop.htm" bordercolor="#000000" noresize>
+  <frameset rows="370,43" frameborder="NO" border="0" framespacing="0" cols="*"> 
+    <frame src="cadavre000.htm" scrolling="AUTO" name="Document" frameborder="NO">
+    <frame name="Index" scrolling="NO" marginwidth="0" marginheight="0" src="cadavindex.htm" noresize frameborder="NO">
+  </frameset>
+</frameset>
+<noframes><body bgcolor="#FFFFFF">
+
+</body></noframes>
+</html>

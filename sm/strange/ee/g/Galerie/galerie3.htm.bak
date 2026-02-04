@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Galerie de l'Empereur</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#996600" background="bg.jpg" text="#CC0000">
+<div align="center"><a href="galerie2.htm"><img src="goprev.jpg" width="57" height="31" border="0" align="left"></a><a href="galerie4.htm"><img src="gonext.jpg" width="57" height="31" border="0" align="right"></a><img src="titre.jpg" width="599" height="54"> 
+  <br>
+</div>
+<br>
+&nbsp; <br>
+<table border="0" cellspacing="2" cellpadding="0" width="1" align="center">
+  <tr>
+    <td><img src="kmizol.jpg" width="377" height="470"></td>
+    <td>
+      <table border="0" cellspacing="4" cellpadding="0" width="1%" align="center">
+        <tr> 
+          <td><img src="pie1.jpg" width="162" height="207"></td>
+          <td><img src="pie3.jpg" width="162" height="207"></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+          <td><img src="pie2.jpg" width="162" height="207"></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><img src="pie4.jpg" width="162" height="207"></td>
+          <td>&nbsp;</td>
+          <td><img src="pie5.jpg" width="162" height="207"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

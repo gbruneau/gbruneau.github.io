@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" background="flagbg.jpg" text="#000000" link="#000000" vlink="#000000" alink="#000000">
+<div align="center">
+  <p><img src="drapeau.jpg" width="515" height="276" border="2"> </p>
+  <table width="75%" border="0" cellspacing="0">
+    <tr bgcolor="#FF0000"> 
+      <td bgcolor="#FF0000"> 
+        <div align="center">&nbsp;</div>
+      </td>
+      <td width="80%">&nbsp;</td>
+      <td bgcolor="#FF0000">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td bgcolor="#FF0000">&nbsp;</td>
+      <td width="80%"> 
+        <div align="center"> 
+          <p><font size="6"><img src="pin.jpg" width="55" height="54"></font></p>
+          <p><font size="6">Pour célébrer le jour du drapeau, la ministre des 
+            drapeaux la vénérable Keisha Lhopse proclame la distribution de deux 
+            cents drapeaux, épinglettes et macarons de taille variable à tous 
+            les citoyens de l'empire.</font></p>
+          <p><font size="6"><img src="pin.jpg" width="55" height="54"></font></p>
+        </div>
+      </td>
+      <td bgcolor="#FF0000"> 
+        <div align="center">&nbsp;</div>
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td bgcolor="#FF0000">&nbsp;</td>
+      <td width="80%" bgcolor="#FF0000">&nbsp;</td>
+      <td bgcolor="#FF0000">&nbsp;</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p><font size="6"> </font></p>
+</div>
+</body>
+</html>

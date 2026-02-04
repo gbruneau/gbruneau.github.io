@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="ambassade.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><img src="Piscine.JPG" width="512" height="427"> </p>
+  <p><font size="6">Piscine d'appoint</font><br>
+    <font size="4">En attendant que la piscine permanente ne soit finis, <br>
+    les autorit&eacute;s ont biens voulus fournir &agrave; l'ambassadeur une piscine 
+    d'appoint <br>
+    permettant &agrave; sa petite famille de se rafra&icirc;chir pendant les jours 
+    chauds d'&eacute;t&eacute;.<br>
+    <a href="p04.html"><img src="backblack.gif" width="65" height="24" border="0"></a><a href="p06.html"><img src="nextblack.gif" width="65" height="24" border="0"></a> 
+    </font></p>
+</div>
+</body>
+</html>

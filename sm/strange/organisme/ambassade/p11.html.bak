@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="ambassade.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><img src="ecurie2.jpg" width="371" height="259"> </p>
+  <p><font size="6">&Eacute;curie des invit&eacute;s</font><br>
+    <font size="4">Plus modeste que l'&eacute;curie de l'ambassadeur, ce b&acirc;timent 
+    peu quand m&ecirc;me accueillir plus de quarante chevaux.</font><font size="4"><br>
+    <a href="p10.html"><img src="backblack.gif" width="65" height="24" border="0"></a><a href="p12.html"><img src="nextblack.gif" width="65" height="24" border="0"></a> 
+    </font></p>
+  </div>
+</body>
+</html>

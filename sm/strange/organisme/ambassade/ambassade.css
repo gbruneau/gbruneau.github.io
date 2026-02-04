@@ -1,0 +1,11 @@
+body {  background-color: #000000; color: #CCCC00; font-family: Nuncio}
+a:active {  color: #CCCC00}
+a:link {  color: #CCCC00}
+a:visited {  color: #CCCC00}
+a:hover {  color: #FFFF00}
+  @font-face {
+    font-family: Nuncio;
+    font-style:  normal;
+    font-weight: normal;
+    src: url(../../FONT/NUNCIO0.TTF);
+  }

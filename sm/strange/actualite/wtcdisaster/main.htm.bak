@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>WTC Disaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<frameset cols="190,*" frameborder="NO" border="0" framespacing="0" rows="*"> 
+  <frame name="" scrolling="AUTO" noresize src="index.htm">
+  <frame name="DOC" src="Intro.htm">
+</frameset>
+<noframes> 
+<body bgcolor="#FFFFFF" text="#000000">
+</body>
+</noframes> 
+</html>

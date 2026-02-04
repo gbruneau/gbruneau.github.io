@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../style.css" rel="Stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#330000" text="#CCCC00" link="#CCCC00" vlink="#CCCC00" alink="#CCCC00">
+<table width="100%" border="0">
+  <tr>
+    <td width="5%" valign="top"><img src="p10.jpg" width="422" height="483"></td>
+    <td valign="top" width="95%"> 
+      <div align="center"> 
+        <p>Livre du Tout<br>
+          X - Toute chose soluble dans B<span class="un">un</span>ge peut changer 
+          d'<span class="un">un</span>ivers</p>
+        <hr>
+      </div>
+      <ol>
+        <li> 
+          <div align="center"> 
+            <div align="left">Toute chose soluble dans B<span class="un">un</span>ge 
+              peut changer d'<span class="un">un</span>ivers</div>
+          </div>
+        </li>
+        <li>Question: B<span class="un">un</span>ge est-it perm&eacute;able ?</li>
+        <li>Autre question: B<span class="un">un</span>ge est-it soluble?</li>
+        <li>Repr&eacute;sentation du N&eacute;ant (Gros plan) 
+          <div align="center"> 
+            <div align="left"> </div>
+          </div>
+        </li>
+      </ol>
+      <div align="center">
+        <div align="left">
+          <hr>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

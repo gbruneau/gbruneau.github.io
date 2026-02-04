@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="livre">
+<style type="text/css">
+<!--
+.aCitation {  font-style: italic; text-align: justify}
+.aCredit {  font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor="#660000" text="#FFCC00" link="#FFCC00" vlink="#FFCC00" alink="#FFCF00">
+<div align="center"> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="10">
+    <tr> 
+      <td valign="top"><img src="livrejc1.JPG" width="303" height="500"></td>
+      <td> 
+        <div align="justify"> 
+          <p><span class="aCitation"><font size="5">&quot;Si le choux est trop 
+            cher, achetez autre chose. Le gouvernement n'est pas responsable de 
+            ce que vous achetez.&quot;</font></span> <font size="5"><br>
+            <span class="aCredit">Il ne faut JAMAIS parler aux &eacute;trangers, 
+            P.247</span></font></p>
+          <p>&nbsp;</p>
+          <p><span class="aCitation">L'occasion d'un Sommet de la Fraternit&eacute; 
+            pour la suite du monde selon l'Empereur. Un sommet plan&eacute;taire 
+            qui cherche &agrave; trouver le passage vers un sens nouveau. Inoubliable.</span><br>
+            <span class="aCredit">- Lucie Fehr, Le Matin de Cadillac -</span></p>
+          <p><span class="aCitation">Il ne faut jamais parler aux &eacute;tangers, 
+            c'est la parole de tous les humains qui r&eacute;sistent, refusant 
+            de se laisser emporter par les courants qui sacrifient l'existence 
+            dans son essence m&ecirc;me. Vivre, c'est aussi la peine de vivre, 
+            sans laquelle aucun lendemain n'est possible. Avec Il ne faut jamais 
+            parler aux &eacute;tangers, l'Empereur cl&ocirc;t d'une main magistrale 
+            son grand cycle philosophique.</span><br>
+            <span class="aCredit">- Honnor&eacute; Thorique, Le Shefferville Poste 
+            -</span></p>
+          <p><span class="aCitation">Une impressionnante agglomération de lettres 
+            formant une succession de mots. L'assemblage de mots pour en faire 
+            des phrases en fait un document d'une lisibilité remarquable. Encore 
+            une fois l'Empereur innove sur ses écrits précédents. À lire absolument 
+            pour comprendre ce qui y est écrit. </span><br>
+            <span class="aCredit">- Diog&egrave;ne Oscide, L'Echo de Keylong -</span></p>
+          <p><br>
+            <br>
+          </p>
+          </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

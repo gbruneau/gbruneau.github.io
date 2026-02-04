@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../style.css" rel="Stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#330000" text="#CCCC00" link="#CCCC00" vlink="#CCCC00" alink="#CCCC00">
+<table width="100%" border="0">
+  <tr>
+    <td width="5%" valign="top"><img src="p02.jpg" width="435" height="595"></td>
+    <td valign="top" width="95%">
+      <div align="center"> 
+        <p>Livre du Tout<br>
+          II - La terre c'est comme une grosse boule de cr&egrave;me glac&eacute;e 
+          napolitaine</p>
+        <hr>
+      </div>
+      <ol>
+        <li> 
+          <div align="left"> &quot;La terre c'est comme une grosse boule de cr&egrave;me 
+            glac&eacute;e napolitaine&quot;</div>
+        </li>
+        <li>&quot;Le spagathy en spay<br>
+          Sauce &agrave; bille<br>
+          Parmesan en b&acirc;ton&quot;</li>
+        <li>&quot;La mol&eacute;cule <span class="un">un</span>iverselle&quot;</li>
+        <li>&quot;Conversion du syst&egrave;me solaire au syst&egrave;me m&eacute;trique&quot;</li>
+        <li>On fait installer <br>
+          (pos&eacute;) {le temps l'espace le son l'avoine </li>
+        <li>Fruit</li>
+        <li>B<span class="un">un</span>ge</li>
+        <li>???</li>
+        <li>Anneau et vecteurs</li>
+      </ol>
+      <hr>
+    <p>&nbsp;</p></td>
+  </tr>
+</table>
+</body>
+</html>

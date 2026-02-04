@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Galerie de l'Empereur</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#996600" background="bg.jpg" text="#CC0000">
+<div align="center"><a href="galerie3.htm"><img src="goprev.jpg" width="57" height="31" align="left" border="0"></a><img src="titre.jpg" width="599" height="54"> 
+  <br>
+</div>
+<br>
+&nbsp; <br>
+<table width="41%" border="0" cellspacing="6" cellpadding="0" align="center">
+  <tr>
+    <td width="90%"><img src="cinema.jpg" width="311" height="308"></td>
+    <td width="10%"><img src="skull.jpg" width="265" height="165"></td>
+  </tr>
+</table>
+</body>
+</html>

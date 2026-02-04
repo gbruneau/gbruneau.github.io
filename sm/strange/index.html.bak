@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Strange Manivelle</title>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Humour,Strange Manivelle,Empereur,Strange,IBC,Soulageaison,Cadavre Exquis,Qu&eacute;bec,Cr&eacute;ation Collective,Satire,Manivelle,Absurde,Absurdit&eacute;,Quebec,Canada,Shefferville"> 
+<meta name="description" content="s">
+<script language="JavaScript">
+function GoNoBanner()
+{
+window.top.location.replace("http://members.nbci.com/_XMCM/bunge/mainmenu.html");
+}
+</script>
+</head>
+<body bgcolor="#339900" onLoad="javascript:GoNoBanner()">
+<b>Strange Manivelle</b>
+</body>
+</html>

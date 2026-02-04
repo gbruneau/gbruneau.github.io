@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="ambassade.css">
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"> 
+  <p><img src="ecurie1.jpg" width="415" height="175"> </p>
+  <p><font size="6">&Eacute;curie de l'ambassadeur</font><br>
+    <font size="4">Cette splendide &eacute;curie sert &agrave; loger les chevaux 
+    de l'ambassadeur.<br>
+    Bien que celle-ci soit spacieuse, elle reste toutefois insuffisante pour les 
+    besoins de l'ambassadeur.<br>
+    </font><font size="4"> Celui-ci a du faire une cruelle s&eacute;lection des 
+    chevaux &agrave; emmener pour la dur&eacute; de son poste en Chicoutimi.<br>
+    <a href="p09.html"><img src="backblack.gif" width="65" height="24" border="0"></a><a href="p11.html"><img src="nextblack.gif" width="65" height="24" border="0"></a> 
+    </font></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Vignette StoryServer 4 Tue Oct 09 12:32:07 2001 --><HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="DESCRIPTION" content="L'EMPIRE, Journal L'Empire, quotidien d'information impérial">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="KEYWORDS" content="EMPIRE">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="ROBOTS" content="INDEX,FOLLOW,NOARCHIVE">
+<TITLE>L'Empire interactif : A la Une</TITLE>
+<SCRIPT language=JavaScript>
+		<!--
+		var agent = navigator.appName;
+		var ver = parseInt(navigator.appVersion);
+		if ((agent=="Netscape") && (ver >= 4) && (ver < 5))
+			fichier = "style_netscape.css" ;
+		else
+			fichier = "style_ie.css";
+		document.write('<LINK HREF="'+ fichier + '" REL="stylesheet" TYPE="text/css">');
+		//-->
+	   </SCRIPT>
+
+</HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginheight="0" marginwidth="0"><! OAS SETUP begin -->
+<SCRIPT language=JavaScript> <!-- 
+// Serveur OAS
+OAS_url = 'http://pubs.lemonde.fr/RealMedia/ads/';
+// OAS_URL
+OAS_sitepage = 'info.lemonde.fr/homepage';
+
+OAS_listpos = 'TopLeft,Bottom,Position2,Left,Right,Position1,Middle,Middle1,TopRight';  
+
+OAS_query = '';
+OAS_version = 10;
+OAS_rn = '001234567890'; OAS_rns = '1234567890';
+OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+function OAS_NORMAL(pos) {
+  document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" TARGET=_top>');
+  document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" BORDER=0></A>');
+}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+OAS_version = 11;
+if (navigator.userAgent.indexOf('Mozilla/3') != -1)
+  OAS_version = 10;
+if (OAS_version >= 11)
+  document.write('<SCRIPT LANGUAGE=JavaScript SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + OAS_query + '"></SCR' + 'IPT>');
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+document.write('');
+function OAS_AD(pos) {
+  if (OAS_version >= 11)
+    OAS_RICH(pos);
+  else
+    OAS_NORMAL(pos);
+}
+//-->
+</SCRIPT>
+<!------ OAS SETUP end ------><!--squelette : info_sq_une-2-->
+<TABLE bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=775>
+  <TBODY>
+  <TR>
+    <TD colSpan=10><!-- info_sssq_bandeau_haut_home -->
+      <TABLE bgColor=#ffffff border=0 cellPadding=0 cellSpacing=0 width=775>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=105><!-- info_pv_perso_oreille_gauche -->
+            <SCRIPT language=JavaScript type=text/javascript>
+<!--
+
+// Initialisation d'un flag pour savoir si on se trouve sur "La Une"
+var La_Une;
+if (3208 == 3208) {
+	La_Une = 1;
+} else {
+	La_Une = 0;
+}
+
+function SetCookieTdb (name,value,expires,path,domain,secure) {
+  document.cookie = name + "=" + escape (value) +
+    ((expires) ? "; expires=" + expires.toGMTString() : "") +
+    ((path) ? "; path=" + path : "; path=") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
+}
+
+function GetCookieVal (offset) {
+  var endstr = document.cookie.indexOf (";", offset);
+  if (endstr == -1)
+    endstr = document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg)
+      return GetCookieVal (j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+  }
+  return null;
+}
+
+var val_cook_temp = GetCookie('info_user_web');
+//alert (val_cook_temp);
+if ((val_cook_temp != null) && (val_cook_temp != "")) {
+	var ls_info = val_cook_temp.split('·');
+	var civilite = ls_info[0];
+	var nom = ls_info[1];
+	var affiche_nb_email = ls_info[2];
+	var login = ls_info[3];
+	var nom_ville = ls_info[4];
+	var image_am_meteo = ls_info[5];
+	var image_pm_meteo = ls_info[6];	
+	var temperature_min = ls_info[7];
+	var temperature_max = ls_info[8];
+	var desc_temps_am = ls_info[9];
+	var desc_temps_pm = ls_info[10];	
+	
+	var obj_date = new Date();
+	if ((obj_date.getHours() >= 0) && (obj_date.getHours() < 12)) {
+		var temperature = temperature_min;
+		var image_meteo = image_am_meteo;
+		var desc_temps = desc_temps_am;
+	} else {
+		var temperature = temperature_max;	
+		var image_meteo = image_pm_meteo;		
+		var desc_temps = desc_temps_pm
+	} 
+
+	if (image_meteo == '.gif') {
+		ligne_meteo = '' ;
+	} else {
+		ligne_meteo = '<img src="http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/meteo/'+ image_meteo +'" border="0" alt="'+ desc_temps +'">&nbsp;'+ temperature +' &#186;C' ;
+	}
+	document.write('<table border="0" cellpadding="1" cellspacing="1" width="105" bgcolor="6473a4"><tr><td bgcolor="#0c2577" height="17"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html"><font color="#ffffff">Bienvenue</font></a></span></td></tr><tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">'+ civilite +'&nbsp;'+ nom +'</a></span></td></tr><tr><td bgcolor="#e7e7e7" nowrap="yes"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">'+ nom_ville +'&nbsp;' + ligne_meteo + '</a></span></td></tr>');
+
+	if (affiche_nb_email==1) {
+		document.write('<tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" target="_blank" href="http://club.lemonde.fr"><img src="http://dynimg.medianet-technologies.com/lemonde/imgmail.php?login='+ login +'" width="95" height="15" border="0"></a></span></td></tr>');
+	} else {
+		document.write('<tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">votre mail</a></span></td></tr>');
+	}
+
+	if (La_Une==1) {
+		document.write('<tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/logout/1,6902,,00.html">S&#39;&eacute;clipser</a></span></td></tr></table>');
+	} else {
+		document.write('</table>');
+	}
+
+} else {	
+	var user_id = GetCookie('tdb_user_id');
+
+	if ((user_id != null) && (user_id != "")) {
+
+		document.write('<script language="JavaScript" type="text/javascript" src="http://www.lemonde.fr/info_perso_oreille_gauche/1,6057,3208-' + user_id + ',00.html"></scr' + 'ipt>');		
+	} else {
+		document.write('<table border="0" cellpadding="1" cellspacing="1" width="105" bgcolor="6473a4"><tr><td bgcolor="#0c2577" height=17><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html"><font color="#ffffff">Bienvenue</font></a></span></td></tr><tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">Personnalisez :</a></span></td></tr>');
+		if (La_Une==1) {
+			document.write('<tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">votre m&#233;t&#233;o</a></span></td></tr><tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">votre mail</a></span></td></tr>');
+		} else {
+			document.write('<tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">m&#233;t&#233;o & mail</a></span></td></tr>');
+		}
+		document.write('<tr><td bgcolor="#e7e7e7"><span class="titremenuhaut">&nbsp;&nbsp;<a class="titremenuhaut" href="/tdb/login/1,6861,,00.html">votre compte</a></span></td></tr></table>');
+	}
+}	
+//-->
+</SCRIPT>
+          </TD>
+          <TD width=10><IMG height=1 
+            src="pixel_blanc.gif" 
+            width=10></TD>
+          <TD width=307>&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="Le%20Mon1.gif" width="278" height="54"></TD>
+          <TD width=15><IMG height=1 
+            src="pixel_blanc.gif" 
+            width=15></TD>
+          <TD vAlign=center width=2><IMG height=44 
+            src="barre.gif" width=2></TD>
+          <TD width=15><IMG height=1 
+            src="pixel_blanc.gif" 
+            width=15></TD>
+          <TD width=137><IMG height=1 
+            src="pixel_blanc.gif" 
+            width=137><BR><!-- info_pv_logo_home --><SPAN 
+            class=daterubprincipale>Mardi, le 9ème jour de la Lune de
+            Paris-pâté</SPAN> - <SPAN 
+            class=daterubprincipale>Schefferville</SPAN><!-- /info_pv_logo_home --></TD>
+          <TD width=184><img border="0" src="EMPIRE5.gif" width="163" height="100"></TD></TR>
+        <TR>
+          <TD colSpan=8 width=775><!--info_pv_appel_version_texte -->
+            <TABLE cellSpacing=0 cellspadding="1">
+              <TBODY>
+              <TR>
+                <TD align=right 
+                background="pix_bleu.gif" 
+                height=10 noWrap width=773 border="0" vspace="6"><A 
+                  href="file:///C:/sequence/0,5987,3208---VT,00.html" 
+                  style="TEXT-DECORATION: none" color="white"><FONT color=white 
+                  face=verdana size=1><B>Version texte</B></FONT></A></TD></TR>
+              <TR>
+                <TD></TD></TR></TBODY></TABLE>
+            <p align="center" style="margin-top: 0; margin-bottom: 6"><!-- /info_pv_appel_version_texte --><b><i><font size="4">*
+            </font></i></b><b><i><font size="4">DOSSIER SPÉCIAL SUR LA LUTTE
+            CONTRE LES SÉPARATISTES *</font></i></b></p>
+          </TD></TR></TBODY></TABLE><!-- /info_sssq_bandeau_haut_home --></TD></TR>
+  <TR>
+    <TD rowSpan=2 vAlign=top width=105><!-- info_sssq_1_col_empil_gen --><!-- info_pv_sequence_liste -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=105>
+        <TBODY>
+        <TR>
+          <FORM action=http://recherche.lemonde.fr/search97cgi/s97_cgi 
+          method=post name=recherche><INPUT name=Action type=hidden 
+          value=SearchBack> <INPUT name=Filter type=hidden 
+          value=www_simple_f.hts> <INPUT name=ResultTemplate type=hidden 
+          value=www_simple_t.hts> <INPUT name=Collection type=hidden value=www> 
+          <INPUT name=Collection type=hidden value=int> <INPUT name=Collection 
+          type=hidden value=sor> <INPUT name=ResultCount type=hidden value=10> 
+          <INPUT name=zon type=hidden value=title> <INPUT name=ResultMaxDocs 
+          type=hidden value=100> <INPUT name=ResultField[1] type=hidden 
+          value=title> <INPUT name=ResultField[2] type=hidden value=soutitre> 
+          <INPUT name=ResultField[3] type=hidden value=url_vignette> <INPUT 
+          name=ResultField[4] type=hidden value=resume> <INPUT 
+          name=ResultField[5] type=hidden value=date_publi_papier> 
+          <TD colSpan=2 height=20 vAlign=top>&nbsp;<INPUT name=query 
+            onfocus="document.recherche.query.value='';" size=9 
+            value=Rechercher>&nbsp;<INPUT border=0 height=15 
+            src="bt_ok.gif" type=image 
+            width=15><BR><IMG height=3 
+            src="pix1.gif" 
+          width=1><BR></TD></FORM></TR>
+        <TR>
+          <TD bgColor=#b2a288 colSpan=2><SPAN 
+            class=titremenugauche>&nbsp;ACTUALITES<BR></SPAN><IMG align=bottom 
+            border=0 height=1 
+            src="pix1.gif" 
+        width=105></TD></TR>
+        <TR>
+          <TD bgColor=#b2a288 width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD bgColor=#efebe5><A class=amenu 
+            href="file:///C:/sequence/0,5987,3208---,00.html">à la 
+            une</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3210---,00.html">empire</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3224---,00.html">colonies</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3226---,00.html">société</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="../../a/atlas/commandature/main.htm" target="_top">protectorats</A><BR>
+            <IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3230---,00.html">horizons</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3232---,00.html">invasions en cours</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3234---,00.html">armée</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3352---,00.html">jeano</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3236---,00.html">désinformation</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3238---,00.html">aujourd'hui</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="http://www.lemonde.fr/s/meteomonde/meteo2.html">météo</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="../../../organisme/propagande/MinistereDeLaPropagande.htm" target="_top">propagande</A><BR>
+            <IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3244---,00.html">sciences</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3246---,00.html">contre-culture</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf width=4><FONT color=#d8cebf 
+          size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3358---,00.html">mode</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR></TBODY></TABLE><!-- /info_pv_sequence_liste --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_autres_editions -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=105>
+        <TBODY>
+        <TR>
+          <TD bgColor=#b2a288 colSpan=2><SPAN 
+            class=titremenugauche>&nbsp;AUTRES&nbsp;EDITIONS<BR></SPAN><IMG 
+            align=bottom alt="" border=0 height=1 
+            src="pix1.gif" 
+        width=105></TD></TR>
+        <TR>
+          <TD bgColor=#d8cebf rowSpan=7 width=4><FONT color=#d8cebf 
+            size=1>.</FONT></TD>
+          <TD><A class=amenu href="file:///C:/tld/0,5987,,00.html">&nbsp;tous 
+            les dossiers</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="http://forums.lemonde.fr/" 
+            target=_blank>&nbsp;tous les forums</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu 
+            href="file:///C:/tdb/login/1,6861,,00.html">&nbsp;lettres<BR>&nbsp;d'information</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu 
+            href="javascript:window.open('/dessins_du_jour/0,5870,,00.html','reverso','scrollbars=yes,width=600,height=400');void(0)">&nbsp;les 
+            dessins du jour</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="file:///C:/kiosque" target=_blank>&nbsp;l'EMPIRE
+            en pdf</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="file:///C:/kiosque" target=_blank>&nbsp;l'EMPIRE
+            en html</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu 
+            href="file:///C:/article/0,5987,3280--139041-,00.html">&nbsp;version
+            T.V.</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR></TBODY></TABLE><!-- /info_pv_autres_editions --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_chaines -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=105>
+        <TBODY>
+        <TR>
+          <TD bgColor=#990000 colSpan=2><SPAN class=titremenugauche><FONT 
+            color=white>&nbsp;CHAINES</FONT><BR></SPAN><IMG align=bottom alt="" 
+            border=0 height=1 
+            src="pix1.gif" 
+        width=105></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc rowSpan=7 width=4><FONT color=#d8cebf 
+            size=1>.</FONT></TD>
+          <TD><A class=amenu href="http://interactif.lemonde.fr/" 
+            target=_blank>&nbsp;interactif</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="http://sortir.lemonde.fr/" 
+            target=_blank>&nbsp;sortir</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3260---,00.html">&nbsp;livres</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3264---,00.html">&nbsp;éducation</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="file:///C:/sequence/0,5987,3290---,00.html" 
+            target=_blank>&nbsp;emploi</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="http://www.lemonde.fr/immobilier/" 
+            target=_blank>&nbsp;immobilier</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="http://finances.lemonde.fr/" 
+            target=_blank>&nbsp;finances</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=105></TD></TR></TBODY></TABLE><!-- /info_pv_chaines --><IMG height=7 
+      src="pixel_blanc.gif" width=1><BR><!-- info_pv_service -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=105>
+        <TBODY>
+        <TR>
+          <TD bgColor=#b2a288 colSpan=2><SPAN class=titremenugauche><FONT 
+            color=white>&nbsp;SERVICES</FONT><BR></SPAN><IMG align=bottom alt="" 
+            border=0 height=1 
+            src="pix1.gif" 
+        width=105></TD></TR>
+        <TR>
+          <TD bgColor=#66cccc rowSpan=4 width=4><FONT color=#d8cebf 
+            size=1>.</FONT></TD>
+          <TD><A class=amenu href="http://archives.lemonde.fr/" 
+            target=_blank>Fausses archives de l'EMPIRE</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="file:///C:/sequence/0,5987,3254---,00.html" 
+            target="">&nbsp;services<BR>&nbsp;aux lecteurs</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="file:///C:/sequence/0,5987,3258---,00.html" 
+            target="">&nbsp;contactez-nous</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD><A class=amenu href="http://sdl.lemonde.fr/" 
+            target=_blank>&nbsp;sté des lecteurs</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR></TBODY></TABLE><!-- /info_pv_service --><IMG height=7 
+      src="pixel_blanc.gif" width=1><BR><!-- info_pv_outils -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=105>
+        <TBODY>
+        <TR>
+          <TD bgColor=#cc9900 colSpan=2><SPAN 
+            class=titremenugauche>&nbsp;OUTILS<BR></SPAN><IMG align=bottom 
+            alt="" border=0 height=1 
+            src="pix1.gif" 
+        width=105></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/tdb/login/1,6861,,00.html">espace 
+            personnel</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu href="http://club.lemonde.fr/" 
+            target=_blank>mail gratuit</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/article/0,5987,3280--139043-,00.html">mots 
+            croisés</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="javascript:window.open('http://www.lemonde.fr/s/webcam/home/index.html','','scrollbars=no,width=370,height=340');void(0)">webcam</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3298---,00.html">outils de 
+            recherche</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/article/0,5987,3280--139046-,00.html">navigateurs 
+            <BR>&nbsp;&amp; utilitaires</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="javascript:window.open('http://lemonde.reverso.net/PopUP_trad.asp','reverso','scrollbars=no,width=480,height=170');void(0)">traducteur</A><BR><IMG 
+            height=1 src="pix1.gif" 
+            width=102></TD></TR>
+        <TR>
+          <TD bgColor=#ffcccc><FONT color=#d8cebf size=1>&nbsp;</FONT></TD>
+          <TD><A class=amenu 
+            href="file:///C:/sequence/0,5987,3274---,00.html">questions de 
+            <BR>&nbsp;lahulien</A><BR><IMG height=1 
+            src="pix1.gif" 
+        width=102></TD></TR></TBODY></TABLE><!-- /info_pv_outils --><!-- /info_sssq_1_col_empil_gen --></TD>
+    <TD rowSpan=2 width=9><IMG height=1 
+      src="pixel_blanc.gif" width=9></TD>
+    <TD vAlign=top width=468><!-- info_ssq_4_cases_home --><!-- info_pv_sujet_1_imp_n_sec_home_ref -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=468>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE align=right border=0 cellPadding=0 cellSpacing=0 width=233>
+              <TBODY>
+              <TR>
+                <TD rowSpan=2><IMG 
+                  src="pixel_blanc.gif" 
+                  width=5></TD>
+                <TD bgColor=black colSpan=2><!-- image wth 228 --><A 
+                  href="file:///C:/article/0,5987,3216--229777-,00.html"><IMG 
+                  alt="Un chasseur F-14 décolle de l'USS &quot;Enterprise&quot;, le 9 octobre 2001 | APP" 
+                  border=0 
+                  src="attaques0910afp2.jpeg"></A></TD></TR>
+              <TR>
+                <TD bgColor=black><IMG 
+                  src="pixel.gif" 
+                width=3></TD>
+                <TD bgColor=black><SPAN class=afptxtphoto><font color="#FFFFFF">Un chasseur
+                  Z-2 prend son envol depuis le SEASS &quot;Candy&quot;,</font>
+                  le 9octobre 2001 | 
+                  AFP<BR></SPAN></TD></TR></TBODY></TABLE><SPAN class=laune><A 
+            class=laune 
+            href="file:///C:/article/0,5987,3216--229777-,00.html">Lahul : 
+            les frappes continuent </A><BR></SPAN><A class=unetxt 
+            href="file:///C:/article/0,5987,3216--229777-,00.html">L'empire a mené un premier bombardement
+            massif sur
+            le Lahul après deux salves consécutives d'attaques efficacement
+            meurtrières et
+            a annoncé qu'il pourrait s'en prendre à "d'autres foyers du
+            séparatisme&quot;. Par crainte d'une riposte séparatiste, Schefferville
+            a décrété l'état d'alerte à la grandeur de l'Empire.
+            </a><ul><LI>
+            <A class=unetxt 
+            href="file:///C:/article/0,5987,3216--229777-,00.html"></a><A class=unetxt 
+            href="http://www.lemonde.fr/visu_obj_multi/0,5867,17600-3219,00.html" 
+            target=_blank>Infographie : les forces en présence au Lahul.</A><BR>
+            <DIV class=afptxtgrey>LEMPIRE | 09.10.01 | <SPAN 
+            class=afptxtheure>08h54 <IMG height=6 hspace=1 
+            src="fleche1.gif" width=6><A 
+            class=afptxtgrey 
+            href="file:///C:/dossier/0,5987,3210-6550--,00.html"> 
+            DOSSIER</A></span></DIV><SPAN 
+            class=afptxtheure>
+            <DIV class=unetxtgras style="PADDING-TOP: 7px">LIRE 
+            EGALEMENT</DIV><A class=unetxt 
+            href="file:///C:/article/0,5987,3218--229773-,00.html">A Gaspé, les 
+            affrontements entre manifestants séparatistes et policiers préfectoraux
+              ont fait 30 000 morts </A>
+            <DIV class=afptxtgrey><B>•</B> LEMPIRE&nbsp; | 08.10.01 | 19h04</DIV><A 
+            class=unetxt 
+            href="file:///C:/article/0,5987,3216--229775-,00.html">Bilan 
+            préliminaire positif pour la première vague d'attaques sur Madrid</A>
+            <DIV class=afptxtgrey><B>•</B> LEMPIRE&nbsp; | 08.10.01 | 21h13</DIV><A 
+            class=unetxt 
+            href="file:///C:/article/0,5987,3216--229770-,00.html">Un assaut 
+            contre Londres serait possible d'ici une semaine </A>
+            <DIV class=afptxtgrey><B>•</B> LEMPIRE&nbsp; | 08.10.01 | 18h17</DIV><A 
+            class=unetxt 
+            href="file:///C:/article/0,5987,3216--229645-,00.html">Les premières 
+            frappes impériales contre Berlin</A>
+            <DIV class=afptxtgrey><B>•</B> LEMPIRE&nbsp; | 08.10.01 | 12h10</DIV><A 
+            class=unetxt 
+            href="file:///C:/article/0,5987,3210--229584-,00.html">Le Ministère
+              de l'Information prépare l'opinion à une guerre longue 
+</A>
+            <DIV class=afptxtgrey><B>•</B> LEMPIRE&nbsp; | 08.10.01 | 
+            09h53</DIV></SPAN></LI>
+            </ul>
+          </TD></TR></TBODY></TABLE><!-- /info_pv_sujet_1_imp_n_sec_home_ref --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=468>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=147><!-- info_pv_sujet_1_titre_resume_home  -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=147>
+              <TBODY>
+              <TR>
+                <TD width=96><SPAN 
+                class=titrearticle>BIOSÉPARATISME<BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=46><IMG height=1 
+                  src="pix1.gif" 
+                  width="100%"><BR></TD></TR>
+              <TR>
+                <TD colSpan=3><SPAN class=unesstitre><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3222--229776-,00.html">Le 
+                  niveau d'alerte maximal déclaré à Trois-Pistoles</A><BR></SPAN>
+                  <DIV class=unetxt><A class=unetxt 
+                  href="file:///C:/article/0,5987,3222--229776-,00.html">Un 
+                  deuxième cas de contamination par la bactérie de la Poutine a été 
+                  découvert à Helsinki. Le général Stéphane Dion n'a 
+                  pas rejeté l'éventualité d'un acte séparatiste.</A></DIV>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 08.10.01 | 21h47 
+                  </DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_1_titre_resume_home --></TD>
+          <TD width=13>&nbsp;</TD>
+          <TD vAlign=top width=147><!-- info_pv_sujet_1_titre_resume_home  -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=147>
+              <TBODY>
+              <TR>
+                <TD width=186><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3216---,00.html">LA 
+                  GUERRE<BR>CONTRE LES PEQUISSES.</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=-44><IMG height=1 
+                  src="pix1.gif" 
+                  width="100%"><BR></TD></TR>
+              <TR>
+                <TD colSpan=3><SPAN class=unesstitre><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3216--229628-,00.html">A
+                  Moscou : "Les infidèles ont frappé nos frères !" 
+                  </A><BR></SPAN>
+                  <DIV class=unetxt><A class=unetxt 
+                  href="file:///C:/article/0,5987,3216--229628-,00.html">Les 
+                  formations politiques du Camp de défense apatride de
+                    Monte-Carlo lancent un appel à la guerre séparatiste contre
+                    &quot;l'Empire et ses valets pyloniens&quot;.</A></DIV>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 08.10.01 | 11h01 
+                  </DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_1_titre_resume_home --></TD>
+          <TD width=13>&nbsp;</TD>
+          <TD vAlign=top width=147><!-- info_pv_sujet_1_titre_resume_home  -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=147>
+              <TBODY>
+              <TR>
+                <TD width=134><SPAN class=titrearticle>ATTENTATS EN PYLONIE<BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=8><IMG height=1 
+                  src="pix1.gif" 
+                  width="100%"><BR></TD></TR>
+              <TR>
+                <TD colSpan=3><SPAN class=unesstitre><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3226--229780-,00.html">Chibougamau
+                  autorise l'extradition de Lucien Bouchard</A><BR></SPAN>
+                  <DIV class=unetxt><A class=unetxt 
+                  href="file:///C:/article/0,5987,3226--229780-,00.html">Le 
+                  gouvernement impérial a donné son feu vert pour 
+                  l'extradition vers la Pylonie de Lucien Bouchard, organisateur 
+                  présumé des attentats commis au Kamtchatka.</A></DIV>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 08h34 
+                  </DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_1_titre_resume_home --></TD></TR></TBODY></TABLE><!-- /info_ssq_4_cases_home --><BR><IMG 
+      height=1 src="pix1.gif" vspace=5 
+      width=468><BR><!-- info_sssq_1_col_empil_gen --><!-- info_pv_pub_OAS_468 -->
+      <SCRIPT language=JavaScript>OAS_AD('TopLeft');</SCRIPT>
+      <IMG border=0 height=1 
+      src="lemonde_v.gif" width=1><BR><!-- /info_pv_pub_OAS_468 --><!-- /info_sssq_1_col_empil_gen --><IMG 
+      height=1 src="pix1.gif" vspace=5 
+      width=468><BR><!-- info_sssq_2_col_empil_home -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=468>
+        <TBODY>
+        <TR width="468">
+          <TD vAlign=top width=228><!-- info_pv_sujet_jour -->
+            <TABLE bgColor=#e6daca border=0 cellPadding=3 cellSpacing=0 
+            width=228>
+              <TBODY>
+              <TR>
+                <TD><SPAN class=titrearticle><A class=titrearticle 
+                  href="javascript:%20window.open(" 
+                  0,5870,,00.html?,?reverso?,?scrollbars='yes,width=600,height=400");void(0);"' 
+                  dessins_du_jour info>HÉROS DU JOUR</A><BR></SPAN>
+                  <TABLE align=center border=0 cellPadding=0 cellSpacing=0>
+                    <TBODY>
+                    <TR>
+                      <TD><!-- image --><img src="http://www.catch22.com/~mark/pics/bot10.jpg" width="182" height="333"><BR></TD></TR>
+                    <TR>
+                      <TD bgColor=#000000><!-- legende de l'image --><font color="#FFFFFF"><SPAN 
+                        class=afptxtphoto>Nouveau robot</SPAN></font> <font color="#FFFFFF"><SPAN 
+                        class=afptxtphoto>d'intervention&nbsp;</SPAN></font></TD></TR></TBODY></TABLE>
+                  <DIV class=unetitre style="PADDING-TOP: 9px">
+                  <DIV><SPAN class=titrearticle>CHRONIQUES ET ÉDITORIAL<BR></SPAN><IMG height=5 
+                  src="pixel.gif" 
+                  width=1><BR><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3208--229785-,00.html">En 
+                  raison des circonstances</A><BR><SPAN class=unetxt>par 
+                  Bertrand Poitras-Delpech de l'Académie pylonienne<BR></SPAN>
+                  <DIV class=titrearticle 
+                  style="PADDING-TOP: 9px"></DIV></DIV></DIV></TD></TR></TBODY></TABLE><!-- /info_pave_sujet_jour --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=231>
+              <TBODY>
+              <TR width="228">
+                <TD width=49><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3224---,00.html">COLOMBIE
+                  PYLONIQUE</A></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=177><IMG height=1 
+                  src="pix1.gif" 
+                  width=177><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3224--229825-,00.html">La 
+                  majorité plurielle se divise sous l'effet de la riposte impériale</A><BR><A class=unetxt 
+                  href="file:///C:/article/0,5987,3224--229825-,00.html">Les
+                  Mauves et le Parti séparatiste réclament un débat au Parlement 
+                  assorti d'un vote sur l'engagement de Colombie pylonique au côté de
+                  l'Empire. Le président de l'Assemblée révolutionnaire,
+                  Roger Turcotte, écartait, mardi matin, cette 
+                  éventualité.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  10h54<BR></DIV><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3224--229833-,00.html">Le 
+                  gouvernement propose de nouvelles mesures contre les séparatistes</A><BR>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  10h54<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=53><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3226---,00.html">SOCIÉTÉ</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=170><IMG height=1 
+                  src="pix1.gif" 
+                  width=170><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3226--229842-,00.html">L'empire
+                  connaît depuis deux ans un super baby-boom </A><BR><A 
+                  class=unetxt 
+                  href="file:///C:/article/0,5987,3226--229842-,00.html">Les 
+                  premiers chiffres des naissances confirment que chaque femme
+                  met au monde en moyenne un enfant par année, suite aux
+                  mesures progressistes mises en place par le Ministère de la
+                  Repopulation.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  11h51<BR></DIV>
+                  <A class=unesstitre 
+                  href="../../m/monncandy/monncandy.html" target="_top">Au procès 
+                  de l'affaire de la Lune Candy, le parquet abandonne l'accusation 
+                  contre Paul&nbsp; Martin</A><BR>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  12h21<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=53><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3246---,00.html">CULTURE</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=170><IMG height=1 
+                  src="pix1.gif" 
+                  width=170><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3246--229803-,00.html">"Va 
+                  savoir" : la joie de filmer, à la ville comme à la scène 
+                  </A><BR><A class=unetxt 
+                  href="file:///C:/article/0,5987,3246--229803-,00.html">Jeannette
+                  Bertrand entraîne une farandole enchantée de quiproquos 
+                  amoureux, de rebondissements romanesques et d'interrogations
+                  artistiques sur la Torture en tant qu'art de la rue.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  11h33<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --></TD><!-- colonne de separation //-->
+          <TD width=12><IMG height=1 
+            src="pixel_blanc.gif" 
+            width=12></TD><!--  //-->
+          <TD vAlign=top width=228><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=96><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3210---,00.html">COLONIES</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=127><IMG height=1 
+                  src="pix1.gif" 
+                  width=127><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3214--229821-,00.html">95 000 morts lors d'une collision sur l'aéroport de
+                  Tombouctou</A><BR><A class=unetxt 
+                  href="file:///C:/article/0,5987,3214--229821-,00.html">22
+                  avions de transport aéroportés se sont heurtés durant un
+                  show aérien, au-dessus d'une foule de 150 000 spectateurs. Selon les 
+                  premiers éléments de l'enquête, un des pilotes n'a 
+                  pas respecté la signalisation, alors qu'un épais brouillard 
+                  enveloppait la région.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  10h41<BR></DIV><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3218--229829-,00.html">L'anti-impérialisme 
+                  mobilise une partie des opinions lahuliennes et séparatistes</A><BR>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  11h21<BR></DIV><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3210--229584-,00.html">Les 
+                  dirigeants impériaux préparent le peuple à une guerre 
+                  longue </A><BR>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 08.10.01 | 
+                  09h53<BR></DIV><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3212--229819-,00.html">Les 
+                  frappes impériales sur Kansas City mettent le président du
+                  Spanishland dans une 
+                  position délicate</A><BR>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  11h20<BR></DIV><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3220--229834-,00.html">Au 
+                  Conseil de sécurité, l'Empereur annonce que "d'autres pays
+                  seront bientôt détruits&quot; </A><BR>
+                  <DIV class=afptxtgrey><B>•</B>  L'EMPIRE | 09.10.01 | 
+                  11h03<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=61><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3230---,00.html">HORIZONS</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=162><IMG height=1 
+                  src="pix1.gif" 
+                  width=162><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3230--229782-,00.html">Retour 
+                  sur la feuille de route des séparatistes</A><BR><A class=unetxt 
+                  href="file:///C:/article/0,5987,3230--229782-,00.html">A la 
+                  veille de leur opération suicide, les péquisses avaient en main un curieux texte, sorte de feuille de 
+                  route du séparatiste. &quot;L'Empire&quot; a demandé à cinq spécialistes du
+                  séparatisme, des sectes et du péquisme de l'analyser.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 09.10.01 | 
+                  10h46<BR></DIV><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3230--229567-,00.html">Les 
+                  preuves contre Bernard Landry</A><BR>
+                  <DIV class=afptxtgrey><B>•</B> L'MPIRE | 08.10.01 | 10h10 | 
+                  document<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=61><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3244---,00.html">SCIENCES</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=162><IMG height=1 
+                  src="pix1.gif" 
+                  width=162><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3244--229771-,00.html">La 
+                  recherche sur la transformation de l'eau en vin récompensée par un Nobel </A><BR><A 
+                  class=unetxt 
+                  href="file:///C:/article/0,5987,3244--229771-,00.html">L'attribution 
+                  du prix Nobel de l'Alchimie, attribué 
+                  conjointement à un Drummondvillois et deux Bengalis, récompense 
+                  des découvertes dans le domaine de la recherche </A>
+                  <A class=unesstitre 
+                  href="file:///C:/article/0,5987,3244--229771-,00.html">sur la
+                  transformation de l'eau en vin</A><A 
+                  class=unetxt 
+                  href="file:///C:/article/0,5987,3244--229771-,00.html">, 
+                  qui "ouvrent de nouvelles possibilités pour l'industrie
+                  vinicole&quot;.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 08.10.01 | 
+                  19h37<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=82><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3234---,00.html">ENTREPRISES</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=141><IMG height=1 
+                  src="pix1.gif" 
+                  width=141><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3234--229720-,00.html">La 
+                  volatilité des marchés de la Torture déstabilise les 
+                  entreprises</A><BR><A class=unetxt 
+                  href="file:///C:/article/0,5987,3234--229720-,00.html">Après 
+                  s'être effondrés de façon spectaculaire à la suite des 
+                  attentats de Trois-Rivières Ouest et de Péribonka, les indices 
+                  mondiaux de la Torture se sont ressaisis et ont regagné l'essentiel du 
+                  terrain perdu. Mais l'industrie de la Torture demeure sensible
+                  aux fluctuations de l'efficacité de la Répression. <BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 08.10.01 | 
+                  13h24<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --><IMG 
+            height=7 
+            src="pixel_blanc.gif" 
+            width=1><BR><!-- info_pv_sujet_compl_home -->
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=228>
+              <TBODY>
+              <TR width="228">
+                <TD width=46><SPAN class=titrearticle><A class=titrearticle 
+                  href="file:///C:/info/sequence/0,5987,3242---,00.html">SPORTS</A><BR></SPAN></TD>
+                <TD align=right width=5><IMG height=7 
+                  src="pix1.gif" 
+                  width=1><BR></TD>
+                <TD width=177><IMG height=1 
+                  src="pix1.gif" 
+                  width=177><BR></TD></TR>
+              <TR>
+                <TD colSpan=3 width=228><A class=unesstitre 
+                  href="file:///C:/article/0,5987,3242--229697-,00.html">Le 
+                  match Empire-Pylonie de la réconciliation reste à jouer 
+                  </A><BR><A class=unetxt 
+                  href="file:///C:/article/0,5987,3242--229697-,00.html">L'"enthousiasme" 
+                  mal contrôlé de jeunes supporteurs a mis prématurément fin à 
+                  la rencontre Empire-Pylonie, alors que 25 000 d'entre eux ont
+                  du êtres emprisonnés pour excès de cris de joie. Ce match aux multiples enjeux 
+                  avait pourtant fait l'objet d'une attention particulière de la 
+                  part des autorités. Mais il semble que tous les risques 
+                  évoqués n'aient pas été pris en considération.<BR></A>
+                  <DIV class=afptxtgrey><B>•</B> L'EMPIRE | 08.10.01 | 
+                  16h31<BR></DIV></TD></TR></TBODY></TABLE><!-- /info_pv_sujet_compl_home --></TD></TR></TBODY></TABLE><!-- /info_sssq_2_col_empil_home --></TD>
+    <TD width=9><IMG height=1 
+      src="pixel_blanc.gif" width=9></TD>
+    <TD align=middle vAlign=top width=184><!-- info_sssq_1_col_empil_gen --><!-- info_pv_DH -->
+      <TABLE bgColor=#ecae18 border=0 cellPadding=3 cellSpacing=0 width=184>
+        <TBODY>
+        <TR>
+          <TD><SPAN class=coldroitaccroche>dernière heure<BR></SPAN></TD></TR><!-- Vignette StoryServer 4 Tue Oct 09 13:02:09 2001 -->
+        <TR>
+          <TD><SPAN class=coldroittitre><A class=coldroittitre 
+            href="file:///C:/dh/0,5987,3208--6211735,00.html">Le Japon anéanti
+            par une bombe au cobalt&nbsp;</A></SPAN>
+            <DIV class=coldroitsource><B>•</B>&nbsp;APP | 09.10.01 | 
+          12h53</DIV></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><A class=coldroittitre 
+            href="file:///C:/dh/0,5987,3208--6211691,00.html">Italie: la Sicile
+            sous contrôle impérial</A></SPAN>
+            <DIV class=coldroitsource><B>•</B>&nbsp;APP | 09.10.01 | 
+          12h46</DIV></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><A class=coldroittitre 
+            href="file:///C:/dh/0,5987,3208--6211690,00.html">La Pylonie soutient 
+            "toutes les mesures impériales&quot; </A></SPAN>
+            <DIV class=coldroitsource><B>•</B>&nbsp;APP | 09.10.01 | 
+          12h43</DIV></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittexteblanc><BR><A 
+            href="file:///C:/dh/0,5987,3208-36-,00.html"><IMG 
+            alt="L'ensemble des dernières dépêches" border=0 height=10 hspace=5 
+            src="bt_fleche1.gif" 
+            width=10></A><A class=titredossier 
+            href="file:///C:/dh/0,5987,3208-36-,00.html">Les dernières 
+            dépêches</A><BR></SPAN></TD></TR></TBODY></TABLE><!-- /info_pv_DH --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_coup_de_fond 3095 type: article-->
+      <TABLE bgColor=#de132c border=0 cellPadding=0 cellSpacing=0 width=184>
+        <TBODY>
+        <TR>
+          <TD colSpan=3 style="PADDING-BOTTOM: 5px"><a href="../../j/journaux/main.html" target="_top"><img border="0" src="Le%20Mon2.jpg" width="184" height="116"></a></TD>
+        </TR>
+        <TR>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD>
+          <TD><SPAN class=coldroittitre><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3210--229778-,00.html">Faut-il 
+            attaquer l'Islande ? </A><BR></SPAN><SPAN class=coldroitsource><IMG 
+            align=absMiddle border=0 hspace=1 
+            src="fleche2.gif" 
+            vspace=5>&nbsp;L'EMPIRE | 09.10.01 | 08h19 </SPAN><BR></TD>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD></TR></TBODY></TABLE><!-- /info_pv_coup_de_fond --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_coup_de_fond 3077 type: dossier-->
+      <TABLE bgColor=#a8a8cd border=0 cellPadding=0 cellSpacing=0 width=184>
+        <TBODY>
+        <TR>
+          <TD><A class=coldroittitre 
+            href="file:///C:/dossier/0,5987,3210-6550--,00.html"><IMG 
+            alt="Des bombardiers stratégiques américains B-1 équipés de bombes à guidage de précision par satellite, ont pris part aux raids | AFP" 
+            border=0 
+            src="doskaboulbomb0710b.jpeg" 
+            width=184> </A></TD></TR></TBODY></TABLE>
+      <TABLE bgColor=#a8a8cd border=0 cellPadding=3 cellSpacing=0 width=184>
+        <TBODY>
+        <TR>
+          <TD><SPAN class=coldroittitre><A class=coldroittitre 
+            href="file:///C:/dossier/0,5987,3210-6550--,00.html">La Patagonie<BR>sous 
+            le feu impérial</A><BR></SPAN></TD></TR></TBODY></TABLE><!-- /info_pv_coup_de_fond --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_contenu_libre contenu_id = 1479 -->
+      <TABLE bgColor=#a55073 border=0 cellPadding=0 cellSpacing=0 
+        width="100%"><TBODY>
+        <TR>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD>
+          <TD><SPAN class=coldroitaccroche><A class=coldroitaccroche 
+            href="file:///C:/info/dossier/0,5987,3210-6399--,00.html">11ème jour
+            de la Lune du Crapaud de CowBrand</A><BR></SPAN></TD>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD></TR>
+        <TR>
+          <TD colSpan=3><img src="parizeau.jpg" width="183" height="134"> </TD></TR>
+        <TR>
+          <TD colSpan=3><IMG height=3 
+            src="pixel_blanc.gif"></TD></TR>
+        <TR>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD>
+          <TD><A class=coldroittitre 
+            href="file:///C:/info/dossier/0,5987,3210-6399--,00.html">Séparatisme
+            :<BR>un défi à l'ordre mondial</A><BR></TD>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD></TR>
+        <TR>
+          <TD colSpan=3><IMG height=3 
+            src="pixel_blanc.gif"></TD></TR></TBODY></TABLE><!-- /info_pv_contenu_libre --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_contenu_libre contenu_id = 1609 -->
+      <TABLE bgColor=#75a5b2 border=0 cellPadding=0 cellSpacing=0 
+        width="100%"><TBODY>
+        <TR>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD>
+          <TD><SPAN class=coldroitaccroche><A class=coldroitaccroche 
+            href="http://www.lemonde.fr/visu_obj_multi/0,5867,17899-3219,00.html" 
+            target=_blank></a><A class=coldroitaccroche 
+            href="javascript:%20window.open('http://www.lemonde.fr/visu_obj_multi/0,5867,17899-3219,00.html','Visualisation','scrollbars=yes,%20height=580,%20width=800');void(0)">infographie</A><BR></SPAN></TD>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD></TR>
+        <TR>
+          <TD colSpan=3><IMG height=3 
+            src="pixel_blanc.gif"></TD></TR>
+        <TR>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD>
+          <TD><img border="0" src="EMPIRE4.gif" width="178" height="112"><SPAN class=coldroittexte><BR><SPAN class=coldroittitre>Les premiers 
+            bombardements</SPAN><BR></SPAN></TD>
+          <TD width=3><IMG height=1 
+            src="pixel_blanc.gif" 
+          width=3></TD></TR>
+        <TR>
+          <TD colSpan=3><IMG height=3 
+            src="pixel_blanc.gif"></TD></TR></TBODY></TABLE><!-- /info_pv_contenu_libre --><IMG 
+      height=7 src="pixel_blanc.gif" 
+      width=1><BR><!-- info_pv_sondage -->
+      <SCRIPT language=javascript>
+<!-- 1 begin script
+ 
+function FixCookieDate (date) {
+  var base = new Date(0);
+  var skew = base.getTime(); // dawn of (Unix) time - should be 0
+  if (skew > 0)  // Except on the Mac - ahead of its time
+    date.setTime (date.getTime() - skew);
+}
+
+function SetCookie (name,value,expires,path,domain,secure) {
+  document.cookie = name + "=" + escape (value) +
+    ((expires) ? "; expires=" + expires.toGMTString() : "") +
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
+}
+
+function DeleteCookie (name,path,domain) {
+  if (GetCookie(name)) {
+    document.cookie = name + "=" +
+      ((path) ? "; path=" + path : "") +
+      ((domain) ? "; domain=" + domain : "") +
+      "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
+}
+
+// end script -->
+
+
+
+</SCRIPT>
+
+      <TABLE bgColor=#9999cc border=0 cellPadding=3 cellSpacing=0 width=184>
+        <TBODY>
+        <TR>
+          <TD align=left><!-- Vignette StoryServer 4 Tue Oct 09 13:01:01 2001 --><A 
+            name=votre_avis></a><SPAN class=coldroitaccroche>votre 
+            avis</SPAN><BR><SPAN class=coldroittitre>Quelle est votre réaction 
+            devant les frappes impériales sur le Lahul ?</SPAN><BR><BR>
+            <SCRIPT language=javascript>
+var nom_cookie="sondage195";
+// Si on n'a pas de cookie, on n'a pas vote
+if (!GetCookie(nom_cookie)) {
+ var expdate = new Date ();
+ FixCookieDate (expdate); // Correct for Mac date bug - call only once for given Date object!
+ expdate.setTime (expdate.getTime() + 3E11); // Never
+ var nom_cookie="sondage195";
+ document.write('<form name="form_sondage" method="post" action="/sondage_insertion/1,7314,195,00.html">');
+ document.write('<span class=pavetexte>');
+
+ document.write("<input type='radio' name='num_reponse' value='649'>Vous soutenez sans réserve leur action<br>");
+
+ document.write("<input type='radio' name='num_reponse' value='650'>Vous approuvez complètement leur action<br>");
+
+ document.write("<input type='radio' name='num_reponse' value='651'>Vous êtes entièrement d'accord<br>");
+
+ document.write("<input type='radio' name='num_reponse' value='652'>Vous appuyez leur action à 100 %<br>");
+
+ document.write("<input type='radio' name='num_reponse' value='653'>Vous êtes un séparatiste<br>");
+ document.write('<br></span><a href="javascript:SetCookie (nom_cookie, 1, expdate); document.form_sondage.submit(); "><img src="http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/exprimezvous.gif" border=0></a></span><br>');			
+  		
+ document.write('<img src="http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/puceflblc.gif" border=0>&nbsp;<a href=/sondage/0,5987,195,00.html><span class=titredossier>Vos derniers Avis</span></a>');
+ document.write('</form>');
+} else {  // Si, on a un cookie, on a vote : on affiche les resultats				  			  			
+
+ 
+    document.write("<span class=coldroittexte><img src='http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/indicateur.gif' height=8 width=31.1>&nbsp;<b>31.1&nbsp;%</b><br>Vous soutenez sans réserve leur action</span><br><br>");
+	
+    document.write("<span class=coldroittexte><img src='http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/indicateur.gif' height=8 width=22.5>&nbsp;<b>22.5&nbsp;%</b><br>Vous l’approuvez plutôt</span><br><br>");
+	
+    document.write("<span class=coldroittexte><img src='http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/indicateur.gif' height=8 width=22.8>&nbsp;<b>22.8&nbsp;%</b><br>Vous êtes plutôt critique</span><br><br>");
+	
+    document.write("<span class=coldroittexte><img src='http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/indicateur.gif' height=8 width=22.3>&nbsp;<b>22.3&nbsp;%</b><br>Vous condamnez leur action</span><br><br>");
+	
+    document.write("<span class=coldroittexte><img src='http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/indicateur.gif' height=8 width=1.3>&nbsp;<b>1.3&nbsp;%</b><br>Sans opinion</span><br><br>");
+	 document.write('<span class=coldroittexte>nombre de votants: <b>10535</b><span>');
+
+ document.write('<br><br><img src="http://a1692.g.akamai.net/f/1692/2042/1h/medias.lemonde.fr/medias/info/sondage/puceflblc.gif" border=0>&nbsp;<a href=/sondage/0,5987,195,00.html><span class=titredossier>Vos derniers Avis</span></a>');
+ document.write('<br><br>');
+};
+</SCRIPT>
+            <FONT face=arial size=1>© lempire /  <A 
+            href="http://www.expressionpublique.com/" target=_blank>propagande publique</A></FONT> <BR></TD></TR></TBODY></TABLE><!-- /info_pv_sondage --><IMG height=7 
+      src="pixel_blanc.gif" width=1><BR><!-- info_pv_art_recommandes -->
+      <TABLE bgColor=#cbac26 border=0 cellPadding=3 cellSpacing=0 width=184>
+        <TBODY>
+        <TR>
+          <TD><SPAN class=coldroitaccroche>articles 
+            recommandés<BR></SPAN><SPAN class=coldroittexte>Les huit articles 
+            recommandés par les internautes de l'EMPIRE<BR></SPAN></TD></TR><!-- Vignette StoryServer 4 Tue Oct 09 13:00:12 2001 -->
+        <TR>
+          <TD><SPAN class=coldroittitre><font color="#ffffff">Limoilou</font><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3216--229545-,00.html">Une 
+            déclaration de Lucien Bouchard diffusée après le début de la riposte 
+            </A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><FONT 
+            color=#ffffff>Horizons</FONT><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3230--229567-,00.html">Les preuves 
+            contre Jacques Parizeau</A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><FONT color=#ffffff>Analyses et 
+            forums</FONT><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3232--229456-,00.html">Le facteur Landry</A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><FONT 
+            color=#ffffff>Horizons</FONT><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3230--229562-,00.html">Les héros 
+            brisés de la guerre lahulienne</A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><FONT color=#ffffff>A la 
+            Une</FONT><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3208--229414-,00.html">Le vif 
+            dialogue de deux séparatistes rimouskois par temps de doutes et 
+            d'angoisses</A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><font color="#ffffff">Francfort</font><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3216--229612-,00.html">Pauline
+            Marois annonce que l'Empire "ne connaîtra plus jamais la sécurité" 
+            </A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><FONT color=#ffffff>A la 
+            Une</FONT><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3208--229530-,00.html">Empire-Pylonie
+            : Mort aux supporteurs </A></SPAN><BR></TD></TR>
+        <TR>
+          <TD><SPAN class=coldroittitre><font color="#ffffff">Prague</font><BR><A class=coldroittitre 
+            href="file:///C:/article/0,5987,3216--229645-,00.html">Les premières 
+            frappes impériales contre la Slovaquie</A></SPAN><BR></TD></TR></TBODY></TABLE><!-- /info_pv_art_recommandes --><!-- /info_sssq_1_col_empil_gen --></TD></TR>
+  <TR>
+    <TD colSpan=3><BR><IMG height=1 
+      src="pix1.gif" vspace=2 
+      width="100%"><BR>
+      <!-- info_sssq_1_col_empil_gen -->
+      <!-- info_pv_copyright -->
+      <SPAN 
+      class=unetxt>Droits de <A class=unetxt 
+      href="file:///C:/article/0,5987,3258--139039-,00.html"><U>reproduction</U></A> 
+      et de <A class=unetxt 
+      href="file:///C:/article/0,5987,3258--139039-,00.html"><U>diffusion</U></A> 
+      réservés; © <strong>L'Empire</strong><BR>
+      <STRONG>Usage strictement personnel.</STRONG> L'utilisateur du site reconnaît 
+      avoir pris connaissance de la <A class=unetxt 
+      href="file:///C:/article/0,5987,3258--139039-,00.html"><U>licence</U></A> 
+      de droits d'usage, en accepter et en respecter les dispositions.<BR>
+      <A 
+      class=unetxt 
+      href="file:///C:/article/0,5987,3258--139040-,00.html"><U>Politique</U></A> 
+      de confidentialité du site. <strong>L'Empire</strong> est une des nombreuses 
+      filliales de <a href="../../../organisme/IBC/mainmenu.html" target="_top"><img src="../../../organisme/IBC/logoibcsm.jpg" width="75" height="26" align="absmiddle" border="0"></a> 
+      . </SPAN> 
+      <!-- info_pv_copyright -->
+      <!-- /info_sssq_1_col_empil_gen -->
+    </TD>
+  </TR></TBODY></TABLE><!-- =4= --><!--div id=div_dev style='position:absolute; left:1000; top:0;'>
+		<table bgcolor=113388 cellspacing=1>
+		<tr><td bgcolor=FFFFDD>
+			&nbsp;<a target=dev href='/sequence/0,5987,,00.html'><font face="verdana" style="font-size: 9px; font-weight: bold; text-decoration:none">old front</font></a> &nbsp;</td> 	
+		</tr></table>
+	</div--><!-- appel  lib_gen_tags_comptage -->
+<SCRIPT language=JavaScript><!--
+tps=new Date();
+if (tps.getSeconds() < 30)
+{document.write("<IMG SRC=\"http://195.25.89.17/lemonde_p?" + tps.getMinutes() + "0" + tps.getSeconds() + "_WWW_homepage/index" + "\" WIDTH=\"1\" HEIGHT=\"1\"><br>");}
+// --></SCRIPT>
+<NOSCRIPT><IMG height=1 
+src="lemonde_p.gif" 
+width=1><BR></NOSCRIPT><!-- DEBUT / Cybermonitor / START -->
+<SCRIPT language=JavaScript><!--
+CM_RUBRIQUE="WWW_homepage/index";
+CM_CLIENT="lemondev3";
+CM_SECTION1="";
+// --></SCRIPT>
+
+<SCRIPT language=javascript 
+src="lemondev3.js">
+</SCRIPT>
+<NOSCRIPT><IMG 
+src="lemondev3_v.gif"></NOSCRIPT>
+<SCRIPT language=JavaScript1.1>
+<!--
+hsh = new Date();
+hsd = document;
+TAG_COMPTAGE="WWW_homepage/index";
+TAG_SITE="";
+hsi = '<img width="1" height="1" src="http://logp.xiti.com/hit.xiti?s=43260'+TAG_SITE
+hsi += '&p='+TAG_COMPTAGE+'&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsd.referrer.replace('&', '$') + '" >');
+//-->
+</SCRIPT>
+ <NOSCRIPT><IMG height=1 src="hit.gif" 
+width=1> </NOSCRIPT><!-- info_pv_pub_OAS_rect -->
+<SCRIPT language=JavaScript>OAS_AD('Middle');</SCRIPT>
+<!-- /info_pv_pub_OAS_rect --><!-- =4= --><!-- sq     =2 --><!-- sq_pere= --><!-- pg=2--><!-- sq_path=info_sq_une--><!-- webozone =10 --></BODY></HTML>
