@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  background-color: white;
+  color: black;
+}
+
+/** =================== Modes =================== */
+
+.dark-mode   {
+  background-color: black!important;
+  color: white!important;
+}
+
+.light-mode {
+  background-color: white!important;
+  color: black!important;
+}
+
+.grey-mode {
+  background-color: gray!important;
+  color: white!important;
+}
+
+
+/** =================== Layout =================== */
+
+
+NAV,
+DIV,
+SECTION {
+  padding: 0px;
+}
+
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+
+  nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+/*
+    height: calc(100vh - 50px);
+*/
+
+  #main {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-self: flex-start;
+  }
+  #palette {
+    width: 100%;
+  }
+
+  #tools {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+}
+
+@media (orientation:landscape) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  nav {
+    width: 5vw;
+    height: 100%;
+  }
+
+  #main {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    height: 100%;
+  }
+
+  #palette {
+    width: 70%;
+    height: 100%;
+  }
+
+  #tools {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#palette 
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+  
+#palette 
+  {
+      overflow-y: auto;
+  }
+
+.emoji {
+  font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+

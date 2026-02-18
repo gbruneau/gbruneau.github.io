@@ -1,11 +1,43 @@
 {
+  "components/colorTools/lorem.png": {
+    "file": "assets/lorem-BJyBWwdF.png",
+    "src": "components/colorTools/lorem.png"
+  },
+  "components/colorTools/slide.png": {
+    "file": "assets/slide-CWPU772s.png",
+    "src": "components/colorTools/slide.png"
+  },
+  "components/db/commit.png": {
+    "file": "assets/commit-Byhck9DN.png",
+    "src": "components/db/commit.png"
+  },
+  "components/db/undo.png": {
+    "file": "assets/undo-B4HCBn1S.png",
+    "src": "components/db/undo.png"
+  },
+  "components/settings/darkmode.png": {
+    "file": "assets/darkmode-DNiTWdge.png",
+    "src": "components/settings/darkmode.png"
+  },
+  "components/settings/settings.png": {
+    "file": "assets/settings-Cid5nJbk.png",
+    "src": "components/settings/settings.png"
+  },
   "index.html": {
-    "file": "assets/index-Bsz_hg40.js",
+    "file": "assets/index-C6uclVZy.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-C90BIzfe.css"
+      "assets/index-P14CJ20F.css"
+    ],
+    "assets": [
+      "assets/commit-Byhck9DN.png",
+      "assets/undo-B4HCBn1S.png",
+      "assets/settings-Cid5nJbk.png",
+      "assets/darkmode-DNiTWdge.png",
+      "assets/slide-CWPU772s.png",
+      "assets/lorem-BJyBWwdF.png"
     ]
   }
 }
