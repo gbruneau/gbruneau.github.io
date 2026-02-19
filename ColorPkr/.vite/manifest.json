@@ -24,12 +24,12 @@
     "src": "components/settings/settings.png"
   },
   "index.html": {
-    "file": "assets/index-CbZg83p1.js",
+    "file": "assets/index-CdgG9cHn.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-Bvdm4kWQ.css"
+      "assets/index-zLqrcpgq.css"
     ],
     "assets": [
       "assets/commit-Byhck9DN.png",
