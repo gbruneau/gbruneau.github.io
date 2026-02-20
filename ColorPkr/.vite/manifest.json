@@ -1,4 +1,8 @@
 {
+  "components/colorTools/lock.png": {
+    "file": "assets/lock-C7H-RXiA.png",
+    "src": "components/colorTools/lock.png"
+  },
   "components/colorTools/lorem.png": {
     "file": "assets/lorem-BJyBWwdF.png",
     "src": "components/colorTools/lorem.png"
@@ -24,12 +28,12 @@
     "src": "components/settings/settings.png"
   },
   "index.html": {
-    "file": "assets/index-B7go_Egq.js",
+    "file": "assets/index-C_9yPgXb.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-D8njePNl.css"
+      "assets/index-DVmovVtj.css"
     ],
     "assets": [
       "assets/commit-Byhck9DN.png",
@@ -37,7 +41,8 @@
       "assets/settings-Cid5nJbk.png",
       "assets/darkmode-DNiTWdge.png",
       "assets/slide-CWPU772s.png",
-      "assets/lorem-BJyBWwdF.png"
+      "assets/lorem-BJyBWwdF.png",
+      "assets/lock-C7H-RXiA.png"
     ]
   }
 }
