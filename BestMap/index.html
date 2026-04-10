@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./assets/BestMap-logo-CZZGZZcw.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
-  <script type="module" crossorigin src="./assets/index-BS3crtU4.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-vA65HxfH.css">
+  <script type="module" crossorigin src="./assets/index-BGElBkyf.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DEx3Jq95.css">
 </head>
 
 <body>
@@ -134,6 +134,18 @@
               <div class="BM-Button  BM-Small-Button" id="btFavImport" data-title="impJSON"><img
                   src="./icons/importFav.png" class="Icon-Small"></div>
 
+              <div class="BM-Button BM-Small-Button" id="btFavExport" data-title="expJSON"><img
+                  src="./icons/exportFav.png" class="Icon-Small"></div>
+
+
+              <div class="BM-Button BM-Small-Button" id="btFavToGeoJSON" data-title="expGeoJSON"><img
+                  src="./icons/exportGeoJSON.png" class="Icon-Small"></div>
+
+              <div class="BM-Button BM-Small-Button" id="btFavToKML" data-title="expKML"><img
+                  src="./icons/exportKML.png" class="Icon-Small"></div>
+
+              <div class="btSpacer"></div>
+
               <div class="BM-Button  BM-Small-Button" id="btFavSave" data-title="savechange"><img
                   src="./icons/saveFav.png" class="Icon-Small"></div>
               <div class="BM-Button  BM-Small-Button" id="btFavUndo" data-title="undo"><img src="./icons/undoFav.png"
@@ -145,15 +157,7 @@
               <div class="btSpacer"></div>
 
 
-              <div class="BM-Button BM-Small-Button" id="btFavExport" data-title="expJSON"><img
-                  src="./icons/exportFav.png" class="Icon-Small"></div>
 
-
-              <div class="BM-Button BM-Small-Button" id="btFavToGeoJSON" data-title="expGeoJSON"><img
-                  src="./icons/exportGeoJSON.png" class="Icon-Small"></div>
-
-              <div class="BM-Button BM-Small-Button" id="btFavToKML" data-title="expKML"><img
-                  src="./icons/exportKML.png" class="Icon-Small"></div>
 
               <div class="btSpacer"></div>
 
@@ -183,7 +187,8 @@
               <select id="languageDropdown" name="language">
               </select>
               <br>
-              <label for="defaultToCurrentLayer" data-label="defaultocurrentlayer">Set Default Base Map to</label>&nbsp;<span id="DefaultLayerName">???</span>
+              <label for="defaultToCurrentLayer" data-label="defaultocurrentlayer">Set Default Base Map
+                to</label>&nbsp;<span id="DefaultLayerName">???</span>
               <input type="checkbox" id="defaultToCurrentLayer" name="defaultToCurrentLayer">
               <hr>
               <div class="BM-Button BM-Small-Button" id="btPrefSave" data-title="savechange"><img
@@ -235,13 +240,13 @@
                 <label for="fLat" data-label="lat">Latitude:</label>
                 <input type="number" id="fLat" name="fLat" disabled="true" min="-90" max="90" step="15">
                 <label for="fLatDMS"></label>
-                <input type="text" id="fLatDMS" name="fLatDMS" disabled="true" >
+                <input type="text" id="fLatDMS" name="fLatDMS" disabled="true">
               </div>
               <div class="BM-Input">
                 <label for="fLng" data-label="lng">Longitude:</label>
                 <input type="number" id="fLng" name="fLng" disabled="true" min="-180" max="180" step="15">
                 <label for="fLngDMS"></label>
-                <input type="text" id="fLngDMS" name="fLngDMS" disabled="true" >
+                <input type="text" id="fLngDMS" name="fLngDMS" disabled="true">
               </div>
               <div class="BM-Input">
                 <label for="fZoom" data-label="zoom">Zoom:</label>
