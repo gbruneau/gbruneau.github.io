@@ -1,5 +1,13 @@
 [
-{"UnitSymbolFr":"ℓP","UnitSymbolEn":"ℓP","SizeInMeter":"1.616255E-35","UnitNameFr":"Longueur de Planck","UnitNameEn":"Planck Length","UnitDescFr":"≈1.6 × 10⁻³⁵ m","UnitDescEn":"≈1.6 × 10⁻³⁵ m"}
+{"UnitSymbolFr":"ℓP","UnitSymbolEn":"ℓP","SizeInMeter":"1.616255E-35","UnitNameFr":"Longueur de Planck","UnitNameEn":"Planck Length","UnitDescFr":"≈1.6 × 10⁻³⁵ m","UnitDescEn":"≈1.6 × 10⁻³⁵ m1"}
+,
+{"UnitSymbolFr":"qm","UnitSymbolEn":"qm","SizeInMeter":"1E-30","UnitNameFr":"Quectomètre","UnitNameEn":"Quectometre","UnitDescFr":"10⁻³⁰ m","UnitDescEn":"10⁻³⁰ m"}
+,
+{"UnitSymbolFr":"rm","UnitSymbolEn":"rm","SizeInMeter":"1E-27","UnitNameFr":"Rontomètre","UnitNameEn":"Rontometre","UnitDescFr":"10⁻²⁷ m","UnitDescEn":"10⁻²⁷ m"}
+,
+{"UnitSymbolFr":"ym","UnitSymbolEn":"ym","SizeInMeter":"1E-24","UnitNameFr":"Yoctomètre","UnitNameEn":"Yoctometre","UnitDescFr":"10⁻²⁴ m","UnitDescEn":"10⁻²⁴ m"}
+,
+{"UnitSymbolFr":"zm","UnitSymbolEn":"zm","SizeInMeter":"1E-21","UnitNameFr":"Zeptomètre","UnitNameEn":"Zeptometre","UnitDescFr":"10⁻²¹ m","UnitDescEn":"10⁻²¹ m"}
 ,
 {"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":"1E-18","UnitNameFr":"Atomètre","UnitNameEn":"Atometre","UnitDescFr":"10⁻¹⁸ m","UnitDescEn":"10⁻¹⁸ m"}
 ,
@@ -33,5 +41,7 @@
 {"UnitSymbolFr":"M Al","UnitSymbolEn":"M ly","SizeInMeter":"9.4607E+021","UnitNameFr":"Million d’années lumière","UnitNameEn":"Million of light years","UnitDescFr":"Distance parcourue par la lumiere pendant un millions  d'années (≈9.46 × 10¹⁸ Km)","UnitDescEn":"Distance traveled by light in one million years (≈9.46 × 10¹⁸ Km)"}
 ,
 {"UnitSymbolFr":"G Al","UnitSymbolEn":"G ly","SizeInMeter":"9.4607E+024","UnitNameFr":"Milliard d’années lumière","UnitNameEn":"Billions of light year","UnitDescFr":"Distance parcourue par la lumiere pendant un milliard d'années (≈9.46 × 10²¹ Km)","UnitDescEn":"Distance traveled by light in one billion years (≈9.46 × 10²¹ Km)"}
+,
+{"UnitSymbolFr":"T Al","UnitSymbolEn":"T ly","SizeInMeter":"9.4607E+027","UnitNameFr":"Billion d’années lumière","UnitNameEn":"Trillion of light year","UnitDescFr":"Distance parcourue par la lumiere pendant un billion d'années (≈9.46 × 10²⁴ Km)","UnitDescEn":"Distance traveled by light in one trillion years (≈9.46 × 10²⁴ Km)"}
 
 ]
