@@ -10,6 +10,8 @@
 ,{"id":8,"LabelEn":"Size",	"LabelFr":"Grandeur"}
 ,{"id":9,"LabelEn":"Scaled",	"LabelFr":"Proportioné"}
 ,{"id":10,"LabelEn":"Size in meter",	"LabelFr":"Grandeur en mètres"}
-,{"id":11,"LabelEn":"Magnitude",	"LabelFr":"Taille approximative"}
+,{"id":11,"LabelEn":"Magnitude (±10%)",	"LabelFr":"Taille approximative (±10%)"}
 ,{"id":12,"LabelEn":"Ⓣ",	"LabelFr":"Ⓣ"}
+,{"id":13,"LabelEn":"Distance",	"LabelFr":"Distance"}
+,{"id":14,"LabelEn":"Diameter",	"LabelFr":"Diamètre"}
 ]
