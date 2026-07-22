@@ -9,7 +9,7 @@
 ,
 {"UnitSymbolFr":"zm","UnitSymbolEn":"zm","SizeInMeter":"1E-21","UnitNameFr":"Zeptomètre","UnitNameEn":"Zeptometre","UnitDescFr":"10⁻²¹ m","UnitDescEn":"10⁻²¹ m"}
 ,
-{"UnitSymbolFr":"nm","UnitSymbolEn":"nm","SizeInMeter":"1E-18","UnitNameFr":"Atomètre","UnitNameEn":"Atometre","UnitDescFr":"10⁻¹⁸ m","UnitDescEn":"10⁻¹⁸ m"}
+{"UnitSymbolFr":"am","UnitSymbolEn":"am","SizeInMeter":"1E-18","UnitNameFr":"Atomètre","UnitNameEn":"Atometre","UnitDescFr":"10⁻¹⁸ m","UnitDescEn":"10⁻¹⁸ m"}
 ,
 {"UnitSymbolFr":"fm","UnitSymbolEn":"fm","SizeInMeter":"1E-15","UnitNameFr":"Femtomètre","UnitNameEn":"Femtometre","UnitDescFr":"10⁻¹⁵ m","UnitDescEn":"10⁻¹⁵ m"}
 ,
