@@ -114,6 +114,12 @@
 ,
 {"IsDistance":"false","ObjectEn":"Diameter of Aldebaran","ObjectFr":"Diamètre de Aldebaran","SizeInMeter":"62752100000","URL":"https://en.wikipedia.org/wiki/Aldebaran"}
 ,
+{"IsDistance":"false","ObjectEn":"Diameter of Alpha Centauri","ObjectFr":"Diamètre de Alpha du Centaure","SizeInMeter":"1.69e9","URL":"https://en.wikipedia.org/wiki/Alpha_Centauri_A"}
+,
+{"IsDistance":"true","ObjectEn":"Distance to Deneb - The farthest naked eyes visible star","ObjectFr":"Distance de Deneb - Étoile la plus éloigné visible àl'oeuil nu","SizeInMeter":"2.46e19","URL":"https://en.wikipedia.org/wiki/Deneb"}
+,
+{"IsDistance":"false","ObjectEn":"Deneb Diameter - The farthest naked eyes visible star","ObjectFr":"Damètre de Deneb - Étoile la plus éloigné visible àl'oeuil nu","SizeInMeter":"280e9","URL":"https://scaleofuniverse.com/en/universe/deneb"}
+,
 {"IsDistance":"false","ObjectEn":"Mercury Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Mercure","SizeInMeter":"115818000000.000000000","URL":"https://en.wikipedia.org/wiki/Mercury_(planet)"}
 ,
 {"IsDistance":"false","ObjectEn":"Venus Orbit Diameter","ObjectFr":"Diamètre de l'orbite de Vénus","SizeInMeter":"119687000000.000000000","URL":"https://en.wikipedia.org/wiki/Venus"}
