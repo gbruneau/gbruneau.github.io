@@ -18,9 +18,9 @@
   "metamodel": {
     "title": "Metamodelo",
     "content": [
-      { "type": "p", "text": "ArchiMate 4 representa la estructura general del lenguaje mediante el «Hexagonion» — un conjunto de hexágonos anidados que muestra cómo se relacionan los siete dominios entre sí, desde el dominio Motivación en el núcleo, pasando por Estrategia, luego Negocio, Común y Aplicación, después Tecnología, hasta Implementación y Migración en el exterior. Selecciona un dominio a continuación para ver sus elementos." },
-      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "El Hexagonion de ArchiMate 4: hexágonos anidados con Motivación en el núcleo, rodeado por Estrategia, luego Negocio, Común y Aplicación, después Tecnología, e Implementación y Migración en el exterior." },
-      { "type": "p", "text": "Los elementos específicos de un único dominio — como Actor de Negocio u Objeto de Datos — residen en el anillo de ese dominio. Los elementos compartidos y reutilizados en los dominios de Negocio, Aplicación y Tecnología — como Proceso, Función, Servicio y Evento — residen en el Dominio Común, anidado entre ellos." }
+      { "type": "p", "text": "ArchiMate 4 representa la estructura general del lenguaje mediante el «Hexagonion» — un conjunto de hexágonos anidados que muestra cómo se relacionan los siete dominios entre sí, desde el dominio Motivación en el núcleo, pasando por Estrategia, luego Común, luego Negocio, Aplicación y Tecnología compartiendo un mismo anillo, hasta Implementación y Migración en el exterior. Selecciona un dominio a continuación para ver sus elementos." },
+      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "El Hexagonion de ArchiMate 4: hexágonos anidados con Motivación en el núcleo, rodeado por Estrategia, luego Común, luego Negocio, Aplicación y Tecnología compartiendo un mismo anillo, e Implementación y Migración en el exterior." },
+      { "type": "p", "text": "Los elementos específicos de un único dominio — como Actor de Negocio u Objeto de Datos — residen en el sector de ese dominio. Los elementos compartidos y reutilizados en los dominios de Negocio, Aplicación y Tecnología — como Proceso, Función, Servicio y Evento — residen en el Dominio Común, anidado entre ellos y Estrategia." }
     ]
   },
   "about": {

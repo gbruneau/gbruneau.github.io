@@ -18,9 +18,9 @@
   "metamodel": {
     "title": "Meta Model",
     "content": [
-      { "type": "p", "text": "ArchiMate 4 depicts the overall structure of the language using the \"Hexagonion\" — a set of nested hexagons showing how the seven domains relate to one another, from the Motivation domain at the core outward through Strategy, then Business, Common, and Application, then Technology, to Implementation & Migration on the outside. Select a domain below to see its elements." },
-      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "The ArchiMate 4 Hexagonion: nested hexagons with Motivation at the core, surrounded by Strategy, then Business, Common, and Application, then Technology, and Implementation & Migration on the outside." },
-      { "type": "p", "text": "Elements that are specific to a single domain — such as Business Actor or Data Object — live in that domain's own ring. Elements shared and reused across the Business, Application, and Technology domains — such as Process, Function, Service, and Event — live in the Common Domain, nested between them." }
+      { "type": "p", "text": "ArchiMate 4 depicts the overall structure of the language using the \"Hexagonion\" — a set of nested hexagons showing how the seven domains relate to one another, from the Motivation domain at the core outward through Strategy, then Common, then Business, Application, and Technology sharing one ring, to Implementation & Migration on the outside. Select a domain below to see its elements." },
+      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "The ArchiMate 4 Hexagonion: nested hexagons with Motivation at the core, surrounded by Strategy, then Common, then Business, Application, and Technology sharing one ring, and Implementation & Migration on the outside." },
+      { "type": "p", "text": "Elements that are specific to a single domain — such as Business Actor or Data Object — live in that domain's own wedge. Elements shared and reused across the Business, Application, and Technology domains — such as Process, Function, Service, and Event — live in the Common Domain, nested between them and Strategy." }
     ]
   },
   "about": {
