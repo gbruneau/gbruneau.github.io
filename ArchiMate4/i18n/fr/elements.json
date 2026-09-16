@@ -1,0 +1,338 @@
+{
+  "role": {
+    "name": "Rôle",
+    "shortDescription": "La responsabilité d'exécuter un comportement spécifique, à laquelle un acteur peut être affecté.",
+    "longDescription": "Un Rôle représente la part qu'un élément de structure active — une personne, une équipe ou un système — joue lorsqu'il exerce un certain comportement. Affecter un acteur à un rôle exprime que cet acteur est responsable de ce comportement, ou capable de l'exercer — en séparant qui fait le travail de ce qu'il fait dans ce cadre.",
+    "example": "Une seule personne peut occuper le rôle de « Gestionnaire de sinistres » dans une compagnie d'assurance, tandis qu'un autre employé assure le même rôle pendant son absence — le rôle reste constant même si la personne qui l'occupe change.",
+    "exampleLabel": "Gestionnaire de sinistres",
+    "exampleCaption": "Occupé par différentes personnes au fil du temps"
+  },
+  "collaboration": {
+    "name": "Collaboration",
+    "shortDescription": "Un agrégat de deux éléments de structure active ou plus, travaillant ensemble pour exercer un comportement collectif.",
+    "longDescription": "Une Collaboration regroupe plusieurs acteurs, rôles, composants ou nœuds qui exercent conjointement un comportement qu'aucun d'entre eux ne pourrait accomplir seul. Elle modélise le travail d'équipe ou la coopération entre éléments actifs sans dicter les détails de coordination interne.",
+    "example": "Une « Collaboration de gestion des sinistres » formée par le service Sinistres, le service Juridique et un expert externe travaillant ensemble pour traiter un sinistre d'assurance contesté.",
+    "exampleLabel": "Collaboration de gestion des sinistres",
+    "exampleCaption": "Sinistres + Juridique + expert externe"
+  },
+  "path": {
+    "name": "Chemin",
+    "shortDescription": "Un lien entre deux localisations ou plus, à travers lequel des éléments de structure active peuvent échanger des ressources.",
+    "longDescription": "Un Chemin représente un itinéraire ou un canal — physique, logique ou organisationnel — qui relie des localisations et permet le déplacement de personnes, de biens, d'informations ou d'autres ressources entre elles.",
+    "example": "L'itinéraire routier entre le bureau régional d'une entreprise et son siège social, emprunté par des coursiers pour transporter des contrats signés.",
+    "exampleLabel": "Itinéraire du coursier",
+    "exampleCaption": "Bureau régional ↔ siège social"
+  },
+  "grouping": {
+    "name": "Regroupement",
+    "shortDescription": "Regroupe des éléments qui partagent une caractéristique commune, sans impliquer de relation structurelle entre eux.",
+    "longDescription": "Un Regroupement est un dispositif purement organisationnel : il rassemble des éléments — de tout type — qui vont ensemble sur le plan conceptuel (par exemple, tout ce qui concerne un projet ou un thème particulier), sans affirmer qu'ils se composent, s'agrègent ou se rapportent structurellement les uns aux autres. Il se représente avec une bordure en pointillés pour le distinguer du confinement structurel.",
+    "example": "Un regroupement « Programme de transformation numérique » qui rassemble visuellement un ensemble de processus, d'applications et d'éléments technologiques par ailleurs sans lien, provenant de l'ensemble du modèle, dans le but d'une présentation unique.",
+    "exampleLabel": "Programme de transformation numérique",
+    "exampleCaption": "Regroupe des éléments sans lien pour une vue"
+  },
+  "location": {
+    "name": "Localisation",
+    "shortDescription": "Un lieu conceptuel ou physique ayant une position géographique.",
+    "longDescription": "Une Localisation représente un endroit où d'autres éléments — tels que des acteurs, des nœuds ou des installations — peuvent être positionnés. Il peut s'agir d'un point géographique précis ou d'une zone conceptuelle plus large, souvent utilisée pour modéliser où se situent physiquement des ressources métier ou technologiques.",
+    "example": "La localisation « Agence d'Amsterdam », où se trouvent plusieurs acteurs métier, un nœud et une installation dans le modèle.",
+    "exampleLabel": "Agence d'Amsterdam",
+    "exampleCaption": "Acteurs, un nœud et une installation ici"
+  },
+  "process": {
+    "name": "Processus",
+    "shortDescription": "Une séquence de comportements qui produit un résultat spécifique.",
+    "longDescription": "Un Processus représente un flux ordonné d'activités — des étapes exécutées les unes après les autres, ou selon des branches parallèles ou conditionnelles définies — qui produisent ensemble un résultat défini. Dans ArchiMate 4, Processus est un concept unique et générique du Domaine Commun, réutilisé pour décrire aussi bien des flux de travail au niveau métier, applicatif que technologique, distingués par le contexte plutôt que par des types d'éléments distincts par domaine.",
+    "example": "Le processus « Traiter la réclamation d'assurance » : enregistrer la réclamation, évaluer les dommages, déterminer le remboursement et émettre le paiement, dans cet ordre.",
+    "exampleLabel": "Traiter la réclamation d'assurance",
+    "exampleCaption": "Enregistrer → évaluer → indemniser → payer"
+  },
+  "function": {
+    "name": "Fonction",
+    "shortDescription": "Un regroupement de comportements selon des critères tels que les ressources ou les responsabilités requises, visant à atteindre un objectif.",
+    "longDescription": "Une Fonction regroupe des comportements qui vont ensemble parce qu'ils font appel aux mêmes ressources ou responsabilités, plutôt que parce qu'ils se déroulent selon une séquence fixe — ce qui la distingue d'un Processus. Elle répond à la question « quelle capacité de comportement est nécessaire ici » plutôt qu'à « que se passe-t-il, et dans quel ordre ».",
+    "example": "Une fonction « Évaluation des sinistres » qui regroupe tout le comportement nécessaire pour évaluer la validité et le montant d'un sinistre, quel que soit le processus spécifique qui la sollicite.",
+    "exampleLabel": "Évaluation des sinistres",
+    "exampleCaption": "Comportement regroupé par ressources partagées"
+  },
+  "service": {
+    "name": "Service",
+    "shortDescription": "Un comportement exposé explicitement défini.",
+    "longDescription": "Un Service représente une unité de fonctionnalité mise à la disposition de son environnement, dont le comportement visible de l'extérieur est défini — sans exposer la manière dont ce comportement est mis en œuvre en interne. Il formalise la frontière entre un fournisseur et les consommateurs qui utilisent ce qu'il propose.",
+    "example": "Un service « Déclaration de sinistre en ligne » proposé aux assurés, leur permettant de soumettre une réclamation via un formulaire sans avoir besoin de savoir quels processus ou systèmes internes la traitent ensuite.",
+    "exampleLabel": "Déclaration de sinistre en ligne",
+    "exampleCaption": "Exposé aux assurés"
+  },
+  "event": {
+    "name": "Événement",
+    "shortDescription": "Un changement d'état.",
+    "longDescription": "Un Événement représente quelque chose qui se produit — instantané du point de vue de la modélisation — qui peut déclencher, ou être déclenché par, un autre comportement. Contrairement à un Processus ou une Fonction, un Événement n'a pas de durée ; il marque un instant où quelque chose change.",
+    "example": "L'événement « Sinistre reçu », qui se produit au moment où la déclaration de sinistre d'un assuré arrive, et déclenche le début du processus de traitement des sinistres.",
+    "exampleLabel": "Sinistre reçu",
+    "exampleCaption": "Déclenche le processus de traitement des sinistres"
+  },
+  "stakeholder": {
+    "name": "Partie prenante",
+    "shortDescription": "Le rôle d'un individu, d'une équipe ou d'une organisation qui a un intérêt ou une préoccupation vis-à-vis du résultat de l'architecture.",
+    "longDescription": "Une Partie prenante représente le point de vue à partir duquel quelqu'un perçoit les effets d'une architecture — non pas la personne elle-même, mais son intérêt à son égard. Les parties prenantes définissent, modifient et mettent l'accent sur des objectifs, et peuvent influencer mutuellement leurs priorités à mesure que ces intérêts évoluent.",
+    "example": "La partie prenante « Directeur financier » se préoccupe de maîtriser les coûts de traitement des sinistres, tandis que la partie prenante « Client » se préoccupe de la rapidité du remboursement d'un sinistre.",
+    "exampleLabel": "Directeur financier",
+    "exampleCaption": "Préoccupé par le coût du traitement des sinistres"
+  },
+  "driver": {
+    "name": "Facteur déclencheur",
+    "shortDescription": "Une condition interne ou externe qui motive une organisation à définir ses objectifs et à agir pour les atteindre.",
+    "longDescription": "Un Facteur déclencheur désigne la force sous-jacente derrière un objectif — un changement réglementaire, une pression du marché ou une ambition interne — sans encore préciser ce qu'il convient de faire à ce sujet. Lorsqu'un facteur déclencheur est étroitement lié à une partie prenante spécifique, on parle souvent de la « préoccupation » de cette partie prenante.",
+    "example": "Le facteur déclencheur « Attentes croissantes des clients en matière de libre-service numérique » motive la compagnie d'assurance à investir dans un portail de sinistres en ligne.",
+    "exampleLabel": "Attentes croissantes des clients",
+    "exampleCaption": "Motive un portail de sinistres en ligne"
+  },
+  "assessment": {
+    "name": "Évaluation",
+    "shortDescription": "Le résultat de l'analyse de l'état de l'entreprise au regard d'un facteur déclencheur — une force, une faiblesse, une opportunité ou une menace.",
+    "longDescription": "Une Évaluation restitue ce qu'une analyse a révélé : une faiblesse ou une menace à traiter, ou une force ou une opportunité sur laquelle s'appuyer. Les évaluations constituent la base factuelle sur laquelle les objectifs sont définis en réponse, bouclant la boucle entre un facteur déclencheur et la décision de changer quelque chose.",
+    "example": "L'évaluation « Les délais de traitement des sinistres dépassent les attentes des clients », établie en réponse au facteur déclencheur « Attentes croissantes des clients », est ce qui pousse l'entreprise à définir un objectif d'amélioration.",
+    "exampleLabel": "Délais de traitement dépassant les attentes",
+    "exampleCaption": "Mène à un objectif d'amélioration"
+  },
+  "goal": {
+    "name": "Objectif",
+    "shortDescription": "Un énoncé de haut niveau d'intention, de direction ou d'état final souhaité pour une organisation ou ses parties prenantes.",
+    "longDescription": "Un Objectif énonce ce qu'une partie prenante souhaite atteindre, généralement en termes qualitatifs — « réduire », « améliorer », « augmenter » — plutôt que comme une cible mesurable. Les objectifs sont souvent décomposés en sous-objectifs plus restreints, et sont couramment associés à un ou plusieurs Résultats concrets qui définissent à quoi ressemblerait leur réalisation.",
+    "example": "L'objectif « Réduire le délai moyen de traitement des sinistres », défini par le service Sinistres en réponse à l'évaluation sur les attentes des clients.",
+    "exampleLabel": "Réduire le délai de traitement des sinistres",
+    "exampleCaption": "Défini en réponse à une évaluation"
+  },
+  "outcome": {
+    "name": "Résultat",
+    "shortDescription": "Un résultat final, un effet ou une conséquence d'un état de fait donné — ce qui a été réellement accompli, par opposition à ce qui était visé.",
+    "longDescription": "Un Résultat est un aboutissement concret, souvent mesurable, par opposition à un Objectif, qui exprime une intention : un objectif est ce que l'on veut, un résultat est ce que l'on obtient. Les résultats peuvent être positifs ou négatifs, et peuvent ne réaliser que partiellement — voire pas du tout — l'objectif auquel ils se rapportent.",
+    "example": "Le résultat « Délai moyen de traitement des sinistres réduit à 3 jours », qui réalise l'objectif de réduction du délai de traitement.",
+    "exampleLabel": "Délai réduit à 3 jours",
+    "exampleCaption": "Réalise l'objectif de délai de traitement"
+  },
+  "principle": {
+    "name": "Principe",
+    "shortDescription": "Un énoncé normatif d'intention qui définit une propriété générale s'appliquant à tout système dans un contexte donné.",
+    "longDescription": "Un Principe guide la conception de toute solution dans son contexte, plutôt que de décrire un système spécifique — cette portée plus large et plus abstraite est ce qui le distingue d'une Exigence. Un principe est généralement concrétisé par une ou plusieurs exigences concrètes qui l'appliquent à un système réel.",
+    "example": "Le principe « Les données client sont saisies une seule fois et réutilisées partout » s'applique à tous les systèmes que la compagnie d'assurance construit, pas uniquement au portail de sinistres.",
+    "exampleLabel": "Saisir les données client une seule fois",
+    "exampleCaption": "S'applique à tous les systèmes de l'entreprise"
+  },
+  "requirement": {
+    "name": "Exigence",
+    "shortDescription": "Un énoncé de besoin qui définit une propriété s'appliquant à un système spécifique, tel que décrit par l'architecture.",
+    "longDescription": "Une Exigence représente le « moyen » par lequel un Objectif est concrétisé : une propriété qu'un système particulier doit présenter. Les exigences résultent généralement de la décomposition d'un objectif jusqu'à ce qu'il soit suffisamment précis pour être satisfait par une conception concrète, et sont souvent contraintes par un ou plusieurs Principes directeurs.",
+    "example": "L'exigence « Le portail de sinistres en ligne doit confirmer la réception d'un sinistre dans un délai de 60 secondes », qui concrétise l'objectif relatif au délai de traitement des sinistres.",
+    "exampleLabel": "Confirmer la réception en 60 secondes",
+    "exampleCaption": "Réalise l'objectif de délai de traitement"
+  },
+  "value": {
+    "name": "Valeur",
+    "shortDescription": "L'importance relative, l'utilité ou la valeur d'un concept, telle que perçue par un client, une partie prenante ou un utilisateur final.",
+    "longDescription": "La Valeur exprime pourquoi quelque chose compte pour celui qui en fait l'expérience — souvent, mais pas toujours, en termes monétaires ; elle peut tout aussi bien décrire la commodité, la confiance ou la tranquillité d'esprit. Un même élément peut porter une valeur différente, voire opposée, pour différentes parties prenantes.",
+    "example": "Le service « Déclaration de sinistre en ligne » a pour valeur la « Commodité » pour le client, et la « Réduction des coûts de traitement » pour l'assureur.",
+    "exampleLabel": "Commodité",
+    "exampleCaption": "Valeur du service de déclaration, pour le client"
+  },
+  "meaning": {
+    "name": "Signification",
+    "shortDescription": "La connaissance, l'expertise ou l'interprétation qu'un public particulier associe à un concept, dans un contexte donné.",
+    "longDescription": "La Signification décrit comment un élément de structure passive — un document, un message, une donnée — est réellement compris par celui qui le reçoit, ce qui n'est pas toujours identique à sa description technique. Un même objet sous-jacent peut porter une signification différente selon les parties prenantes.",
+    "example": "Un message « Confirmation de sinistre » a pour signification « Votre sinistre a été reçu et est en cours d'examen » pour le client, tandis que ce même message signifie « Un nouveau dossier est entré dans la file d'attente » pour le service Sinistres.",
+    "exampleLabel": "Sinistre reçu et en cours d'examen",
+    "exampleCaption": "Ce qu'un message de confirmation signifie pour le client"
+  },
+  "resource": {
+    "name": "Ressource",
+    "shortDescription": "Un actif utile ou précieux sur lequel une organisation peut s'appuyer — tangible, intangible ou humain.",
+    "longDescription": "Une Ressource est un élément structurel qui n'est ni purement actif ni purement passif : elle est concrétisée par les éléments de structure active et passive qui l'incarnent (personnel, équipement, fonds, information) et constitue une source de la capacité d'action de l'organisation. Les ressources étant limitées, elles sont un facteur déterminant des stratégies et objectifs qu'une organisation peut réellement poursuivre.",
+    "example": "Les « Experts en sinistres » et le « Budget de traitement des sinistres » sont des ressources affectées à la capacité de traitement des sinistres de l'entreprise.",
+    "exampleLabel": "Experts en sinistres",
+    "exampleCaption": "Affectés à la capacité de traitement des sinistres"
+  },
+  "capability": {
+    "name": "Capacité",
+    "shortDescription": "Une aptitude que possède une organisation, une personne ou un système.",
+    "longDescription": "Une Capacité décrit ce qu'une entreprise sait faire — exprimée sous forme de nom ou de gérondif, comme « Gestion des sinistres », jamais comme un processus ou un système spécifique — indépendamment de la manière dont cette aptitude est actuellement mise en œuvre. Les capacités sont concrétisées par une combinaison de personnes, de processus, d'informations et de technologies, et constituent le point d'ancrage habituel de la planification fondée sur les capacités.",
+    "example": "La capacité « Évaluation des sinistres », que la compagnie d'assurance peut choisir de concrétiser via du personnel interne, un réseau d'experts externalisé ou un modèle automatisé, sans que la capacité elle-même ne change.",
+    "exampleLabel": "Évaluation des sinistres",
+    "exampleCaption": "Réalisée par du personnel, un réseau externalisé ou un modèle"
+  },
+  "value-stream": {
+    "name": "Chaîne de valeur",
+    "shortDescription": "Une séquence d'activités qui crée un résultat global de valeur pour un client, une partie prenante ou un utilisateur final.",
+    "longDescription": "Une Chaîne de valeur décrit la création de valeur du point de vue du bénéficiaire — ce qu'il gagne — plutôt que la liste ordonnée de tâches que décrit un Processus ; les deux sont liés mais se situent à des niveaux d'abstraction différents, et une chaîne de valeur est généralement concrétisée par un ou plusieurs processus. Les chaînes de valeur peuvent être découpées en étapes, chacune ajoutant une valeur incrémentale à la suivante.",
+    "example": "La chaîne de valeur « Souscrire une police d'assurance », dont les étapes — Devis, Souscription, Émission de la police — sont chacune desservies par des capacités différentes et concrétisées par des processus différents.",
+    "exampleLabel": "Souscrire une police d'assurance",
+    "exampleCaption": "Devis → souscription → émission de la police"
+  },
+  "course-of-action": {
+    "name": "Plan d'action",
+    "shortDescription": "Une approche ou un plan visant à configurer les capacités et ressources de l'entreprise pour atteindre un objectif.",
+    "longDescription": "Un Plan d'action représente ce qu'une organisation a décidé de faire — généralement scindé entre des Stratégies plus larges et à long terme, et des Tactiques plus étroites et à court terme, bien que la frontière entre les deux ne soit pas nette. Les plans d'action sont concrétisés par les capacités et ressources que l'organisation mobilise pour les mettre en œuvre.",
+    "example": "Le plan d'action « Automatiser la réception de la première déclaration de sinistre », adopté dans le cadre de la stratégie plus large « Sinistres numériques » de l'entreprise.",
+    "exampleLabel": "Automatiser la première déclaration",
+    "exampleCaption": "Fait partie de la stratégie Sinistres numériques"
+  },
+  "business-actor": {
+    "name": "Acteur métier",
+    "shortDescription": "Une entité métier capable d'exercer un comportement — une personne, un service ou une organisation.",
+    "longDescription": "Un Acteur métier est le « qui » : un individu, une équipe, un service ou une organisation entière spécifique, par opposition à un Rôle, qui est la responsabilité à laquelle cet acteur est affecté. Un même acteur peut être affecté à plusieurs rôles, et un même rôle peut être occupé par différents acteurs au fil du temps.",
+    "example": "Le « Service Sinistres », modélisé comme un acteur métier, est affecté au rôle de « Gestionnaire de sinistres ».",
+    "exampleLabel": "Service Sinistres",
+    "exampleCaption": "Affecté au rôle de Gestionnaire de sinistres"
+  },
+  "business-interface": {
+    "name": "Interface métier",
+    "shortDescription": "Un point d'accès par lequel un acteur métier met ses services à la disposition de son environnement.",
+    "longDescription": "Une Interface métier est le canal par lequel un service métier est atteint — une ligne téléphonique, un guichet d'agence, un formulaire web — plutôt que le service lui-même. Un même service peut être exposé simultanément via plusieurs interfaces différentes.",
+    "example": "La « Hotline sinistres » et le « Portail de sinistres en ligne » de la compagnie d'assurance sont deux interfaces métier différentes qui exposent toutes deux le même service « Gestion des sinistres ».",
+    "exampleLabel": "Hotline sinistres",
+    "exampleCaption": "Expose le service de gestion des sinistres"
+  },
+  "business-object": {
+    "name": "Objet métier",
+    "shortDescription": "Un élément passif conceptuel ayant une pertinence du point de vue métier.",
+    "longDescription": "Un Objet métier modélise un concept dans les termes que le métier utilise lui-même pour penser et s'exprimer — une police, un sinistre, une fiche client — au niveau conceptuel, indépendamment de la manière dont il est physiquement stocké. Il peut être concrétisé par un ou plusieurs Objets de données qui le représentent dans les systèmes informatiques.",
+    "example": "L'objet métier « Police d'assurance », auquel peuvent être rattachés zéro ou plusieurs objets métier « Sinistre ».",
+    "exampleLabel": "Police d'assurance",
+    "exampleCaption": "A zéro ou plusieurs sinistres associés"
+  },
+  "product": {
+    "name": "Produit",
+    "shortDescription": "Un ensemble cohérent de services, d'objets métier, d'objets de données, d'artefacts et/ou de matériel proposé comme un tout aux clients.",
+    "longDescription": "Un Produit est ce qui est vendu : un ensemble de services et d'informations regroupés et désignés par un nom unique orienté client, pouvant agréger des éléments de n'importe quel domaine, pas seulement le domaine Métier. « Acheter » un produit constitue généralement lui-même l'un des services qu'il regroupe, et accorde typiquement au client des droits définis dans un objet métier associé tel qu'un contrat.",
+    "example": "Le produit « Assurance auto » regroupe les services « Gestion des sinistres » et « Assistance routière » ainsi que l'objet métier « Contrat de police ».",
+    "exampleLabel": "Assurance auto",
+    "exampleCaption": "Regroupe Gestion des sinistres + Assistance routière"
+  },
+  "application-component": {
+    "name": "Composant applicatif",
+    "shortDescription": "Une encapsulation de fonctionnalité applicative, alignée sur la structure de mise en œuvre, qui est modulaire et remplaçable.",
+    "longDescription": "Un Composant applicatif est une unité logicielle autonome et déployable indépendamment : il encapsule son propre comportement et ses propres données et ne les expose qu'à travers ses interfaces. Des composants coopérants peuvent être regroupés au sein d'une Collaboration, et un composant peut être désigné comme la source faisant autorité pour un objet de données donné.",
+    "example": "Le composant applicatif « Moteur de traitement des sinistres » expose un service « Déclarer un sinistre » via son interface « API Sinistres ».",
+    "exampleLabel": "Moteur de traitement des sinistres",
+    "exampleCaption": "Expose Déclarer un sinistre via son API Sinistres"
+  },
+  "application-interface": {
+    "name": "Interface applicative",
+    "shortDescription": "Un point d'accès par lequel un composant applicatif met ses services à la disposition de son environnement.",
+    "longDescription": "Une Interface applicative spécifie le contrat qu'un autre composant doit utiliser pour atteindre un service — ses paramètres, son protocole et son format de données — sans exposer les rouages qui se trouvent derrière. Une seule interface peut exposer plusieurs services, et un même service peut être accessible via plusieurs interfaces.",
+    "example": "L'interface applicative « API Sinistres » expose les services « Déclarer un sinistre » et « Vérifier l'état du sinistre » du Moteur de traitement des sinistres à l'application web destinée aux clients.",
+    "exampleLabel": "API Sinistres",
+    "exampleCaption": "Expose Déclarer un sinistre et Vérifier le statut"
+  },
+  "data-object": {
+    "name": "Objet de données",
+    "shortDescription": "Des données structurées pour un traitement automatisé.",
+    "longDescription": "Un Objet de données est le pendant informatique d'un Objet métier — une information autonome ayant une signification métier claire, modélisée comme une classe l'est en modélisation de données ou orientée objet, représentant typiquement un type plutôt qu'une instance unique. Un objet de données peut concrétiser un objet métier, et peut lui-même être concrétisé par un ou plusieurs artefacts.",
+    "example": "L'objet de données « Fiche sinistre » concrétise l'objet métier « Sinistre » au sein du Moteur de traitement des sinistres.",
+    "exampleLabel": "Fiche sinistre",
+    "exampleCaption": "Concrétise l'objet métier Sinistre"
+  },
+  "node": {
+    "name": "Nœud",
+    "shortDescription": "Une structure informatique ou physique générique qui héberge, manipule ou interagit avec d'autres structures de ce type.",
+    "longDescription": "Un Nœud est l'élément de structure active générique du Domaine Technologie — qu'il s'agisse d'un serveur physique ou d'une instance de calcul dans le cloud — capable d'exécuter des logiciels et de stocker ou traiter des artefacts. Les nœuds peuvent contenir des sous-nœuds et sont couramment reliés entre eux par des chemins, des réseaux de communication ou des réseaux de distribution.",
+    "example": "Le nœud « Serveur applicatif Sinistres » héberge l'artefact déployé « claims-api.jar ».",
+    "exampleLabel": "Serveur applicatif Sinistres",
+    "exampleCaption": "Héberge l'artefact claims-api.jar"
+  },
+  "technology-interface": {
+    "name": "Interface technologique",
+    "shortDescription": "Un point d'accès par lequel un nœud, un dispositif, un logiciel système, une installation ou un équipement met des services à la disposition de son environnement.",
+    "longDescription": "Une Interface technologique est le pendant, au niveau technologique, d'une interface métier ou applicative — le contrat, le protocole et le point d'accès par lesquels un service technologique est atteint, plutôt que le service lui-même.",
+    "example": "Le point de terminaison « HTTPS » sur le Serveur applicatif Sinistres, une interface technologique qui expose ses services hébergés au reste du réseau.",
+    "exampleLabel": "Point de terminaison HTTPS",
+    "exampleCaption": "Expose les services hébergés au réseau"
+  },
+  "device": {
+    "name": "Dispositif",
+    "shortDescription": "Un matériel informatique, éventuellement virtualisé, utilisé pour le traitement, le stockage de données et des finalités similaires.",
+    "longDescription": "Un Dispositif est une pièce physique (ou virtualisée) de matériel de traitement — un serveur, un ordinateur portable, un routeur — généralement associée à un Logiciel système pour former ensemble un Nœud. Les dispositifs peuvent être composites, en agrégeant des sous-dispositifs, et peuvent être reliés entre eux par des réseaux de communication.",
+    "example": "Le dispositif physique « Serveur en baie 14 », sur lequel s'exécute le logiciel système du nœud « Serveur applicatif Sinistres ».",
+    "exampleLabel": "Serveur en baie 14",
+    "exampleCaption": "Exécute le logiciel système du serveur applicatif"
+  },
+  "system-software": {
+    "name": "Logiciel système",
+    "shortDescription": "Un logiciel qui fournit ou contribue à un environnement pour stocker, exécuter et utiliser d'autres logiciels ou données.",
+    "longDescription": "Le Logiciel système est l'environnement d'exécution sous-jacent à une application — un système d'exploitation, un moteur de base de données, un serveur d'applications — généralement combiné avec un Dispositif pour former un Nœud complet. Un logiciel système peut être superposé à un autre, comme une base de données s'exécutant au sein d'un système d'exploitation.",
+    "example": "Le logiciel système « Serveur de base de données PostgreSQL », s'exécutant sur le dispositif « Serveur en baie 14 », stocke les données de sinistres utilisées par le Moteur de traitement des sinistres.",
+    "exampleLabel": "Serveur de base de données PostgreSQL",
+    "exampleCaption": "S'exécute sur le serveur en baie 14"
+  },
+  "equipment": {
+    "name": "Équipement",
+    "shortDescription": "Une machine physique, un outil, un instrument ou du bétail.",
+    "longDescription": "L'Équipement représente les éléments de traitement physiques, non informatiques, qui agissent sur du Matériau — les machines d'un atelier, un instrument de diagnostic, ou un véhicule — par opposition au matériel informatique, modélisé comme un Dispositif. L'équipement peut être combiné avec des dispositifs et des logiciels système au sein d'un même nœud pour représenter des systèmes qui mêlent infrastructure physique et informatique, comme un scanner médical.",
+    "example": "Le « Scanner d'inspection de flotte » utilisé par les experts de la compagnie d'assurance pour photographier et consigner les dommages sur un véhicule.",
+    "exampleLabel": "Scanner d'inspection de flotte",
+    "exampleCaption": "Utilisé par les experts pour consigner les dommages"
+  },
+  "facility": {
+    "name": "Installation",
+    "shortDescription": "Une structure ou un environnement physique.",
+    "longDescription": "Une Installation est le lieu physique qui abrite des équipements, des dispositifs ou des personnes — un bâtiment, un entrepôt, un centre de données — par opposition à une Localisation, qui est une position géographique plus abstraite qu'une installation (parmi d'autres choses) peut occuper. Les installations peuvent être interconnectées par des réseaux de distribution et peuvent agréger d'autres installations.",
+    "example": "Le « Centre régional de traitement des sinistres », une installation située à la localisation « Rotterdam » de l'entreprise, qui abrite l'équipement et les serveurs de l'équipe Sinistres.",
+    "exampleLabel": "Centre régional de traitement des sinistres",
+    "exampleCaption": "Abrite l'équipement de l'équipe Sinistres"
+  },
+  "communication-network": {
+    "name": "Réseau de communication",
+    "shortDescription": "Un ensemble de structures informatiques pour la transmission, le routage et la réception de données.",
+    "longDescription": "Un Réseau de communication est l'infrastructure physique — câblage, routeurs, liaisons sans fil — qui concrétise un Chemin logique entre des nœuds. Il peut être composé de sous-réseaux, et peut agréger les dispositifs et logiciels système (commutateurs, pare-feux) qui le composent.",
+    "example": "Le « Réseau d'entreprise » interne de la compagnie relie le Serveur applicatif Sinistres aux postes de travail des agences.",
+    "exampleLabel": "Réseau d'entreprise",
+    "exampleCaption": "Relie les serveurs aux postes des agences"
+  },
+  "distribution-network": {
+    "name": "Réseau de distribution",
+    "shortDescription": "Un réseau physique utilisé pour transporter des matériaux ou de l'énergie.",
+    "longDescription": "Un Réseau de distribution est le pendant physique d'un Réseau de communication : au lieu de transporter des données, il déplace des biens, des personnes ou de l'énergie entre des installations, en concrétisant les chemins logiques qui les relient. Il peut agréger les installations et équipements — tels que des dépôts et des véhicules — qui composent le réseau.",
+    "example": "Le « Réseau régional de coursiers », un réseau de distribution, transporte les formulaires de sinistre papier signés entre les agences et le siège social.",
+    "exampleLabel": "Réseau régional de coursiers",
+    "exampleCaption": "Transporte les formulaires de sinistre papier"
+  },
+  "artifact": {
+    "name": "Artefact",
+    "shortDescription": "Une donnée utilisée ou produite dans un processus de développement logiciel, ou par le déploiement et l'exploitation d'un système informatique.",
+    "longDescription": "Un Artefact est l'unité physique, au sens informatique, qui porte un objet de données ou un composant — un fichier, un script, un exécutable, une table de base de données — pouvant être déployée sur un dispositif ou un logiciel système. Un composant applicatif ou un objet de données est généralement concrétisé par un ou plusieurs artefacts.",
+    "example": "L'artefact « claims-api.jar » concrétise le composant applicatif Moteur de traitement des sinistres, et est déployé sur le Serveur applicatif Sinistres.",
+    "exampleLabel": "claims-api.jar",
+    "exampleCaption": "Concrétise le Moteur de traitement des sinistres"
+  },
+  "material": {
+    "name": "Matériau",
+    "shortDescription": "Une matière ou une énergie physique tangible.",
+    "longDescription": "Le Matériau représente des substances ou ressources physiques du monde réel — matières premières, produits physiques, carburant ou électricité — auxquelles un Équipement peut accéder, qu'il peut déplacer, transformer ou stocker. C'est le pendant physique d'un Artefact dans le monde informatique.",
+    "example": "L'« Épave du véhicule », un matériau inspecté par le Scanner d'inspection de flotte lors d'une évaluation des dommages.",
+    "exampleLabel": "Épave du véhicule",
+    "exampleCaption": "Inspectée par le scanner d'inspection de flotte"
+  },
+  "work-package": {
+    "name": "Paquet de travaux",
+    "shortDescription": "Une série d'actions identifiées et conçues pour atteindre des résultats spécifiques dans des contraintes de temps et de ressources données.",
+    "longDescription": "Un Paquet de travaux modélise un effort ponctuel et borné — un projet, un sprint, un sous-projet — par opposition à un Processus, qui modélise un flux continu et répétable. Il produit généralement un ou plusieurs Livrables, et peut agréger des paquets de travaux plus petits en son sein.",
+    "example": "Le paquet de travaux « Lancer le portail de sinistres en ligne », qui agrège les paquets de travaux « Construire l'API Sinistres » et « Construire l'application web client ».",
+    "exampleLabel": "Lancer le portail de sinistres en ligne",
+    "exampleCaption": "Agrège deux paquets de travaux plus petits"
+  },
+  "deliverable": {
+    "name": "Livrable",
+    "shortDescription": "Un résultat produit par un paquet de travaux.",
+    "longDescription": "Un Livrable est le résultat concret que produit un Paquet de travaux — un rapport, un logiciel, un document validé, ou un changement organisationnel — et fait souvent l'objet d'un examen formel et d'un accord avec les parties prenantes avant d'être accepté. Les livrables sont ce qui concrétise un Plateau, l'état stable que l'organisation atteint une fois qu'ils sont en place.",
+    "example": "Le livrable « API Sinistres v1 » produit par le paquet de travaux « Construire l'API Sinistres ».",
+    "exampleLabel": "API Sinistres v1",
+    "exampleCaption": "Produit par le paquet Construire l'API Sinistres"
+  },
+  "plateau": {
+    "name": "Plateau",
+    "shortDescription": "Un état relativement stable de l'architecture qui existe pendant une période limitée.",
+    "longDescription": "Un Plateau marque un point d'arrêt défini dans l'évolution d'une architecture — une Référence de départ, une Cible, ou l'un des états de Transition intermédiaires — concrétisé par les livrables qui ont permis à l'organisation d'y parvenir. Les plateaux permettent de planifier et de communiquer les grandes transformations comme une séquence d'étapes gérables plutôt que comme un saut unique.",
+    "example": "Le plateau « Sinistres numériques en production », atteint une fois que les livrables « API Sinistres v1 » et « Application web client v1 » sont tous deux en production.",
+    "exampleLabel": "Sinistres numériques en production",
+    "exampleCaption": "Atteint une fois les livrables v1 en production"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "composition": {
+    "name": "Composición",
+    "description": "Indica que un elemento está formado por uno o más elementos. Es la relación estructural más fuerte: una parte solo existe mientras exista su todo, y no puede pertenecer a más de un todo a la vez. Se representa con una línea continua y un rombo relleno en el extremo del todo (origen).",
+    "example": "Un objeto de negocio «Póliza de Seguro» está compuesto por un «Anexo de Póliza» y un conjunto de «Condiciones de Póliza» — al eliminar la póliza, su anexo y sus condiciones dejan de existir como partes de nada."
+  },
+  "aggregation": {
+    "name": "Agregación",
+    "description": "Indica que un elemento combina uno o más elementos que no le pertenecen en exclusiva — una forma más débil de composición en la que las partes pueden existir de forma independiente o compartirse entre varios todos. Se representa con una línea continua y un rombo hueco (sin rellenar) en el extremo del todo (origen).",
+    "example": "Una función de negocio «Departamento de Siniestros» agrega las subfunciones «Recepción de Siniestros» y «Evaluación de Siniestros», aunque cada subfunción podría en principio servir también a otro departamento."
+  },
+  "assignment": {
+    "name": "Asignación",
+    "description": "Indica la asignación de una responsabilidad, o la asignación de un elemento de estructura activa para realizar un comportamiento, o de un elemento activo a un rol. Se representa con una línea continua con un círculo relleno en el extremo de origen (el elemento asignado) y una punta de flecha rellena en el extremo de destino.",
+    "example": "El rol de negocio «Gestor de Siniestros» se asigna al proceso de negocio «Evaluar Siniestro», lo que significa que quien ocupe ese rol lleva a cabo el proceso."
+  },
+  "realization": {
+    "name": "Realización",
+    "description": "Indica que una entidad desempeña un papel decisivo en la creación, el logro, el mantenimiento o el funcionamiento de una entidad más abstracta — normalmente, que un elemento concreto realiza uno más abstracto, como un componente que realiza un servicio, o un requisito que realiza un principio. Se representa con una línea punteada y una punta de flecha triangular hueca que apunta al elemento realizado.",
+    "example": "El componente de aplicación «Motor de Recepción de Siniestros» realiza el servicio de aplicación «Presentar un Siniestro» que se ofrece a los asegurados."
+  },
+  "serving": {
+    "name": "Servir",
+    "description": "Indica que un elemento pone su funcionalidad a disposición de otro elemento — hace que algo esté disponible para que el otro elemento lo use. Se representa con una línea continua y una punta de flecha abierta que apunta al elemento servido. Renombrada desde «usado por» en versiones anteriores de ArchiMate.",
+    "example": "El servicio de aplicación «Procesamiento de Pagos» sirve al proceso de negocio «Tramitar Reclamación de Seguro», que depende de él para emitir los pagos."
+  },
+  "access": {
+    "name": "Acceso",
+    "description": "Indica que un elemento de comportamiento o de estructura activa accede a — lee, escribe o actualiza — un elemento de estructura pasiva, como un objeto de negocio o un objeto de datos. Se representa con una línea punteada, opcionalmente con una pequeña punta de flecha abierta que indica la dirección del acceso.",
+    "example": "El proceso de negocio «Evaluar Siniestro» accede al objeto de negocio «Expediente del Siniestro» para leer su contenido y actualizar su estado."
+  },
+  "influence": {
+    "name": "Influencia",
+    "description": "Indica que un elemento afecta, positiva o negativamente, a la implementación o el logro de un elemento de motivación, como un objetivo o un requisito. Se representa con una línea discontinua y una punta de flecha abierta, opcionalmente etiquetada con un signo + o − para mostrar el sentido de la influencia.",
+    "example": "El impulsor «Aumento del Fraude en Siniestros» influye negativamente en el objetivo «Reducir el Tiempo de Pago de Siniestros», ya que los controles antifraude adicionales ralentizan el procesamiento."
+  },
+  "association": {
+    "name": "Asociación",
+    "description": "Indica una relación no especificada, o una no cubierta por ninguno de los demás tipos de relación, entre dos elementos. Se representa con una línea continua sin punta de flecha, opcionalmente con una punta de flecha abierta para mostrar un sentido de lectura.",
+    "example": "El actor de negocio «Tomador del Seguro» está asociado con el objeto de negocio «Póliza de Seguro» — un vínculo general que no implica semántica estructural ni de dependencia."
+  },
+  "triggering": {
+    "name": "Disparo",
+    "description": "Indica una relación temporal o causal entre elementos de comportamiento — que un proceso, función o evento inicia otro. Se representa con una línea continua y una punta de flecha rellena que apunta al elemento activado.",
+    "example": "El evento de negocio «Siniestro Presentado» dispara el proceso de negocio «Evaluar Siniestro»."
+  },
+  "flow": {
+    "name": "Flujo",
+    "description": "Indica la transferencia de información, dinero, bienes u otro valor de un elemento de comportamiento a otro. Se representa con una línea discontinua y una punta de flecha rellena que apunta al elemento receptor.",
+    "example": "El proceso «Evaluar Siniestro» envía mediante un flujo una «Decisión de Pago» al proceso «Procesar Pago»."
+  },
+  "specialization": {
+    "name": "Especialización",
+    "description": "Indica que un elemento es un tipo más específico de un elemento más general, heredando las características del elemento general a la vez que puede añadir o refinar las suyas propias — directamente análogo a la generalización/herencia en el modelado orientado a objetos. Se representa con una línea continua y una punta de flecha triangular hueca que apunta al elemento general.",
+    "example": "«Póliza de Seguro de Auto» y «Póliza de Seguro de Viaje» son ambas especializaciones del objeto de negocio general «Póliza de Seguro», cada una añadiendo sus propios atributos y condiciones específicos."
+  },
+  "and-junction": {
+    "name": "Unión Y",
+    "description": "Una unión utilizada para conectar varias relaciones del mismo tipo en un único Y lógico: todas las relaciones entrantes deben cumplirse conjuntamente para que se aplique la relación saliente. Se representa con un pequeño círculo relleno en el punto donde se encuentran las líneas.",
+    "example": "Deben producirse tanto el evento «Pago Recibido» como el evento «Mercancía Enviada» antes de que la unión Y dispare el proceso «Cerrar Pedido»."
+  },
+  "or-junction": {
+    "name": "Unión O",
+    "description": "Una unión utilizada para conectar varias relaciones del mismo tipo en un único O lógico: basta con que se cumpla una de las relaciones entrantes para que se aplique la relación saliente. Se representa con un pequeño círculo hueco en el punto donde se encuentran las líneas.",
+    "example": "Basta con una «Aprobación del Responsable» o una «Aprobación Automática» para que la unión O dispare el proceso «Liberar Fondos»."
+  }
+}

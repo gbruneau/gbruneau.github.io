@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Deliverable notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#F7C6C0" stroke="#C0504D" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#C0504D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.08 7.26L2.08 14.79C5.32 16.69 8.67 16.74 12.13 14.96C15.47 13.95 18.77 13.95 22 14.96L22 7.26Z"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Deliverable</tspan></text>
+</svg>

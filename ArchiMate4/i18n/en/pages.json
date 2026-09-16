@@ -1,0 +1,35 @@
+{
+  "introduction": {
+    "title": "Introduction",
+    "content": [
+      { "type": "p", "text": "ArchiMate is an open, independent modeling language for enterprise architecture, maintained by The Open Group. It provides a common vocabulary for describing the structure and behavior of an organization's business processes, applications, and technology infrastructure, and the relationships between them." },
+      { "type": "h3", "text": "What's new in ArchiMate 4" },
+      { "type": "p", "text": "ArchiMate 4 reorganizes the language around seven \"Domains\" in place of the earlier layer model, and merges a number of layer-specific elements (such as separate Business, Application, and Technology versions of Process, Function, Service, and Event) into single generic Common Domain concepts that are reused across contexts." },
+      { "type": "h3", "text": "How to use this cheat sheet" },
+      { "type": "list", "items": [
+        "Browse the seven Domains to see the elements that belong to each one.",
+        "Browse Relationships to see how elements can be connected to one another.",
+        "Use Search to quickly find an element or relationship by name or description, with optional regular-expression matching.",
+        "Switch languages at any time using the language switcher in the header."
+      ] },
+      { "type": "references" }
+    ]
+  },
+  "metamodel": {
+    "title": "Meta Model",
+    "content": [
+      { "type": "p", "text": "ArchiMate 4 depicts the overall structure of the language using the \"Hexagonion\" — a set of nested hexagons showing how the seven domains relate to one another, from the Motivation domain at the core outward through Strategy, then Business, Common, and Application, then Technology, to Implementation & Migration on the outside. Select a domain below to see its elements." },
+      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "The ArchiMate 4 Hexagonion: nested hexagons with Motivation at the core, surrounded by Strategy, then Business, Common, and Application, then Technology, and Implementation & Migration on the outside." },
+      { "type": "p", "text": "Elements that are specific to a single domain — such as Business Actor or Data Object — live in that domain's own ring. Elements shared and reused across the Business, Application, and Technology domains — such as Process, Function, Service, and Event — live in the Common Domain, nested between them." }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "content": [
+      { "type": "p", "text": "This cheat sheet is a single-page reference for ArchiMate 4 — its domains, elements, relationships, and notation — built as a small static web app with no backend, and no tracking." },
+      { "type": "version" },
+      { "type": "p", "text": "Icons and the \"Hexagonion\" metamodel diagram are modeled on the official notation defined in Appendix A of the specification. ArchiMate® and The Open Group® are registered trademarks of The Open Group." },
+      { "type": "references" }
+    ]
+  }
+}

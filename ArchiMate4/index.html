@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchiMate 4 Cheat Sheet</title>
+  <link rel="icon" href="data:,">
+  <script>
+    // Applied before first paint (and before any module script) to avoid a
+    // flash of the wrong theme on load — this can't wait for main.js.
+    (function () {
+      try {
+        var stored = localStorage.getItem('archimate4-theme');
+        if (stored === 'light' || stored === 'dark') {
+          document.documentElement.dataset.theme = stored;
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script type="module" crossorigin src="./assets/index-CLnkEwim.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-zXCMDq_i.css">
+</head>
+<body>
+  <header id="app-header">
+    <div class="brand">ArchiMate 4 Cheat Sheet</div>
+    <nav id="app-menu" aria-label="Main menu"></nav>
+    <div id="language-switcher"></div>
+    <div id="theme-toggle"></div>
+  </header>
+
+  <main id="app-view" aria-live="polite"></main>
+
+  <div id="boot-error" hidden></div>
+
+</body>
+</html>

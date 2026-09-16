@@ -1,0 +1,30 @@
+{
+  "common": {
+    "name": "Commun",
+    "description": "Éléments génériques — tels que les processus, fonctions, services et événements — partagés et réutilisés dans les domaines Métier, Application et Technologie plutôt que dupliqués pour chacun."
+  },
+  "motivation": {
+    "name": "Motivation",
+    "description": "Éléments utilisés pour modéliser les motivations qui guident la conception ou l'évolution d'une architecture d'entreprise, notamment les parties prenantes, les facteurs déclencheurs, les objectifs et les exigences."
+  },
+  "strategy": {
+    "name": "Stratégie",
+    "description": "Éléments utilisés pour modéliser l'orientation et les choix stratégiques d'une entreprise, notamment les capacités, les ressources et les plans d'action."
+  },
+  "business": {
+    "name": "Métier",
+    "description": "Éléments généralement utilisés pour modéliser l'architecture métier : les produits et services proposés aux clients, ainsi que les acteurs, rôles et interfaces qui les concrétisent."
+  },
+  "application": {
+    "name": "Application",
+    "description": "Éléments généralement utilisés pour modéliser l'architecture applicative : la structure, le comportement et les interactions des applications logicielles."
+  },
+  "technology": {
+    "name": "Technologie",
+    "description": "Éléments généralement utilisés pour modéliser l'architecture technologique : la structure et le comportement de l'infrastructure technologique, couvrant à la fois l'informatique et la technologie physique/opérationnelle."
+  },
+  "implementation-migration": {
+    "name": "Mise en œuvre et migration",
+    "description": "Éléments qui accompagnent la mise en œuvre et la migration des architectures, notamment les paquets de travaux, les livrables et les plateaux représentant des états stables dans le temps."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "app": {
+    "title": "Antisèche ArchiMate 4"
+  },
+  "menu": {
+    "intro": "Introduction",
+    "metamodel": "Méta-modèle",
+    "search": "Recherche",
+    "domains": "Domaines",
+    "relationships": "Relations",
+    "about": "À propos"
+  },
+  "search": {
+    "placeholder": "Rechercher des éléments et des relations…",
+    "mode": "Type de recherche",
+    "modePlain": "Texte simple",
+    "modeRegex": "Expression régulière",
+    "scope": "Rechercher dans",
+    "scopeName": "Nom uniquement",
+    "scopeNameDesc": "Nom et description",
+    "noResults": "Aucun résultat trouvé.",
+    "invalidRegex": "Ce n'est pas une expression régulière valide.",
+    "resultsCount": "{count} résultat(s)"
+  },
+  "domain": {
+    "elementsHeading": "Éléments",
+    "backToDomains": "Retour aux domaines"
+  },
+  "relationship": {
+    "backToRelationships": "Retour aux relations"
+  },
+  "relationshipCategory": {
+    "structural": "Structurelle",
+    "dependency": "Dépendance",
+    "dynamic": "Dynamique",
+    "other": "Autre",
+    "junction": "Jonction"
+  },
+  "elementCategory": {
+    "active-structure": "Structure active",
+    "behavior": "Comportement",
+    "passive-structure": "Structure passive",
+    "motivation": "Motivation",
+    "composite": "Composite"
+  },
+  "common": {
+    "shortDescription": "Résumé",
+    "longDescription": "Description",
+    "example": "Exemple concret",
+    "exampleBadge": "EXEMPLE",
+    "domain": "Domaine",
+    "category": "Catégorie",
+    "notation": "Notation",
+    "version": "Version",
+    "referencesHeading": "Références",
+    "contentComingSoon": "Le contenu de cet élément est en cours de rédaction et n'est pas encore disponible dans cette langue.",
+    "bootError": "Cette application doit être servie via HTTP pour charger ses données — l'ouverture directe du fichier ne fonctionnera pas. Essayez d'exécuter un serveur local (par exemple « npx serve source ») depuis le dossier source/ et ouvrez l'adresse affichée."
+  },
+  "lang": {
+    "en": "EN",
+    "fr": "FR",
+    "es": "ES"
+  },
+  "theme": {
+    "toggleToLight": "Passer au thème clair",
+    "toggleToDark": "Passer au thème sombre"
+  }
+}

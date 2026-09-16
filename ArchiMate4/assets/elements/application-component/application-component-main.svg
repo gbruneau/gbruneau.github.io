@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Application Component notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#B7D9F2" stroke="#2C6FB0" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#2C6FB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6.5" y="5" width="14" height="14" rx="1"/>
+    <rect x="3" y="8" width="4" height="3" rx="0.5"/>
+    <rect x="3" y="13" width="4" height="3" rx="0.5"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="45">Application</tspan><tspan x="84" y="63">Component</tspan></text>
+</svg>

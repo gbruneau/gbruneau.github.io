@@ -1,0 +1,68 @@
+{
+  "app": {
+    "title": "Chuleta de ArchiMate 4"
+  },
+  "menu": {
+    "intro": "Introducción",
+    "metamodel": "Metamodelo",
+    "search": "Buscar",
+    "domains": "Dominios",
+    "relationships": "Relaciones",
+    "about": "Acerca de"
+  },
+  "search": {
+    "placeholder": "Buscar elementos y relaciones…",
+    "mode": "Tipo de búsqueda",
+    "modePlain": "Texto simple",
+    "modeRegex": "Expresión regular",
+    "scope": "Buscar en",
+    "scopeName": "Solo nombre",
+    "scopeNameDesc": "Nombre y descripción",
+    "noResults": "No se encontraron resultados.",
+    "invalidRegex": "Esa no es una expresión regular válida.",
+    "resultsCount": "{count} resultado(s)"
+  },
+  "domain": {
+    "elementsHeading": "Elementos",
+    "backToDomains": "Volver a Dominios"
+  },
+  "relationship": {
+    "backToRelationships": "Volver a Relaciones"
+  },
+  "relationshipCategory": {
+    "structural": "Estructural",
+    "dependency": "Dependencia",
+    "dynamic": "Dinámica",
+    "other": "Otra",
+    "junction": "Unión"
+  },
+  "elementCategory": {
+    "active-structure": "Estructura activa",
+    "behavior": "Comportamiento",
+    "passive-structure": "Estructura pasiva",
+    "motivation": "Motivación",
+    "composite": "Compuesto"
+  },
+  "common": {
+    "shortDescription": "Resumen",
+    "longDescription": "Descripción",
+    "example": "Ejemplo real",
+    "exampleBadge": "EJEMPLO",
+    "domain": "Dominio",
+    "category": "Categoría",
+    "notation": "Notación",
+    "version": "Versión",
+    "referencesHeading": "Referencias",
+    "contentComingSoon": "El contenido de este elemento se está redactando y todavía no está disponible en este idioma.",
+    "bootError": "Esta aplicación necesita servirse por HTTP para cargar sus datos — abrir el archivo directamente no funcionará. Prueba a ejecutar un servidor local (por ejemplo, «npx serve source») desde la carpeta source/ y abre la dirección que se muestre."
+  },
+  "lang": {
+    "en": "EN",
+    "fr": "FR",
+    "es": "ES"
+  },
+  "theme": {
+    "toggleToLight": "Cambiar a tema claro",
+    "toggleToDark": "Cambiar a tema oscuro"
+  }
+}

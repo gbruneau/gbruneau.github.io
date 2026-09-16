@@ -1,0 +1,35 @@
+{
+  "introduction": {
+    "title": "Introduction",
+    "content": [
+      { "type": "p", "text": "ArchiMate est un langage de modélisation ouvert et indépendant pour l'architecture d'entreprise, maintenu par The Open Group. Il fournit un vocabulaire commun pour décrire la structure et le comportement des processus métier, des applications et de l'infrastructure technologique d'une organisation, ainsi que les relations qui les unissent." },
+      { "type": "h3", "text": "Les nouveautés d'ArchiMate 4" },
+      { "type": "p", "text": "ArchiMate 4 réorganise le langage autour de sept « Domaines » à la place de l'ancien modèle en couches, et fusionne plusieurs éléments spécifiques à une couche (comme les versions Métier, Application et Technologie distinctes de Processus, Fonction, Service et Événement) en concepts génériques uniques du Domaine Commun, réutilisés dans tous les contextes." },
+      { "type": "h3", "text": "Comment utiliser cette antisèche" },
+      { "type": "list", "items": [
+        "Parcourez les sept Domaines pour voir les éléments qui appartiennent à chacun.",
+        "Parcourez les Relations pour voir comment les éléments peuvent être connectés entre eux.",
+        "Utilisez la Recherche pour trouver rapidement un élément ou une relation par son nom ou sa description, avec une option d'expression régulière.",
+        "Changez de langue à tout moment grâce au sélecteur de langue dans l'en-tête."
+      ] },
+      { "type": "references" }
+    ]
+  },
+  "metamodel": {
+    "title": "Méta-modèle",
+    "content": [
+      { "type": "p", "text": "ArchiMate 4 représente la structure globale du langage à l'aide de l'« Hexagonion » — un ensemble d'hexagones imbriqués montrant comment les sept domaines s'articulent entre eux, du domaine Motivation au cœur, en passant par Stratégie, puis Métier, Commun et Application, puis Technologie, jusqu'à Mise en œuvre & migration à l'extérieur. Sélectionnez un domaine ci-dessous pour voir ses éléments." },
+      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "L'Hexagonion d'ArchiMate 4 : des hexagones imbriqués avec Motivation au cœur, entouré de Stratégie, puis Métier, Commun et Application, puis Technologie, et Mise en œuvre & migration à l'extérieur." },
+      { "type": "p", "text": "Les éléments propres à un seul domaine — comme Acteur métier ou Objet de données — se trouvent dans l'anneau de ce domaine. Les éléments partagés et réutilisés dans les domaines Métier, Application et Technologie — comme Processus, Fonction, Service et Événement — se trouvent dans le Domaine Commun, imbriqué entre eux." }
+    ]
+  },
+  "about": {
+    "title": "À propos",
+    "content": [
+      { "type": "p", "text": "Cette antisèche est une référence sur une seule page pour ArchiMate 4 — ses domaines, éléments, relations et notation — conçue comme une petite application web statique, sans serveur ni suivi." },
+      { "type": "version" },
+      { "type": "p", "text": "Les icônes et le diagramme du méta-modèle « Hexagonion » sont modélisés d'après la notation officielle définie à l'Annexe A de la spécification. ArchiMate® et The Open Group® sont des marques déposées de The Open Group." },
+      { "type": "references" }
+    ]
+  }
+}

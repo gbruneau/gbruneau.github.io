@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Course of Action notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#F5D98A" stroke="#B8860B" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#B8860B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="15.4" cy="10.2" r="6.7"/>
+    <circle cx="15.4" cy="10.2" r="4.5"/>
+    <circle cx="15.4" cy="10.2" r="2.2" fill="#B8860B" stroke="none"/>
+    <path d="M1.9 20.5 4.2 16.6 8 14.4" stroke-width="3" stroke-linecap="butt"/>
+    <path d="M9 13.4 5.8 12.5 8 16.6Z" fill="#B8860B" stroke="none"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="45">Course of</tspan><tspan x="84" y="63">Action</tspan></text>
+</svg>

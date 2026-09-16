@@ -1,0 +1,5 @@
+[
+  { "id": "introduction", "order": 0, "kind": "static" },
+  { "id": "metamodel", "order": 1, "kind": "static" },
+  { "id": "about", "order": 2, "kind": "static" }
+]

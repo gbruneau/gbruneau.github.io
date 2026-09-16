@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="System Software notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#C7EFC5" stroke="#3E8E41" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#3E8E41" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10" cy="10.5" r="5.2"/>
+    <circle cx="14.5" cy="14" r="5.2"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">System Software</tspan></text>
+</svg>

@@ -1,0 +1,338 @@
+{
+  "role": {
+    "name": "Rol",
+    "shortDescription": "La responsabilidad de realizar un comportamiento específico, a la que se puede asignar un actor.",
+    "longDescription": "Un Rol representa la parte que desempeña un elemento de estructura activa — una persona, un equipo o un sistema — al llevar a cabo cierto comportamiento. Asignar un actor a un rol expresa que ese actor es responsable de dicho comportamiento, o capaz de realizarlo, separando quién hace el trabajo de qué papel desempeña.",
+    "example": "Una sola persona puede ocupar el rol de «Gestor de Siniestros» en una compañía de seguros, mientras que otro empleado cubre el mismo rol durante su ausencia — el rol permanece constante aunque cambie la persona que lo ocupa.",
+    "exampleLabel": "Gestor de Siniestros",
+    "exampleCaption": "Ocupado por diferentes personas con el tiempo"
+  },
+  "collaboration": {
+    "name": "Colaboración",
+    "shortDescription": "Un agregado de dos o más elementos de estructura activa que trabajan juntos para realizar un comportamiento colectivo.",
+    "longDescription": "Una Colaboración agrupa a varios actores, roles, componentes o nodos que llevan a cabo conjuntamente un comportamiento que ninguno de ellos podría realizar por sí solo. Modela el trabajo en equipo o la cooperación entre elementos activos sin dictar los detalles internos de coordinación.",
+    "example": "Una «Colaboración de Gestión de Siniestros» formada por el Departamento de Siniestros, el Departamento Legal y un perito externo que trabajan juntos para tramitar un siniestro de seguro en disputa.",
+    "exampleLabel": "Colaboración de Gestión de Siniestros",
+    "exampleCaption": "Siniestros + Legal + perito externo"
+  },
+  "path": {
+    "name": "Camino",
+    "shortDescription": "Un enlace entre dos o más localizaciones, a través del cual los elementos de estructura activa pueden intercambiar recursos.",
+    "longDescription": "Un Camino representa una ruta o canal — físico, lógico u organizativo — que conecta localizaciones y permite el movimiento de personas, bienes, información u otros recursos entre ellas.",
+    "example": "La ruta por carretera entre la oficina regional de una empresa y su sede central, utilizada por mensajeros para transportar contratos firmados.",
+    "exampleLabel": "Ruta del Mensajero",
+    "exampleCaption": "Oficina regional ↔ sede central"
+  },
+  "grouping": {
+    "name": "Agrupación",
+    "shortDescription": "Agrupa elementos que comparten alguna característica común, sin implicar una relación estructural entre ellos.",
+    "longDescription": "Una Agrupación es un recurso puramente organizativo: reúne elementos — de cualquier tipo — que pertenecen conceptualmente juntos (por ejemplo, todo lo relacionado con un proyecto o tema concreto), sin afirmar que se componen, agregan o relacionan estructuralmente entre sí. Se representa con un borde discontinuo para distinguirla de la contención estructural.",
+    "example": "Una agrupación «Programa de Transformación Digital» que reúne visualmente un conjunto de procesos, aplicaciones y elementos tecnológicos, por lo demás inconexos, de todo el modelo, con el fin de una única presentación.",
+    "exampleLabel": "Programa de Transformación Digital",
+    "exampleCaption": "Agrupa elementos sin relación para una vista"
+  },
+  "location": {
+    "name": "Localización",
+    "shortDescription": "Un lugar conceptual o físico con una posición geográfica.",
+    "longDescription": "Una Localización representa un sitio en el que se pueden situar otros elementos — como actores, nodos o instalaciones. Puede ser un punto geográfico preciso o un área conceptual más amplia, y se usa a menudo para modelar dónde se ubican físicamente los recursos de negocio o de tecnología.",
+    "example": "La localización «Oficina de Ámsterdam», en la que se sitúan en el modelo varios actores de negocio, un nodo y una instalación.",
+    "exampleLabel": "Oficina de Ámsterdam",
+    "exampleCaption": "Actores, un nodo y una instalación aquí"
+  },
+  "process": {
+    "name": "Proceso",
+    "shortDescription": "Una secuencia de comportamientos que logra un resultado específico.",
+    "longDescription": "Un Proceso representa un flujo ordenado de actividades — pasos ejecutados uno tras otro, o en ramas paralelas o condicionales definidas — que juntos producen un resultado definido. En ArchiMate 4, Proceso es un único concepto genérico del Dominio Común, reutilizado para describir flujos de trabajo tanto de negocio como de aplicación o tecnología, distinguidos por el contexto y no por tipos de elemento independientes por dominio.",
+    "example": "El proceso «Tramitar Reclamación de Seguro»: registrar la reclamación, evaluar los daños, determinar el pago e emitirlo, en ese orden.",
+    "exampleLabel": "Tramitar Reclamación de Seguro",
+    "exampleCaption": "Registrar → evaluar → indemnizar → pagar"
+  },
+  "function": {
+    "name": "Función",
+    "shortDescription": "Un conjunto de comportamientos agrupados según criterios como los recursos o responsabilidades requeridos, orientado a lograr un objetivo.",
+    "longDescription": "Una Función agrupa comportamientos que van juntos porque recurren a los mismos recursos o responsabilidades, en lugar de porque ocurren en una secuencia fija — lo que la distingue de un Proceso. Responde a «qué capacidad de comportamiento se necesita aquí» en lugar de «qué ocurre y en qué orden».",
+    "example": "Una función «Evaluación de Siniestros» que agrupa todo el comportamiento necesario para evaluar la validez y el importe de un siniestro, independientemente de qué proceso concreto la invoque.",
+    "exampleLabel": "Evaluación de Siniestros",
+    "exampleCaption": "Comportamiento agrupado por recursos compartidos"
+  },
+  "service": {
+    "name": "Servicio",
+    "shortDescription": "Un comportamiento expuesto y definido explícitamente.",
+    "longDescription": "Un Servicio representa una unidad de funcionalidad que se pone a disposición de su entorno, con su comportamiento visible externamente definido — sin exponer cómo se realiza internamente ese comportamiento. Formaliza el límite entre un proveedor y los consumidores que hacen uso de lo que ofrece.",
+    "example": "Un servicio «Presentación de Siniestros en Línea» ofrecido a los asegurados, que les permite presentar una reclamación a través de un formulario sin necesidad de saber qué procesos o sistemas internos la gestionan después.",
+    "exampleLabel": "Presentación de Siniestros en Línea",
+    "exampleCaption": "Ofrecido a los asegurados"
+  },
+  "event": {
+    "name": "Evento",
+    "shortDescription": "Un cambio de estado.",
+    "longDescription": "Un Evento representa algo que sucede — instantáneo desde el punto de vista del modelado — que puede activar, o ser activado por, otro comportamiento. A diferencia de un Proceso o una Función, un Evento no tiene duración; marca un instante en el que algo cambia.",
+    "example": "El evento «Siniestro Recibido», que ocurre en el momento en que llega la presentación de un siniestro de un asegurado, y dispara el inicio del proceso de tramitación de siniestros.",
+    "exampleLabel": "Siniestro Recibido",
+    "exampleCaption": "Dispara el proceso de tramitación de siniestros"
+  },
+  "stakeholder": {
+    "name": "Parte Interesada",
+    "shortDescription": "El rol de un individuo, equipo u organización que tiene un interés o una preocupación respecto al resultado de la arquitectura.",
+    "longDescription": "Una Parte Interesada representa la perspectiva desde la que alguien percibe los efectos de una arquitectura — no la persona en sí, sino su interés en ella. Las partes interesadas establecen, cambian y enfatizan objetivos, y pueden influirse mutuamente en sus prioridades a medida que esos intereses cambian.",
+    "example": "La parte interesada «Director Financiero» se preocupa por mantener bajos los costes de tramitación de siniestros, mientras que la parte interesada «Cliente» se preocupa por la rapidez con la que se paga un siniestro.",
+    "exampleLabel": "Director Financiero",
+    "exampleCaption": "Preocupado por el coste de tramitación de siniestros"
+  },
+  "driver": {
+    "name": "Impulsor",
+    "shortDescription": "Una condición interna o externa que motiva a una organización a definir sus objetivos y actuar para alcanzarlos.",
+    "longDescription": "Un Impulsor nombra la fuerza subyacente detrás de un objetivo — un cambio normativo, una presión del mercado o una ambición interna — sin indicar todavía qué debería hacerse al respecto. Cuando un impulsor está estrechamente vinculado a una parte interesada concreta, a menudo se le llama la «preocupación» de esa parte interesada.",
+    "example": "El impulsor «Aumento de las Expectativas de los Clientes de Autoservicio Digital» motiva a la compañía de seguros a invertir en un portal de siniestros en línea.",
+    "exampleLabel": "Aumento de las Expectativas del Cliente",
+    "exampleCaption": "Motiva un portal de siniestros en línea"
+  },
+  "assessment": {
+    "name": "Valoración",
+    "shortDescription": "El resultado de analizar el estado de la empresa con respecto a algún impulsor — una fortaleza, debilidad, oportunidad o amenaza.",
+    "longDescription": "Una Valoración recoge lo que ha revelado un análisis: una debilidad o amenaza que abordar, o una fortaleza u oportunidad sobre la que construir. Las valoraciones son la base de evidencia sobre la que se establecen los objetivos en respuesta, cerrando el ciclo entre un impulsor y la decisión de cambiar algo.",
+    "example": "La valoración «Los Tiempos de Tramitación de Siniestros Superan las Expectativas de los Clientes», realizada en respuesta al impulsor «Aumento de las Expectativas de los Clientes», es lo que lleva a la empresa a definir un objetivo de mejora.",
+    "exampleLabel": "Tiempos de Tramitación Superan las Expectativas",
+    "exampleCaption": "Lleva a un objetivo de mejora"
+  },
+  "goal": {
+    "name": "Objetivo",
+    "shortDescription": "Una declaración de alto nivel de intención, dirección o estado final deseado para una organización o sus partes interesadas.",
+    "longDescription": "Un Objetivo declara lo que una parte interesada quiere lograr, típicamente en términos cualitativos — «reducir», «mejorar», «aumentar» — en lugar de como una meta medible. Los objetivos a menudo se descomponen en subobjetivos más pequeños, y suelen emparejarse con uno o más Resultados concretos que definen cómo sería realmente alcanzarlos.",
+    "example": "El objetivo «Reducir el Tiempo Medio de Tramitación de Siniestros», establecido por el departamento de Siniestros en respuesta a la valoración sobre las expectativas de los clientes.",
+    "exampleLabel": "Reducir el Tiempo de Tramitación de Siniestros",
+    "exampleCaption": "Establecido en respuesta a una valoración"
+  },
+  "outcome": {
+    "name": "Resultado",
+    "shortDescription": "Un resultado final, efecto o consecuencia de algún estado de cosas — lo que realmente se logró, a diferencia de lo que se pretendía.",
+    "longDescription": "Un Resultado es un logro concreto, a menudo medible, en contraste con un Objetivo, que expresa una intención: un objetivo es lo que se quiere, un resultado es lo que se obtiene. Los resultados pueden ser positivos o negativos, y pueden realizar solo parcialmente — o no realizar en absoluto — el objetivo con el que se relacionan.",
+    "example": "El resultado «Tiempo Medio de Tramitación de Siniestros Reducido a 3 Días», que realiza el objetivo de reducir el tiempo de tramitación.",
+    "exampleLabel": "Tiempo Reducido a 3 Días",
+    "exampleCaption": "Realiza el objetivo de tiempo de tramitación"
+  },
+  "principle": {
+    "name": "Principio",
+    "shortDescription": "Una declaración normativa de intención que define una propiedad general aplicable a cualquier sistema en un contexto dado.",
+    "longDescription": "Un Principio guía el diseño de toda solución en su contexto, en lugar de describir un sistema específico — ese alcance más amplio y abstracto es lo que lo distingue de un Requisito. Un principio normalmente se realiza mediante uno o más requisitos concretos que lo aplican a un sistema real.",
+    "example": "El principio «Los Datos del Cliente se Introducen Una Vez y se Reutilizan en Todas Partes» se aplica a todos los sistemas que construye la compañía de seguros, no solo al portal de siniestros.",
+    "exampleLabel": "Introducir los Datos del Cliente Una Vez",
+    "exampleCaption": "Se aplica a todos los sistemas de la empresa"
+  },
+  "requirement": {
+    "name": "Requisito",
+    "shortDescription": "Una declaración de necesidad que define una propiedad aplicable a un sistema específico, tal como lo describe la arquitectura.",
+    "longDescription": "Un Requisito representa el «medio» por el cual se realiza un Objetivo: una propiedad que un sistema concreto debe presentar. Los requisitos suelen obtenerse descomponiendo un objetivo hasta que sea lo bastante específico como para satisfacerlo con un diseño concreto, y a menudo están limitados por uno o más Principios rectores.",
+    "example": "El requisito «El Portal de Siniestros en Línea Debe Confirmar la Recepción de un Siniestro en un Plazo de 60 Segundos», que realiza el objetivo relativo al tiempo de tramitación de siniestros.",
+    "exampleLabel": "Confirmar Recepción en 60 Segundos",
+    "exampleCaption": "Realiza el objetivo de tiempo de tramitación"
+  },
+  "value": {
+    "name": "Valor",
+    "shortDescription": "La importancia relativa, utilidad o valor de un concepto, tal como lo percibe un cliente, una parte interesada o un usuario final.",
+    "longDescription": "El Valor expresa por qué algo importa a quien lo experimenta — a menudo, aunque no siempre, en términos monetarios; puede describir igualmente la comodidad, la confianza o la tranquilidad. Un mismo elemento puede aportar un valor diferente, incluso opuesto, para distintas partes interesadas.",
+    "example": "El servicio «Presentación de Siniestros en Línea» tiene un valor de «Comodidad» para el cliente, y un valor de «Menor Coste de Procesamiento» para la aseguradora.",
+    "exampleLabel": "Comodidad",
+    "exampleCaption": "Valor del servicio de presentación, para el cliente"
+  },
+  "meaning": {
+    "name": "Significado",
+    "shortDescription": "El conocimiento, la experiencia o la interpretación que una audiencia concreta atribuye a un concepto, en un contexto dado.",
+    "longDescription": "El Significado recoge cómo entiende realmente un elemento de estructura pasiva — un documento, un mensaje, un dato — quien lo recibe, lo cual no siempre coincide con su descripción técnica. El mismo objeto subyacente puede tener un significado diferente para distintas partes interesadas.",
+    "example": "Un mensaje «Confirmación de Siniestro» tiene el significado «Su siniestro ha sido recibido y está siendo revisado» para el cliente, mientras que ese mismo mensaje significa «Ha entrado un nuevo caso en la cola» para el departamento de Siniestros.",
+    "exampleLabel": "Siniestro Recibido y en Revisión",
+    "exampleCaption": "Lo que significa un mensaje de confirmación para el cliente"
+  },
+  "resource": {
+    "name": "Recurso",
+    "shortDescription": "Un activo útil o valioso del que puede disponer una organización — tangible, intangible o humano.",
+    "longDescription": "Un Recurso es un elemento estructural que no es puramente activo ni puramente pasivo: se realiza mediante los elementos de estructura activa y pasiva que lo encarnan (personal, equipamiento, fondos, información) y es una fuente de la capacidad de actuar de la organización. Dado que los recursos son limitados, son un factor determinante de qué estrategias y objetivos puede realmente perseguir una organización.",
+    "example": "Los «Peritos de Siniestros» y el «Presupuesto de Tramitación de Siniestros» son recursos asignados a la capacidad de tramitación de siniestros de la empresa.",
+    "exampleLabel": "Peritos de Siniestros",
+    "exampleCaption": "Asignados a la capacidad de tramitación de siniestros"
+  },
+  "capability": {
+    "name": "Capacidad",
+    "shortDescription": "Una aptitud que posee una organización, persona o sistema.",
+    "longDescription": "Una Capacidad describe lo que una empresa puede hacer — expresada como un sustantivo o gerundio, como «Gestión de Siniestros», nunca como un proceso o sistema específico — independientemente de cómo se realice actualmente esa aptitud. Las capacidades se realizan mediante una combinación de personas, procesos, información y tecnología, y son el punto de anclaje habitual para la planificación basada en capacidades.",
+    "example": "La capacidad «Evaluación de Siniestros», que la compañía de seguros puede optar por realizar mediante personal interno, una red de peritos externalizada o un modelo automatizado, sin que la capacidad en sí cambie.",
+    "exampleLabel": "Evaluación de Siniestros",
+    "exampleCaption": "Realizada por personal, una red externalizada o un modelo"
+  },
+  "value-stream": {
+    "name": "Cadena de Valor",
+    "shortDescription": "Una secuencia de actividades que crea un resultado global de valor para un cliente, una parte interesada o un usuario final.",
+    "longDescription": "Una Cadena de Valor describe la creación de valor desde el punto de vista del receptor — lo que este gana — en lugar de la lista ordenada de tareas que describe un Proceso; ambos están relacionados pero se sitúan en niveles de abstracción diferentes, y una cadena de valor normalmente se realiza mediante uno o más procesos. Las cadenas de valor pueden dividirse en etapas, cada una añadiendo valor incremental a la siguiente.",
+    "example": "La cadena de valor «Contratar Póliza de Seguro», cuyas etapas — Cotizar, Suscribir, Emitir Póliza — son servidas cada una por capacidades diferentes y realizadas por procesos diferentes.",
+    "exampleLabel": "Contratar Póliza de Seguro",
+    "exampleCaption": "Cotizar → suscribir → emitir póliza"
+  },
+  "course-of-action": {
+    "name": "Curso de Acción",
+    "shortDescription": "Un enfoque o plan para configurar las capacidades y recursos de la empresa con el fin de lograr un objetivo.",
+    "longDescription": "Un Curso de Acción representa lo que una organización ha decidido hacer — comúnmente dividido en Estrategias más amplias y a largo plazo, y Tácticas más concretas y a corto plazo, aunque la línea entre ambas no es nítida. Los cursos de acción se realizan mediante las capacidades y recursos que la organización configura para llevarlos a cabo.",
+    "example": "El curso de acción «Automatizar la Recepción del Primer Aviso de Siniestro», adoptado como parte de la estrategia más amplia «Siniestros Digitales» de la empresa.",
+    "exampleLabel": "Automatizar el Primer Aviso de Siniestro",
+    "exampleCaption": "Parte de la estrategia Siniestros Digitales"
+  },
+  "business-actor": {
+    "name": "Actor de Negocio",
+    "shortDescription": "Una entidad de negocio capaz de realizar un comportamiento — una persona, un departamento o una organización.",
+    "longDescription": "Un Actor de Negocio es el «quién»: un individuo, equipo, departamento u organización entera específicos, a diferencia de un Rol, que es la responsabilidad a la que se asigna ese actor. Un mismo actor puede asignarse a varios roles, y un mismo rol puede ser ocupado por distintos actores a lo largo del tiempo.",
+    "example": "El «Departamento de Siniestros», modelado como actor de negocio, se asigna al rol de «Gestor de Siniestros».",
+    "exampleLabel": "Departamento de Siniestros",
+    "exampleCaption": "Asignado al rol de Gestor de Siniestros"
+  },
+  "business-interface": {
+    "name": "Interfaz de Negocio",
+    "shortDescription": "Un punto de acceso donde un actor de negocio pone sus servicios a disposición de su entorno.",
+    "longDescription": "Una Interfaz de Negocio es el canal a través del cual se accede a un servicio de negocio — una línea telefónica, un mostrador de sucursal, un formulario web — en lugar del servicio en sí. Un mismo servicio puede exponerse a la vez a través de varias interfaces distintas.",
+    "example": "La «Línea de Atención de Siniestros» y el «Portal de Siniestros en Línea» de la compañía de seguros son dos interfaces de negocio distintas que exponen ambas el mismo servicio «Gestión de Siniestros».",
+    "exampleLabel": "Línea de Atención de Siniestros",
+    "exampleCaption": "Expone el servicio de Gestión de Siniestros"
+  },
+  "business-object": {
+    "name": "Objeto de Negocio",
+    "shortDescription": "Un elemento pasivo conceptual con relevancia desde el punto de vista del negocio.",
+    "longDescription": "Un Objeto de Negocio modela un concepto en los términos en que el propio negocio piensa y habla — una póliza, un siniestro, una ficha de cliente — a nivel conceptual, independientemente de cómo se almacene físicamente. Puede realizarse mediante uno o más Objetos de Datos que lo representan en los sistemas informáticos.",
+    "example": "El objeto de negocio «Póliza de Seguro», al que pueden asociarse cero o más objetos de negocio «Siniestro».",
+    "exampleLabel": "Póliza de Seguro",
+    "exampleCaption": "Tiene cero o más siniestros asociados"
+  },
+  "product": {
+    "name": "Producto",
+    "shortDescription": "Un conjunto coherente de servicios, objetos de negocio, objetos de datos, artefactos y/o material ofrecido como un todo a los clientes.",
+    "longDescription": "Un Producto es lo que se vende: un paquete de servicios e información empaquetados juntos y designados con un único nombre orientado al cliente, que potencialmente agrega elementos de cualquier dominio, no solo del de Negocio. «Comprar» un producto suele ser en sí mismo uno de los servicios que agrupa, y normalmente concede al cliente derechos definidos en un objeto de negocio asociado, como un contrato.",
+    "example": "El producto «Seguro de Auto» agrupa los servicios «Gestión de Siniestros» y «Asistencia en Carretera» junto con el objeto de negocio «Contrato de Póliza».",
+    "exampleLabel": "Seguro de Auto",
+    "exampleCaption": "Agrupa Gestión de Siniestros + Asistencia en Carretera"
+  },
+  "application-component": {
+    "name": "Componente de Aplicación",
+    "shortDescription": "Una encapsulación de funcionalidad de aplicación, alineada con la estructura de implementación, que es modular y reemplazable.",
+    "longDescription": "Un Componente de Aplicación es una unidad de software autónoma e independientemente desplegable: encapsula su propio comportamiento y datos, y los expone únicamente a través de sus interfaces. Los componentes que cooperan pueden agruparse en una Colaboración, y un componente puede designarse como la fuente autorizada de un determinado objeto de datos.",
+    "example": "El componente de aplicación «Motor de Tramitación de Siniestros» expone un servicio «Presentar Siniestro» a través de su interfaz «API de Siniestros».",
+    "exampleLabel": "Motor de Tramitación de Siniestros",
+    "exampleCaption": "Expone Presentar Siniestro vía su API de Siniestros"
+  },
+  "application-interface": {
+    "name": "Interfaz de Aplicación",
+    "shortDescription": "Un punto de acceso donde un componente de aplicación pone sus servicios a disposición de su entorno.",
+    "longDescription": "Una Interfaz de Aplicación especifica el contrato que otro componente debe usar para acceder a un servicio — sus parámetros, protocolo y formato de datos — sin exponer lo que hay detrás. Una única interfaz puede exponer varios servicios, y un mismo servicio puede ser accesible a través de más de una interfaz.",
+    "example": "La interfaz de aplicación «API de Siniestros» expone los servicios «Presentar Siniestro» y «Consultar Estado del Siniestro» del Motor de Tramitación de Siniestros a la aplicación web orientada al cliente.",
+    "exampleLabel": "API de Siniestros",
+    "exampleCaption": "Expone Presentar Siniestro y Consultar Estado"
+  },
+  "data-object": {
+    "name": "Objeto de Datos",
+    "shortDescription": "Datos estructurados para su procesamiento automatizado.",
+    "longDescription": "Un Objeto de Datos es el equivalente a nivel de TI de un Objeto de Negocio — una pieza de información autocontenida con un significado de negocio claro, modelada de forma similar a como se modela una clase en el modelado de datos u orientado a objetos, y que normalmente representa un tipo en lugar de una instancia única. Un objeto de datos puede realizar un objeto de negocio, y puede a su vez ser realizado por uno o más artefactos.",
+    "example": "El objeto de datos «Registro de Siniestro» realiza el objeto de negocio «Siniestro» dentro del Motor de Tramitación de Siniestros.",
+    "exampleLabel": "Registro de Siniestro",
+    "exampleCaption": "Realiza el objeto de negocio Siniestro"
+  },
+  "node": {
+    "name": "Nodo",
+    "shortDescription": "Una estructura informática o física genérica que hospeda, manipula o interactúa con otras estructuras de este tipo.",
+    "longDescription": "Un Nodo es el elemento de estructura activa genérico del Dominio de Tecnología — desde un servidor físico hasta una instancia de cómputo en la nube — capaz de ejecutar software y almacenar o procesar artefactos. Los nodos pueden contener subnodos y suelen conectarse entre sí mediante caminos, redes de comunicación o redes de distribución.",
+    "example": "El nodo «Servidor de Aplicaciones de Siniestros» hospeda el artefacto desplegado «claims-api.jar».",
+    "exampleLabel": "Servidor de Aplicaciones de Siniestros",
+    "exampleCaption": "Hospeda el artefacto claims-api.jar"
+  },
+  "technology-interface": {
+    "name": "Interfaz de Tecnología",
+    "shortDescription": "Un punto de acceso donde un nodo, dispositivo, software de sistema, instalación o equipo pone servicios a disposición de su entorno.",
+    "longDescription": "Una Interfaz de Tecnología es el equivalente, a nivel tecnológico, de una interfaz de negocio o de aplicación — el contrato, el protocolo y el punto de acceso a través del cual se accede a un servicio tecnológico, en lugar del servicio en sí.",
+    "example": "El «Punto de Acceso HTTPS» del Servidor de Aplicaciones de Siniestros, una interfaz de tecnología que expone sus servicios hospedados al resto de la red.",
+    "exampleLabel": "Punto de Acceso HTTPS",
+    "exampleCaption": "Expone los servicios hospedados a la red"
+  },
+  "device": {
+    "name": "Dispositivo",
+    "shortDescription": "Hardware de TI, posiblemente virtualizado, utilizado para el procesamiento, el almacenamiento de datos y fines similares.",
+    "longDescription": "Un Dispositivo es una pieza física (o virtualizada) de hardware de procesamiento — un servidor, un portátil, un router — normalmente emparejado con Software de Sistema para formar juntos un Nodo. Los dispositivos pueden ser compuestos, agregando subdispositivos, y pueden conectarse entre sí mediante redes de comunicación.",
+    "example": "El dispositivo físico «Servidor en Bastidor 14», en el que se ejecuta el software de sistema del nodo «Servidor de Aplicaciones de Siniestros».",
+    "exampleLabel": "Servidor en Bastidor 14",
+    "exampleCaption": "Ejecuta el software de sistema del servidor de aplicaciones"
+  },
+  "system-software": {
+    "name": "Software de Sistema",
+    "shortDescription": "Software que proporciona o contribuye a un entorno para almacenar, ejecutar y usar otro software o datos.",
+    "longDescription": "El Software de Sistema es el entorno de ejecución subyacente a una aplicación — un sistema operativo, un motor de base de datos, un servidor de aplicaciones — normalmente combinado con un Dispositivo para formar un Nodo completo. Un software de sistema puede estar en capas sobre otro, como una base de datos que se ejecuta dentro de un sistema operativo.",
+    "example": "El software de sistema «Servidor de Base de Datos PostgreSQL», que se ejecuta en el dispositivo «Servidor en Bastidor 14», almacena los datos de siniestros que utiliza el Motor de Tramitación de Siniestros.",
+    "exampleLabel": "Servidor de Base de Datos PostgreSQL",
+    "exampleCaption": "Se ejecuta en el Servidor en Bastidor 14"
+  },
+  "equipment": {
+    "name": "Equipo",
+    "shortDescription": "Una máquina física, herramienta, instrumento o ganado.",
+    "longDescription": "El Equipo representa los elementos de procesamiento físicos, no informáticos, que actúan sobre el Material — la maquinaria de una planta de producción, un instrumento de diagnóstico o un vehículo — a diferencia del hardware de TI, que se modela como un Dispositivo. El equipo puede combinarse con dispositivos y software de sistema dentro de un mismo nodo para representar sistemas que combinan infraestructura física e informática, como un escáner médico.",
+    "example": "El «Escáner de Inspección de Flota» que usan los peritos de la compañía de seguros para fotografiar y registrar los daños de un vehículo.",
+    "exampleLabel": "Escáner de Inspección de Flota",
+    "exampleCaption": "Usado por peritos para registrar daños"
+  },
+  "facility": {
+    "name": "Instalación",
+    "shortDescription": "Una estructura o entorno físico.",
+    "longDescription": "Una Instalación es el lugar físico que alberga equipos, dispositivos o personas — un edificio, un almacén, un centro de datos — a diferencia de una Localización, que es una posición geográfica más abstracta que una instalación (entre otras cosas) puede ocupar. Las instalaciones pueden interconectarse mediante redes de distribución y pueden agregar otras instalaciones.",
+    "example": "El «Centro Regional de Tramitación de Siniestros», una instalación situada en la localización «Rotterdam» de la empresa, que alberga el equipo y los servidores del equipo de Siniestros.",
+    "exampleLabel": "Centro Regional de Tramitación de Siniestros",
+    "exampleCaption": "Alberga el equipo del equipo de Siniestros"
+  },
+  "communication-network": {
+    "name": "Red de Comunicación",
+    "shortDescription": "Un conjunto de estructuras de TI para la transmisión, el enrutamiento y la recepción de datos.",
+    "longDescription": "Una Red de Comunicación es la infraestructura física — cableado, routers, enlaces inalámbricos — que realiza un Camino lógico entre nodos. Puede estar compuesta de subredes, y puede agregar los dispositivos y el software de sistema (conmutadores, cortafuegos) que la componen.",
+    "example": "La «Red Corporativa» interna de la empresa conecta el Servidor de Aplicaciones de Siniestros con los puestos de trabajo de las sucursales.",
+    "exampleLabel": "Red Corporativa",
+    "exampleCaption": "Conecta servidores con puestos de las sucursales"
+  },
+  "distribution-network": {
+    "name": "Red de Distribución",
+    "shortDescription": "Una red física utilizada para transportar materiales o energía.",
+    "longDescription": "Una Red de Distribución es el equivalente físico de una Red de Comunicación: en lugar de transportar datos, mueve bienes, personas o energía entre instalaciones, realizando los caminos lógicos que las conectan. Puede agregar las instalaciones y equipos — como depósitos y vehículos — que forman la red.",
+    "example": "La «Red Regional de Mensajería», una red de distribución, transporta formularios de siniestro en papel firmados entre las sucursales y la sede central.",
+    "exampleLabel": "Red Regional de Mensajería",
+    "exampleCaption": "Transporta formularios de siniestro en papel"
+  },
+  "artifact": {
+    "name": "Artefacto",
+    "shortDescription": "Una pieza de datos utilizada o producida en un proceso de desarrollo de software, o por el despliegue y funcionamiento de un sistema de TI.",
+    "longDescription": "Un Artefacto es la unidad física, a nivel de TI, que porta un objeto de datos o un componente — un archivo, un script, un ejecutable, una tabla de base de datos — que puede desplegarse en un dispositivo o software de sistema. Un componente de aplicación o un objeto de datos normalmente se realiza mediante uno o más artefactos.",
+    "example": "El artefacto «claims-api.jar» realiza el componente de aplicación Motor de Tramitación de Siniestros, y se despliega en el Servidor de Aplicaciones de Siniestros.",
+    "exampleLabel": "claims-api.jar",
+    "exampleCaption": "Realiza el Motor de Tramitación de Siniestros"
+  },
+  "material": {
+    "name": "Material",
+    "shortDescription": "Materia física tangible o energía.",
+    "longDescription": "El Material representa sustancias o recursos físicos del mundo real — materias primas, productos físicos, combustible o electricidad — a los que un Equipo puede acceder, mover, transformar o almacenar. Es el equivalente físico de un Artefacto en el mundo de TI.",
+    "example": "Los «Restos del Vehículo», un material inspeccionado por el Escáner de Inspección de Flota durante una evaluación de daños.",
+    "exampleLabel": "Restos del Vehículo",
+    "exampleCaption": "Inspeccionados por el Escáner de Inspección de Flota"
+  },
+  "work-package": {
+    "name": "Paquete de Trabajo",
+    "shortDescription": "Una serie de acciones identificadas y diseñadas para lograr resultados específicos dentro de restricciones de tiempo y recursos determinadas.",
+    "longDescription": "Un Paquete de Trabajo modela un esfuerzo puntual y acotado — un proyecto, un sprint, un subproyecto — a diferencia de un Proceso, que modela un flujo continuo y repetible. Normalmente produce uno o más Entregables, y puede agregar paquetes de trabajo más pequeños dentro de sí.",
+    "example": "El paquete de trabajo «Lanzar el Portal de Siniestros en Línea», que agrega los paquetes de trabajo «Construir la API de Siniestros» y «Construir la Aplicación Web para Clientes».",
+    "exampleLabel": "Lanzar el Portal de Siniestros en Línea",
+    "exampleCaption": "Agrega dos paquetes de trabajo más pequeños"
+  },
+  "deliverable": {
+    "name": "Entregable",
+    "shortDescription": "Un resultado de un paquete de trabajo.",
+    "longDescription": "Un Entregable es la salida concreta que produce un Paquete de Trabajo — un informe, una pieza de software, un documento formalmente aprobado, o un cambio organizativo — y a menudo se revisa formalmente y se acuerda con las partes interesadas antes de aceptarse. Los entregables son lo que realiza un Plateau, el estado estable que la organización alcanza una vez que están implantados.",
+    "example": "El entregable «API de Siniestros v1» producido por el paquete de trabajo «Construir la API de Siniestros».",
+    "exampleLabel": "API de Siniestros v1",
+    "exampleCaption": "Producido por el paquete Construir la API de Siniestros"
+  },
+  "plateau": {
+    "name": "Plateau",
+    "shortDescription": "Un estado relativamente estable de la arquitectura que existe durante un período limitado de tiempo.",
+    "longDescription": "Un Plateau marca un punto de parada definido en la evolución de una arquitectura — una Línea Base, un Objetivo, o uno de los estados de Transición intermedios — realizado por los entregables que llevaron a la organización hasta allí. Los plateaus permiten planificar y comunicar las grandes transformaciones como una secuencia de pasos manejables en lugar de como un único salto.",
+    "example": "El plateau «Siniestros Digitales en Producción», alcanzado una vez que los entregables «API de Siniestros v1» y «Aplicación Web para Clientes v1» están ambos en producción.",
+    "exampleLabel": "Siniestros Digitales en Producción",
+    "exampleCaption": "Alcanzado una vez los entregables v1 están en producción"
+  }
+}

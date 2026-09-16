@@ -1,0 +1,68 @@
+{
+  "app": {
+    "title": "ArchiMate 4 Cheat Sheet"
+  },
+  "menu": {
+    "intro": "Introduction",
+    "metamodel": "Meta Model",
+    "search": "Search",
+    "domains": "Domains",
+    "relationships": "Relationships",
+    "about": "About"
+  },
+  "search": {
+    "placeholder": "Search elements and relationships…",
+    "mode": "Match type",
+    "modePlain": "Plain text",
+    "modeRegex": "Regular expression",
+    "scope": "Search in",
+    "scopeName": "Name only",
+    "scopeNameDesc": "Name and description",
+    "noResults": "No results found.",
+    "invalidRegex": "That's not a valid regular expression.",
+    "resultsCount": "{count} result(s)"
+  },
+  "domain": {
+    "elementsHeading": "Elements",
+    "backToDomains": "Back to Domains"
+  },
+  "relationship": {
+    "backToRelationships": "Back to Relationships"
+  },
+  "relationshipCategory": {
+    "structural": "Structural",
+    "dependency": "Dependency",
+    "dynamic": "Dynamic",
+    "other": "Other",
+    "junction": "Junction"
+  },
+  "elementCategory": {
+    "active-structure": "Active Structure",
+    "behavior": "Behavior",
+    "passive-structure": "Passive Structure",
+    "motivation": "Motivation",
+    "composite": "Composite"
+  },
+  "common": {
+    "shortDescription": "Summary",
+    "longDescription": "Description",
+    "example": "Real-life example",
+    "exampleBadge": "EXAMPLE",
+    "domain": "Domain",
+    "category": "Category",
+    "notation": "Notation",
+    "version": "Version",
+    "referencesHeading": "References",
+    "contentComingSoon": "Content for this item is being written and isn't available in this language yet.",
+    "bootError": "This app needs to be served over HTTP to load its data — opening the file directly won't work. Try running a local server (e.g. \"npx serve source\") from the source/ folder and opening the printed address."
+  },
+  "lang": {
+    "en": "EN",
+    "fr": "FR",
+    "es": "ES"
+  },
+  "theme": {
+    "toggleToLight": "Switch to light theme",
+    "toggleToDark": "Switch to dark theme"
+  }
+}

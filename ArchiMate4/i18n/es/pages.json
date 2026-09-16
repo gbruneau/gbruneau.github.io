@@ -1,0 +1,35 @@
+{
+  "introduction": {
+    "title": "Introducción",
+    "content": [
+      { "type": "p", "text": "ArchiMate es un lenguaje de modelado abierto e independiente para la arquitectura empresarial, mantenido por The Open Group. Proporciona un vocabulario común para describir la estructura y el comportamiento de los procesos de negocio, las aplicaciones y la infraestructura tecnológica de una organización, así como las relaciones entre ellos." },
+      { "type": "h3", "text": "Novedades de ArchiMate 4" },
+      { "type": "p", "text": "ArchiMate 4 reorganiza el lenguaje en torno a siete «Dominios» en lugar del antiguo modelo de capas, y fusiona varios elementos específicos de una capa (como las versiones de Negocio, Aplicación y Tecnología de Proceso, Función, Servicio y Evento) en conceptos genéricos únicos del Dominio Común, reutilizados en todos los contextos." },
+      { "type": "h3", "text": "Cómo usar esta chuleta" },
+      { "type": "list", "items": [
+        "Explora los siete Dominios para ver los elementos que pertenecen a cada uno.",
+        "Explora las Relaciones para ver cómo pueden conectarse los elementos entre sí.",
+        "Usa el Buscador para encontrar rápidamente un elemento o relación por su nombre o descripción, con la opción de usar expresiones regulares.",
+        "Cambia de idioma en cualquier momento con el selector de idioma en la cabecera."
+      ] },
+      { "type": "references" }
+    ]
+  },
+  "metamodel": {
+    "title": "Metamodelo",
+    "content": [
+      { "type": "p", "text": "ArchiMate 4 representa la estructura general del lenguaje mediante el «Hexagonion» — un conjunto de hexágonos anidados que muestra cómo se relacionan los siete dominios entre sí, desde el dominio Motivación en el núcleo, pasando por Estrategia, luego Negocio, Común y Aplicación, después Tecnología, hasta Implementación y Migración en el exterior. Selecciona un dominio a continuación para ver sus elementos." },
+      { "type": "image", "src": "assets/metamodel/hexagonion.svg", "alt": "El Hexagonion de ArchiMate 4: hexágonos anidados con Motivación en el núcleo, rodeado por Estrategia, luego Negocio, Común y Aplicación, después Tecnología, e Implementación y Migración en el exterior." },
+      { "type": "p", "text": "Los elementos específicos de un único dominio — como Actor de Negocio u Objeto de Datos — residen en el anillo de ese dominio. Los elementos compartidos y reutilizados en los dominios de Negocio, Aplicación y Tecnología — como Proceso, Función, Servicio y Evento — residen en el Dominio Común, anidado entre ellos." }
+    ]
+  },
+  "about": {
+    "title": "Acerca de",
+    "content": [
+      { "type": "p", "text": "Esta chuleta es una referencia de una sola página para ArchiMate 4 — sus dominios, elementos, relaciones y notación — creada como una pequeña aplicación web estática, sin servidor ni seguimiento." },
+      { "type": "version" },
+      { "type": "p", "text": "Los iconos y el diagrama del metamodelo «Hexagonion» están modelados según la notación oficial definida en el Anexo A de la especificación. ArchiMate® y The Open Group® son marcas registradas de The Open Group." },
+      { "type": "references" }
+    ]
+  }
+}

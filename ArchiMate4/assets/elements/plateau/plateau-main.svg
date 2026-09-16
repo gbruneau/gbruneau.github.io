@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Plateau notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#F7C6C0" stroke="#C0504D" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#C0504D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 17.09H15.45"/>
+    <path d="M5.27 12H18.73"/>
+    <path d="M8.55 6.91H22"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Plateau</tspan></text>
+</svg>

@@ -1,0 +1,67 @@
+{
+  "composition": {
+    "name": "Composition",
+    "description": "Indicates that an element consists of one or more other elements. It is the strongest structural relationship: a part exists only as long as its whole does, and cannot belong to more than one whole at a time. Drawn as a solid line with a filled diamond at the whole (source) end.",
+    "example": "An \"Insurance Policy\" business object is composed of a \"Policy Schedule\" and a set of \"Policy Conditions\" — remove the policy, and its schedule and conditions cease to exist as parts of anything."
+  },
+  "aggregation": {
+    "name": "Aggregation",
+    "description": "Indicates that an element combines one or more other elements that are not exclusively its parts — a weaker form of composition where the parts can exist independently or be shared across wholes. Drawn as a solid line with a hollow (unfilled) diamond at the whole (source) end.",
+    "example": "A \"Claims Department\" business function aggregates the \"Claims Intake\" and \"Claims Assessment\" sub-functions, though each sub-function could in principle also serve another department."
+  },
+  "assignment": {
+    "name": "Assignment",
+    "description": "Indicates the allocation of responsibility, or the assignment of an active structure element to perform behavior, or an active element to a role. Drawn as a solid line with a filled circle at the source (assigned) end and a filled arrowhead at the target end.",
+    "example": "The \"Claims Handler\" business role is assigned to the \"Assess Claim\" business process, meaning whoever holds that role carries out the process."
+  },
+  "realization": {
+    "name": "Realization",
+    "description": "Indicates that an entity plays a critical role in the creation, achievement, sustenance, or operation of a more abstract entity — typically that a concrete element realizes a more abstract one, such as a component realizing a service, or a requirement realizing a principle. Drawn as a dotted line with a hollow triangle arrowhead pointing to the realized element.",
+    "example": "The \"Claims Intake Component\" application component realizes the \"File a Claim\" application service exposed to policyholders."
+  },
+  "serving": {
+    "name": "Serving",
+    "description": "Indicates that an element provides its functionality to another element — it makes something available for the other element's use. Drawn as a solid line with an open arrowhead pointing to the served element. Renamed from \"used by\" in earlier ArchiMate versions.",
+    "example": "The \"Payment Processing\" application service serves the \"Handle Insurance Claim\" business process, which relies on it to issue payouts."
+  },
+  "access": {
+    "name": "Access",
+    "description": "Indicates that a behavior element or active structure element accesses, reads, writes, or updates a passive structure element such as a business object or data object. Drawn as a dotted line, optionally with a small open arrowhead indicating the direction of access.",
+    "example": "The \"Assess Claim\" business process accesses the \"Claim File\" business object to read its contents and update its status."
+  },
+  "influence": {
+    "name": "Influence",
+    "description": "Indicates that an element affects the implementation or achievement of a motivation element, such as a goal or requirement, positively or negatively. Drawn as a dashed line with an open arrowhead, optionally labeled with a + or − sign to show the direction of influence.",
+    "example": "The \"Rising Claim Fraud\" driver negatively influences the \"Reduce Claim Payout Time\" goal, since additional fraud checks slow down processing."
+  },
+  "association": {
+    "name": "Association",
+    "description": "Indicates an unspecified relationship, or one not covered by any of the other relationship types, between two elements. Drawn as a solid line with no arrowhead, optionally with an open arrowhead to show a direction of reading.",
+    "example": "The \"Policyholder\" business actor is associated with the \"Insurance Policy\" business object — a general link that doesn't imply structural or dependency semantics."
+  },
+  "triggering": {
+    "name": "Triggering",
+    "description": "Indicates a temporal or causal relationship between behavior elements — that one process, function, or event starts another. Drawn as a solid line with a filled arrowhead pointing to the triggered element.",
+    "example": "The \"Claim Submitted\" business event triggers the \"Assess Claim\" business process."
+  },
+  "flow": {
+    "name": "Flow",
+    "description": "Indicates the transfer of information, money, goods, or other value from one behavior element to another. Drawn as a dashed line with a filled arrowhead pointing to the receiving element.",
+    "example": "The \"Assess Claim\" process flows a \"Payout Decision\" to the \"Process Payment\" process."
+  },
+  "specialization": {
+    "name": "Specialization",
+    "description": "Indicates that an element is a more specific kind of a more general element, inheriting the general element's characteristics while potentially adding or refining its own — directly analogous to generalization/inheritance in object-oriented modeling. Drawn as a solid line with a hollow triangle arrowhead pointing to the general element.",
+    "example": "\"Auto Insurance Policy\" and \"Travel Insurance Policy\" are both specializations of the general \"Insurance Policy\" business object, each adding their own specific attributes and conditions."
+  },
+  "and-junction": {
+    "name": "AND Junction",
+    "description": "A junction used to connect multiple relationships of the same type into a single logical AND: all incoming relationships must hold together for the outgoing relationship to apply. Drawn as a small filled circle where the lines meet.",
+    "example": "Both the \"Payment Received\" and \"Goods Dispatched\" events must occur before the AND-junction triggers the \"Close Order\" process."
+  },
+  "or-junction": {
+    "name": "OR Junction",
+    "description": "A junction used to connect multiple relationships of the same type into a single logical OR: any one of the incoming relationships is sufficient for the outgoing relationship to apply. Drawn as a small hollow circle where the lines meet.",
+    "example": "Either a \"Manager Approval\" or an \"Auto-Approval\" outcome is enough for the OR-junction to trigger the \"Release Funds\" process."
+  }
+}

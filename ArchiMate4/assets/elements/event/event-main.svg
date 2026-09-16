@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Event notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#E8DCC8" stroke="#8C7B5A" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#8C7B5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 6H15C18.5 6 20 8.5 20 12C20 15.5 18.5 18 15 18H6L9.5 12Z"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Event</tspan></text>
+</svg>

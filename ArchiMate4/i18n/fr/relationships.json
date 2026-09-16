@@ -1,0 +1,67 @@
+{
+  "composition": {
+    "name": "Composition",
+    "description": "Indique qu'un élément est composé d'un ou plusieurs autres éléments. C'est la relation structurelle la plus forte : une partie n'existe que tant que son tout existe, et ne peut appartenir qu'à un seul tout à la fois. Elle se représente par un trait plein avec un losange plein du côté du tout (source).",
+    "example": "Un objet métier « Police d'assurance » est composé d'un « Avenant de police » et d'un ensemble de « Conditions de police » — supprimez la police, et son avenant ainsi que ses conditions cessent d'exister en tant que parties de quoi que ce soit."
+  },
+  "aggregation": {
+    "name": "Agrégation",
+    "description": "Indique qu'un élément regroupe un ou plusieurs autres éléments qui ne lui appartiennent pas exclusivement — une forme plus faible de composition où les parties peuvent exister indépendamment ou être partagées entre plusieurs touts. Elle se représente par un trait plein avec un losange creux (non rempli) du côté du tout (source).",
+    "example": "Une fonction métier « Service Sinistres » agrège les sous-fonctions « Réception des sinistres » et « Évaluation des sinistres », bien que chaque sous-fonction puisse en principe aussi servir un autre service."
+  },
+  "assignment": {
+    "name": "Attribution",
+    "description": "Indique l'attribution d'une responsabilité, ou l'affectation d'un élément de structure active pour exécuter un comportement, ou d'un élément actif à un rôle. Elle se représente par un trait plein avec un cercle plein du côté source (l'élément affecté) et une flèche pleine du côté cible.",
+    "example": "Le rôle métier « Gestionnaire de sinistres » est attribué au processus métier « Évaluer le sinistre », ce qui signifie que quiconque occupe ce rôle exécute le processus."
+  },
+  "realization": {
+    "name": "Réalisation",
+    "description": "Indique qu'une entité joue un rôle déterminant dans la création, la réalisation, le maintien ou le fonctionnement d'une entité plus abstraite — typiquement qu'un élément concret réalise un élément plus abstrait, comme un composant réalisant un service, ou une exigence réalisant un principe. Elle se représente par un trait pointillé avec une flèche triangulaire creuse pointant vers l'élément réalisé.",
+    "example": "Le composant applicatif « Moteur de réception des sinistres » réalise le service applicatif « Déclarer un sinistre » proposé aux assurés."
+  },
+  "serving": {
+    "name": "Desserte",
+    "description": "Indique qu'un élément met sa fonctionnalité à la disposition d'un autre élément — il rend quelque chose disponible pour l'usage de l'autre élément. Elle se représente par un trait plein avec une flèche ouverte pointant vers l'élément desservi. Renommée depuis « utilisé par » dans les versions antérieures d'ArchiMate.",
+    "example": "Le service applicatif « Traitement des paiements » dessert le processus métier « Traiter la réclamation d'assurance », qui s'appuie dessus pour émettre les remboursements."
+  },
+  "access": {
+    "name": "Accès",
+    "description": "Indique qu'un élément de comportement ou de structure active accède à un élément de structure passive — le lit, l'écrit ou le met à jour — tel qu'un objet métier ou un objet de données. Elle se représente par un trait pointillé, éventuellement avec une petite flèche ouverte indiquant le sens de l'accès.",
+    "example": "Le processus métier « Évaluer le sinistre » accède à l'objet métier « Dossier du sinistre » pour en lire le contenu et mettre à jour son statut."
+  },
+  "influence": {
+    "name": "Influence",
+    "description": "Indique qu'un élément affecte, positivement ou négativement, la mise en œuvre ou l'atteinte d'un élément de motivation tel qu'un objectif ou une exigence. Elle se représente par un trait discontinu avec une flèche ouverte, éventuellement accompagnée d'un signe + ou − indiquant le sens de l'influence.",
+    "example": "Le facteur déclencheur « Hausse de la fraude aux sinistres » influence négativement l'objectif « Réduire le délai de remboursement des sinistres », car les contrôles anti-fraude supplémentaires ralentissent le traitement."
+  },
+  "association": {
+    "name": "Association",
+    "description": "Indique une relation non spécifiée, ou une relation non couverte par les autres types de relations, entre deux éléments. Elle se représente par un trait plein sans flèche, éventuellement avec une flèche ouverte pour indiquer un sens de lecture.",
+    "example": "L'acteur métier « Assuré » est associé à l'objet métier « Police d'assurance » — un lien général qui n'implique pas de sémantique structurelle ou de dépendance."
+  },
+  "triggering": {
+    "name": "Déclenchement",
+    "description": "Indique une relation temporelle ou causale entre éléments de comportement — qu'un processus, une fonction ou un événement en démarre un autre. Elle se représente par un trait plein avec une flèche pleine pointant vers l'élément déclenché.",
+    "example": "L'événement métier « Sinistre déclaré » déclenche le processus métier « Évaluer le sinistre »."
+  },
+  "flow": {
+    "name": "Flux",
+    "description": "Indique le transfert d'information, d'argent, de biens ou d'une autre forme de valeur d'un élément de comportement vers un autre. Elle se représente par un trait discontinu avec une flèche pleine pointant vers l'élément récepteur.",
+    "example": "Le processus « Évaluer le sinistre » transmet par un flux une « Décision de remboursement » au processus « Traiter le paiement »."
+  },
+  "specialization": {
+    "name": "Spécialisation",
+    "description": "Indique qu'un élément est une forme plus spécifique d'un élément plus général, héritant des caractéristiques de l'élément général tout en pouvant ajouter ou affiner les siennes — un principe directement analogue à la généralisation/l'héritage en modélisation orientée objet. Elle se représente par un trait plein avec une flèche triangulaire creuse pointant vers l'élément général.",
+    "example": "« Police d'assurance auto » et « Police d'assurance voyage » sont toutes deux des spécialisations de l'objet métier général « Police d'assurance », chacune ajoutant ses propres attributs et conditions spécifiques."
+  },
+  "and-junction": {
+    "name": "Jonction ET",
+    "description": "Une jonction utilisée pour combiner plusieurs relations du même type en un seul ET logique : toutes les relations entrantes doivent être vérifiées ensemble pour que la relation sortante s'applique. Elle se représente par un petit cercle plein à l'endroit où les traits se rejoignent.",
+    "example": "Les événements « Paiement reçu » et « Marchandises expédiées » doivent tous deux se produire avant que la jonction ET ne déclenche le processus « Clôturer la commande »."
+  },
+  "or-junction": {
+    "name": "Jonction OU",
+    "description": "Une jonction utilisée pour combiner plusieurs relations du même type en un seul OU logique : une seule des relations entrantes suffit pour que la relation sortante s'applique. Elle se représente par un petit cercle creux à l'endroit où les traits se rejoignent.",
+    "example": "Soit une « Approbation du responsable », soit une « Approbation automatique » suffit pour que la jonction OU déclenche le processus « Débloquer les fonds »."
+  }
+}

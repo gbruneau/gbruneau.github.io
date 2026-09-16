@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Work Package notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#F7C6C0" stroke="#C0504D" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#C0504D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.88 13.06C16.14 10.35 15.47 7.14 13.22 5.17C10.98 3.2 7.7 2.95 5.18 4.55C2.66 6.16 1.5 9.23 2.33 12.1C3.17 14.97 5.8 16.95 8.79 16.95L17.02 16.95"/>
+    <path d="M17.02 12.83 22.5 16.95 17.02 21.06Z" fill="#C0504D" stroke="none"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Work Package</tspan></text>
+</svg>

@@ -1,0 +1,338 @@
+{
+  "role": {
+    "name": "Role",
+    "shortDescription": "The responsibility for performing specific behavior, to which an actor can be assigned.",
+    "longDescription": "A Role represents the part that an active structure element, such as a person, team, or system, plays when performing certain behavior. Assigning an actor to a role expresses that the actor is responsible for, or capable of, carrying out that behavior — separating who does the work from what part they play.",
+    "example": "A single person might hold the Role of \"Claims Handler\" at an insurance company, while another employee covers the same role during their absence — the role stays constant even as the person filling it changes.",
+    "exampleLabel": "Claims Handler",
+    "exampleCaption": "Filled by different people over time"
+  },
+  "collaboration": {
+    "name": "Collaboration",
+    "shortDescription": "An aggregate of two or more active structure elements working together to perform collective behavior.",
+    "longDescription": "A Collaboration groups multiple actors, roles, components, or nodes that jointly carry out behavior no single one of them could perform alone. It models teamwork or cooperation between active elements without dictating the internal coordination details.",
+    "example": "A \"Claims Handling Collaboration\" formed by the Claims Department, the Legal Department, and an external Assessor working together to process a disputed insurance claim.",
+    "exampleLabel": "Claims Handling Collaboration",
+    "exampleCaption": "Claims + Legal + external assessor"
+  },
+  "path": {
+    "name": "Path",
+    "shortDescription": "A link between two or more locations, through which active structure elements can exchange resources.",
+    "longDescription": "A Path represents a route or channel — physical, logical, or organizational — that connects locations and enables the movement of people, goods, information, or other resources between them.",
+    "example": "The road route between a company's regional office and its head office, used by couriers to transport signed contracts.",
+    "exampleLabel": "Courier Route",
+    "exampleCaption": "Regional office ↔ head office"
+  },
+  "grouping": {
+    "name": "Grouping",
+    "shortDescription": "Aggregates elements that share some common characteristic, without implying a structural relationship between them.",
+    "longDescription": "A Grouping is a purely organizational device: it bundles elements — of any type — that belong together conceptually (for example, everything related to a particular project or theme), without asserting that they compose, aggregate, or otherwise structurally relate to one another. It is drawn with a dashed border to distinguish it from structural containment.",
+    "example": "A \"Digital Transformation Programme\" grouping that visually bundles a set of otherwise-unrelated processes, applications, and technology elements from across the model for the purpose of a single presentation.",
+    "exampleLabel": "Digital Transformation Programme",
+    "exampleCaption": "Bundles unrelated elements for one view"
+  },
+  "location": {
+    "name": "Location",
+    "shortDescription": "A conceptual or physical place with a geographic position.",
+    "longDescription": "A Location represents somewhere that other elements — such as actors, nodes, or facilities — can be positioned. It can be a precise geographic point or a broader conceptual area, and is often used to model where business or technology resources are physically situated.",
+    "example": "The \"Amsterdam Branch Office\" location, at which several Business Actors, a Node, and a Facility are all situated in the model.",
+    "exampleLabel": "Amsterdam Branch Office",
+    "exampleCaption": "Actors, a node, and a facility sit here"
+  },
+  "process": {
+    "name": "Process",
+    "shortDescription": "A sequence of behaviors that achieves a specific result.",
+    "longDescription": "A Process represents an ordered flow of activities — steps performed one after another, or in defined parallel or conditional branches — that together produce a defined outcome. In ArchiMate 4, Process is a single generic Common Domain concept reused to describe business, application, or technology-level workflows alike, distinguished by context rather than by separate element types per domain.",
+    "example": "The \"Handle Insurance Claim\" process: register the claim, assess damage, determine payout, and issue payment, in sequence.",
+    "exampleLabel": "Handle Insurance Claim",
+    "exampleCaption": "Register → assess → payout → pay"
+  },
+  "function": {
+    "name": "Function",
+    "shortDescription": "A collection of behavior grouped by criteria such as required resources or responsibilities, aimed at achieving a goal.",
+    "longDescription": "A Function groups behavior that belongs together because it draws on the same resources or responsibilities, rather than because it happens in a fixed sequence — which is what distinguishes it from a Process. It answers \"what capability of behavior is needed here\" rather than \"what happens in what order.\"",
+    "example": "A \"Claims Assessment\" function that groups together all the behavior needed to evaluate the validity and value of a claim, regardless of which specific process invokes it.",
+    "exampleLabel": "Claims Assessment",
+    "exampleCaption": "Behavior grouped by shared resources"
+  },
+  "service": {
+    "name": "Service",
+    "shortDescription": "An explicitly defined exposed behavior.",
+    "longDescription": "A Service represents a unit of functionality that is made available to its environment, with its externally visible behavior defined — without exposing how that behavior is internally realized. It formalizes the boundary between a provider and the consumers who make use of what it offers.",
+    "example": "An \"Online Claims Submission\" service offered to policyholders, letting them submit a claim through a form without needing to know which internal processes or systems handle it afterward.",
+    "exampleLabel": "Online Claims Submission",
+    "exampleCaption": "Exposed to policyholders"
+  },
+  "event": {
+    "name": "Event",
+    "shortDescription": "A state change.",
+    "longDescription": "An Event represents something that happens — instantaneous from a modeling perspective — that can trigger, or be triggered by, other behavior. Unlike a Process or Function, an Event has no duration; it marks a moment when something changes.",
+    "example": "The \"Claim Received\" event, which occurs the moment a policyholder's claim submission arrives, and triggers the start of the claims-handling process.",
+    "exampleLabel": "Claim Received",
+    "exampleCaption": "Triggers the claims-handling process"
+  },
+  "stakeholder": {
+    "name": "Stakeholder",
+    "shortDescription": "The role of an individual, team, or organization that has an interest in, or concern about, the outcome of the architecture.",
+    "longDescription": "A Stakeholder represents the perspective from which someone perceives the effects of an architecture — not the person themselves, but their interest in it. Stakeholders set, change, and emphasize goals, and may influence one another's priorities as those interests shift.",
+    "example": "The \"Chief Financial Officer\" stakeholder is concerned with keeping claims-processing costs down, while the \"Customer\" stakeholder is concerned with how quickly a claim gets paid out.",
+    "exampleLabel": "Chief Financial Officer",
+    "exampleCaption": "Concerned with claims-processing cost"
+  },
+  "driver": {
+    "name": "Driver",
+    "shortDescription": "An internal or external condition that motivates an organization to define its goals and act to achieve them.",
+    "longDescription": "A Driver names the underlying force behind a goal — a change in regulation, market pressure, or an internal ambition — without yet saying what should be done about it. When a driver is closely tied to a specific stakeholder, it is often called that stakeholder's \"concern.\"",
+    "example": "The driver \"Rising Customer Expectations for Digital Self-Service\" motivates the insurance company to invest in an online claims portal.",
+    "exampleLabel": "Rising Customer Expectations",
+    "exampleCaption": "Motivates an online claims portal"
+  },
+  "assessment": {
+    "name": "Assessment",
+    "shortDescription": "The outcome of analyzing the state of the enterprise with respect to some driver — a strength, weakness, opportunity, or threat.",
+    "longDescription": "An Assessment captures what an analysis found: a weakness or threat to be addressed, or a strength or opportunity to build on. Assessments are the evidence base that goals are set in response to, closing the loop between a driver and the decision to change something.",
+    "example": "The assessment \"Claim-Handling Times Exceed Customer Expectations\", made in response to the \"Rising Customer Expectations\" driver, is what leads the company to define an improvement goal.",
+    "exampleLabel": "Handling Times Exceed Expectations",
+    "exampleCaption": "Leads to an improvement goal"
+  },
+  "goal": {
+    "name": "Goal",
+    "shortDescription": "A high-level statement of intent, direction, or desired end state for an organization or its stakeholders.",
+    "longDescription": "A Goal states what a stakeholder wants to achieve, typically in qualitative terms — \"reduce\", \"improve\", \"increase\" — rather than as a measurable target. Goals are often decomposed into smaller sub-goals, and are commonly paired with one or more concrete Outcomes that define what achieving them would actually look like.",
+    "example": "The goal \"Reduce Average Claim Handling Time\", set by the Claims department in response to the customer-expectations assessment.",
+    "exampleLabel": "Reduce Claim Handling Time",
+    "exampleCaption": "Set in response to an assessment"
+  },
+  "outcome": {
+    "name": "Outcome",
+    "shortDescription": "An end result, effect, or consequence of some state of affairs — what was actually achieved, as opposed to what was intended.",
+    "longDescription": "An Outcome is a concrete, often measurable result, in contrast to a Goal, which expresses intent: a goal is what you want, an outcome is what you get. Outcomes can be positive or negative, and may only partially — or not at all — realize the goal they relate to.",
+    "example": "The outcome \"Average Claim Handling Time Reduced to 3 Days\", which realizes the goal of reducing handling time.",
+    "exampleLabel": "Handling Time Reduced to 3 Days",
+    "exampleCaption": "Realizes the handling-time goal"
+  },
+  "principle": {
+    "name": "Principle",
+    "shortDescription": "A normative statement of intent that defines a general property applying to any system within a given context.",
+    "longDescription": "A Principle guides the design of every solution in its context, rather than describing one specific system — that broader, more abstract scope is what distinguishes it from a Requirement. A principle is typically realized by one or more concrete requirements that apply it to an actual system.",
+    "example": "The principle \"Customer Data Is Entered Once and Reused Everywhere\" applies to every system the insurance company builds, not just the claims portal.",
+    "exampleLabel": "Enter Customer Data Once",
+    "exampleCaption": "Applies to every system the company builds"
+  },
+  "requirement": {
+    "name": "Requirement",
+    "shortDescription": "A statement of need that defines a property applying to a specific system, as described by the architecture.",
+    "longDescription": "A Requirement represents the \"means\" by which a Goal is realized: a property a particular system must exhibit. Requirements are typically arrived at by decomposing a goal until it is specific enough to be satisfied by a concrete design, and are often constrained by one or more governing Principles.",
+    "example": "The requirement \"The Online Claims Portal Shall Confirm Receipt of a Claim Within 60 Seconds\", which realizes the claim-handling-time goal.",
+    "exampleLabel": "Confirm Receipt Within 60 Seconds",
+    "exampleCaption": "Realizes the handling-time goal"
+  },
+  "value": {
+    "name": "Value",
+    "shortDescription": "The relative worth, utility, or importance of a concept, as perceived by a customer, stakeholder, or end user.",
+    "longDescription": "Value expresses why something matters to whoever experiences it — often, but not always, in monetary terms; it can equally describe convenience, trust, or peace of mind. The same element can carry different, even opposing, value for different stakeholders.",
+    "example": "The \"Online Claims Submission\" service has a value of \"Convenience\" for the Customer, and a value of \"Lower Processing Cost\" for the Insurer.",
+    "exampleLabel": "Convenience",
+    "exampleCaption": "Value of the submission service, to the customer"
+  },
+  "meaning": {
+    "name": "Meaning",
+    "shortDescription": "The knowledge, expertise, or interpretation that a particular audience attaches to a concept, in a given context.",
+    "longDescription": "Meaning captures how a passive structure element — a document, a message, a piece of data — is actually understood by whoever receives it, which is not always the same as its technical description. The same underlying object can carry a different meaning for different stakeholders.",
+    "example": "A \"Claim Confirmation\" message has the meaning \"Your claim has been received and is being reviewed\" for the Customer, while the same message means \"A new case has entered the queue\" for the Claims department.",
+    "exampleLabel": "Claim Received & Being Reviewed",
+    "exampleCaption": "What a confirmation message means to the customer"
+  },
+  "resource": {
+    "name": "Resource",
+    "shortDescription": "A useful or valuable asset that an organization can draw upon — tangible, intangible, or human.",
+    "longDescription": "A Resource is a structural element that is neither purely active nor purely passive: it is realized by the active and passive structure elements that embody it (staff, equipment, funds, information) and is a source of the organization's ability to act. Because resources are limited, they're a deciding factor in which strategies and goals an organization can actually pursue.",
+    "example": "\"Claims Adjusters\" and the \"Claims Processing Budget\" are resources assigned to the company's claims-handling capability.",
+    "exampleLabel": "Claims Adjusters",
+    "exampleCaption": "Assigned to the claims-handling capability"
+  },
+  "capability": {
+    "name": "Capability",
+    "shortDescription": "An ability that an organization, person, or system possesses.",
+    "longDescription": "A Capability describes what an enterprise can do — expressed as a noun or gerund, like \"Claims Management\", never as a specific process or system — independent of how that ability is currently implemented. Capabilities are realized by a combination of people, process, information, and technology, and are the usual anchor for capability-based planning.",
+    "example": "The \"Claims Assessment\" capability, which the insurance company can choose to realize through in-house staff, an outsourced assessor network, or an automated model, without the capability itself changing.",
+    "exampleLabel": "Claims Assessment",
+    "exampleCaption": "Realized by staff, an outsourced network, or a model"
+  },
+  "value-stream": {
+    "name": "Value Stream",
+    "shortDescription": "A sequence of activities that create an overall result of value for a customer, stakeholder, or end user.",
+    "longDescription": "A Value Stream describes value creation from the recipient's point of view — what they gain — rather than the ordered task list a Process describes; the two are related but sit at different levels of abstraction, and a value stream is typically realized by one or more processes. Value streams can be broken into stages, each adding incremental value to the next.",
+    "example": "The \"Acquire Insurance Policy\" value stream, whose stages — Quote, Underwrite, Issue Policy — are each served by different capabilities and realized by different processes.",
+    "exampleLabel": "Acquire Insurance Policy",
+    "exampleCaption": "Quote → underwrite → issue policy"
+  },
+  "course-of-action": {
+    "name": "Course of Action",
+    "shortDescription": "An approach or plan for configuring the enterprise's capabilities and resources to achieve a goal.",
+    "longDescription": "A Course of Action represents what an organization has decided to do — commonly split into longer-term, broader Strategies and shorter-term, narrower Tactics, though the line between the two is not sharp. Courses of action are realized by the capabilities and resources the organization configures to carry them out.",
+    "example": "The course of action \"Automate First-Notice-of-Loss Intake\", adopted as part of the company's broader \"Digital Claims\" strategy.",
+    "exampleLabel": "Automate First-Notice-of-Loss",
+    "exampleCaption": "Part of the Digital Claims strategy"
+  },
+  "business-actor": {
+    "name": "Business Actor",
+    "shortDescription": "A business entity capable of performing behavior — a person, department, or organization.",
+    "longDescription": "A Business Actor is the who: a specific individual, team, department, or entire organization, as opposed to a Role, which is the responsibility that actor is assigned. A single actor may be assigned to several roles, and the same role may be filled by different actors over time.",
+    "example": "The \"Claims Department\", modeled as a business actor, is assigned to the \"Claims Handler\" role.",
+    "exampleLabel": "Claims Department",
+    "exampleCaption": "Assigned to the Claims Handler role"
+  },
+  "business-interface": {
+    "name": "Business Interface",
+    "shortDescription": "A point of access where a business actor makes its services available to its environment.",
+    "longDescription": "A Business Interface is the channel through which a business service is reached — a phone line, a branch counter, a web form — rather than the service itself. The same service can be exposed through several different interfaces at once.",
+    "example": "The insurance company's \"Claims Hotline\" and \"Online Claims Portal\" are two different business interfaces that both expose the same \"Claims Handling\" service.",
+    "exampleLabel": "Claims Hotline",
+    "exampleCaption": "Exposes the Claims Handling service"
+  },
+  "business-object": {
+    "name": "Business Object",
+    "shortDescription": "A conceptual passive element that has relevance from a business perspective.",
+    "longDescription": "A Business Object models a concept the business itself thinks and talks in terms of — a policy, a claim, a customer record — at the conceptual level, independent of how it is physically stored. It can be realized by one or more Data Objects that represent it in IT systems.",
+    "example": "The \"Insurance Policy\" business object, which can have zero or more \"Claim\" business objects filed against it.",
+    "exampleLabel": "Insurance Policy",
+    "exampleCaption": "Has zero or more claims filed against it"
+  },
+  "product": {
+    "name": "Product",
+    "shortDescription": "A coherent collection of services, business objects, data objects, artifacts, and/or material offered as a whole to customers.",
+    "longDescription": "A Product is what gets sold: a bundle of services and information packaged together and given a single, customer-facing name, potentially aggregating elements from any domain, not just Business. \"Buying\" a product is usually itself one of the services it bundles, and typically grants the customer rights defined in an associated business object such as a contract.",
+    "example": "The \"Auto Insurance\" product bundles the \"Claims Handling\" and \"Roadside Assistance\" services together with the \"Policy Agreement\" business object.",
+    "exampleLabel": "Auto Insurance",
+    "exampleCaption": "Bundles Claims Handling + Roadside Assistance"
+  },
+  "application-component": {
+    "name": "Application Component",
+    "shortDescription": "An encapsulation of application functionality, aligned to implementation structure, that is modular and replaceable.",
+    "longDescription": "An Application Component is a self-contained, independently deployable unit of software: it encapsulates its own behavior and data and exposes them only through its interfaces. Cooperating components can be grouped in a Collaboration, and a component can be assigned as the authoritative source of a given data object.",
+    "example": "The \"Claims Processing Engine\" application component exposes a \"Submit Claim\" service through its \"Claims API\" interface.",
+    "exampleLabel": "Claims Processing Engine",
+    "exampleCaption": "Exposes Submit Claim via its Claims API"
+  },
+  "application-interface": {
+    "name": "Application Interface",
+    "shortDescription": "A point of access where an application component makes its services available to its environment.",
+    "longDescription": "An Application Interface specifies the contract another component must use to reach a service — its parameters, protocol, and data format — without exposing the internals behind it. A single interface may expose several services, and the same service may be reachable through more than one interface.",
+    "example": "The \"Claims API\" application interface exposes the \"Submit Claim\" and \"Check Claim Status\" services of the Claims Processing Engine to the customer-facing web application.",
+    "exampleLabel": "Claims API",
+    "exampleCaption": "Exposes Submit Claim & Check Status"
+  },
+  "data-object": {
+    "name": "Data Object",
+    "shortDescription": "Data structured for automated processing.",
+    "longDescription": "A Data Object is the IT-level counterpart to a Business Object — a self-contained piece of information with clear business meaning, modeled the way a class is modeled in data or object modeling, typically representing a type rather than a single instance. A data object can realize a business object, and can itself be realized by one or more artifacts.",
+    "example": "The \"Claim Record\" data object realizes the \"Claim\" business object inside the Claims Processing Engine.",
+    "exampleLabel": "Claim Record",
+    "exampleCaption": "Realizes the Claim business object"
+  },
+  "node": {
+    "name": "Node",
+    "shortDescription": "A generic IT or physical structure that hosts, manipulates, or interacts with other such structures.",
+    "longDescription": "A Node is the generic active structure element of the Technology Domain — anything from a physical server to a cloud compute instance — that can run software and store or process artifacts. Nodes can contain sub-nodes and are commonly connected to one another by paths, communication networks, or distribution networks.",
+    "example": "The \"Claims Application Server\" node hosts the deployed \"claims-api.jar\" artifact.",
+    "exampleLabel": "Claims Application Server",
+    "exampleCaption": "Hosts the claims-api.jar artifact"
+  },
+  "technology-interface": {
+    "name": "Technology Interface",
+    "shortDescription": "A point of access where a node, device, system software, facility, or equipment makes services available to its environment.",
+    "longDescription": "A Technology Interface is the technology-layer counterpart of a business or application interface — the contract, protocol, and access point through which a technology service is reached, rather than the service itself.",
+    "example": "The \"HTTPS Endpoint\" technology interface on the Claims Application Server exposes its hosted services to the rest of the network.",
+    "exampleLabel": "HTTPS Endpoint",
+    "exampleCaption": "Exposes hosted services to the network"
+  },
+  "device": {
+    "name": "Device",
+    "shortDescription": "IT hardware, possibly virtualized, used for processing, data storage, and similar purposes.",
+    "longDescription": "A Device is a physical (or virtualized) piece of processing hardware — a server, a laptop, a router — usually paired with System Software to together form a Node. Devices can be composite, aggregating sub-devices, and can be connected to one another by communication networks.",
+    "example": "The physical \"Rack Server 14\" device, on which the \"Claims Application Server\" node's system software runs.",
+    "exampleLabel": "Rack Server 14",
+    "exampleCaption": "Runs the app server's system software"
+  },
+  "system-software": {
+    "name": "System Software",
+    "shortDescription": "Software that provides or contributes to an environment for storing, executing, and using other software or data.",
+    "longDescription": "System Software is the execution environment underneath an application — an operating system, a database engine, an application server — usually combined with a Device to form a complete Node. One piece of system software can be layered on top of another, such as a database running inside an operating system.",
+    "example": "The \"PostgreSQL Database Server\" system software, running on the \"Rack Server 14\" device, stores the claims data used by the Claims Processing Engine.",
+    "exampleLabel": "PostgreSQL Database Server",
+    "exampleCaption": "Runs on Rack Server 14"
+  },
+  "equipment": {
+    "name": "Equipment",
+    "shortDescription": "A physical machine, tool, instrument, or livestock.",
+    "longDescription": "Equipment represents the physical, non-IT processing elements that act on Material — the machinery of a factory floor, a diagnostic instrument, or a vehicle — as distinct from IT hardware, which is modeled as a Device. Equipment can be combined with devices and system software within a single node to represent systems that blend physical and IT infrastructure, such as a medical scanner.",
+    "example": "The \"Fleet Inspection Scanner\" equipment used by the insurance company's assessors to photograph and log vehicle damage.",
+    "exampleLabel": "Fleet Inspection Scanner",
+    "exampleCaption": "Used by assessors to log vehicle damage"
+  },
+  "facility": {
+    "name": "Facility",
+    "shortDescription": "A physical structure or environment.",
+    "longDescription": "A Facility is the physical place that houses equipment, devices, or people — a building, a warehouse, a data center — as opposed to a Location, which is a more abstract geographic position that a facility (among other things) can occupy. Facilities can be interconnected by distribution networks and can aggregate other facilities.",
+    "example": "The \"Regional Claims Processing Center\" facility, located at the company's \"Rotterdam\" location, that houses the claims team's equipment and servers.",
+    "exampleLabel": "Regional Claims Processing Center",
+    "exampleCaption": "Houses the claims team's equipment"
+  },
+  "communication-network": {
+    "name": "Communication Network",
+    "shortDescription": "A set of IT structures for the transmission, routing, and reception of data.",
+    "longDescription": "A Communication Network is the physical infrastructure — cabling, routers, wireless links — that realizes a logical Path between nodes. It can be composed of sub-networks, and can aggregate the devices and system software (switches, firewalls) that make it up.",
+    "example": "The company's internal \"Corporate Network\" connects the Claims Application Server to the branch-office workstations.",
+    "exampleLabel": "Corporate Network",
+    "exampleCaption": "Connects servers to branch workstations"
+  },
+  "distribution-network": {
+    "name": "Distribution Network",
+    "shortDescription": "A physical network used to transport materials or energy.",
+    "longDescription": "A Distribution Network is the physical-world counterpart to a Communication Network: instead of carrying data, it moves goods, people, or energy between facilities, realizing the logical paths between them. It can aggregate the facilities and equipment — such as depots and vehicles — that form the network.",
+    "example": "The \"Regional Courier Network\" distribution network transports signed paper claim forms between branch offices and the head office.",
+    "exampleLabel": "Regional Courier Network",
+    "exampleCaption": "Transports paper claim forms"
+  },
+  "artifact": {
+    "name": "Artifact",
+    "shortDescription": "A piece of data used or produced in a software development process, or by the deployment and operation of an IT system.",
+    "longDescription": "An Artifact is the physical IT-world unit that carries a data object or a component — a file, a script, an executable, a database table — that can be deployed onto a device or system software. An application component or data object is typically realized by one or more artifacts.",
+    "example": "The \"claims-api.jar\" artifact realizes the Claims Processing Engine application component, and is deployed on the Claims Application Server.",
+    "exampleLabel": "claims-api.jar",
+    "exampleCaption": "Realizes the Claims Processing Engine"
+  },
+  "material": {
+    "name": "Material",
+    "shortDescription": "Tangible physical matter or energy.",
+    "longDescription": "Material represents physical substances or resources in the real world — raw materials, physical products, fuel, or electricity — that Equipment can access, move, transform, or store. It is the physical-world counterpart to an Artifact in the IT world.",
+    "example": "The \"Vehicle Wreckage\" material inspected by the Fleet Inspection Scanner equipment during a damage assessment.",
+    "exampleLabel": "Vehicle Wreckage",
+    "exampleCaption": "Inspected by the Fleet Inspection Scanner"
+  },
+  "work-package": {
+    "name": "Work Package",
+    "shortDescription": "A series of actions identified and designed to achieve specific results within specified time and resource constraints.",
+    "longDescription": "A Work Package models a bounded, one-off effort — a project, a sprint, a sub-project — as opposed to a Process, which models an ongoing, repeatable flow. It typically produces one or more Deliverables, and can aggregate smaller work packages within it.",
+    "example": "The \"Launch Online Claims Portal\" work package, which aggregates the \"Build Claims API\" and \"Build Customer Web App\" work packages.",
+    "exampleLabel": "Launch Online Claims Portal",
+    "exampleCaption": "Aggregates two smaller work packages"
+  },
+  "deliverable": {
+    "name": "Deliverable",
+    "shortDescription": "A result of a work package.",
+    "longDescription": "A Deliverable is the concrete output a Work Package produces — a report, a piece of software, a signed-off document, or an organizational change — and is often formally reviewed and agreed with stakeholders before being accepted. Deliverables are what realize a Plateau, the stable state the organization reaches once they're in place.",
+    "example": "The \"Claims API v1\" deliverable produced by the \"Build Claims API\" work package.",
+    "exampleLabel": "Claims API v1",
+    "exampleCaption": "Produced by the Build Claims API work package"
+  },
+  "plateau": {
+    "name": "Plateau",
+    "shortDescription": "A relatively stable state of the architecture that exists during a limited period of time.",
+    "longDescription": "A Plateau marks a defined stopping point in an architecture's evolution — a Baseline, a Target, or one of the Transition states in between — realized by the deliverables that got the organization there. Plateaus let large transformations be planned and communicated as a sequence of manageable steps rather than a single leap.",
+    "example": "The \"Digital Claims Live\" plateau, realized once the \"Claims API v1\" and \"Customer Web App v1\" deliverables are both in production.",
+    "exampleLabel": "Digital Claims Live",
+    "exampleCaption": "Reached once v1 deliverables are in production"
+  }
+}

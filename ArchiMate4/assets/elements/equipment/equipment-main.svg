@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Equipment notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#C7EFC5" stroke="#3E8E41" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#3E8E41" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11.80 15.20 L12.85 15.85 L12.26 17.54 L11.03 17.39 L10.77 17.67 L11.06 18.88 L9.44 19.66 L8.68 18.68 L8.30 18.70 L7.65 19.75 L5.96 19.16 L6.11 17.93 L5.83 17.67 L4.62 17.96 L3.84 16.34 L4.82 15.58 L4.80 15.20 L3.75 14.55 L4.34 12.86 L5.57 13.01 L5.83 12.73 L5.54 11.52 L7.16 10.74 L7.92 11.72 L8.30 11.70 L8.95 10.65 L10.64 11.24 L10.49 12.47 L10.77 12.73 L11.98 12.44 L12.76 14.06 L11.78 14.82 Z"/>
+    <circle cx="8.3" cy="15.2" r="1.4"/>
+    <path d="M18.75 8.00 L19.66 8.52 L19.18 9.88 L18.15 9.72 L17.94 9.94 L18.22 10.96 L16.92 11.58 L16.30 10.73 L16.00 10.75 L15.48 11.66 L14.12 11.18 L14.28 10.15 L14.06 9.94 L13.04 10.22 L12.42 8.92 L13.27 8.30 L13.25 8.00 L12.34 7.48 L12.82 6.12 L13.85 6.28 L14.06 6.06 L13.78 5.04 L15.08 4.42 L15.70 5.27 L16.00 5.25 L16.52 4.34 L17.88 4.82 L17.72 5.85 L17.94 6.06 L18.96 5.78 L19.58 7.08 L18.73 7.70 Z"/>
+    <circle cx="16" cy="8" r="1.1"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Equipment</tspan></text>
+</svg>

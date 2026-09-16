@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Product notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#FFF3B0" stroke="#C9A400" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#C9A400" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="5" width="16" height="15" rx="1"/>
+    <rect x="4" y="5" width="8" height="3.75" rx="1"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Product</tspan></text>
+</svg>

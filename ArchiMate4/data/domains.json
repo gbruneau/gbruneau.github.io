@@ -1,0 +1,9 @@
+[
+  { "id": "common", "order": 0, "color": "#E8DCC8", "colorStroke": "#8C7B5A" },
+  { "id": "motivation", "order": 1, "color": "#D9C9EC", "colorStroke": "#7B4FA0" },
+  { "id": "strategy", "order": 2, "color": "#F5D98A", "colorStroke": "#B8860B" },
+  { "id": "business", "order": 3, "color": "#FFF3B0", "colorStroke": "#C9A400" },
+  { "id": "application", "order": 4, "color": "#B7D9F2", "colorStroke": "#2C6FB0" },
+  { "id": "technology", "order": 5, "color": "#C7EFC5", "colorStroke": "#3E8E41" },
+  { "id": "implementation-migration", "order": 6, "color": "#F7C6C0", "colorStroke": "#C0504D" }
+]

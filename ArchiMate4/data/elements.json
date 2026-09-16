@@ -1,0 +1,422 @@
+[
+  {
+    "id": "role",
+    "domainId": "common",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/role/role-main.svg",
+      "icon": "assets/elements/role/role-icon.svg",
+      "example": "assets/elements/role/role-example.svg"
+    }
+  },
+  {
+    "id": "collaboration",
+    "domainId": "common",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/collaboration/collaboration-main.svg",
+      "icon": "assets/elements/collaboration/collaboration-icon.svg",
+      "example": "assets/elements/collaboration/collaboration-example.svg"
+    }
+  },
+  {
+    "id": "path",
+    "domainId": "common",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/path/path-main.svg",
+      "icon": "assets/elements/path/path-icon.svg",
+      "example": "assets/elements/path/path-example.svg"
+    }
+  },
+  {
+    "id": "process",
+    "domainId": "common",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/process/process-main.svg",
+      "icon": "assets/elements/process/process-icon.svg",
+      "example": "assets/elements/process/process-example.svg"
+    }
+  },
+  {
+    "id": "function",
+    "domainId": "common",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/function/function-main.svg",
+      "icon": "assets/elements/function/function-icon.svg",
+      "example": "assets/elements/function/function-example.svg"
+    }
+  },
+  {
+    "id": "service",
+    "domainId": "common",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/service/service-main.svg",
+      "icon": "assets/elements/service/service-icon.svg",
+      "example": "assets/elements/service/service-example.svg"
+    }
+  },
+  {
+    "id": "event",
+    "domainId": "common",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/event/event-main.svg",
+      "icon": "assets/elements/event/event-icon.svg",
+      "example": "assets/elements/event/event-example.svg"
+    }
+  },
+  {
+    "id": "grouping",
+    "domainId": "common",
+    "category": "composite",
+    "svg": {
+      "main": "assets/elements/grouping/grouping-main.svg",
+      "icon": "assets/elements/grouping/grouping-icon.svg",
+      "example": "assets/elements/grouping/grouping-example.svg"
+    }
+  },
+  {
+    "id": "location",
+    "domainId": "common",
+    "category": "composite",
+    "svg": {
+      "main": "assets/elements/location/location-main.svg",
+      "icon": "assets/elements/location/location-icon.svg",
+      "example": "assets/elements/location/location-example.svg"
+    }
+  },
+  {
+    "id": "stakeholder",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/stakeholder/stakeholder-main.svg",
+      "icon": "assets/elements/stakeholder/stakeholder-icon.svg",
+      "example": "assets/elements/stakeholder/stakeholder-example.svg"
+    }
+  },
+  {
+    "id": "driver",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/driver/driver-main.svg",
+      "icon": "assets/elements/driver/driver-icon.svg",
+      "example": "assets/elements/driver/driver-example.svg"
+    }
+  },
+  {
+    "id": "assessment",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/assessment/assessment-main.svg",
+      "icon": "assets/elements/assessment/assessment-icon.svg",
+      "example": "assets/elements/assessment/assessment-example.svg"
+    }
+  },
+  {
+    "id": "goal",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/goal/goal-main.svg",
+      "icon": "assets/elements/goal/goal-icon.svg",
+      "example": "assets/elements/goal/goal-example.svg"
+    }
+  },
+  {
+    "id": "outcome",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/outcome/outcome-main.svg",
+      "icon": "assets/elements/outcome/outcome-icon.svg",
+      "example": "assets/elements/outcome/outcome-example.svg"
+    }
+  },
+  {
+    "id": "principle",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/principle/principle-main.svg",
+      "icon": "assets/elements/principle/principle-icon.svg",
+      "example": "assets/elements/principle/principle-example.svg"
+    }
+  },
+  {
+    "id": "requirement",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/requirement/requirement-main.svg",
+      "icon": "assets/elements/requirement/requirement-icon.svg",
+      "example": "assets/elements/requirement/requirement-example.svg"
+    }
+  },
+  {
+    "id": "value",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/value/value-main.svg",
+      "icon": "assets/elements/value/value-icon.svg",
+      "example": "assets/elements/value/value-example.svg"
+    }
+  },
+  {
+    "id": "meaning",
+    "domainId": "motivation",
+    "category": "motivation",
+    "svg": {
+      "main": "assets/elements/meaning/meaning-main.svg",
+      "icon": "assets/elements/meaning/meaning-icon.svg",
+      "example": "assets/elements/meaning/meaning-example.svg"
+    }
+  },
+  {
+    "id": "resource",
+    "domainId": "strategy",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/resource/resource-main.svg",
+      "icon": "assets/elements/resource/resource-icon.svg",
+      "example": "assets/elements/resource/resource-example.svg"
+    }
+  },
+  {
+    "id": "capability",
+    "domainId": "strategy",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/capability/capability-main.svg",
+      "icon": "assets/elements/capability/capability-icon.svg",
+      "example": "assets/elements/capability/capability-example.svg"
+    }
+  },
+  {
+    "id": "value-stream",
+    "domainId": "strategy",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/value-stream/value-stream-main.svg",
+      "icon": "assets/elements/value-stream/value-stream-icon.svg",
+      "example": "assets/elements/value-stream/value-stream-example.svg"
+    }
+  },
+  {
+    "id": "course-of-action",
+    "domainId": "strategy",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/course-of-action/course-of-action-main.svg",
+      "icon": "assets/elements/course-of-action/course-of-action-icon.svg",
+      "example": "assets/elements/course-of-action/course-of-action-example.svg"
+    }
+  },
+  {
+    "id": "business-actor",
+    "domainId": "business",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/business-actor/business-actor-main.svg",
+      "icon": "assets/elements/business-actor/business-actor-icon.svg",
+      "example": "assets/elements/business-actor/business-actor-example.svg"
+    }
+  },
+  {
+    "id": "business-interface",
+    "domainId": "business",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/business-interface/business-interface-main.svg",
+      "icon": "assets/elements/business-interface/business-interface-icon.svg",
+      "example": "assets/elements/business-interface/business-interface-example.svg"
+    }
+  },
+  {
+    "id": "business-object",
+    "domainId": "business",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/business-object/business-object-main.svg",
+      "icon": "assets/elements/business-object/business-object-icon.svg",
+      "example": "assets/elements/business-object/business-object-example.svg"
+    }
+  },
+  {
+    "id": "product",
+    "domainId": "business",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/product/product-main.svg",
+      "icon": "assets/elements/product/product-icon.svg",
+      "example": "assets/elements/product/product-example.svg"
+    }
+  },
+  {
+    "id": "application-component",
+    "domainId": "application",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/application-component/application-component-main.svg",
+      "icon": "assets/elements/application-component/application-component-icon.svg",
+      "example": "assets/elements/application-component/application-component-example.svg"
+    }
+  },
+  {
+    "id": "application-interface",
+    "domainId": "application",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/application-interface/application-interface-main.svg",
+      "icon": "assets/elements/application-interface/application-interface-icon.svg",
+      "example": "assets/elements/application-interface/application-interface-example.svg"
+    }
+  },
+  {
+    "id": "data-object",
+    "domainId": "application",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/data-object/data-object-main.svg",
+      "icon": "assets/elements/data-object/data-object-icon.svg",
+      "example": "assets/elements/data-object/data-object-example.svg"
+    }
+  },
+  {
+    "id": "node",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/node/node-main.svg",
+      "icon": "assets/elements/node/node-icon.svg",
+      "example": "assets/elements/node/node-example.svg"
+    }
+  },
+  {
+    "id": "technology-interface",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/technology-interface/technology-interface-main.svg",
+      "icon": "assets/elements/technology-interface/technology-interface-icon.svg",
+      "example": "assets/elements/technology-interface/technology-interface-example.svg"
+    }
+  },
+  {
+    "id": "device",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/device/device-main.svg",
+      "icon": "assets/elements/device/device-icon.svg",
+      "example": "assets/elements/device/device-example.svg"
+    }
+  },
+  {
+    "id": "system-software",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/system-software/system-software-main.svg",
+      "icon": "assets/elements/system-software/system-software-icon.svg",
+      "example": "assets/elements/system-software/system-software-example.svg"
+    }
+  },
+  {
+    "id": "equipment",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/equipment/equipment-main.svg",
+      "icon": "assets/elements/equipment/equipment-icon.svg",
+      "example": "assets/elements/equipment/equipment-example.svg"
+    }
+  },
+  {
+    "id": "facility",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/facility/facility-main.svg",
+      "icon": "assets/elements/facility/facility-icon.svg",
+      "example": "assets/elements/facility/facility-example.svg"
+    }
+  },
+  {
+    "id": "communication-network",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/communication-network/communication-network-main.svg",
+      "icon": "assets/elements/communication-network/communication-network-icon.svg",
+      "example": "assets/elements/communication-network/communication-network-example.svg"
+    }
+  },
+  {
+    "id": "distribution-network",
+    "domainId": "technology",
+    "category": "active-structure",
+    "svg": {
+      "main": "assets/elements/distribution-network/distribution-network-main.svg",
+      "icon": "assets/elements/distribution-network/distribution-network-icon.svg",
+      "example": "assets/elements/distribution-network/distribution-network-example.svg"
+    }
+  },
+  {
+    "id": "artifact",
+    "domainId": "technology",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/artifact/artifact-main.svg",
+      "icon": "assets/elements/artifact/artifact-icon.svg",
+      "example": "assets/elements/artifact/artifact-example.svg"
+    }
+  },
+  {
+    "id": "material",
+    "domainId": "technology",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/material/material-main.svg",
+      "icon": "assets/elements/material/material-icon.svg",
+      "example": "assets/elements/material/material-example.svg"
+    }
+  },
+  {
+    "id": "work-package",
+    "domainId": "implementation-migration",
+    "category": "behavior",
+    "svg": {
+      "main": "assets/elements/work-package/work-package-main.svg",
+      "icon": "assets/elements/work-package/work-package-icon.svg",
+      "example": "assets/elements/work-package/work-package-example.svg"
+    }
+  },
+  {
+    "id": "deliverable",
+    "domainId": "implementation-migration",
+    "category": "passive-structure",
+    "svg": {
+      "main": "assets/elements/deliverable/deliverable-main.svg",
+      "icon": "assets/elements/deliverable/deliverable-icon.svg",
+      "example": "assets/elements/deliverable/deliverable-example.svg"
+    }
+  },
+  {
+    "id": "plateau",
+    "domainId": "implementation-migration",
+    "category": "composite",
+    "svg": {
+      "main": "assets/elements/plateau/plateau-main.svg",
+      "icon": "assets/elements/plateau/plateau-icon.svg",
+      "example": "assets/elements/plateau/plateau-example.svg"
+    }
+  }
+]

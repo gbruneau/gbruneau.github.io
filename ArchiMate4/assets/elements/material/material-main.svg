@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Material notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#C7EFC5" stroke="#3E8E41" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#3E8E41" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 12 16 18.93 8 18.93 4 12 8 5.07 16 5.07Z"/>
+    <path d="M9.7 16.43H14.3"/>
+    <path d="M7.02 11.78 9.32 7.8"/>
+    <path d="M14.69 7.8 16.99 11.78"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Material</tspan></text>
+</svg>

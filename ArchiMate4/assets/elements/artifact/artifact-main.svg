@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Artifact notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#C7EFC5" stroke="#3E8E41" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#3E8E41" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.5 3h8l5 5v12a1 1 0 0 1-1 1H6.5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
+    <path d="M14.5 3v5h5" stroke-linejoin="round"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Artifact</tspan></text>
+</svg>

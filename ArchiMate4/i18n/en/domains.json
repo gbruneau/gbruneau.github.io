@@ -1,0 +1,30 @@
+{
+  "common": {
+    "name": "Common",
+    "description": "Generic elements — such as processes, functions, services, and events — that are shared and reused across the Business, Application, and Technology domains rather than duplicated per domain."
+  },
+  "motivation": {
+    "name": "Motivation",
+    "description": "Elements used to model the motivations that guide the design or change of an enterprise architecture, including stakeholders, drivers, goals, and requirements."
+  },
+  "strategy": {
+    "name": "Strategy",
+    "description": "Elements used to model the strategic direction and choices of an enterprise, including capabilities, resources, and courses of action."
+  },
+  "business": {
+    "name": "Business",
+    "description": "Elements typically used to model the Business Architecture: products and services offered to customers, and the actors, roles, and interfaces that realize them."
+  },
+  "application": {
+    "name": "Application",
+    "description": "Elements typically used to model the Application Architecture: the structure, behavior, and interaction of software applications."
+  },
+  "technology": {
+    "name": "Technology",
+    "description": "Elements typically used to model the Technology Architecture: the structure and behavior of technology infrastructure, spanning both IT and physical/operational technology."
+  },
+  "implementation-migration": {
+    "name": "Implementation & Migration",
+    "description": "Elements that support the implementation and migration of architectures, including work packages, deliverables, and plateaus representing stable states over time."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "common": {
+    "name": "Común",
+    "description": "Elementos genéricos — como procesos, funciones, servicios y eventos — compartidos y reutilizados en los dominios de Negocio, Aplicación y Tecnología en lugar de duplicarse en cada uno."
+  },
+  "motivation": {
+    "name": "Motivación",
+    "description": "Elementos utilizados para modelar las motivaciones que guían el diseño o el cambio de una arquitectura empresarial, incluyendo partes interesadas, impulsores, objetivos y requisitos."
+  },
+  "strategy": {
+    "name": "Estrategia",
+    "description": "Elementos utilizados para modelar la dirección y las decisiones estratégicas de una empresa, incluyendo capacidades, recursos y cursos de acción."
+  },
+  "business": {
+    "name": "Negocio",
+    "description": "Elementos habitualmente usados para modelar la Arquitectura de Negocio: los productos y servicios ofrecidos a los clientes, y los actores, roles e interfaces que los materializan."
+  },
+  "application": {
+    "name": "Aplicación",
+    "description": "Elementos habitualmente usados para modelar la Arquitectura de Aplicación: la estructura, el comportamiento y la interacción de las aplicaciones de software."
+  },
+  "technology": {
+    "name": "Tecnología",
+    "description": "Elementos habitualmente usados para modelar la Arquitectura de Tecnología: la estructura y el comportamiento de la infraestructura tecnológica, abarcando tanto TI como tecnología física/operativa."
+  },
+  "implementation-migration": {
+    "name": "Implementación y Migración",
+    "description": "Elementos que dan soporte a la implementación y migración de arquitecturas, incluyendo paquetes de trabajo, entregables y mesetas (plateaus) que representan estados estables a lo largo del tiempo."
+  }
+}

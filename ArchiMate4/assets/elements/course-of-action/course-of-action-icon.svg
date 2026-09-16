@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="course-of-action icon">
+<circle cx="15.4" cy="10.2" r="6.7"/>
+    <circle cx="15.4" cy="10.2" r="4.5"/>
+    <circle cx="15.4" cy="10.2" r="2.2" fill="#B8860B" stroke="none"/>
+    <path d="M1.9 20.5 4.2 16.6 8 14.4" stroke-width="3" stroke-linecap="butt"/>
+    <path d="M9 13.4 5.8 12.5 8 16.6Z" fill="#B8860B" stroke="none"/>
+</svg>

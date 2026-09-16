@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 104" role="img" aria-label="Resource notation">
+  <rect x="2" y="2" width="164" height="100" rx="8" fill="#F5D98A" stroke="#B8860B" stroke-width="2.5"/>
+  <g transform="translate(141,9) scale(0.75)" fill="none" stroke="#B8860B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3.5" y="7" width="15" height="10" rx="1.5"/>
+    <path d="M18.5 10h1.7v4h-1.7"/>
+    <path d="M7.3 9v6M11 9v6M14.7 9v6"/>
+  </g>
+  <text text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a"><tspan x="84" y="54">Resource</tspan></text>
+</svg>
