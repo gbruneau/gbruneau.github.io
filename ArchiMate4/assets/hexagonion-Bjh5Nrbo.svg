@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="">
+  <!-- ArchiMate 4 "Hexagonion": nested rings, innermost to outermost:
+       Motivation (core), Strategy, Common, Business/Application/Technology
+       (three equal wedges of one ring), Implementation and Migration.
+       Colors match source/data/domains.json. Labels are an HTML overlay
+       (see metamodelView.js) so this file stays purely graphical and
+       language-neutral. -->
+  <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
+    <!-- Ring 1 (outermost): Implementation and Migration -->
+    <path fill="#F7C6C0" fill-rule="evenodd"
+          d="M395,200 297.5,368.87 102.5,368.87 5,200 102.5,31.13 297.5,31.13 Z
+             M355,200 277.5,334.24 122.5,334.24 45,200 122.5,65.76 277.5,65.76 Z"/>
+    <!-- Ring 2: Technology (lower-right + bottom) -->
+    <path fill="#C7EFC5" d="M355,200 277.5,334.24 122.5,334.24 142.5,299.61 257.5,299.61 315,200 Z"/>
+    <!-- Ring 2: Business (lower-left + upper-left) -->
+    <path fill="#FFF3B0" d="M122.5,334.24 45,200 122.5,65.76 142.5,100.39 85,200 142.5,299.61 Z"/>
+    <!-- Ring 2: Application (top + upper-right) -->
+    <path fill="#B7D9F2" d="M122.5,65.76 277.5,65.76 355,200 315,200 257.5,100.39 142.5,100.39 Z"/>
+    <!-- Ring 3: Common -->
+    <path fill="#E8DCC8" fill-rule="evenodd"
+          d="M315,200 257.5,299.61 142.5,299.61 85,200 142.5,100.39 257.5,100.39 Z
+             M280,200 240,269.28 160,269.28 120,200 160,130.72 240,130.72 Z"/>
+    <!-- Ring 4: Strategy -->
+    <path fill="#F5D98A" fill-rule="evenodd"
+          d="M280,200 240,269.28 160,269.28 120,200 160,130.72 240,130.72 Z
+             M245,200 222.5,238.97 177.5,238.97 155,200 177.5,161.03 222.5,161.03 Z"/>
+    <!-- Core: Motivation -->
+    <path fill="#D9C9EC" d="M245,200 222.5,238.97 177.5,238.97 155,200 177.5,161.03 222.5,161.03 Z"/>
+  </g>
+</svg>
