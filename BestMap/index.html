@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./assets/BestMap-logo-CZZGZZcw.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BestMap</title>
-  <script type="module" crossorigin src="./assets/index-Dq1A4Xjg.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DEx3Jq95.css">
+  <script type="module" crossorigin src="./assets/index-DkN1bFqL.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BfkSyIyj.css">
 </head>
 
 <body>
@@ -23,6 +23,21 @@
       <div class="dlgButtons">
         <button id="btFavCancelUpload" class="BM-Button" data-label="cancel">Cancel</button>
         <button id="btFavDoUpload" class="BM-Button" style="display:none" data-label="upload">
+          Upload
+        </button>
+      </div>
+    </div>
+    <!-- Dialog Box for Tracker Import-->
+    <div id="dlgUploadTrk" class="dlgBox">
+      <div class="dlgHeader">
+        <h3 data-label="imptrkfile">Import Tracker File</h3>
+      </div>
+      <input type="file" id="btSelTrkFile" accept=".json">
+      <label class="BM-Button" for="btSelTrkFile" data-label="selfav">Select file</label>
+      <div id="selectedTrkFileName"></div>
+      <div class="dlgButtons">
+        <button id="btTrkCancelUpload" class="BM-Button" data-label="cancel">Cancel</button>
+        <button id="btTrkDoUpload" class="BM-Button" style="display:none" data-label="upload">
           Upload
         </button>
       </div>
@@ -53,15 +68,21 @@
                 <img src="./icons/Overlay.png" class="Icon-Small">
               </a>
             </li>
-            <li class="sidepanel-tab" title="Tools" data-title="tools">
-              <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-tools">
-                <img src="./icons/tabTools.png" class="Icon-Small">
-              </a>
-            </li>
-
             <li class="sidepanel-tab" title="Favorites Places" data-title="favplace">
               <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-fav">
                 <img src="./icons/tabFav.png" class="Icon-Small">
+              </a>
+            </li>
+
+            <li class="sidepanel-tab" title="Tracker" data-title="trktab">
+              <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-trk">
+                <img src="./icons/tabTrk.png" class="Icon-Small">
+              </a>
+            </li>
+
+            <li class="sidepanel-tab" title="Tools" data-title="tools">
+              <a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-tools">
+                <img src="./icons/tabTools.png" class="Icon-Small">
               </a>
             </li>
 
@@ -91,38 +112,6 @@
               <div id="BM-Overlay-Nav-Panel"></div>
             </div>
 
-            <!--  TOOL TAB-->
-            <div class="sidepanel-tab-content" data-tab-content="tab-tools">
-              <h2 data-label="maptools">Map Tools</h2>
-              <div id="searchFld" class="BM-Input">
-                <label for="fGeoCode" data-label="search">Search:</label>
-                <input type="search" id="fGeoCode" name="fGeoCode" value="" data-placeholder="addrexample">
-              </div>
-              <p data-label="weeelzoom"></p>
-              <div class="BM-Button" id="btFlipMarker" title="Marker" data-title="marker"></div>
-              <div class="BM-Button" id="btGoHere" data-title="gocurpos"></div>
-              <div class="BM-Button" id="btTrack" data-title="trackpos"></div>
-              <div class="BM-Button" id="btMeasure" data-title="measure"></div>
-              <h2 data-label="openin">Open in</h2>
-              <div class="BM-GOURL-Container">
-                <div id="btGoGoogle" class="BM-GOURL-Bt">
-                  <img src="./layerIcons/GoogleMap.png">
-                  <div class="BM-GOURL-Bt-Name">Google Map</div>
-                </div>
-                <div id="btGoGoogleEarth" class="BM-GOURL-Bt">
-                  <img src="./icons/GoogleEarth.png">
-                  <div class="BM-GOURL-Bt-Name">Google Earth</div>
-                </div>
-                <div id="btGoOSM" class="BM-GOURL-Bt">
-                  <img src="./layerIcons/Mapnik.png">
-                  <div class="BM-GOURL-Bt-Name">Street Map</div>
-                </div>
-                <div id="btGoBing" class="BM-GOURL-Bt">
-                  <img src="./layerIcons/BingMap.png">
-                  <div class="BM-GOURL-Bt-Name">Bing</div>
-                </div>
-              </div>
-            </div>
             <!--  Favorites -->
             <div class="sidepanel-tab-content" data-tab-content="tab-fav">
 
@@ -180,6 +169,89 @@
                 </tbody>
               </table>
             </div>
+            <!--  Tracker: record device position at a fixed interval, list/edit/export the recorded points -->
+            <div class="sidepanel-tab-content" data-tab-content="tab-trk">
+
+              <h1 data-label="trkheader">Device tracker</h1>
+
+              <div class="BM-Button BM-Small-Button" id="btTrkRecord" data-title="trkrecord"><img
+                  src="./icons/trkRecord.png" class="Icon-Small"></div>
+
+              <div class="BM-Button BM-Small-Button" id="btTrkClear" data-title="trkclear"><img
+                  src="./icons/trkClear.png" class="Icon-Small"></div>
+
+              <div class="btSpacer"></div>
+
+              <div class="BM-Button  BM-Small-Button" id="btTrkSave" data-title="savechange"><img
+                  src="./icons/saveFav.png" class="Icon-Small"></div>
+              <div class="BM-Button  BM-Small-Button" id="btTrkUndo" data-title="undo"><img
+                  src="./icons/undoFav.png" class="Icon-Small"></div>
+
+              <div class="btSpacer"></div>
+
+              <div class="BM-Button  BM-Small-Button" id="btTrkImportJSON" data-title="impJSON"><img
+                  src="./icons/importFav.png" class="Icon-Small"></div>
+              <div class="BM-Button  BM-Small-Button" id="btTrkExportJSON" data-title="expJSON"><img
+                  src="./icons/trkSave.png" class="Icon-Small"></div>
+
+              <div class="btSpacer"></div>
+
+              <div class="BM-Button BM-Small-Button" id="btTrkExport" data-title="trkexport"><img
+                  src="./icons/exportGeoJSON.png" class="Icon-Small"></div>
+
+              <div class="BM-Button BM-Small-Button" id="btTrkZoom" data-title="trkzoom"><img
+                  src="./icons/trkZoom.png" class="Icon-Small"></div>
+
+              <div class="BM-Trk-AutoZoom">
+                <input type="checkbox" id="chkTrkAutoZoom" name="chkTrkAutoZoom">
+                <label for="chkTrkAutoZoom" data-label="trkautozoom">Auto zoom on new marker</label>
+              </div>
+
+              <table id="TrkTable" class="BM-Table">
+                <thead>
+                  <tr>
+                    <th id="headTrkDateTime" data-label="trkdatetimecol">Date/Time</th>
+                    <th data-label="trktitlecol">Title</th>
+                    <th data-title="edittrkpt" width="40px" data-label="edit">Edit</th>
+                    <th data-title="deltrkpt" width="40px" data-label="delete">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="TrkTableBody">
+                </tbody>
+              </table>
+            </div>
+            <!--  TOOL TAB-->
+            <div class="sidepanel-tab-content" data-tab-content="tab-tools">
+              <h2 data-label="maptools">Map Tools</h2>
+              <div id="searchFld" class="BM-Input">
+                <label for="fGeoCode" data-label="search">Search:</label>
+                <input type="search" id="fGeoCode" name="fGeoCode" value="" data-placeholder="addrexample">
+              </div>
+              <p data-label="weeelzoom"></p>
+              <div class="BM-Button" id="btFlipMarker" title="Marker" data-title="marker"></div>
+              <div class="BM-Button" id="btGoHere" data-title="gocurpos"></div>
+              <div class="BM-Button" id="btTrack" data-title="trackpos"></div>
+              <div class="BM-Button" id="btMeasure" data-title="measure"></div>
+              <h2 data-label="openin">Open in</h2>
+              <div class="BM-GOURL-Container">
+                <div id="btGoGoogle" class="BM-GOURL-Bt">
+                  <img src="./layerIcons/GoogleMap.png">
+                  <div class="BM-GOURL-Bt-Name">Google Map</div>
+                </div>
+                <div id="btGoGoogleEarth" class="BM-GOURL-Bt">
+                  <img src="./icons/GoogleEarth.png">
+                  <div class="BM-GOURL-Bt-Name">Google Earth</div>
+                </div>
+                <div id="btGoOSM" class="BM-GOURL-Bt">
+                  <img src="./layerIcons/Mapnik.png">
+                  <div class="BM-GOURL-Bt-Name">Street Map</div>
+                </div>
+                <div id="btGoBing" class="BM-GOURL-Bt">
+                  <img src="./layerIcons/BingMap.png">
+                  <div class="BM-GOURL-Bt-Name">Bing</div>
+                </div>
+              </div>
+            </div>
             <!-- Preferences tab -->
             <div class="sidepanel-tab-content" data-tab-content="tab-pref">
               <h1 data-label="pref">pref</h1>
@@ -190,6 +262,9 @@
               <label for="defaultToCurrentLayer" data-label="defaultocurrentlayer">Set Default Base Map
                 to</label>&nbsp;<span id="DefaultLayerName">???</span>
               <input type="checkbox" id="defaultToCurrentLayer" name="defaultToCurrentLayer">
+              <br>
+              <label for="fTrkInterval" data-label="trkinterval">Tracking interval (seconds):</label>
+              <input type="number" id="fTrkInterval" name="fTrkInterval" min="5" step="5">
               <hr>
               <div class="BM-Button BM-Small-Button" id="btPrefSave" data-title="savechange"><img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqCAMAAACbSil8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURQAAABREWBRGVhVFVxU/VRVGVxcsURtWbCFmgiZ3lyyHrTWjj0XRq1X/x6nNcHEAAAAEdFJOUwBAgL+jVN0MAAAACXBIWXMAADLAAAAywAEoZFrbAAAEUUlEQVR4Xu3bcXuTMBSFcVqstG5+/68rkLM+lpElN3BCcznvP85Ve/MzgdZNu2SXW8P11wsYGTUtnbtCkqp96VjWzrqQZm2sE2mG1Y00eYYdSW89TOt5kv68rb6ktxtYK3mTxrfVnTR6tfqTxqgOpRGqR+n6fcmndI3qVLpC9Sr9TnUr/Ub1K11SHUsX1HzprwPDEqzBGDLs6e8DwxKsATlnOb2YekhYgjUop0zX6d8DwxKsgTlmuyNh6iFhCdbgtEpbphqlDVOt0napZmmzVLu0VWqBtFFqibRNapG0SWqZtEkqfrSGqehjpU88tn9YgrVdqJ/45EsfeHD/MMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNXQiauWwBGuiJsPUQ8ISrImaDFMPCUuwJmoyTD0kLMGaqMkw9ZCwBGuiJsPUQ8ISrImaDFMPCUuwVkr9PDAswVoptcFE9ZioHhPVY6J6TFSPieoxUT0mqsdE9ZiovIbhHhrwiWrVpA7D489Ldb3VqMNj4UR3PM6vEnW5n/93r6StQv0JOvWogq1ATUGnalj51Ds0ifhYOjVjS0N0K5mac3ifkV95uNQBiMy4VirVKCVbmVSzlGslUgukVCuRarkjPXvgNxPiUTNfT5fxXnNo1EIp0UqjYuEF4Ql2j0Ut3lTe5UqibpDS7sLvSCVtK4e6Scra1rekcraVQ8WSi8PT7BuFunFTSSeYQo28JcQXgF9a/6WUE0yhYsGLVtcf+VPBo7vGoEbOr4XKOMFvSmWcYAbVsvzGqVjuMguVcbGKuqXYF1pMVMJ9SdQtnYgae1uoXV2P8BUmHeAtieqRqndLLqmR5Vuoq792YwzqDn+JY3w3g0GN3JcsVMJdiUI90RdcohfgSnhoEeW7cRRq7JU1u3aosZeb7PA0+8ahRs5lbpzvJnOoG08wnmXnONRt28rZVBZ107biOfaORN3yHSrSptKoG44wnmD3aNTiI8x4TzhHo5YeYdbxZVLLjjBPyqSWWBl/T/2KSbVbmVIu1WqlSslUm5UrZVMt92HiHWmOTc23sqV86m3Iwj5o7xye8alZG0vf0rEa1CS2BrQW9Sdsnf/mOFaLGrlmHxWu0a/qUade/k3hyKznHKtLnRvm8JOKHUA9KlE9JqrHRPWYqB4T1WOiekxUj4nqMVE9JqrHRPWYqB4T1WOiekxUj3U9PvDfeaj9eajX7oKP3HfpTnNf6rqzbOt1pJ7kap2k59jW8UqduuKnjpuP75R761Pq/Qz3OL3I8ca+QqcuV3+34r5/7mjX/QPoBGoX1Dx4ugAAAABJRU5ErkJggg==" class="Icon-Small"></div>
