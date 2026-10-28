@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Policy Lifecycle Tool - Help</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #222; }
+  h1 { border-bottom: 2px solid #222; padding-bottom: 0.5rem; }
+  h2 { margin-top: 2rem; }
+  code { background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <h1>Policy Lifecycle Tool - Help</h1>
+
+  <h2>Overview</h2>
+  <p>This tool documents an insurance policy transaction use case as a succession of transaction lines, each showing policy periods over time.</p>
+
+  <h2>Main menu</h2>
+  <ul>
+    <li><strong>Open</strong> - load a use case from a <code>.policycase</code> file.</li>
+    <li><strong>Save</strong> - save the current use case to a <code>.policycase</code> file using its current name.</li>
+    <li><strong>Save As</strong> - save the current use case under a new name.</li>
+    <li><strong>Edit / View toggle</strong> - switch between editing and read-only viewing. The tool opens in View mode.</li>
+    <li><strong>Clear</strong> - clear the current use case (asks for confirmation).</li>
+    <li><strong>Print</strong> - print the current use case using your browser's print dialog.</li>
+    <li><strong>Help</strong> - opens this page.</li>
+    <li><strong>About</strong> - shows application information.</li>
+    <li><strong>Language selector</strong> - switch between English, French, and Spanish.</li>
+  </ul>
+
+  <h2>Use case header</h2>
+  <p>Set a description, start date, time scale (Month or Quarter), range (number of scale units shown), and an 8-color palette used to paint policy periods. Click a color square to change it with your browser's color picker, or drag a color onto a transaction graph to create a new policy period. Use the <strong>+</strong> button to add a new transaction line.</p>
+
+  <h2>Transaction lines</h2>
+  <p>Each transaction line has a type (Submission, Policy Change, Cancellation, Reinstatement, Rewrite, Renewal, Comment, Other) and a comment. Use the controls on the left to collapse/expand the line, reorder it (drag the grab handle), edit its properties, or delete it.</p>
+
+  <h2>Policy periods</h2>
+  <p>Policy periods are rectangles on a transaction's graph. In Edit mode you can:</p>
+  <ul>
+    <li>Drag a palette color onto the graph to create a new period.</li>
+    <li>Drag a period to move it.</li>
+    <li>Drag its left or right edge to resize it.</li>
+    <li>Click its edit (pencil) icon to set its policy term/period numbers, description, color, or mark it as a gap.</li>
+  </ul>
+  <p>A gap is shown as a white rectangle with a diagonal cross and only an edit icon.</p>
+</body>
+</html>
