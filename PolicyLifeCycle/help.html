@@ -89,7 +89,7 @@ const T = {
         '<strong>Save As</strong> - save under a new name (prompts you for a filename).',
         '<strong>Edit / View</strong> - toggle between editing and read-only viewing. The tool opens in Edit mode.',
         '<strong>Clear</strong> - clear the current use case and start a fresh one with a single default transaction line (asks for confirmation).',
-        '<strong>Print</strong> - print the current use case using your browser\'s print dialog.',
+        '<strong>Print</strong> - print the current use case using your browser\'s print dialog. Only available in View mode.',
         '<strong>Help</strong> - opens this page.',
         '<strong>About</strong> - shows application information.',
         '<strong>Language selector</strong> - switch between English, French, and Spanish; your choice is remembered.'
@@ -97,7 +97,7 @@ const T = {
       { h: 'Use case header', p: [
         'Set a Use Case name, a Description (shown in italics), a Start Date, a time Scale (Month or Quarter), and a Range (how many scale units are shown - new use cases default to 16).'
       ], list: [
-        '<strong>Color palette</strong> - 8 colors used to paint policy periods. Click a square to change it with your browser\'s color picker, or drag a color onto a transaction\'s graph to create a new policy period there. The reset button restores the default palette. Your palette is remembered between sessions.',
+        '<strong>Color palette</strong> (only shown in Edit mode) - 8 colors used to paint policy periods. Click a square to change it with your browser\'s color picker, or drag a color onto a transaction\'s graph to create a new policy period there. The reset button restores the default palette. Your palette is remembered between sessions.',
         '<strong>+ button</strong> - adds a new transaction line. It clones the most recent non-Comment line (same type, comment, and policy periods) with its date advanced by one day - handy for a quick succession of similar transactions. If there\'s no eligible line to clone, it adds a plain default line instead.',
         '<strong>Collapse/Expand all</strong> - collapses every transaction line if any are expanded, or expands them all if every line is already collapsed. This is the only way to change line display while in View mode.'
       ] },
@@ -114,12 +114,13 @@ const T = {
         'Drag its left or right edge to resize it - it stops at the edge of its neighbor and can never overlap another period.',
         'Click its pencil icon to open its edit dialog.'
       ], p2: [
-        'A gap is shown as a white rectangle with a diagonal cross and only shows an edit icon (no label).'
+        'A gap is shown as a white rectangle with a diagonal cross, its description centered on it if any, and only an edit icon (no term/period label).'
       ] },
       { h: 'Edit Policy Period dialog', list: [
         '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8).',
-        '<strong>Description</strong> - multi-line; line breaks are preserved on the graph.',
+        '<strong>Description</strong> - multi-line; line breaks are preserved on the graph, even for gaps.',
         '<strong>Is a gap</strong> checkbox.',
+        '<strong>Highlight left</strong> / <strong>Highlight right</strong> checkboxes - add a thick border on that side of the period\'s rectangle. Available for any period, gap or not.',
         'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color.',
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
       ] },
@@ -127,7 +128,8 @@ const T = {
         'Every dialog (Edit Transaction Line, Edit Policy Period, About, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
       ] },
       { h: 'Saving and loading', p: [
-        'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.'
+        'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.',
+        'Every line and period property - including collapsed/expanded state, colors, gap status, and highlight borders - is saved and restored exactly as you left it.'
       ] }
     ]
   },
@@ -143,7 +145,7 @@ const T = {
         '<strong>Enregistrer sous</strong> - enregistre sous un nouveau nom (demande un nom de fichier).',
         '<strong>Édition / Visualisation</strong> - bascule entre édition et visualisation en lecture seule. L\'outil s\'ouvre en mode édition.',
         '<strong>Effacer</strong> - efface le cas d\'utilisation actuel et en recommence un nouveau avec une seule ligne de transaction par défaut (demande confirmation).',
-        '<strong>Imprimer</strong> - imprime le cas d\'utilisation actuel via la boîte de dialogue d\'impression du navigateur.',
+        '<strong>Imprimer</strong> - imprime le cas d\'utilisation actuel via la boîte de dialogue d\'impression du navigateur. Disponible uniquement en mode visualisation.',
         '<strong>Aide</strong> - ouvre cette page.',
         '<strong>À propos</strong> - affiche les informations de l\'application.',
         '<strong>Sélecteur de langue</strong> - bascule entre anglais, français et espagnol ; votre choix est mémorisé.'
@@ -151,7 +153,7 @@ const T = {
       { h: 'En-tête du cas d\'utilisation', p: [
         'Définissez un nom de Cas d\'utilisation, une Description (affichée en italique), une Date de début, une Échelle de temps (Mois ou Trimestre), et une Portée (nombre d\'unités d\'échelle affichées - les nouveaux cas d\'utilisation ont par défaut une valeur de 16).'
       ], list: [
-        '<strong>Palette de couleurs</strong> - 8 couleurs utilisées pour peindre les périodes de police. Cliquez sur une case pour la modifier avec le sélecteur de couleur du navigateur, ou glissez une couleur sur le graphique d\'une transaction pour y créer une nouvelle période de police. Le bouton de réinitialisation restaure la palette par défaut. Votre palette est mémorisée entre les sessions.',
+        '<strong>Palette de couleurs</strong> (affichée uniquement en mode édition) - 8 couleurs utilisées pour peindre les périodes de police. Cliquez sur une case pour la modifier avec le sélecteur de couleur du navigateur, ou glissez une couleur sur le graphique d\'une transaction pour y créer une nouvelle période de police. Le bouton de réinitialisation restaure la palette par défaut. Votre palette est mémorisée entre les sessions.',
         '<strong>Bouton +</strong> - ajoute une nouvelle ligne de transaction. Il clone la dernière ligne qui n\'est pas de type Commentaire (même type, commentaire et périodes de police) avec sa date avancée d\'un jour - pratique pour une succession rapide de transactions similaires. S\'il n\'y a aucune ligne éligible à cloner, une ligne par défaut simple est ajoutée à la place.',
         '<strong>Tout réduire/développer</strong> - réduit toutes les lignes de transaction si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites. C\'est le seul moyen de modifier l\'affichage des lignes en mode visualisation.'
       ] },
@@ -168,12 +170,13 @@ const T = {
         'Glissez son bord gauche ou droit pour la redimensionner - elle s\'arrête au bord de sa voisine et ne peut jamais chevaucher une autre période.',
         'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
       ], p2: [
-        'Un écart est affiché comme un rectangle blanc avec une croix diagonale et ne montre qu\'une icône d\'édition (sans étiquette).'
+        'Un écart est affiché comme un rectangle blanc avec une croix diagonale, sa description centrée dessus le cas échéant, et seulement une icône d\'édition (pas d\'étiquette terme/période).'
       ] },
       { h: 'Boîte de dialogue Modifier la période de police', list: [
         '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8).',
-        '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique.',
+        '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique, même pour les écarts.',
         'Case à cocher <strong>Est un écart</strong>.',
+        'Cases à cocher <strong>Surligner à gauche</strong> / <strong>Surligner à droite</strong> - ajoutent une bordure épaisse de ce côté du rectangle de la période. Disponible pour toute période, écart ou non.',
         'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée.',
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
       ] },
@@ -181,7 +184,8 @@ const T = {
         'Chaque boîte de dialogue (Modifier la ligne de transaction, Modifier la période de police, À propos, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
       ] },
       { h: 'Enregistrement et chargement', p: [
-        'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.'
+        'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.',
+        'Chaque propriété de ligne et de période - y compris l\'état réduit/développé, les couleurs, le statut d\'écart et les bordures de surlignage - est enregistrée et restaurée telle que vous l\'avez laissée.'
       ] }
     ]
   },
@@ -197,7 +201,7 @@ const T = {
         '<strong>Guardar como</strong> - guarda con un nuevo nombre (solicita un nombre de archivo).',
         '<strong>Editar / Visualizar</strong> - alterna entre edición y visualización de solo lectura. La herramienta se abre en modo edición.',
         '<strong>Borrar</strong> - borra el caso de uso actual y comienza uno nuevo con una sola línea de transacción por defecto (solicita confirmación).',
-        '<strong>Imprimir</strong> - imprime el caso de uso actual usando el cuadro de diálogo de impresión del navegador.',
+        '<strong>Imprimir</strong> - imprime el caso de uso actual usando el cuadro de diálogo de impresión del navegador. Solo disponible en modo visualización.',
         '<strong>Ayuda</strong> - abre esta página.',
         '<strong>Acerca de</strong> - muestra información de la aplicación.',
         '<strong>Selector de idioma</strong> - alterna entre inglés, francés y español; su elección se recuerda.'
@@ -205,7 +209,7 @@ const T = {
       { h: 'Encabezado del caso de uso', p: [
         'Defina un nombre de Caso de uso, una Descripción (mostrada en cursiva), una Fecha de inicio, una Escala de tiempo (Mes o Trimestre), y un Rango (cuántas unidades de escala se muestran - los casos de uso nuevos tienen un valor por defecto de 16).'
       ], list: [
-        '<strong>Paleta de colores</strong> - 8 colores usados para pintar los períodos de póliza. Haga clic en un cuadro para cambiarlo con el selector de color del navegador, o arrastre un color sobre el gráfico de una transacción para crear allí un nuevo período de póliza. El botón de restablecer recupera la paleta por defecto. Su paleta se recuerda entre sesiones.',
+        '<strong>Paleta de colores</strong> (se muestra solo en modo edición) - 8 colores usados para pintar los períodos de póliza. Haga clic en un cuadro para cambiarlo con el selector de color del navegador, o arrastre un color sobre el gráfico de una transacción para crear allí un nuevo período de póliza. El botón de restablecer recupera la paleta por defecto. Su paleta se recuerda entre sesiones.',
         '<strong>Botón +</strong> - agrega una nueva línea de transacción. Clona la línea más reciente que no sea de tipo Comentario (mismo tipo, comentario y períodos de póliza) con su fecha avanzada un día - útil para una sucesión rápida de transacciones similares. Si no hay ninguna línea apta para clonar, agrega en su lugar una línea simple por defecto.',
         '<strong>Contraer/Expandir todo</strong> - contrae todas las líneas de transacción si alguna está expandida, o las expande todas si ya están todas contraídas. Esta es la única forma de cambiar la visualización de las líneas en modo visualización.'
       ] },
@@ -222,12 +226,13 @@ const T = {
         'Arrastre su borde izquierdo o derecho para redimensionarlo - se detiene en el borde de su vecino y nunca puede superponerse a otro período.',
         'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
       ], p2: [
-        'Un vacío se muestra como un rectángulo blanco con una cruz diagonal y solo muestra un icono de edición (sin etiqueta).'
+        'Un vacío se muestra como un rectángulo blanco con una cruz diagonal, su descripción centrada si la hay, y solo un icono de edición (sin etiqueta de término/período).'
       ] },
       { h: 'Cuadro de diálogo Editar período de póliza', list: [
         '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8).',
-        '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico.',
+        '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico, incluso para los vacíos.',
         'Casilla <strong>Es un vacío</strong>.',
+        'Casillas <strong>Resaltar a la izquierda</strong> / <strong>Resaltar a la derecha</strong> - agregan un borde grueso en ese lado del rectángulo del período. Disponible para cualquier período, sea vacío o no.',
         'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado.',
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
       ] },
@@ -235,7 +240,8 @@ const T = {
         'Todos los cuadros de diálogo (Editar línea de transacción, Editar período de póliza, Acerca de, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
       ] },
       { h: 'Guardar y abrir', p: [
-        'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.'
+        'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.',
+        'Cada propiedad de línea y período - incluyendo el estado contraído/expandido, los colores, el estado de vacío y los bordes de resaltado - se guarda y se restaura tal como la dejó.'
       ] }
     ]
   }
