@@ -2,47 +2,287 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 <title>Policy Lifecycle Tool - Help</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #222; }
-  h1 { border-bottom: 2px solid #222; padding-bottom: 0.5rem; }
-  h2 { margin-top: 2rem; }
-  code { background: #f0f0f0; padding: 0.1rem 0.3rem; border-radius: 3px; }
+  :root {
+    --text: #1a1a1a;
+    --muted: #555;
+    --border: #ccc;
+    --code-bg: #f0f0f0;
+    --surface: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #eee;
+      --muted: #aaa;
+      --border: #444;
+      --code-bg: #2a2a2a;
+      --surface: #1b1b1b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem;
+    line-height: 1.55;
+    color: var(--text);
+    background: var(--surface);
+  }
+  .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  h1 { margin: 0; font-size: 1.5rem; }
+  h2 { margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.15rem; }
+  p { margin: 0.5rem 0; }
+  ul { margin: 0.5rem 0; padding-left: 1.3rem; }
+  li { margin: 0.3rem 0; }
+  code {
+    background: var(--code-bg);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  select {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .muted { color: var(--muted); font-size: 0.9em; }
 </style>
 </head>
 <body>
-  <h1>Policy Lifecycle Tool - Help</h1>
+  <div class="top-row">
+    <h1 id="pageTitle"></h1>
+    <select id="langSelect" aria-label="Language"></select>
+  </div>
+  <div id="content"></div>
 
-  <h2>Overview</h2>
-  <p>This tool documents an insurance policy transaction use case as a succession of transaction lines, each showing policy periods over time.</p>
+<script>
+const STORAGE_KEY = 'policyLifecycleTool.language';
+const SUPPORTED = ['en', 'fr', 'es'];
+const LANG_NAMES = { en: 'English', fr: 'Français', es: 'Español' };
 
-  <h2>Main menu</h2>
-  <ul>
-    <li><strong>Open</strong> - load a use case from a <code>.policycase</code> file.</li>
-    <li><strong>Save</strong> - save the current use case to a <code>.policycase</code> file using its current name.</li>
-    <li><strong>Save As</strong> - save the current use case under a new name.</li>
-    <li><strong>Edit / View toggle</strong> - switch between editing and read-only viewing. The tool opens in View mode.</li>
-    <li><strong>Clear</strong> - clear the current use case (asks for confirmation).</li>
-    <li><strong>Print</strong> - print the current use case using your browser's print dialog.</li>
-    <li><strong>Help</strong> - opens this page.</li>
-    <li><strong>About</strong> - shows application information.</li>
-    <li><strong>Language selector</strong> - switch between English, French, and Spanish.</li>
-  </ul>
+const T = {
+  en: {
+    pageTitle: 'Policy Lifecycle Tool - Help',
+    sections: [
+      { h: 'Overview', p: [
+        'This tool documents an insurance policy transaction use case as a succession of transaction lines, each showing policy periods on a timeline graph.'
+      ] },
+      { h: 'Main menu', list: [
+        '<strong>Open</strong> - load a use case from a <code>.policycase</code> file.',
+        '<strong>Save</strong> - save the current use case to a <code>.policycase</code> file using its current name.',
+        '<strong>Save As</strong> - save under a new name (prompts you for a filename).',
+        '<strong>Edit / View</strong> - toggle between editing and read-only viewing. The tool opens in Edit mode.',
+        '<strong>Clear</strong> - clear the current use case and start a fresh one with a single default transaction line (asks for confirmation).',
+        '<strong>Print</strong> - print the current use case using your browser\'s print dialog.',
+        '<strong>Help</strong> - opens this page.',
+        '<strong>About</strong> - shows application information.',
+        '<strong>Language selector</strong> - switch between English, French, and Spanish; your choice is remembered.'
+      ] },
+      { h: 'Use case header', p: [
+        'Set a Use Case name, a Description (shown in italics), a Start Date, a time Scale (Month or Quarter), and a Range (how many scale units are shown - new use cases default to 16).'
+      ], list: [
+        '<strong>Color palette</strong> - 8 colors used to paint policy periods. Click a square to change it with your browser\'s color picker, or drag a color onto a transaction\'s graph to create a new policy period there. The reset button restores the default palette. Your palette is remembered between sessions.',
+        '<strong>+ button</strong> - adds a new transaction line. It clones the most recent non-Comment line (same type, comment, and policy periods) with its date advanced by one day - handy for a quick succession of similar transactions. If there\'s no eligible line to clone, it adds a plain default line instead.',
+        '<strong>Collapse/Expand all</strong> - collapses every transaction line if any are expanded, or expands them all if every line is already collapsed. This is the only way to change line display while in View mode.'
+      ] },
+      { h: 'Transaction lines', p: [
+        'Each line has a type (Submission, Policy Change, Cancellation, Reinstatement, Rewrite, Renewal, Comment, or Other), a transaction date (hidden in View mode when the type is Comment), and a comment - line breaks you type are preserved.',
+        'In Edit mode, use the controls on the left of each line to collapse/expand it, reorder it (drag the grab handle), open its edit dialog (pencil), or delete it (trash, asks for confirmation). Collapsing a line hides its comment and shrinks its graph, showing only its type and date.',
+        'Comment-type lines replace their graph with a single centered box showing the comment text instead of policy periods.'
+      ] },
+      { h: 'Policy periods', p: [
+        'Policy periods are the colored rectangles on a transaction line\'s graph, snapped to a grid of half a scale unit.'
+      ], list: [
+        'Drag a palette color onto the graph to create a new period there - it won\'t land on top of an existing one, it snaps to the nearest free spot.',
+        'Drag a period to move it. Dropping it onto another period on the same line swaps the two, as long as that doesn\'t collide with a third period; otherwise it settles at the nearest free position next to where you dropped it.',
+        'Drag its left or right edge to resize it - it stops at the edge of its neighbor and can never overlap another period.',
+        'Click its pencil icon to open its edit dialog.'
+      ], p2: [
+        'A gap is shown as a white rectangle with a diagonal cross and only shows an edit icon (no label).'
+      ] },
+      { h: 'Edit Policy Period dialog', list: [
+        '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8).',
+        '<strong>Description</strong> - multi-line; line breaks are preserved on the graph.',
+        '<strong>Is a gap</strong> checkbox.',
+        'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color.',
+        '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
+      ] },
+      { h: 'Dialogs', p: [
+        'Every dialog (Edit Transaction Line, Edit Policy Period, About, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
+      ] },
+      { h: 'Saving and loading', p: [
+        'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.'
+      ] }
+    ]
+  },
+  fr: {
+    pageTitle: 'Outil de cycle de vie des polices - Aide',
+    sections: [
+      { h: 'Aperçu', p: [
+        'Cet outil documente un cas d\'utilisation de transactions de polices d\'assurance sous forme d\'une succession de lignes de transaction, chacune montrant des périodes de police sur un graphique temporel.'
+      ] },
+      { h: 'Menu principal', list: [
+        '<strong>Ouvrir</strong> - charge un cas d\'utilisation depuis un fichier <code>.policycase</code>.',
+        '<strong>Enregistrer</strong> - enregistre le cas d\'utilisation actuel dans un fichier <code>.policycase</code> en utilisant son nom actuel.',
+        '<strong>Enregistrer sous</strong> - enregistre sous un nouveau nom (demande un nom de fichier).',
+        '<strong>Édition / Visualisation</strong> - bascule entre édition et visualisation en lecture seule. L\'outil s\'ouvre en mode édition.',
+        '<strong>Effacer</strong> - efface le cas d\'utilisation actuel et en recommence un nouveau avec une seule ligne de transaction par défaut (demande confirmation).',
+        '<strong>Imprimer</strong> - imprime le cas d\'utilisation actuel via la boîte de dialogue d\'impression du navigateur.',
+        '<strong>Aide</strong> - ouvre cette page.',
+        '<strong>À propos</strong> - affiche les informations de l\'application.',
+        '<strong>Sélecteur de langue</strong> - bascule entre anglais, français et espagnol ; votre choix est mémorisé.'
+      ] },
+      { h: 'En-tête du cas d\'utilisation', p: [
+        'Définissez un nom de Cas d\'utilisation, une Description (affichée en italique), une Date de début, une Échelle de temps (Mois ou Trimestre), et une Portée (nombre d\'unités d\'échelle affichées - les nouveaux cas d\'utilisation ont par défaut une valeur de 16).'
+      ], list: [
+        '<strong>Palette de couleurs</strong> - 8 couleurs utilisées pour peindre les périodes de police. Cliquez sur une case pour la modifier avec le sélecteur de couleur du navigateur, ou glissez une couleur sur le graphique d\'une transaction pour y créer une nouvelle période de police. Le bouton de réinitialisation restaure la palette par défaut. Votre palette est mémorisée entre les sessions.',
+        '<strong>Bouton +</strong> - ajoute une nouvelle ligne de transaction. Il clone la dernière ligne qui n\'est pas de type Commentaire (même type, commentaire et périodes de police) avec sa date avancée d\'un jour - pratique pour une succession rapide de transactions similaires. S\'il n\'y a aucune ligne éligible à cloner, une ligne par défaut simple est ajoutée à la place.',
+        '<strong>Tout réduire/développer</strong> - réduit toutes les lignes de transaction si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites. C\'est le seul moyen de modifier l\'affichage des lignes en mode visualisation.'
+      ] },
+      { h: 'Lignes de transaction', p: [
+        'Chaque ligne a un type (Soumission, Modification, Annulation, Remise en vigueur, Réécriture, Renouvellement, Commentaire ou Autre), une date de transaction (masquée en mode visualisation lorsque le type est Commentaire), et un commentaire - les sauts de ligne que vous tapez sont conservés.',
+        'En mode édition, utilisez les commandes à gauche de chaque ligne pour la réduire/développer, la réorganiser (glisser la poignée), ouvrir sa boîte de dialogue d\'édition (crayon), ou la supprimer (poubelle, demande confirmation). Réduire une ligne masque son commentaire et réduit son graphique, ne montrant que son type et sa date.',
+        'Les lignes de type Commentaire remplacent leur graphique par une case unique centrée affichant le texte du commentaire à la place des périodes de police.'
+      ] },
+      { h: 'Périodes de police', p: [
+        'Les périodes de police sont les rectangles colorés sur le graphique d\'une ligne de transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
+      ], list: [
+        'Glissez une couleur de la palette sur le graphique pour y créer une nouvelle période - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche.',
+        'Glissez une période pour la déplacer. La déposer sur une autre période de la même ligne échange les deux, tant que cela ne crée pas de collision avec une troisième période ; sinon elle se positionne à l\'emplacement libre le plus proche de l\'endroit où vous l\'avez déposée.',
+        'Glissez son bord gauche ou droit pour la redimensionner - elle s\'arrête au bord de sa voisine et ne peut jamais chevaucher une autre période.',
+        'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
+      ], p2: [
+        'Un écart est affiché comme un rectangle blanc avec une croix diagonale et ne montre qu\'une icône d\'édition (sans étiquette).'
+      ] },
+      { h: 'Boîte de dialogue Modifier la période de police', list: [
+        '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8).',
+        '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique.',
+        'Case à cocher <strong>Est un écart</strong>.',
+        'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée.',
+        'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
+      ] },
+      { h: 'Boîtes de dialogue', p: [
+        'Chaque boîte de dialogue (Modifier la ligne de transaction, Modifier la période de police, À propos, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
+      ] },
+      { h: 'Enregistrement et chargement', p: [
+        'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.'
+      ] }
+    ]
+  },
+  es: {
+    pageTitle: 'Herramienta de ciclo de vida de pólizas - Ayuda',
+    sections: [
+      { h: 'Resumen', p: [
+        'Esta herramienta documenta un caso de uso de transacciones de pólizas de seguros como una sucesión de líneas de transacción, cada una mostrando períodos de póliza en un gráfico temporal.'
+      ] },
+      { h: 'Menú principal', list: [
+        '<strong>Abrir</strong> - carga un caso de uso desde un archivo <code>.policycase</code>.',
+        '<strong>Guardar</strong> - guarda el caso de uso actual en un archivo <code>.policycase</code> usando su nombre actual.',
+        '<strong>Guardar como</strong> - guarda con un nuevo nombre (solicita un nombre de archivo).',
+        '<strong>Editar / Visualizar</strong> - alterna entre edición y visualización de solo lectura. La herramienta se abre en modo edición.',
+        '<strong>Borrar</strong> - borra el caso de uso actual y comienza uno nuevo con una sola línea de transacción por defecto (solicita confirmación).',
+        '<strong>Imprimir</strong> - imprime el caso de uso actual usando el cuadro de diálogo de impresión del navegador.',
+        '<strong>Ayuda</strong> - abre esta página.',
+        '<strong>Acerca de</strong> - muestra información de la aplicación.',
+        '<strong>Selector de idioma</strong> - alterna entre inglés, francés y español; su elección se recuerda.'
+      ] },
+      { h: 'Encabezado del caso de uso', p: [
+        'Defina un nombre de Caso de uso, una Descripción (mostrada en cursiva), una Fecha de inicio, una Escala de tiempo (Mes o Trimestre), y un Rango (cuántas unidades de escala se muestran - los casos de uso nuevos tienen un valor por defecto de 16).'
+      ], list: [
+        '<strong>Paleta de colores</strong> - 8 colores usados para pintar los períodos de póliza. Haga clic en un cuadro para cambiarlo con el selector de color del navegador, o arrastre un color sobre el gráfico de una transacción para crear allí un nuevo período de póliza. El botón de restablecer recupera la paleta por defecto. Su paleta se recuerda entre sesiones.',
+        '<strong>Botón +</strong> - agrega una nueva línea de transacción. Clona la línea más reciente que no sea de tipo Comentario (mismo tipo, comentario y períodos de póliza) con su fecha avanzada un día - útil para una sucesión rápida de transacciones similares. Si no hay ninguna línea apta para clonar, agrega en su lugar una línea simple por defecto.',
+        '<strong>Contraer/Expandir todo</strong> - contrae todas las líneas de transacción si alguna está expandida, o las expande todas si ya están todas contraídas. Esta es la única forma de cambiar la visualización de las líneas en modo visualización.'
+      ] },
+      { h: 'Líneas de transacción', p: [
+        'Cada línea tiene un tipo (Emisión, Modificación, Cancelación, Reinstalación, Reescritura, Renovación, Comentario u Otro), una fecha de transacción (oculta en modo visualización cuando el tipo es Comentario), y un comentario - los saltos de línea que escriba se conservan.',
+        'En modo edición, use los controles a la izquierda de cada línea para contraerla/expandirla, reordenarla (arrastrando el asa), abrir su cuadro de diálogo de edición (lápiz), o eliminarla (papelera, solicita confirmación). Contraer una línea oculta su comentario y reduce su gráfico, mostrando solo su tipo y fecha.',
+        'Las líneas de tipo Comentario reemplazan su gráfico por un único recuadro centrado que muestra el texto del comentario en lugar de los períodos de póliza.'
+      ] },
+      { h: 'Períodos de póliza', p: [
+        'Los períodos de póliza son los rectángulos coloreados en el gráfico de una línea de transacción, ajustados a una cuadrícula de media unidad de escala.'
+      ], list: [
+        'Arrastre un color de la paleta sobre el gráfico para crear allí un nuevo período - no caerá encima de uno existente, se ajustará al espacio libre más cercano.',
+        'Arrastre un período para moverlo. Soltarlo sobre otro período de la misma línea intercambia ambos, siempre que eso no provoque una colisión con un tercer período; de lo contrario, se ubicará en la posición libre más cercana a donde lo soltó.',
+        'Arrastre su borde izquierdo o derecho para redimensionarlo - se detiene en el borde de su vecino y nunca puede superponerse a otro período.',
+        'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
+      ], p2: [
+        'Un vacío se muestra como un rectángulo blanco con una cruz diagonal y solo muestra un icono de edición (sin etiqueta).'
+      ] },
+      { h: 'Cuadro de diálogo Editar período de póliza', list: [
+        '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8).',
+        '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico.',
+        'Casilla <strong>Es un vacío</strong>.',
+        'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado.',
+        'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
+      ] },
+      { h: 'Cuadros de diálogo', p: [
+        'Todos los cuadros de diálogo (Editar línea de transacción, Editar período de póliza, Acerca de, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
+      ] },
+      { h: 'Guardar y abrir', p: [
+        'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.'
+      ] }
+    ]
+  }
+};
 
-  <h2>Use case header</h2>
-  <p>Set a description, start date, time scale (Month or Quarter), range (number of scale units shown), and an 8-color palette used to paint policy periods. Click a color square to change it with your browser's color picker, or drag a color onto a transaction graph to create a new policy period. Use the <strong>+</strong> button to add a new transaction line.</p>
+function detectLocale() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved && SUPPORTED.includes(saved)) return saved;
+  const browserLangs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+  for (const lang of browserLangs) {
+    const short = lang.slice(0, 2).toLowerCase();
+    if (SUPPORTED.includes(short)) return short;
+  }
+  return 'en';
+}
 
-  <h2>Transaction lines</h2>
-  <p>Each transaction line has a type (Submission, Policy Change, Cancellation, Reinstatement, Rewrite, Renewal, Comment, Other) and a comment. Use the controls on the left to collapse/expand the line, reorder it (drag the grab handle), edit its properties, or delete it.</p>
+function render(locale) {
+  const dict = T[locale] || T.en;
+  document.documentElement.lang = locale;
+  document.title = dict.pageTitle;
+  document.getElementById('pageTitle').textContent = dict.pageTitle;
 
-  <h2>Policy periods</h2>
-  <p>Policy periods are rectangles on a transaction's graph. In Edit mode you can:</p>
-  <ul>
-    <li>Drag a palette color onto the graph to create a new period.</li>
-    <li>Drag a period to move it.</li>
-    <li>Drag its left or right edge to resize it.</li>
-    <li>Click its edit (pencil) icon to set its policy term/period numbers, description, color, or mark it as a gap.</li>
-  </ul>
-  <p>A gap is shown as a white rectangle with a diagonal cross and only an edit icon.</p>
+  const content = document.getElementById('content');
+  content.innerHTML = dict.sections.map(section => {
+    const paras = (section.p || []).map(t => `<p>${t}</p>`).join('');
+    const list = section.list ? `<ul>${section.list.map(li => `<li>${li}</li>`).join('')}</ul>` : '';
+    const paras2 = (section.p2 || []).map(t => `<p>${t}</p>`).join('');
+    return `<h2>${section.h}</h2>${paras}${list}${paras2}`;
+  }).join('');
+}
+
+const select = document.getElementById('langSelect');
+SUPPORTED.forEach(code => {
+  const opt = document.createElement('option');
+  opt.value = code;
+  opt.textContent = LANG_NAMES[code];
+  select.appendChild(opt);
+});
+
+const initialLocale = detectLocale();
+select.value = initialLocale;
+render(initialLocale);
+
+select.addEventListener('change', () => {
+  localStorage.setItem(STORAGE_KEY, select.value);
+  render(select.value);
+});
+</script>
 </body>
 </html>
