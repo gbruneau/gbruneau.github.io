@@ -42,6 +42,16 @@
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
   }
+  .title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .app-icon {
+    height: 2.4rem;
+    width: auto;
+    display: block;
+  }
   h1 { margin: 0; font-size: 1.5rem; }
   h2 { margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.15rem; }
   p { margin: 0.5rem 0; }
@@ -66,7 +76,10 @@
 </head>
 <body>
   <div class="top-row">
-    <h1 id="pageTitle"></h1>
+    <div class="title-group">
+      <img src="./favicon.svg" alt="" class="app-icon" />
+      <h1 id="pageTitle"></h1>
+    </div>
     <select id="langSelect" aria-label="Language"></select>
   </div>
   <div id="content"></div>
@@ -114,12 +127,14 @@ const T = {
         'Drag its left or right edge to resize it - it stops at the edge of its neighbor and can never overlap another period.',
         'Click its pencil icon to open its edit dialog.'
       ], p2: [
-        'A gap is shown as a white rectangle with a diagonal cross, its description centered on it if any, and only an edit icon (no term/period label).'
+        'A gap is shown as a checkerboard-patterned rectangle with a thick diagonal cross, its description centered on it if any, and only an edit icon (no term/period label).',
+        'A draft period (not a gap) is shown with a diagonal hatch in its own color and its term/period label and description in italics.'
       ] },
       { h: 'Edit Policy Period dialog', list: [
         '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8).',
         '<strong>Description</strong> - multi-line; line breaks are preserved on the graph, even for gaps.',
         '<strong>Is a gap</strong> checkbox.',
+        '<strong>Draft</strong> checkbox - hidden when Is a gap is checked. Marks the period as a draft, shown with a hatched fill and italic text on the graph.',
         '<strong>Highlight</strong> - four checkboxes (top, left, right, bottom) arranged around a small preview square, each on the side it controls. Checking one adds a thick border on that side of the period\'s rectangle; the square previews it live. Available for any period, gap or not, and any combination of sides can be checked at once.',
         'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations, skewed darker for contrast). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color. Text on a period with a dark color automatically switches to white to stay readable.',
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
@@ -170,12 +185,14 @@ const T = {
         'Glissez son bord gauche ou droit pour la redimensionner - elle s\'arrête au bord de sa voisine et ne peut jamais chevaucher une autre période.',
         'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
       ], p2: [
-        'Un écart est affiché comme un rectangle blanc avec une croix diagonale, sa description centrée dessus le cas échéant, et seulement une icône d\'édition (pas d\'étiquette terme/période).'
+        'Un écart est affiché comme un rectangle à motif damier avec une croix diagonale épaisse, sa description centrée dessus le cas échéant, et seulement une icône d\'édition (pas d\'étiquette terme/période).',
+        'Une période brouillon (qui n\'est pas un écart) est affichée avec une trame hachurée dans sa propre couleur, avec son étiquette terme/période et sa description en italique.'
       ] },
       { h: 'Boîte de dialogue Modifier la période de police', list: [
         '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8).',
         '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique, même pour les écarts.',
         'Case à cocher <strong>Est un écart</strong>.',
+        'Case à cocher <strong>Brouillon</strong> - masquée si Est un écart est cochée. Marque la période comme brouillon, affichée avec un remplissage hachuré et un texte en italique sur le graphique.',
         '<strong>Surlignage</strong> - quatre cases à cocher (haut, gauche, droite, bas) disposées autour d\'un petit carré d\'aperçu, chacune du côté qu\'elle contrôle. En cocher une ajoute une bordure épaisse de ce côté du rectangle de la période ; le carré la prévisualise en direct. Disponible pour toute période, écart ou non, et n\'importe quelle combinaison de côtés peut être cochée à la fois.',
         'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées, orientées vers le foncé pour plus de contraste). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée. Le texte sur une période de couleur foncée passe automatiquement en blanc pour rester lisible.',
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
@@ -226,12 +243,14 @@ const T = {
         'Arrastre su borde izquierdo o derecho para redimensionarlo - se detiene en el borde de su vecino y nunca puede superponerse a otro período.',
         'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
       ], p2: [
-        'Un vacío se muestra como un rectángulo blanco con una cruz diagonal, su descripción centrada si la hay, y solo un icono de edición (sin etiqueta de término/período).'
+        'Un vacío se muestra como un rectángulo con patrón de tablero de ajedrez y una cruz diagonal gruesa, su descripción centrada si la hay, y solo un icono de edición (sin etiqueta de término/período).',
+        'Un período borrador (que no es un vacío) se muestra con una trama rayada en su propio color, con su etiqueta de término/período y su descripción en cursiva.'
       ] },
       { h: 'Cuadro de diálogo Editar período de póliza', list: [
         '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8).',
         '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico, incluso para los vacíos.',
         'Casilla <strong>Es un vacío</strong>.',
+        'Casilla <strong>Borrador</strong> - oculta si Es un vacío está marcada. Marca el período como borrador, mostrado con un relleno rayado y texto en cursiva en el gráfico.',
         '<strong>Resaltado</strong> - cuatro casillas (arriba, izquierda, derecha, abajo) dispuestas alrededor de un pequeño cuadrado de vista previa, cada una en el lado que controla. Marcar una agrega un borde grueso en ese lado del rectángulo del período; el cuadrado lo muestra en vivo. Disponible para cualquier período, sea vacío o no, y se puede marcar cualquier combinación de lados a la vez.',
         'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro, orientadas hacia lo oscuro para más contraste). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado. El texto sobre un período de color oscuro cambia automáticamente a blanco para seguir siendo legible.',
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
