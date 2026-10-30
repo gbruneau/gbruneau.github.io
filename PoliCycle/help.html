@@ -112,12 +112,12 @@ const T = {
       ], list: [
         '<strong>Color palette</strong> (only shown in Edit mode) - 8 colors used to paint policy periods. Click a square to change it with your browser\'s color picker, or drag a color onto a transaction\'s graph to create a new policy period there. The reset button restores the default palette. Your palette is remembered between sessions.',
         '<strong>+ button</strong> - adds a new transaction line. It clones the most recent non-Comment line (same type, comment, and policy periods) with its date advanced by one day - handy for a quick succession of similar transactions. If there\'s no eligible line to clone, it adds a plain default line instead.',
-        '<strong>Collapse/Expand all</strong> - collapses every transaction line if any are expanded, or expands them all if every line is already collapsed. This is the only way to change line display while in View mode.'
+        '<strong>Collapse/Expand all</strong> (only shown in Edit mode) - collapses every transaction line if any are expanded, or expands them all if every line is already collapsed.'
       ] },
       { h: 'Transaction lines', p: [
         'Each line has a type (Submission, Policy Change, Cancellation, Reinstatement, Rewrite, Renewal, Comment, or Other), a transaction date (hidden in View mode when the type is Comment), and a comment - line breaks you type are preserved.',
         'In Edit mode, use the controls on the left of each line to collapse/expand it, reorder it (drag the grab handle), open its edit dialog (pencil), or delete it (trash, asks for confirmation). Collapsing a line hides its comment and shrinks its graph, showing only its type and date.',
-        'Comment-type lines replace their graph with a single centered box showing the comment text instead of policy periods.'
+        'Comment-type lines replace their graph with a single centered box showing the comment text instead of policy periods. In View mode (and when printing), their type label is also hidden on the left.'
       ] },
       { h: 'Policy periods', p: [
         'Policy periods are the colored rectangles on a transaction line\'s graph, snapped to a grid of half a scale unit.'
@@ -146,6 +146,10 @@ const T = {
       { h: 'Saving and loading', p: [
         'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.',
         'Every line and period property - including collapsed/expanded state, colors, gap status, and highlight borders - is saved and restored exactly as you left it.'
+      ] },
+      { h: 'Sharing via URL', p: [
+        'The address bar always reflects the full current use case, compressed and encoded in the URL. Copy and send that URL to someone else and opening it reproduces the exact same use case for them - no file or server needed.',
+        'This relies on compression features built into modern browsers; on a very old browser the address bar may simply not update, but nothing else in the app is affected.'
       ] }
     ]
   },
@@ -171,12 +175,12 @@ const T = {
       ], list: [
         '<strong>Palette de couleurs</strong> (affichée uniquement en mode édition) - 8 couleurs utilisées pour peindre les périodes de police. Cliquez sur une case pour la modifier avec le sélecteur de couleur du navigateur, ou glissez une couleur sur le graphique d\'une transaction pour y créer une nouvelle période de police. Le bouton de réinitialisation restaure la palette par défaut. Votre palette est mémorisée entre les sessions.',
         '<strong>Bouton +</strong> - ajoute une nouvelle ligne de transaction. Il clone la dernière ligne qui n\'est pas de type Commentaire (même type, commentaire et périodes de police) avec sa date avancée d\'un jour - pratique pour une succession rapide de transactions similaires. S\'il n\'y a aucune ligne éligible à cloner, une ligne par défaut simple est ajoutée à la place.',
-        '<strong>Tout réduire/développer</strong> - réduit toutes les lignes de transaction si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites. C\'est le seul moyen de modifier l\'affichage des lignes en mode visualisation.'
+        '<strong>Tout réduire/développer</strong> (affiché uniquement en mode édition) - réduit toutes les lignes de transaction si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites.'
       ] },
       { h: 'Lignes de transaction', p: [
         'Chaque ligne a un type (Soumission, Modification, Annulation, Remise en vigueur, Réécriture, Renouvellement, Commentaire ou Autre), une date de transaction (masquée en mode visualisation lorsque le type est Commentaire), et un commentaire - les sauts de ligne que vous tapez sont conservés.',
         'En mode édition, utilisez les commandes à gauche de chaque ligne pour la réduire/développer, la réorganiser (glisser la poignée), ouvrir sa boîte de dialogue d\'édition (crayon), ou la supprimer (poubelle, demande confirmation). Réduire une ligne masque son commentaire et réduit son graphique, ne montrant que son type et sa date.',
-        'Les lignes de type Commentaire remplacent leur graphique par une case unique centrée affichant le texte du commentaire à la place des périodes de police.'
+        'Les lignes de type Commentaire remplacent leur graphique par une case unique centrée affichant le texte du commentaire à la place des périodes de police. En mode visualisation (et à l\'impression), leur étiquette de type est également masquée à gauche.'
       ] },
       { h: 'Périodes de police', p: [
         'Les périodes de police sont les rectangles colorés sur le graphique d\'une ligne de transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
@@ -205,6 +209,10 @@ const T = {
       { h: 'Enregistrement et chargement', p: [
         'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.',
         'Chaque propriété de ligne et de période - y compris l\'état réduit/développé, les couleurs, le statut d\'écart et les bordures de surlignage - est enregistrée et restaurée telle que vous l\'avez laissée.'
+      ] },
+      { h: 'Partage par URL', p: [
+        'La barre d\'adresse reflète toujours le cas d\'utilisation actuel complet, compressé et encodé dans l\'URL. Copiez et envoyez cette URL à quelqu\'un d\'autre ; l\'ouvrir reproduit exactement le même cas d\'utilisation pour cette personne - aucun fichier ni serveur nécessaire.',
+        'Cela repose sur des fonctions de compression intégrées aux navigateurs modernes ; sur un très vieux navigateur, la barre d\'adresse peut simplement ne pas se mettre à jour, sans affecter le reste de l\'application.'
       ] }
     ]
   },
@@ -230,12 +238,12 @@ const T = {
       ], list: [
         '<strong>Paleta de colores</strong> (se muestra solo en modo edición) - 8 colores usados para pintar los períodos de póliza. Haga clic en un cuadro para cambiarlo con el selector de color del navegador, o arrastre un color sobre el gráfico de una transacción para crear allí un nuevo período de póliza. El botón de restablecer recupera la paleta por defecto. Su paleta se recuerda entre sesiones.',
         '<strong>Botón +</strong> - agrega una nueva línea de transacción. Clona la línea más reciente que no sea de tipo Comentario (mismo tipo, comentario y períodos de póliza) con su fecha avanzada un día - útil para una sucesión rápida de transacciones similares. Si no hay ninguna línea apta para clonar, agrega en su lugar una línea simple por defecto.',
-        '<strong>Contraer/Expandir todo</strong> - contrae todas las líneas de transacción si alguna está expandida, o las expande todas si ya están todas contraídas. Esta es la única forma de cambiar la visualización de las líneas en modo visualización.'
+        '<strong>Contraer/Expandir todo</strong> (solo se muestra en modo edición) - contrae todas las líneas de transacción si alguna está expandida, o las expande todas si ya están todas contraídas.'
       ] },
       { h: 'Líneas de transacción', p: [
         'Cada línea tiene un tipo (Emisión, Modificación, Cancelación, Reinstalación, Reescritura, Renovación, Comentario u Otro), una fecha de transacción (oculta en modo visualización cuando el tipo es Comentario), y un comentario - los saltos de línea que escriba se conservan.',
         'En modo edición, use los controles a la izquierda de cada línea para contraerla/expandirla, reordenarla (arrastrando el asa), abrir su cuadro de diálogo de edición (lápiz), o eliminarla (papelera, solicita confirmación). Contraer una línea oculta su comentario y reduce su gráfico, mostrando solo su tipo y fecha.',
-        'Las líneas de tipo Comentario reemplazan su gráfico por un único recuadro centrado que muestra el texto del comentario en lugar de los períodos de póliza.'
+        'Las líneas de tipo Comentario reemplazan su gráfico por un único recuadro centrado que muestra el texto del comentario en lugar de los períodos de póliza. En modo visualización (y al imprimir), su etiqueta de tipo también se oculta a la izquierda.'
       ] },
       { h: 'Períodos de póliza', p: [
         'Los períodos de póliza son los rectángulos coloreados en el gráfico de una línea de transacción, ajustados a una cuadrícula de media unidad de escala.'
@@ -264,6 +272,10 @@ const T = {
       { h: 'Guardar y abrir', p: [
         'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.',
         'Cada propiedad de línea y período - incluyendo el estado contraído/expandido, los colores, el estado de vacío y los bordes de resaltado - se guarda y se restaura tal como la dejó.'
+      ] },
+      { h: 'Compartir mediante URL', p: [
+        'La barra de direcciones siempre refleja el caso de uso actual completo, comprimido y codificado en la URL. Copie y envíe esa URL a otra persona; al abrirla se reproduce exactamente el mismo caso de uso para ella - no se necesita archivo ni servidor.',
+        'Esto depende de funciones de compresión integradas en los navegadores modernos; en un navegador muy antiguo, la barra de direcciones puede simplemente no actualizarse, sin afectar al resto de la aplicación.'
       ] }
     ]
   }
