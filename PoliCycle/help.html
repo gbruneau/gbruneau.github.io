@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-<title>Policy Lifecycle Tool - Help</title>
+<title>PoliCycle - Help</title>
 <style>
   :root {
     --text: #1a1a1a;
@@ -78,7 +78,7 @@ const LANG_NAMES = { en: 'English', fr: 'Français', es: 'Español' };
 
 const T = {
   en: {
-    pageTitle: 'Policy Lifecycle Tool - Help',
+    pageTitle: 'PoliCycle - Help',
     sections: [
       { h: 'Overview', p: [
         'This tool documents an insurance policy transaction use case as a succession of transaction lines, each showing policy periods on a timeline graph.'
@@ -109,7 +109,7 @@ const T = {
       { h: 'Policy periods', p: [
         'Policy periods are the colored rectangles on a transaction line\'s graph, snapped to a grid of half a scale unit.'
       ], list: [
-        'Drag a palette color onto the graph to create a new period there - it won\'t land on top of an existing one, it snaps to the nearest free spot.',
+        'Drag a palette color onto the graph to create a new period there - it won\'t land on top of an existing one, it snaps to the nearest free spot. It starts at the lightest shade of that color, with the next Policy Term on that line (T1P1, then T2P1, T3P1, ...).',
         'Drag a period to move it. Dropping it onto another period on the same line swaps the two, as long as that doesn\'t collide with a third period; otherwise it settles at the nearest free position next to where you dropped it.',
         'Drag its left or right edge to resize it - it stops at the edge of its neighbor and can never overlap another period.',
         'Click its pencil icon to open its edit dialog.'
@@ -120,8 +120,8 @@ const T = {
         '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8).',
         '<strong>Description</strong> - multi-line; line breaks are preserved on the graph, even for gaps.',
         '<strong>Is a gap</strong> checkbox.',
-        '<strong>Highlight left</strong> / <strong>Highlight right</strong> checkboxes - add a thick border on that side of the period\'s rectangle. Available for any period, gap or not.',
-        'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color.',
+        '<strong>Highlight</strong> - four checkboxes (top, left, right, bottom) arranged around a small preview square, each on the side it controls. Checking one adds a thick border on that side of the period\'s rectangle; the square previews it live. Available for any period, gap or not, and any combination of sides can be checked at once.',
+        'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations, skewed darker for contrast). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color. Text on a period with a dark color automatically switches to white to stay readable.',
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
       ] },
       { h: 'Dialogs', p: [
@@ -134,7 +134,7 @@ const T = {
     ]
   },
   fr: {
-    pageTitle: 'Outil de cycle de vie des polices - Aide',
+    pageTitle: 'PoliCycle - Aide',
     sections: [
       { h: 'Aperçu', p: [
         'Cet outil documente un cas d\'utilisation de transactions de polices d\'assurance sous forme d\'une succession de lignes de transaction, chacune montrant des périodes de police sur un graphique temporel.'
@@ -165,7 +165,7 @@ const T = {
       { h: 'Périodes de police', p: [
         'Les périodes de police sont les rectangles colorés sur le graphique d\'une ligne de transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
       ], list: [
-        'Glissez une couleur de la palette sur le graphique pour y créer une nouvelle période - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche.',
+        'Glissez une couleur de la palette sur le graphique pour y créer une nouvelle période - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche. Elle démarre à la nuance la plus claire de cette couleur, avec le prochain Terme de police sur cette ligne (T1P1, puis T2P1, T3P1, ...).',
         'Glissez une période pour la déplacer. La déposer sur une autre période de la même ligne échange les deux, tant que cela ne crée pas de collision avec une troisième période ; sinon elle se positionne à l\'emplacement libre le plus proche de l\'endroit où vous l\'avez déposée.',
         'Glissez son bord gauche ou droit pour la redimensionner - elle s\'arrête au bord de sa voisine et ne peut jamais chevaucher une autre période.',
         'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
@@ -176,8 +176,8 @@ const T = {
         '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8).',
         '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique, même pour les écarts.',
         'Case à cocher <strong>Est un écart</strong>.',
-        'Cases à cocher <strong>Surligner à gauche</strong> / <strong>Surligner à droite</strong> - ajoutent une bordure épaisse de ce côté du rectangle de la période. Disponible pour toute période, écart ou non.',
-        'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée.',
+        '<strong>Surlignage</strong> - quatre cases à cocher (haut, gauche, droite, bas) disposées autour d\'un petit carré d\'aperçu, chacune du côté qu\'elle contrôle. En cocher une ajoute une bordure épaisse de ce côté du rectangle de la période ; le carré la prévisualise en direct. Disponible pour toute période, écart ou non, et n\'importe quelle combinaison de côtés peut être cochée à la fois.',
+        'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées, orientées vers le foncé pour plus de contraste). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée. Le texte sur une période de couleur foncée passe automatiquement en blanc pour rester lisible.',
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
       ] },
       { h: 'Boîtes de dialogue', p: [
@@ -190,7 +190,7 @@ const T = {
     ]
   },
   es: {
-    pageTitle: 'Herramienta de ciclo de vida de pólizas - Ayuda',
+    pageTitle: 'PoliCycle - Ayuda',
     sections: [
       { h: 'Resumen', p: [
         'Esta herramienta documenta un caso de uso de transacciones de pólizas de seguros como una sucesión de líneas de transacción, cada una mostrando períodos de póliza en un gráfico temporal.'
@@ -221,7 +221,7 @@ const T = {
       { h: 'Períodos de póliza', p: [
         'Los períodos de póliza son los rectángulos coloreados en el gráfico de una línea de transacción, ajustados a una cuadrícula de media unidad de escala.'
       ], list: [
-        'Arrastre un color de la paleta sobre el gráfico para crear allí un nuevo período - no caerá encima de uno existente, se ajustará al espacio libre más cercano.',
+        'Arrastre un color de la paleta sobre el gráfico para crear allí un nuevo período - no caerá encima de uno existente, se ajustará al espacio libre más cercano. Comienza con el tono más claro de ese color, con el siguiente Término de póliza en esa línea (T1P1, luego T2P1, T3P1, ...).',
         'Arrastre un período para moverlo. Soltarlo sobre otro período de la misma línea intercambia ambos, siempre que eso no provoque una colisión con un tercer período; de lo contrario, se ubicará en la posición libre más cercana a donde lo soltó.',
         'Arrastre su borde izquierdo o derecho para redimensionarlo - se detiene en el borde de su vecino y nunca puede superponerse a otro período.',
         'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
@@ -232,8 +232,8 @@ const T = {
         '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8).',
         '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico, incluso para los vacíos.',
         'Casilla <strong>Es un vacío</strong>.',
-        'Casillas <strong>Resaltar a la izquierda</strong> / <strong>Resaltar a la derecha</strong> - agregan un borde grueso en ese lado del rectángulo del período. Disponible para cualquier período, sea vacío o no.',
-        'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado.',
+        '<strong>Resaltado</strong> - cuatro casillas (arriba, izquierda, derecha, abajo) dispuestas alrededor de un pequeño cuadrado de vista previa, cada una en el lado que controla. Marcar una agrega un borde grueso en ese lado del rectángulo del período; el cuadrado lo muestra en vivo. Disponible para cualquier período, sea vacío o no, y se puede marcar cualquier combinación de lados a la vez.',
+        'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro, orientadas hacia lo oscuro para más contraste). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado. El texto sobre un período de color oscuro cambia automáticamente a blanco para seguir siendo legible.',
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
       ] },
       { h: 'Cuadros de diálogo', p: [
