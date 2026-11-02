@@ -124,7 +124,7 @@ const T = {
       { h: 'Policy periods', p: [
         'Policy periods are the colored rectangles on a transaction line\'s graph, snapped to a grid of half a scale unit.'
       ], list: [
-        'Drag the New policy period handle (the white square in the use case header) onto the graph to create a new period there and immediately open its edit dialog - it won\'t land on top of an existing one, it snaps to the nearest free spot. It starts at the lightest shade of the first base palette color, and continues the numbering sequence on that line after the highest existing period: T1P1, then T1P2, up to T1P8, then T2P1, and so on.',
+        'Drag the New policy period handle (the white square in the use case header) onto the graph to create a new period there and immediately open its edit dialog - it won\'t land on top of an existing one, it snaps to the nearest free spot. It continues the numbering sequence on that line after the highest existing period (T1P1, then T1P2, up to T1P8, then T2P1, and so on) and its color matches that Term/Period cell of the enhanced color palette.',
         'Drag a period to move it. Dropping it onto another period on the same line swaps the two, as long as that doesn\'t collide with a third period; otherwise it settles at the nearest free position next to where you dropped it.',
         'Drag its left or right edge to resize it - it stops at the edge of its neighbor and can never overlap another period.',
         'Click its pencil icon to open its edit dialog.'
@@ -190,7 +190,7 @@ const T = {
       { h: 'Périodes de police', p: [
         'Les périodes de police sont les rectangles colorés sur le graphique d\'une ligne de transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
       ], list: [
-        'Glissez la poignée Nouvelle période de police (le carré blanc dans l\'en-tête du cas d\'utilisation) sur le graphique pour y créer une nouvelle période et ouvrir immédiatement sa boîte de dialogue d\'édition - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche. Elle démarre à la nuance la plus claire de la première couleur de base, et poursuit la numérotation sur cette ligne après la période la plus élevée existante : T1P1, puis T1P2, jusqu\'à T1P8, puis T2P1, et ainsi de suite.',
+        'Glissez la poignée Nouvelle période de police (le carré blanc dans l\'en-tête du cas d\'utilisation) sur le graphique pour y créer une nouvelle période et ouvrir immédiatement sa boîte de dialogue d\'édition - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche. Elle poursuit la numérotation sur cette ligne après la période la plus élevée existante (T1P1, puis T1P2, jusqu\'à T1P8, puis T2P1, et ainsi de suite) et sa couleur correspond à cette cellule Terme/Période de la palette de couleurs améliorée.',
         'Glissez une période pour la déplacer. La déposer sur une autre période de la même ligne échange les deux, tant que cela ne crée pas de collision avec une troisième période ; sinon elle se positionne à l\'emplacement libre le plus proche de l\'endroit où vous l\'avez déposée.',
         'Glissez son bord gauche ou droit pour la redimensionner - elle s\'arrête au bord de sa voisine et ne peut jamais chevaucher une autre période.',
         'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
@@ -256,7 +256,7 @@ const T = {
       { h: 'Períodos de póliza', p: [
         'Los períodos de póliza son los rectángulos coloreados en el gráfico de una línea de transacción, ajustados a una cuadrícula de media unidad de escala.'
       ], list: [
-        'Arrastre el asa Nuevo período de póliza (el cuadro blanco en el encabezado del caso de uso) sobre el gráfico para crear allí un nuevo período y abrir de inmediato su diálogo de edición - no caerá encima de uno existente, se ajustará al espacio libre más cercano. Comienza con el tono más claro del primer color base, y continúa la numeración en esa línea después del período más alto existente: T1P1, luego T1P2, hasta T1P8, luego T2P1, y así sucesivamente.',
+        'Arrastre el asa Nuevo período de póliza (el cuadro blanco en el encabezado del caso de uso) sobre el gráfico para crear allí un nuevo período y abrir de inmediato su diálogo de edición - no caerá encima de uno existente, se ajustará al espacio libre más cercano. Continúa la numeración en esa línea después del período más alto existente (T1P1, luego T1P2, hasta T1P8, luego T2P1, y así sucesivamente) y su color coincide con esa celda Término/Período de la paleta de colores mejorada.',
         'Arrastre un período para moverlo. Soltarlo sobre otro período de la misma línea intercambia ambos, siempre que eso no provoque una colisión con un tercer período; de lo contrario, se ubicará en la posición libre más cercana a donde lo soltó.',
         'Arrastre su borde izquierdo o derecho para redimensionarlo - se detiene en el borde de su vecino y nunca puede superponerse a otro período.',
         'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
