@@ -117,7 +117,8 @@ const T = {
       ] },
       { h: 'Transaction lines', p: [
         'Each line has a type (Submission, Policy Change, Cancellation, Reinstatement, Rewrite, Renewal, Other, or Comment - the last two set off by a separator, with Comment always last), a transaction date (hidden in View mode when the type is Comment), and a comment - line breaks you type are preserved.',
-        'In Edit mode, use the controls on the left of each line to collapse/expand it, reorder it (drag the grab handle), open its edit dialog (pencil), or delete it (trash, asks for confirmation). Collapsing a line hides its comment and shrinks its graph, showing only its type - except for the Other type in View mode (and so when printing), where the comment still shows next to the type.',
+        'In Edit mode, use the controls on the left of each line to collapse/expand it, reorder it (drag the grab handle), open its edit dialog (pencil), or delete it (trash, asks for confirmation). Collapsing a line hides its comment and shrinks its graph, showing only its type - except for the Other type in View mode (and so when printing), where the comment shows instead of the type.',
+        'The edit dialog (pencil) also has a <strong>Duplicate</strong> button, which clones the line - including its policy periods - and inserts the copy directly below it, pushing down any lines that follow.',
         'Comment-type lines replace their graph with a single centered box showing the comment text instead of policy periods. In View mode (and when printing), their type label is also hidden on the left.'
       ] },
       { h: 'Policy periods', p: [
@@ -143,7 +144,7 @@ const T = {
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
       ] },
       { h: 'Dialogs', p: [
-        'Every dialog (Edit Transaction Line, Edit Policy Period, About, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
+        'Every dialog (Transaction, Edit Policy Period, About, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
       ] },
       { h: 'Saving and loading', p: [
         'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.',
@@ -182,7 +183,8 @@ const T = {
       ] },
       { h: 'Lignes de transaction', p: [
         'Chaque ligne a un type (Soumission, Modification, Annulation, Remise en vigueur, Réécriture, Renouvellement, Autre ou Commentaire - ces deux derniers séparés par un trait, Commentaire étant toujours en dernier), une date de transaction (masquée en mode visualisation lorsque le type est Commentaire), et un commentaire - les sauts de ligne que vous tapez sont conservés.',
-        'En mode édition, utilisez les commandes à gauche de chaque ligne pour la réduire/développer, la réorganiser (glisser la poignée), ouvrir sa boîte de dialogue d\'édition (crayon), ou la supprimer (poubelle, demande confirmation). Réduire une ligne masque son commentaire et réduit son graphique, ne montrant que son type - sauf pour le type Autre en mode visualisation (et donc à l\'impression), où le commentaire reste affiché à côté du type.',
+        'En mode édition, utilisez les commandes à gauche de chaque ligne pour la réduire/développer, la réorganiser (glisser la poignée), ouvrir sa boîte de dialogue d\'édition (crayon), ou la supprimer (poubelle, demande confirmation). Réduire une ligne masque son commentaire et réduit son graphique, ne montrant que son type - sauf pour le type Autre en mode visualisation (et donc à l\'impression), où le commentaire s\'affiche à la place du type.',
+        'La boîte de dialogue d\'édition (crayon) comporte aussi un bouton <strong>Dupliquer</strong>, qui clone la ligne - y compris ses périodes de police - et insère la copie juste en dessous, en repoussant les lignes suivantes.',
         'Les lignes de type Commentaire remplacent leur graphique par une case unique centrée affichant le texte du commentaire à la place des périodes de police. En mode visualisation (et à l\'impression), leur étiquette de type est également masquée à gauche.'
       ] },
       { h: 'Périodes de police', p: [
@@ -208,7 +210,7 @@ const T = {
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
       ] },
       { h: 'Boîtes de dialogue', p: [
-        'Chaque boîte de dialogue (Modifier la ligne de transaction, Modifier la période de police, À propos, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
+        'Chaque boîte de dialogue (Transaction, Modifier la période de police, À propos, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
       ] },
       { h: 'Enregistrement et chargement', p: [
         'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.',
@@ -247,7 +249,8 @@ const T = {
       ] },
       { h: 'Líneas de transacción', p: [
         'Cada línea tiene un tipo (Emisión, Modificación, Cancelación, Reinstalación, Reescritura, Renovación, Otro o Comentario - estos dos últimos separados por una línea divisoria, con Comentario siempre al final), una fecha de transacción (oculta en modo visualización cuando el tipo es Comentario), y un comentario - los saltos de línea que escriba se conservan.',
-        'En modo edición, use los controles a la izquierda de cada línea para contraerla/expandirla, reordenarla (arrastrando el asa), abrir su cuadro de diálogo de edición (lápiz), o eliminarla (papelera, solicita confirmación). Contraer una línea oculta su comentario y reduce su gráfico, mostrando solo su tipo - excepto para el tipo Otro en modo visualización (y por lo tanto al imprimir), donde el comentario permanece visible junto al tipo.',
+        'En modo edición, use los controles a la izquierda de cada línea para contraerla/expandirla, reordenarla (arrastrando el asa), abrir su cuadro de diálogo de edición (lápiz), o eliminarla (papelera, solicita confirmación). Contraer una línea oculta su comentario y reduce su gráfico, mostrando solo su tipo - excepto para el tipo Otro en modo visualización (y por lo tanto al imprimir), donde el comentario se muestra en lugar del tipo.',
+        'El cuadro de diálogo de edición (lápiz) también tiene un botón <strong>Duplicar</strong>, que clona la línea - incluyendo sus períodos de póliza - e inserta la copia justo debajo, desplazando hacia abajo las líneas siguientes.',
         'Las líneas de tipo Comentario reemplazan su gráfico por un único recuadro centrado que muestra el texto del comentario en lugar de los períodos de póliza. En modo visualización (y al imprimir), su etiqueta de tipo también se oculta a la izquierda.'
       ] },
       { h: 'Períodos de póliza', p: [
@@ -273,7 +276,7 @@ const T = {
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
       ] },
       { h: 'Cuadros de diálogo', p: [
-        'Todos los cuadros de diálogo (Editar línea de transacción, Editar período de póliza, Acerca de, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
+        'Todos los cuadros de diálogo (Transacción, Editar período de póliza, Acerca de, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
       ] },
       { h: 'Guardar y abrir', p: [
         'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.',
