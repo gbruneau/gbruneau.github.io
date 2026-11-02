@@ -129,14 +129,15 @@ const T = {
         'Click its pencil icon to open its edit dialog.'
       ], p2: [
         'A gap is shown as a checkerboard-patterned rectangle with a thick diagonal cross, its description centered on it if any, and only an edit icon (no term/period label).',
-        'A draft period (not a gap) is shown with a diagonal hatch in its own color and its term/period label and description in italics.'
+        'A hatched period (not a gap) is shown with a diagonal hatch in its own color and its term/period label and description in italics.'
       ] },
       { h: 'Edit Policy Period dialog', list: [
         '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8).',
         '<strong>Description</strong> - multi-line; line breaks are preserved on the graph, even for gaps.',
         '<strong>Is a gap</strong> checkbox.',
-        '<strong>Draft</strong> checkbox - hidden when Is a gap is checked. Marks the period as a draft, shown with a hatched fill and italic text on the graph.',
-        '<strong>Fade in</strong> / <strong>Fade out</strong> checkboxes - hidden when Is a gap or Draft is checked. Fade in gradients from transparent to the selected color over the first third of the rectangle; Fade out gradients back to transparent over the last third. Both can be checked at once.',
+        '<strong>Lock</strong> checkbox - checked by default, hidden when Is a gap is checked. Shows a lock (checked) or unlock (unchecked) icon in the period\'s upper right corner on the graph.',
+        '<strong>Hatched</strong> checkbox - hidden when Is a gap is checked. Shows the period with a hatched fill and italic text on the graph.',
+        '<strong>Fade in</strong> / <strong>Fade out</strong> checkboxes - hidden when Is a gap or Hatched is checked. Fade in gradients from transparent to the selected color over the first third of the rectangle; Fade out gradients back to transparent over the last third. Both can be checked at once.',
         '<strong>Highlight</strong> - four checkboxes (top, left, right, bottom) arranged around a small preview square, each on the side it controls. Checking one adds a thick border on that side of the period\'s rectangle; the square previews it live. Available for any period, gap or not, and any combination of sides can be checked at once.',
         'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations, skewed darker for contrast). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color. Text on a period with a dark color automatically switches to white to stay readable.',
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
@@ -193,14 +194,15 @@ const T = {
         'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
       ], p2: [
         'Un écart est affiché comme un rectangle à motif damier avec une croix diagonale épaisse, sa description centrée dessus le cas échéant, et seulement une icône d\'édition (pas d\'étiquette terme/période).',
-        'Une période brouillon (qui n\'est pas un écart) est affichée avec une trame hachurée dans sa propre couleur, avec son étiquette terme/période et sa description en italique.'
+        'Une période hachurée (qui n\'est pas un écart) est affichée avec une trame hachurée dans sa propre couleur, avec son étiquette terme/période et sa description en italique.'
       ] },
       { h: 'Boîte de dialogue Modifier la période de police', list: [
         '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8).',
         '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique, même pour les écarts.',
         'Case à cocher <strong>Est un écart</strong>.',
-        'Case à cocher <strong>Brouillon</strong> - masquée si Est un écart est cochée. Marque la période comme brouillon, affichée avec un remplissage hachuré et un texte en italique sur le graphique.',
-        'Cases à cocher <strong>Fondu d\'entrée</strong> / <strong>Fondu de sortie</strong> - masquées si Est un écart ou Brouillon est cochée. Le fondu d\'entrée dégrade du transparent vers la couleur sélectionnée sur le premier tiers du rectangle ; le fondu de sortie dégrade vers le transparent sur le dernier tiers. Les deux peuvent être cochées en même temps.',
+        'Case à cocher <strong>Verrouillé</strong> - cochée par défaut, masquée si Est un écart est cochée. Affiche une icône de verrou (cochée) ou de déverrouillage (non cochée) dans le coin supérieur droit de la période sur le graphique.',
+        'Case à cocher <strong>Hachuré</strong> - masquée si Est un écart est cochée. Affiche la période avec un remplissage hachuré et un texte en italique sur le graphique.',
+        'Cases à cocher <strong>Fondu d\'entrée</strong> / <strong>Fondu de sortie</strong> - masquées si Est un écart ou Hachuré est cochée. Le fondu d\'entrée dégrade du transparent vers la couleur sélectionnée sur le premier tiers du rectangle ; le fondu de sortie dégrade vers le transparent sur le dernier tiers. Les deux peuvent être cochées en même temps.',
         '<strong>Surlignage</strong> - quatre cases à cocher (haut, gauche, droite, bas) disposées autour d\'un petit carré d\'aperçu, chacune du côté qu\'elle contrôle. En cocher une ajoute une bordure épaisse de ce côté du rectangle de la période ; le carré la prévisualise en direct. Disponible pour toute période, écart ou non, et n\'importe quelle combinaison de côtés peut être cochée à la fois.',
         'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées, orientées vers le foncé pour plus de contraste). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée. Le texte sur une période de couleur foncée passe automatiquement en blanc pour rester lisible.',
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
@@ -257,14 +259,15 @@ const T = {
         'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
       ], p2: [
         'Un vacío se muestra como un rectángulo con patrón de tablero de ajedrez y una cruz diagonal gruesa, su descripción centrada si la hay, y solo un icono de edición (sin etiqueta de término/período).',
-        'Un período borrador (que no es un vacío) se muestra con una trama rayada en su propio color, con su etiqueta de término/período y su descripción en cursiva.'
+        'Un período rayado (que no es un vacío) se muestra con una trama rayada en su propio color, con su etiqueta de término/período y su descripción en cursiva.'
       ] },
       { h: 'Cuadro de diálogo Editar período de póliza', list: [
         '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8).',
         '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico, incluso para los vacíos.',
         'Casilla <strong>Es un vacío</strong>.',
-        'Casilla <strong>Borrador</strong> - oculta si Es un vacío está marcada. Marca el período como borrador, mostrado con un relleno rayado y texto en cursiva en el gráfico.',
-        'Casillas <strong>Aparición gradual</strong> / <strong>Desaparición gradual</strong> - ocultas si Es un vacío o Borrador está marcada. La aparición gradual degrada de transparente al color seleccionado en el primer tercio del rectángulo; la desaparición gradual degrada hacia transparente en el último tercio. Ambas pueden marcarse a la vez.',
+        'Casilla <strong>Bloqueado</strong> - marcada por defecto, oculta si Es un vacío está marcada. Muestra un icono de candado (marcada) o de desbloqueo (no marcada) en la esquina superior derecha del período en el gráfico.',
+        'Casilla <strong>Rayado</strong> - oculta si Es un vacío está marcada. Muestra el período con un relleno rayado y texto en cursiva en el gráfico.',
+        'Casillas <strong>Aparición gradual</strong> / <strong>Desaparición gradual</strong> - ocultas si Es un vacío o Rayado está marcada. La aparición gradual degrada de transparente al color seleccionado en el primer tercio del rectángulo; la desaparición gradual degrada hacia transparente en el último tercio. Ambas pueden marcarse a la vez.',
         '<strong>Resaltado</strong> - cuatro casillas (arriba, izquierda, derecha, abajo) dispuestas alrededor de un pequeño cuadrado de vista previa, cada una en el lado que controla. Marcar una agrega un borde grueso en ese lado del rectángulo del período; el cuadrado lo muestra en vivo. Disponible para cualquier período, sea vacío o no, y se puede marcar cualquier combinación de lados a la vez.',
         'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro, orientadas hacia lo oscuro para más contraste). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado. El texto sobre un período de color oscuro cambia automáticamente a blanco para seguir siendo legible.',
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
