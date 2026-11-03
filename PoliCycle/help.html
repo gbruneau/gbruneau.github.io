@@ -106,7 +106,7 @@ const T = {
         '<strong>Share</strong> - copies the current page URL (which encodes the full use case) to the clipboard, and shows a brief confirmation message.',
         '<strong>Help</strong> - opens this page.',
         '<strong>About</strong> - shows application information.',
-        '<strong>Language selector</strong> - switch between English, French, and Spanish; your choice is remembered.'
+        '<strong>Preferences</strong> - opens the Preferences dialog, where you can switch the language between English, French, and Spanish, and set a Domain (Insurance, Contract, or Custom; defaults to Insurance). Insurance and Contract each narrow the transaction Type list to a curated set for that domain, shown read-only right there as "Available Transaction Options". Choosing Custom shows an editable checklist of every transaction type instead (all checked by default) - only the checked ones appear in the Type dropdown. Your choices are remembered.'
       ] },
       { h: 'Use case header', p: [
         'Set a Use Case name, a Description (shown in italics), a Start Date, a time Scale (Month or Quarter), and a Range (how many scale units are shown - new use cases default to 16).'
@@ -116,7 +116,7 @@ const T = {
         '<strong>Collapse/Expand all</strong> (only shown in Edit mode) - collapses every transaction line if any are expanded, or expands them all if every line is already collapsed.'
       ] },
       { h: 'Transaction lines', p: [
-        'Each line has a type (Submission, Policy Change, Cancellation, Reinstatement, Rewrite, Renewal, Other, or Comment - the last two set off by a separator, with Comment always last), a transaction date (hidden in View mode when the type is Comment), and a comment - line breaks you type are preserved.',
+        'Each line has a type (Request, Submission, Policy Change, Modification, Cancellation, Reinstatement, Rewrite, Renewal, Bind, Signature, Extract, Load, Transmit, Receive, Other, or Comment, with Comment always last), a transaction date (hidden in View mode when the type is Comment), and a comment - line breaks you type are preserved. A separator always appears right after Renewal and right before Comment in the Type dropdown, whatever the Domain. This full list is also the Domain Custom checklist shown in Preferences (all checked by default - only the checked ones end up in the dropdown); Insurance and Contract each show their own shorter, fixed list instead (see Preferences).',
         'In Edit mode, use the controls on the left of each line to collapse/expand it, reorder it (drag the grab handle), open its edit dialog (pencil), or delete it (trash, asks for confirmation). Collapsing a line hides its comment and shrinks its graph, showing only its type - except for the Other type in View mode (and so when printing), where the comment shows instead of the type.',
         'The edit dialog (pencil) also has a <strong>Duplicate</strong> button, which clones the line - including its policy periods - and inserts the copy directly below it, pushing down any lines that follow.',
         'Comment-type lines replace their graph with a single centered box showing the comment text instead of policy periods. In View mode (and when printing), their type label is also hidden on the left.'
@@ -144,7 +144,7 @@ const T = {
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
       ] },
       { h: 'Dialogs', p: [
-        'Every dialog (Transaction, Edit Policy Period, About, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
+        'Every dialog (Transaction, Edit Policy Period, About, Preferences, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
       ] },
       { h: 'Saving and loading', p: [
         'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.',
@@ -172,7 +172,7 @@ const T = {
         '<strong>Partager</strong> - copie l\'URL de la page actuelle (qui encode le cas d\'utilisation complet) dans le presse-papiers, et affiche un bref message de confirmation.',
         '<strong>Aide</strong> - ouvre cette page.',
         '<strong>À propos</strong> - affiche les informations de l\'application.',
-        '<strong>Sélecteur de langue</strong> - bascule entre anglais, français et espagnol ; votre choix est mémorisé.'
+        '<strong>Préférences</strong> - ouvre la boîte de dialogue Préférences, où vous pouvez changer la langue entre anglais, français et espagnol, et définir un Domaine (Assurance, Contrat ou Personnalisé ; par défaut Assurance). Assurance et Contrat restreignent chacun la liste des types de transaction à un ensemble propre à ce domaine, affiché là en lecture seule sous « Options de transaction disponibles ». Choisir Personnalisé affiche à la place une liste à cocher de tous les types de transaction (tous cochés par défaut) - seuls ceux cochés apparaissent dans la liste déroulante Type. Vos choix sont mémorisés.'
       ] },
       { h: 'En-tête du cas d\'utilisation', p: [
         'Définissez un nom de Cas d\'utilisation, une Description (affichée en italique), une Date de début, une Échelle de temps (Mois ou Trimestre), et une Portée (nombre d\'unités d\'échelle affichées - les nouveaux cas d\'utilisation ont par défaut une valeur de 16).'
@@ -182,7 +182,7 @@ const T = {
         '<strong>Tout réduire/développer</strong> (affiché uniquement en mode édition) - réduit toutes les lignes de transaction si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites.'
       ] },
       { h: 'Lignes de transaction', p: [
-        'Chaque ligne a un type (Soumission, Modification, Annulation, Remise en vigueur, Réécriture, Renouvellement, Autre ou Commentaire - ces deux derniers séparés par un trait, Commentaire étant toujours en dernier), une date de transaction (masquée en mode visualisation lorsque le type est Commentaire), et un commentaire - les sauts de ligne que vous tapez sont conservés.',
+        'Chaque ligne a un type (Demande, Soumission, Avenant, Modification, Annulation, Remise en vigueur, Réécriture, Renouvellement, Mise en vigueur, Signature, Extraction, Chargement, Transmission, Réception, Autre ou Commentaire, Commentaire étant toujours en dernier), une date de transaction (masquée en mode visualisation lorsque le type est Commentaire), et un commentaire - les sauts de ligne que vous tapez sont conservés. Un séparateur apparaît toujours juste après Renouvellement et juste avant Commentaire dans la liste déroulante Type, quel que soit le Domaine. Cette liste complète est aussi la liste à cocher du Domaine Personnalisé affichée dans Préférences (tout cochée par défaut - seuls les éléments cochés se retrouvent dans la liste déroulante) ; Assurance et Contrat affichent chacun à la place leur propre liste fixe plus courte (voir Préférences).',
         'En mode édition, utilisez les commandes à gauche de chaque ligne pour la réduire/développer, la réorganiser (glisser la poignée), ouvrir sa boîte de dialogue d\'édition (crayon), ou la supprimer (poubelle, demande confirmation). Réduire une ligne masque son commentaire et réduit son graphique, ne montrant que son type - sauf pour le type Autre en mode visualisation (et donc à l\'impression), où le commentaire s\'affiche à la place du type.',
         'La boîte de dialogue d\'édition (crayon) comporte aussi un bouton <strong>Dupliquer</strong>, qui clone la ligne - y compris ses périodes de police - et insère la copie juste en dessous, en repoussant les lignes suivantes.',
         'Les lignes de type Commentaire remplacent leur graphique par une case unique centrée affichant le texte du commentaire à la place des périodes de police. En mode visualisation (et à l\'impression), leur étiquette de type est également masquée à gauche.'
@@ -210,7 +210,7 @@ const T = {
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
       ] },
       { h: 'Boîtes de dialogue', p: [
-        'Chaque boîte de dialogue (Transaction, Modifier la période de police, À propos, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
+        'Chaque boîte de dialogue (Transaction, Modifier la période de police, À propos, Préférences, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
       ] },
       { h: 'Enregistrement et chargement', p: [
         'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.',
@@ -238,7 +238,7 @@ const T = {
         '<strong>Compartir</strong> - copia la URL de la página actual (que codifica el caso de uso completo) al portapapeles, y muestra un breve mensaje de confirmación.',
         '<strong>Ayuda</strong> - abre esta página.',
         '<strong>Acerca de</strong> - muestra información de la aplicación.',
-        '<strong>Selector de idioma</strong> - alterna entre inglés, francés y español; su elección se recuerda.'
+        '<strong>Preferencias</strong> - abre el cuadro de diálogo Preferencias, donde puede cambiar el idioma entre inglés, francés y español, y definir un Dominio (Seguro, Contrato o Personalizado; por defecto Seguro). Seguro y Contrato reducen cada uno la lista de tipos de transacción a un conjunto propio de ese dominio, mostrado ahí en modo de solo lectura como "Opciones de transacción disponibles". Elegir Personalizado muestra en su lugar una lista con casillas para cada tipo de transacción (todas marcadas por defecto) - solo las marcadas aparecen en la lista desplegable Tipo. Sus elecciones se recuerdan.'
       ] },
       { h: 'Encabezado del caso de uso', p: [
         'Defina un nombre de Caso de uso, una Descripción (mostrada en cursiva), una Fecha de inicio, una Escala de tiempo (Mes o Trimestre), y un Rango (cuántas unidades de escala se muestran - los casos de uso nuevos tienen un valor por defecto de 16).'
@@ -248,7 +248,7 @@ const T = {
         '<strong>Contraer/Expandir todo</strong> (solo se muestra en modo edición) - contrae todas las líneas de transacción si alguna está expandida, o las expande todas si ya están todas contraídas.'
       ] },
       { h: 'Líneas de transacción', p: [
-        'Cada línea tiene un tipo (Emisión, Modificación, Cancelación, Reinstalación, Reescritura, Renovación, Otro o Comentario - estos dos últimos separados por una línea divisoria, con Comentario siempre al final), una fecha de transacción (oculta en modo visualización cuando el tipo es Comentario), y un comentario - los saltos de línea que escriba se conservan.',
+        'Cada línea tiene un tipo (Solicitud, Emisión, Endoso, Modificación, Cancelación, Reinstalación, Reescritura, Renovación, Vinculación, Firma, Extracción, Carga, Transmisión, Recepción, Otro o Comentario, con Comentario siempre al final), una fecha de transacción (oculta en modo visualización cuando el tipo es Comentario), y un comentario - los saltos de línea que escriba se conservan. Siempre aparece una línea divisoria justo después de Renovación y justo antes de Comentario en la lista desplegable Tipo, sea cual sea el Dominio. Esta lista completa es también la lista con casillas del Dominio Personalizado que se muestra en Preferencias (todas marcadas por defecto - solo las marcadas terminan en la lista desplegable); Seguro y Contrato muestran cada uno en su lugar su propia lista fija más corta (vea Preferencias).',
         'En modo edición, use los controles a la izquierda de cada línea para contraerla/expandirla, reordenarla (arrastrando el asa), abrir su cuadro de diálogo de edición (lápiz), o eliminarla (papelera, solicita confirmación). Contraer una línea oculta su comentario y reduce su gráfico, mostrando solo su tipo - excepto para el tipo Otro en modo visualización (y por lo tanto al imprimir), donde el comentario se muestra en lugar del tipo.',
         'El cuadro de diálogo de edición (lápiz) también tiene un botón <strong>Duplicar</strong>, que clona la línea - incluyendo sus períodos de póliza - e inserta la copia justo debajo, desplazando hacia abajo las líneas siguientes.',
         'Las líneas de tipo Comentario reemplazan su gráfico por un único recuadro centrado que muestra el texto del comentario en lugar de los períodos de póliza. En modo visualización (y al imprimir), su etiqueta de tipo también se oculta a la izquierda.'
@@ -276,7 +276,7 @@ const T = {
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
       ] },
       { h: 'Cuadros de diálogo', p: [
-        'Todos los cuadros de diálogo (Transacción, Editar período de póliza, Acerca de, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
+        'Todos los cuadros de diálogo (Transacción, Editar período de póliza, Acerca de, Preferencias, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
       ] },
       { h: 'Guardar y abrir', p: [
         'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.',
