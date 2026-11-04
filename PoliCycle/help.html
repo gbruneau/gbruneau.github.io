@@ -62,6 +62,12 @@
   .menu-icon { display: inline-block; width: 1.4em; text-align: center; margin-right: 0.3rem; color: var(--muted); }
   .icon-list { list-style: none; padding-left: 0; }
   .icon-list li { display: flex; align-items: baseline; }
+  h3 { margin-top: 1.25rem; margin-bottom: 0.4rem; font-size: 1rem; }
+  .table-wrap { overflow-x: auto; margin: 0.4rem 0 1.25rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th, td { border: 1px solid var(--border); padding: 0.35rem 0.6rem; text-align: left; white-space: normal; }
+  th { background: var(--code-bg); }
+  td.chk, th.chk { text-align: center; width: 4.5rem; }
   code {
     background: var(--code-bg);
     padding: 0.1rem 0.35rem;
@@ -93,6 +99,15 @@
 const STORAGE_KEY = 'policyLifecycleTool.language';
 const SUPPORTED = ['en', 'fr', 'es'];
 const LANG_NAMES = { en: 'English', fr: 'Français', es: 'Español' };
+
+// rows: array of [typeName, availableInInsurance, availableInContract, description]
+function typeTable(headers, rows) {
+  const thead = `<tr>${headers.map((h, i) => `<th${i === 1 || i === 2 ? ' class="chk"' : ''}>${h}</th>`).join('')}</tr>`;
+  const tbody = rows.map(([type, insurance, contract, desc]) =>
+    `<tr><td>${type}</td><td class="chk">${insurance ? '✓' : ''}</td><td class="chk">${contract ? '✓' : ''}</td><td>${desc}</td></tr>`
+  ).join('');
+  return `<div class="table-wrap"><table>${thead}${tbody}</table></div>`;
+}
 
 const T = {
   en: {
@@ -129,6 +144,36 @@ const T = {
         '<strong>Comment</strong> - multi-line; line breaks are preserved. For the Comment type, it replaces the graph entirely, shown as a centered box instead of policy periods.',
         '<strong>Collapse/Expand</strong>, <strong>Move</strong>, <strong>Edit</strong>, <strong>Delete</strong> - left-side controls in Edit mode. Collapsing hides the comment and shrinks the graph to show just the type - except for the Other type in View mode, which keeps showing its comment instead.',
         '<strong>Duplicate</strong> - in the edit dialog, clones the Transaction (including its policy periods) directly below it, pushing later ones down.'
+      ] },
+      { h: 'Transaction categories', p: [
+        'Every transaction type belongs to one of three categories, matching the groupings used in Preferences. The tables below show which types are available for the Insurance and Contract domains (Custom can select any of them).'
+      ], raw: [
+        '<h3>Transaction</h3>',
+        typeTable(['Type', 'Insurance', 'Contract', 'Description'], [
+          ['Request', false, true, 'Initial request for a new contract or action, before formal submission.'],
+          ['Submission', true, false, 'Formal submission of a new policy application for underwriting.'],
+          ['Policy Change', true, false, 'A change or endorsement to an existing policy\'s terms.'],
+          ['Modification', false, true, 'A change to the terms of an existing contract.'],
+          ['Cancellation', true, true, 'Termination of the policy or contract before its scheduled end.'],
+          ['Reinstatement', true, true, 'Restoring a previously cancelled policy or contract.'],
+          ['Rewrite', true, true, 'Replacing an existing policy or contract with a new one after major changes.'],
+          ['Renewal', true, true, 'Extending the policy or contract for a new term.']
+        ]),
+        '<h3>Event</h3>',
+        typeTable(['Type', 'Insurance', 'Contract', 'Description'], [
+          ['Bind', true, false, 'Bind the transaction. From that point the transaction can no longer be modified.'],
+          ['Approval', false, true, 'Approval of the transaction.'],
+          ['Signature', false, true, 'Signing of the contract or equivalent.'],
+          ['Extract', true, true, 'Pulling data from the source system.'],
+          ['Load', true, true, 'Loading data into the target system.'],
+          ['Transmit', true, true, 'Sending data to another system.'],
+          ['Receive', true, true, 'Receiving data from another system.']
+        ]),
+        '<h3>Miscellaneous</h3>',
+        typeTable(['Type', 'Insurance', 'Contract', 'Description'], [
+          ['Comment', true, true, 'A free-text note with no data impact.'],
+          ['Other', true, true, 'Any transaction type not covered elsewhere.']
+        ])
       ] },
       { h: 'Policy periods', p: [
         'Policy periods are the colored rectangles on a Transaction\'s graph, snapped to a grid of half a scale unit.'
@@ -200,6 +245,36 @@ const T = {
         '<strong>Réduire/Développer</strong>, <strong>Déplacer</strong>, <strong>Modifier</strong>, <strong>Supprimer</strong> - commandes à gauche en mode édition. Réduire masque le commentaire et réduit le graphique pour ne montrer que le type - sauf pour le type Autre en mode visualisation, qui continue d\'afficher son commentaire à la place.',
         '<strong>Dupliquer</strong> - dans la boîte de dialogue d\'édition, clone la Transaction (y compris ses périodes de police) juste en dessous, en repoussant les suivantes.'
       ] },
+      { h: 'Catégories de transaction', p: [
+        'Chaque type de transaction appartient à l\'une des trois catégories, correspondant aux regroupements utilisés dans Préférences. Les tableaux ci-dessous montrent quels types sont disponibles pour les domaines Assurance et Contrat (Personnalisé peut sélectionner n\'importe lequel d\'entre eux).'
+      ], raw: [
+        '<h3>Transaction</h3>',
+        typeTable(['Type', 'Assurance', 'Contrat', 'Description'], [
+          ['Demande', false, true, 'Demande initiale avant la soumission formelle.'],
+          ['Soumission', true, false, 'Soumission formelle d\'une nouvelle demande de police pour souscription.'],
+          ['Modification de Police', true, false, 'Modification apportée aux termes d\'une police existante.'],
+          ['Modification', false, true, 'Modification apportée aux termes d\'un contrat existant.'],
+          ['Annulation', true, true, 'Résiliation de la police ou du contrat avant son terme prévu.'],
+          ['Remise en vigueur', true, true, 'Rétablissement d\'une police ou d\'un contrat précédemment résilié.'],
+          ['Réécriture', true, true, 'Remplacement d\'une police ou d\'un contrat existant par un nouveau après des changements majeurs.'],
+          ['Renouvellement', true, true, 'Prolongation de la police ou du contrat pour une nouvelle période.']
+        ]),
+        '<h3>Événement</h3>',
+        typeTable(['Type', 'Assurance', 'Contrat', 'Description'], [
+          ['Lier', true, false, 'Mettre en force la transaction. À partir de ce moment, la transaction ne peut plus être modifiée.'],
+          ['Approbation', false, true, 'Approbation de la transaction.'],
+          ['Signature', false, true, 'Signature du contrat ou équivalent.'],
+          ['Extraction', true, true, 'Extraction de données depuis le système source.'],
+          ['Chargement', true, true, 'Chargement des données dans le système cible.'],
+          ['Transmission', true, true, 'Envoi de données à un autre système.'],
+          ['Réception', true, true, 'Réception de données d\'un autre système.']
+        ]),
+        '<h3>Divers</h3>',
+        typeTable(['Type', 'Assurance', 'Contrat', 'Description'], [
+          ['Commentaire', true, true, 'Une note libre sans impact sur les données.'],
+          ['Autre', true, true, 'Tout type de transaction non couvert ailleurs.']
+        ])
+      ] },
       { h: 'Périodes de police', p: [
         'Les périodes de police sont les rectangles colorés sur le graphique d\'une Transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
       ], list: [
@@ -270,6 +345,36 @@ const T = {
         '<strong>Contraer/Expandir</strong>, <strong>Mover</strong>, <strong>Editar</strong>, <strong>Eliminar</strong> - controles a la izquierda en modo edición. Contraer oculta el comentario y reduce el gráfico para mostrar solo el tipo - excepto para el tipo Otro en modo visualización, que sigue mostrando su comentario en su lugar.',
         '<strong>Duplicar</strong> - en el diálogo de edición, clona la Transacción (incluyendo sus períodos de póliza) justo debajo, desplazando hacia abajo las siguientes.'
       ] },
+      { h: 'Categorías de transacción', p: [
+        'Cada tipo de transacción pertenece a una de tres categorías, que coinciden con las agrupaciones usadas en Preferencias. Las tablas siguientes muestran qué tipos están disponibles para los dominios Seguro y Contrato (Personalizado puede seleccionar cualquiera de ellos).'
+      ], raw: [
+        '<h3>Transacción</h3>',
+        typeTable(['Tipo', 'Seguro', 'Contrato', 'Descripción'], [
+          ['Solicitud', false, true, 'Solicitud inicial antes de la emisión formal.'],
+          ['Emisión', true, false, 'Emisión formal de una nueva solicitud de póliza para suscripción.'],
+          ['Endoso', true, false, 'Cambio aplicado a los términos de una póliza existente.'],
+          ['Modificación', false, true, 'Cambio aplicado a los términos de un contrato existente.'],
+          ['Cancelación', true, true, 'Terminación de la póliza o contrato antes de su vencimiento previsto.'],
+          ['Reinstalación', true, true, 'Restablecimiento de una póliza o contrato previamente cancelado.'],
+          ['Reescritura', true, true, 'Sustitución de una póliza o contrato existente por uno nuevo tras cambios importantes.'],
+          ['Renovación', true, true, 'Extensión de la póliza o contrato por un nuevo período.']
+        ]),
+        '<h3>Evento</h3>',
+        typeTable(['Tipo', 'Seguro', 'Contrato', 'Descripción'], [
+          ['Vinculación', true, false, 'Vincular la transacción. A partir de ese momento, la transacción ya no se puede modificar.'],
+          ['Aprobación', false, true, 'Aprobación de la transacción.'],
+          ['Firma', false, true, 'Firma del contrato o equivalente.'],
+          ['Extracción', true, true, 'Extracción de datos desde el sistema de origen.'],
+          ['Carga', true, true, 'Carga de datos en el sistema de destino.'],
+          ['Transmisión', true, true, 'Envío de datos a otro sistema.'],
+          ['Recepción', true, true, 'Recepción de datos de otro sistema.']
+        ]),
+        '<h3>Varios</h3>',
+        typeTable(['Tipo', 'Seguro', 'Contrato', 'Descripción'], [
+          ['Comentario', true, true, 'Una nota de texto libre sin impacto en los datos.'],
+          ['Otro', true, true, 'Cualquier tipo de transacción no cubierto en otra parte.']
+        ])
+      ] },
       { h: 'Períodos de póliza', p: [
         'Los períodos de póliza son los rectángulos coloreados en el gráfico de una Transacción, ajustados a una cuadrícula de media unidad de escala.'
       ], list: [
@@ -329,7 +434,8 @@ function render(locale) {
     const paras = (section.p || []).map(t => `<p>${t}</p>`).join('');
     const list = section.list ? `<ul${section.iconList ? ' class="icon-list"' : ''}>${section.list.map(li => `<li>${li}</li>`).join('')}</ul>` : '';
     const paras2 = (section.p2 || []).map(t => `<p>${t}</p>`).join('');
-    return `<h2>${section.h}</h2>${paras}${list}${paras2}`;
+    const raw = (section.raw || []).join('');
+    return `<h2>${section.h}</h2>${paras}${list}${paras2}${raw}`;
   }).join('');
 }
 
