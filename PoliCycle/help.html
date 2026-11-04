@@ -103,11 +103,11 @@ const T = {
         '<strong>Save As</strong> - save under a new name (prompts you for a filename).',
         '<strong>Edit / View</strong> - toggle between editing and read-only viewing. The tool opens in View mode.',
         '<strong>Print</strong> - print the current use case using your browser\'s print dialog. Only available in View mode.',
+        '<strong>Dark/Light mode</strong> - toggles the app\'s color theme. The icon shows a moon in light mode and a sun in dark mode. Defaults to your OS/browser preference until you toggle it, after which your explicit choice is remembered.',
         '<strong>Share</strong> - copies the current page URL (which encodes the full use case) to the clipboard, and shows a brief confirmation message.',
-        '<strong>Help</strong> - opens this page.',
-        '<strong>About</strong> - shows application information.',
         '<strong>Preferences</strong> - opens the Preferences dialog, where you can switch the language between English, French, and Spanish, and set a Domain (Insurance, Contract, or Custom; defaults to Insurance). Insurance and Contract each narrow the transaction Type list to a curated set for that domain, shown read-only right there, arranged in 3 columns (headed Transaction, Event, Miscellaneous) that line up with that same list\'s separators. Choosing Custom shows an editable checklist of every transaction type instead (all checked by default, arranged in the same 3 headed columns that line up with the dropdown\'s two separators) - only the checked ones appear in the Type dropdown. Your choices are remembered.',
-        '<strong>Dark/Light mode</strong> - toggles the app\'s color theme. The icon shows a moon in light mode and a sun in dark mode. Defaults to your OS/browser preference until you toggle it, after which your explicit choice is remembered.'
+        '<strong>Help</strong> - opens this page.',
+        '<strong>About</strong> - shows application information.'
       ] },
       { h: 'Use case header', p: [
         'Set a Use Case name, a Description (shown in italics), a Start Date, a time Scale (Month or Quarter), and a Range (how many scale units are shown - new use cases default to 16).'
@@ -133,8 +133,10 @@ const T = {
         'A gap is shown as a checkerboard-patterned rectangle with a thick diagonal cross, its description centered on it if any, and only an edit icon (no term/period label).',
         'A hatched period (not a gap) is shown with a diagonal hatch in its own color and its term/period label and description in italics.'
       ] },
-      { h: 'Edit Policy Period dialog', list: [
-        '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8).',
+      { h: 'Edit Policy Period dialog', p: [
+        'Titled "Edit Policy Period" for Domain Insurance, or simply "Edit Period" for Contract and Custom.'
+      ], list: [
+        '<strong>Policy Term</strong> (1-8) and <strong>Policy Period</strong> (1-8) - labeled just "Term" and "Period" outside Domain Insurance.',
         '<strong>Description</strong> - multi-line; line breaks are preserved on the graph, even for gaps.',
         '<strong>Is a gap</strong> checkbox.',
         '<strong>Lock</strong> checkbox - checked by default, hidden when Is a gap is checked. Shows a lock (checked) or unlock (unchecked) icon in the period\'s upper right corner on the graph.',
@@ -170,11 +172,11 @@ const T = {
         '<strong>Enregistrer sous</strong> - enregistre sous un nouveau nom (demande un nom de fichier).',
         '<strong>Édition / Visualisation</strong> - bascule entre édition et visualisation en lecture seule. L\'outil s\'ouvre en mode visualisation.',
         '<strong>Imprimer</strong> - imprime le cas d\'utilisation actuel via la boîte de dialogue d\'impression du navigateur. Disponible uniquement en mode visualisation.',
+        '<strong>Mode sombre/clair</strong> - bascule le thème de couleur de l\'application. L\'icône affiche une lune en mode clair et un soleil en mode sombre. Suit par défaut la préférence de votre système/navigateur jusqu\'à ce que vous le basculiez, après quoi votre choix explicite est mémorisé.',
         '<strong>Partager</strong> - copie l\'URL de la page actuelle (qui encode le cas d\'utilisation complet) dans le presse-papiers, et affiche un bref message de confirmation.',
-        '<strong>Aide</strong> - ouvre cette page.',
-        '<strong>À propos</strong> - affiche les informations de l\'application.',
         '<strong>Préférences</strong> - ouvre la boîte de dialogue Préférences, où vous pouvez changer la langue entre anglais, français et espagnol, et définir un Domaine (Assurance, Contrat ou Personnalisé ; par défaut Assurance). Assurance et Contrat restreignent chacun la liste des types de transaction à un ensemble propre à ce domaine, affiché là en lecture seule, réparti en 3 colonnes (intitulées Transaction, Événement, Divers) alignées sur les séparateurs de cette même liste. Choisir Personnalisé affiche à la place une liste à cocher de tous les types de transaction (tous cochés par défaut, répartis dans les mêmes 3 colonnes intitulées, alignées sur les deux séparateurs de la liste déroulante) - seuls ceux cochés apparaissent dans la liste déroulante Type. Vos choix sont mémorisés.',
-        '<strong>Mode sombre/clair</strong> - bascule le thème de couleur de l\'application. L\'icône affiche une lune en mode clair et un soleil en mode sombre. Suit par défaut la préférence de votre système/navigateur jusqu\'à ce que vous le basculiez, après quoi votre choix explicite est mémorisé.'
+        '<strong>Aide</strong> - ouvre cette page.',
+        '<strong>À propos</strong> - affiche les informations de l\'application.'
       ] },
       { h: 'En-tête du cas d\'utilisation', p: [
         'Définissez un nom de Cas d\'utilisation, une Description (affichée en italique), une Date de début, une Échelle de temps (Mois ou Trimestre), et une Portée (nombre d\'unités d\'échelle affichées - les nouveaux cas d\'utilisation ont par défaut une valeur de 16).'
@@ -200,8 +202,10 @@ const T = {
         'Un écart est affiché comme un rectangle à motif damier avec une croix diagonale épaisse, sa description centrée dessus le cas échéant, et seulement une icône d\'édition (pas d\'étiquette terme/période).',
         'Une période hachurée (qui n\'est pas un écart) est affichée avec une trame hachurée dans sa propre couleur, avec son étiquette terme/période et sa description en italique.'
       ] },
-      { h: 'Boîte de dialogue Modifier la période de police', list: [
-        '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8).',
+      { h: 'Boîte de dialogue Modifier la période de police', p: [
+        'Intitulée « Modifier la période de police » pour le Domaine Assurance, ou simplement « Modifier la période » pour Contrat et Personnalisé.'
+      ], list: [
+        '<strong>Terme de police</strong> (1-8) et <strong>Période de police</strong> (1-8) - simplement intitulées « Terme » et « Période » hors Domaine Assurance.',
         '<strong>Description</strong> - multi-ligne ; les sauts de ligne sont conservés sur le graphique, même pour les écarts.',
         'Case à cocher <strong>Est un écart</strong>.',
         'Case à cocher <strong>Verrouillé</strong> - cochée par défaut, masquée si Est un écart est cochée. Affiche une icône de verrou (cochée) ou de déverrouillage (non cochée) dans le coin supérieur droit de la période sur le graphique.',
@@ -237,11 +241,11 @@ const T = {
         '<strong>Guardar como</strong> - guarda con un nuevo nombre (solicita un nombre de archivo).',
         '<strong>Editar / Visualizar</strong> - alterna entre edición y visualización de solo lectura. La herramienta se abre en modo visualización.',
         '<strong>Imprimir</strong> - imprime el caso de uso actual usando el cuadro de diálogo de impresión del navegador. Solo disponible en modo visualización.',
+        '<strong>Modo oscuro/claro</strong> - alterna el tema de color de la aplicación. El icono muestra una luna en modo claro y un sol en modo oscuro. Sigue por defecto la preferencia de su sistema/navegador hasta que lo alterne, tras lo cual su elección explícita se recuerda.',
         '<strong>Compartir</strong> - copia la URL de la página actual (que codifica el caso de uso completo) al portapapeles, y muestra un breve mensaje de confirmación.',
-        '<strong>Ayuda</strong> - abre esta página.',
-        '<strong>Acerca de</strong> - muestra información de la aplicación.',
         '<strong>Preferencias</strong> - abre el cuadro de diálogo Preferencias, donde puede cambiar el idioma entre inglés, francés y español, y definir un Dominio (Seguro, Contrato o Personalizado; por defecto Seguro). Seguro y Contrato reducen cada uno la lista de tipos de transacción a un conjunto propio de ese dominio, mostrado ahí en modo de solo lectura, organizado en 3 columnas (tituladas Transacción, Evento, Varios) alineadas con los separadores de esa misma lista. Elegir Personalizado muestra en su lugar una lista con casillas para cada tipo de transacción (todas marcadas por defecto, organizadas en esas mismas 3 columnas tituladas, alineadas con los dos separadores de la lista desplegable) - solo las marcadas aparecen en la lista desplegable Tipo. Sus elecciones se recuerdan.',
-        '<strong>Modo oscuro/claro</strong> - alterna el tema de color de la aplicación. El icono muestra una luna en modo claro y un sol en modo oscuro. Sigue por defecto la preferencia de su sistema/navegador hasta que lo alterne, tras lo cual su elección explícita se recuerda.'
+        '<strong>Ayuda</strong> - abre esta página.',
+        '<strong>Acerca de</strong> - muestra información de la aplicación.'
       ] },
       { h: 'Encabezado del caso de uso', p: [
         'Defina un nombre de Caso de uso, una Descripción (mostrada en cursiva), una Fecha de inicio, una Escala de tiempo (Mes o Trimestre), y un Rango (cuántas unidades de escala se muestran - los casos de uso nuevos tienen un valor por defecto de 16).'
@@ -267,8 +271,10 @@ const T = {
         'Un vacío se muestra como un rectángulo con patrón de tablero de ajedrez y una cruz diagonal gruesa, su descripción centrada si la hay, y solo un icono de edición (sin etiqueta de término/período).',
         'Un período rayado (que no es un vacío) se muestra con una trama rayada en su propio color, con su etiqueta de término/período y su descripción en cursiva.'
       ] },
-      { h: 'Cuadro de diálogo Editar período de póliza', list: [
-        '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8).',
+      { h: 'Cuadro de diálogo Editar período de póliza', p: [
+        'Titulado "Editar período de póliza" para el Dominio Seguro, o simplemente "Editar período" para Contrato y Personalizado.'
+      ], list: [
+        '<strong>Término de póliza</strong> (1-8) y <strong>Período de póliza</strong> (1-8) - etiquetados simplemente "Término" y "Período" fuera del Dominio Seguro.',
         '<strong>Descripción</strong> - multilínea; los saltos de línea se conservan en el gráfico, incluso para los vacíos.',
         'Casilla <strong>Es un vacío</strong>.',
         'Casilla <strong>Bloqueado</strong> - marcada por defecto, oculta si Es un vacío está marcada. Muestra un icono de candado (marcada) o de desbloqueo (no marcada) en la esquina superior derecha del período en el gráfico.',
