@@ -4,6 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+<link rel="stylesheet" href="./vendor/fontawesome/css/fontawesome.min.css" />
+<link rel="stylesheet" href="./vendor/fontawesome/css/solid.min.css" />
 <title>PoliCycle - Help</title>
 <style>
   :root {
@@ -57,6 +59,9 @@
   p { margin: 0.5rem 0; }
   ul { margin: 0.5rem 0; padding-left: 1.3rem; }
   li { margin: 0.3rem 0; }
+  .menu-icon { display: inline-block; width: 1.4em; text-align: center; margin-right: 0.3rem; color: var(--muted); }
+  .icon-list { list-style: none; padding-left: 0; }
+  .icon-list li { display: flex; align-items: baseline; }
   code {
     background: var(--code-bg);
     padding: 0.1rem 0.35rem;
@@ -94,39 +99,42 @@ const T = {
     pageTitle: 'PoliCycle - Help',
     sections: [
       { h: 'Overview', p: [
-        'This tool documents an insurance policy transaction use case as a succession of transaction lines, each showing policy periods on a timeline graph.'
+        'This tool documents a policy or contract transaction use case as a succession of Transactions, each showing policy periods on a timeline graph. It isn\'t limited to insurance - the Domain preference (see Preferences) also supports general contracts, or a fully custom set of transaction types.'
       ] },
-      { h: 'Main menu', list: [
-        '<strong>New</strong> - clear the current use case and start a fresh one with a single default transaction line (asks for confirmation), then switches to Edit mode.',
-        '<strong>Open</strong> - load a use case from a <code>.policycase</code> file.',
-        '<strong>Save</strong> - save the current use case to a <code>.policycase</code> file using its current name.',
-        '<strong>Save As</strong> - save under a new name (prompts you for a filename).',
-        '<strong>Edit / View</strong> - toggle between editing and read-only viewing. The tool opens in View mode.',
-        '<strong>Print</strong> - print the current use case using your browser\'s print dialog. Only available in View mode.',
-        '<strong>Dark/Light mode</strong> - toggles the app\'s color theme. The icon shows a moon in light mode and a sun in dark mode. Defaults to your OS/browser preference until you toggle it, after which your explicit choice is remembered.',
-        '<strong>Share</strong> - copies the current page URL (which encodes the full use case) to the clipboard, and shows a brief confirmation message.',
-        '<strong>Preferences</strong> - opens the Preferences dialog, where you can switch the language between English, French, and Spanish, and set a Domain (Insurance, Contract, or Custom; defaults to Insurance). Insurance and Contract each narrow the transaction Type list to a curated set for that domain, shown read-only right there, arranged in 3 columns (headed Transaction, Event, Miscellaneous) that line up with that same list\'s separators. Choosing Custom shows an editable checklist of every transaction type instead (all checked by default, arranged in the same 3 headed columns that line up with the dropdown\'s two separators) - only the checked ones appear in the Type dropdown. Your choices are remembered.',
-        '<strong>Help</strong> - opens this page.',
-        '<strong>About</strong> - shows application information.'
+      { h: 'Main menu', iconList: true, list: [
+        '<span class="menu-icon"><i class="fa-solid fa-file-circle-plus"></i></span><strong>New</strong> - clear the current use case and start a fresh one with a single default Transaction (asks for confirmation), then switches to Edit mode.',
+        '<span class="menu-icon"><i class="fa-solid fa-folder-open"></i></span><strong>Open</strong> - load a use case from a <code>.policycase</code> file.',
+        '<span class="menu-icon"><i class="fa-solid fa-floppy-disk"></i></span><strong>Save</strong> - save the current use case to a <code>.policycase</code> file using its current name.',
+        '<span class="menu-icon"><i class="fa-solid fa-file-export"></i></span><strong>Save As</strong> - save under a new name (prompts you for a filename).',
+        '<span class="menu-icon"><i class="fa-solid fa-pen-to-square"></i></span><strong>Edit / View</strong> - toggle between editing and read-only viewing. The tool opens in View mode.',
+        '<span class="menu-icon"><i class="fa-solid fa-print"></i></span><strong>Print</strong> - print the current use case using your browser\'s print dialog. Only available in View mode.',
+        '<span class="menu-icon"><i class="fa-solid fa-moon"></i></span><strong>Dark/Light mode</strong> - toggles the app\'s color theme, remembering your explicit choice once set.',
+        '<span class="menu-icon"><i class="fa-solid fa-share-nodes"></i></span><strong>Share</strong> - copies the current page URL (which encodes the full use case) to the clipboard.',
+        '<span class="menu-icon"><i class="fa-solid fa-gear"></i></span><strong>Preferences</strong> - opens the Preferences dialog to set the language and a Domain (Insurance, Contract, or Custom), which tailors the Transaction type list available elsewhere.',
+        '<span class="menu-icon"><i class="fa-solid fa-circle-question"></i></span><strong>Help</strong> - opens this page.',
+        '<span class="menu-icon"><i class="fa-solid fa-info-circle"></i></span><strong>About</strong> - shows application information.'
       ] },
       { h: 'Use case header', p: [
         'Set a Use Case name, a Description (shown in italics), a Start Date, a time Scale (Month or Quarter), and a Range (how many scale units are shown - new use cases default to 16).'
       ], list: [
-        '<strong>New policy period</strong> drag handle (only shown in Edit mode) - a single white square. Drag it onto a transaction\'s graph to create a new policy period there and immediately open its edit dialog. The underlying 8-color base palette used to generate period colors isn\'t editable from here.',
-        '<strong>+ button</strong> - adds a new transaction line. It clones the most recent non-Comment line (same type, comment, and policy periods) with its date advanced by one day - handy for a quick succession of similar transactions. If there\'s no eligible line to clone, it adds a plain default line instead.',
-        '<strong>Collapse/Expand all</strong> (only shown in Edit mode) - collapses every transaction line if any are expanded, or expands them all if every line is already collapsed.'
+        '<strong>New policy period</strong> drag handle (only shown in Edit mode) - a single white square. Drag it onto a Transaction\'s graph to create a new policy period there and immediately open its edit dialog. The underlying 8-color base palette used to generate period colors isn\'t editable from here.',
+        '<strong>+ button</strong> - adds a new Transaction. It clones the most recent non-Comment Transaction (same type, comment, and policy periods) with its date advanced by one day. If there\'s no eligible Transaction to clone, it adds a plain default one instead.',
+        '<strong>Collapse/Expand all</strong> (only shown in Edit mode) - collapses every Transaction if any are expanded, or expands them all if every one is already collapsed.'
       ] },
-      { h: 'Transaction lines', p: [
-        'Each line has a type (Request, Submission, Policy Change, Modification, Cancellation, Reinstatement, Rewrite, Renewal, Bind, Approval, Signature, Extract, Load, Transmit, Receive, Comment, or Other, with Comment right after that separator and Other right after Comment), a transaction date (hidden in View mode when the type is Comment), and a comment - line breaks you type are preserved. A separator always appears right after Renewal and right before Comment in the Type dropdown, whatever the Domain. This full list is also the Domain Custom checklist shown in Preferences (all checked by default - only the checked ones end up in the dropdown); Insurance and Contract each show their own shorter, fixed list instead (see Preferences).',
-        'In Edit mode, use the controls on the left of each line to collapse/expand it, reorder it (drag the grab handle), open its edit dialog (pencil), or delete it (trash, asks for confirmation). Collapsing a line hides its comment and shrinks its graph, showing only its type - except for the Other type in View mode (and so when printing), where the comment shows instead of the type.',
-        'The edit dialog (pencil) also has a <strong>Duplicate</strong> button, which clones the line - including its policy periods - and inserts the copy directly below it, pushing down any lines that follow.',
-        'Comment-type lines replace their graph with a single centered box showing the comment text instead of policy periods. In View mode (and when printing), their type label is also hidden on the left.'
+      { h: 'Transactions', p: [
+        'Each Transaction has a type, a date, and a comment.'
+      ], list: [
+        '<strong>Type</strong> - grouped into three categories: Transaction, Event, and Miscellaneous. Which types are offered depends on the Domain preference (see Preferences).',
+        '<strong>Date</strong> - hidden in View mode (and when printing) when the type is Comment.',
+        '<strong>Comment</strong> - multi-line; line breaks are preserved. For the Comment type, it replaces the graph entirely, shown as a centered box instead of policy periods.',
+        '<strong>Collapse/Expand</strong>, <strong>Move</strong>, <strong>Edit</strong>, <strong>Delete</strong> - left-side controls in Edit mode. Collapsing hides the comment and shrinks the graph to show just the type - except for the Other type in View mode, which keeps showing its comment instead.',
+        '<strong>Duplicate</strong> - in the edit dialog, clones the Transaction (including its policy periods) directly below it, pushing later ones down.'
       ] },
       { h: 'Policy periods', p: [
-        'Policy periods are the colored rectangles on a transaction line\'s graph, snapped to a grid of half a scale unit.'
+        'Policy periods are the colored rectangles on a Transaction\'s graph, snapped to a grid of half a scale unit.'
       ], list: [
-        'Drag the New policy period handle (the white square in the use case header) onto the graph to create a new period there and immediately open its edit dialog - it won\'t land on top of an existing one, it snaps to the nearest free spot. It continues the numbering sequence on that line after the highest existing period (T1P1, then T1P2, up to T1P8, then T2P1, and so on) and its color matches that Term/Period cell of the enhanced color palette.',
-        'Drag a period to move it. Dropping it onto another period on the same line swaps the two, as long as that doesn\'t collide with a third period; otherwise it settles at the nearest free position next to where you dropped it.',
+        'Drag the New policy period handle (the white square in the use case header) onto the graph to create a new period there and immediately open its edit dialog - it won\'t land on top of an existing one, it snaps to the nearest free spot. It continues the numbering sequence on that Transaction after the highest existing period (T1P1, then T1P2, up to T1P8, then T2P1, and so on) and its color matches that Term/Period cell of the enhanced color palette.',
+        'Drag a period to move it. Dropping it onto another period on the same Transaction swaps the two, as long as that doesn\'t collide with a third period; otherwise it settles at the nearest free position next to where you dropped it.',
         'Drag its left or right edge to resize it - it stops at the edge of its neighbor and can never overlap another period.',
         'Click its pencil icon to open its edit dialog.'
       ], p2: [
@@ -146,16 +154,14 @@ const T = {
         'An 8x8 <strong>color grid</strong>: 8 columns (one per palette color) by 8 rows (light to dark variations, skewed darker for contrast). Changing Term or Period automatically selects the color at that column/row intersection. A large square next to the grid previews the selected color. Text on a period with a dark color automatically switches to white to stay readable.',
         '<strong>Delete</strong> (no confirmation needed) and Apply/Cancel.'
       ] },
-      { h: 'Dialogs', p: [
-        'Every dialog (Transaction, Edit Policy Period, About, Preferences, and confirmations) can be moved: drag it by its title bar anywhere on screen.'
-      ] },
-      { h: 'Saving and loading', p: [
-        'Save and Save As download the current use case as a <code>.policycase</code> file (JSON), including its color palette. Open loads one back in. Your browser\'s normal file picker is used for both, so files can live anywhere you like.',
-        'Every line and period property - including collapsed/expanded state, colors, gap status, and highlight borders - is saved and restored exactly as you left it.'
+      { h: 'Saving and loading', list: [
+        '<strong>Save</strong> / <strong>Save As</strong> - download the current use case as a <code>.policycase</code> file (JSON), including its color palette.',
+        '<strong>Open</strong> - load one back in, using your browser\'s normal file picker.'
+      ], p2: [
+        'Every Transaction and period property is saved and restored exactly as you left it.'
       ] },
       { h: 'Sharing via URL', p: [
-        'The address bar always reflects the full current use case, compressed and encoded in the URL. Copy and send that URL to someone else and opening it reproduces the exact same use case for them - no file or server needed.',
-        'This relies on compression features built into modern browsers; on a very old browser the address bar may simply not update, but nothing else in the app is affected.'
+        'The address bar always reflects the full current use case, encoded in the URL. Copy and send that URL to someone else and opening it reproduces the exact same use case for them - no file or server needed.'
       ] }
     ]
   },
@@ -163,39 +169,42 @@ const T = {
     pageTitle: 'PoliCycle - Aide',
     sections: [
       { h: 'Aperçu', p: [
-        'Cet outil documente un cas d\'utilisation de transactions de polices d\'assurance sous forme d\'une succession de lignes de transaction, chacune montrant des périodes de police sur un graphique temporel.'
+        'Cet outil documente un cas d\'utilisation de transactions de police ou de contrat comme une succession de Transactions, chacune montrant des périodes de police sur un graphique temporel. Il ne se limite pas à l\'assurance - la préférence Domaine (voir Préférences) prend aussi en charge les contrats généraux ou un ensemble entièrement personnalisé de types de transaction.'
       ] },
-      { h: 'Menu principal', list: [
-        '<strong>Nouveau</strong> - efface le cas d\'utilisation actuel et en recommence un nouveau avec une seule ligne de transaction par défaut (demande confirmation), puis passe en mode édition.',
-        '<strong>Ouvrir</strong> - charge un cas d\'utilisation depuis un fichier <code>.policycase</code>.',
-        '<strong>Enregistrer</strong> - enregistre le cas d\'utilisation actuel dans un fichier <code>.policycase</code> en utilisant son nom actuel.',
-        '<strong>Enregistrer sous</strong> - enregistre sous un nouveau nom (demande un nom de fichier).',
-        '<strong>Édition / Visualisation</strong> - bascule entre édition et visualisation en lecture seule. L\'outil s\'ouvre en mode visualisation.',
-        '<strong>Imprimer</strong> - imprime le cas d\'utilisation actuel via la boîte de dialogue d\'impression du navigateur. Disponible uniquement en mode visualisation.',
-        '<strong>Mode sombre/clair</strong> - bascule le thème de couleur de l\'application. L\'icône affiche une lune en mode clair et un soleil en mode sombre. Suit par défaut la préférence de votre système/navigateur jusqu\'à ce que vous le basculiez, après quoi votre choix explicite est mémorisé.',
-        '<strong>Partager</strong> - copie l\'URL de la page actuelle (qui encode le cas d\'utilisation complet) dans le presse-papiers, et affiche un bref message de confirmation.',
-        '<strong>Préférences</strong> - ouvre la boîte de dialogue Préférences, où vous pouvez changer la langue entre anglais, français et espagnol, et définir un Domaine (Assurance, Contrat ou Personnalisé ; par défaut Assurance). Assurance et Contrat restreignent chacun la liste des types de transaction à un ensemble propre à ce domaine, affiché là en lecture seule, réparti en 3 colonnes (intitulées Transaction, Événement, Divers) alignées sur les séparateurs de cette même liste. Choisir Personnalisé affiche à la place une liste à cocher de tous les types de transaction (tous cochés par défaut, répartis dans les mêmes 3 colonnes intitulées, alignées sur les deux séparateurs de la liste déroulante) - seuls ceux cochés apparaissent dans la liste déroulante Type. Vos choix sont mémorisés.',
-        '<strong>Aide</strong> - ouvre cette page.',
-        '<strong>À propos</strong> - affiche les informations de l\'application.'
+      { h: 'Menu principal', iconList: true, list: [
+        '<span class="menu-icon"><i class="fa-solid fa-file-circle-plus"></i></span><strong>Nouveau</strong> - efface le cas d\'utilisation actuel et en recommence un nouveau avec une seule Transaction par défaut (demande confirmation), puis passe en mode édition.',
+        '<span class="menu-icon"><i class="fa-solid fa-folder-open"></i></span><strong>Ouvrir</strong> - charge un cas d\'utilisation depuis un fichier <code>.policycase</code>.',
+        '<span class="menu-icon"><i class="fa-solid fa-floppy-disk"></i></span><strong>Enregistrer</strong> - enregistre le cas d\'utilisation actuel dans un fichier <code>.policycase</code> en utilisant son nom actuel.',
+        '<span class="menu-icon"><i class="fa-solid fa-file-export"></i></span><strong>Enregistrer sous</strong> - enregistre sous un nouveau nom (demande un nom de fichier).',
+        '<span class="menu-icon"><i class="fa-solid fa-pen-to-square"></i></span><strong>Édition / Visualisation</strong> - bascule entre édition et visualisation en lecture seule. L\'outil s\'ouvre en mode visualisation.',
+        '<span class="menu-icon"><i class="fa-solid fa-print"></i></span><strong>Imprimer</strong> - imprime le cas d\'utilisation actuel via la boîte de dialogue d\'impression du navigateur. Disponible uniquement en mode visualisation.',
+        '<span class="menu-icon"><i class="fa-solid fa-moon"></i></span><strong>Mode sombre/clair</strong> - bascule le thème de couleur de l\'application, en mémorisant votre choix explicite une fois défini.',
+        '<span class="menu-icon"><i class="fa-solid fa-share-nodes"></i></span><strong>Partager</strong> - copie l\'URL de la page actuelle (qui encode le cas d\'utilisation complet) dans le presse-papiers.',
+        '<span class="menu-icon"><i class="fa-solid fa-gear"></i></span><strong>Préférences</strong> - ouvre la boîte de dialogue Préférences pour définir la langue et un Domaine (Assurance, Contrat ou Personnalisé), qui ajuste la liste des types de transaction disponible ailleurs.',
+        '<span class="menu-icon"><i class="fa-solid fa-circle-question"></i></span><strong>Aide</strong> - ouvre cette page.',
+        '<span class="menu-icon"><i class="fa-solid fa-info-circle"></i></span><strong>À propos</strong> - affiche les informations de l\'application.'
       ] },
       { h: 'En-tête du cas d\'utilisation', p: [
         'Définissez un nom de Cas d\'utilisation, une Description (affichée en italique), une Date de début, une Échelle de temps (Mois ou Trimestre), et une Portée (nombre d\'unités d\'échelle affichées - les nouveaux cas d\'utilisation ont par défaut une valeur de 16).'
       ], list: [
-        'Poignée de glissement <strong>Nouvelle période de police</strong> (affichée uniquement en mode édition) - un simple carré blanc. Glissez-le sur le graphique d\'une transaction pour y créer une nouvelle période de police et ouvrir immédiatement sa boîte de dialogue d\'édition. La palette de 8 couleurs de base utilisée pour générer les couleurs des périodes n\'est pas modifiable depuis cet endroit.',
-        '<strong>Bouton +</strong> - ajoute une nouvelle ligne de transaction. Il clone la dernière ligne qui n\'est pas de type Commentaire (même type, commentaire et périodes de police) avec sa date avancée d\'un jour - pratique pour une succession rapide de transactions similaires. S\'il n\'y a aucune ligne éligible à cloner, une ligne par défaut simple est ajoutée à la place.',
-        '<strong>Tout réduire/développer</strong> (affiché uniquement en mode édition) - réduit toutes les lignes de transaction si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites.'
+        'Poignée de glissement <strong>Nouvelle période de police</strong> (affichée uniquement en mode édition) - un simple carré blanc. Glissez-le sur le graphique d\'une Transaction pour y créer une nouvelle période de police et ouvrir immédiatement sa boîte de dialogue d\'édition. La palette de 8 couleurs de base utilisée pour générer les couleurs des périodes n\'est pas modifiable depuis cet endroit.',
+        '<strong>Bouton +</strong> - ajoute une nouvelle Transaction. Il clone la Transaction la plus récente qui n\'est pas de type Commentaire (même type, commentaire et périodes de police) avec sa date avancée d\'un jour. S\'il n\'y a aucune Transaction éligible à cloner, une Transaction par défaut simple est ajoutée à la place.',
+        '<strong>Tout réduire/développer</strong> (affiché uniquement en mode édition) - réduit toutes les Transactions si au moins une est développée, ou les développe toutes si elles sont déjà toutes réduites.'
       ] },
-      { h: 'Lignes de transaction', p: [
-        'Chaque ligne a un type (Demande, Soumission, Avenant, Modification, Annulation, Remise en vigueur, Réécriture, Renouvellement, Lier, Approbation, Signature, Extraction, Chargement, Transmission, Réception, Commentaire, ou Autre, Commentaire venant juste après ce séparateur et Autre juste après Commentaire), une date de transaction (masquée en mode visualisation lorsque le type est Commentaire), et un commentaire - les sauts de ligne que vous tapez sont conservés. Un séparateur apparaît toujours juste après Renouvellement et juste avant Commentaire dans la liste déroulante Type, quel que soit le Domaine. Cette liste complète est aussi la liste à cocher du Domaine Personnalisé affichée dans Préférences (tout cochée par défaut - seuls les éléments cochés se retrouvent dans la liste déroulante) ; Assurance et Contrat affichent chacun à la place leur propre liste fixe plus courte (voir Préférences).',
-        'En mode édition, utilisez les commandes à gauche de chaque ligne pour la réduire/développer, la réorganiser (glisser la poignée), ouvrir sa boîte de dialogue d\'édition (crayon), ou la supprimer (poubelle, demande confirmation). Réduire une ligne masque son commentaire et réduit son graphique, ne montrant que son type - sauf pour le type Autre en mode visualisation (et donc à l\'impression), où le commentaire s\'affiche à la place du type.',
-        'La boîte de dialogue d\'édition (crayon) comporte aussi un bouton <strong>Dupliquer</strong>, qui clone la ligne - y compris ses périodes de police - et insère la copie juste en dessous, en repoussant les lignes suivantes.',
-        'Les lignes de type Commentaire remplacent leur graphique par une case unique centrée affichant le texte du commentaire à la place des périodes de police. En mode visualisation (et à l\'impression), leur étiquette de type est également masquée à gauche.'
+      { h: 'Transactions', p: [
+        'Chaque Transaction a un type, une date et un commentaire.'
+      ], list: [
+        '<strong>Type</strong> - regroupé en trois catégories : Transaction, Événement et Divers. Les types proposés dépendent de la préférence Domaine (voir Préférences).',
+        '<strong>Date</strong> - masquée en mode visualisation (et à l\'impression) lorsque le type est Commentaire.',
+        '<strong>Commentaire</strong> - multi-ligne ; les sauts de ligne sont conservés. Pour le type Commentaire, il remplace entièrement le graphique, affiché comme une case centrée au lieu des périodes de police.',
+        '<strong>Réduire/Développer</strong>, <strong>Déplacer</strong>, <strong>Modifier</strong>, <strong>Supprimer</strong> - commandes à gauche en mode édition. Réduire masque le commentaire et réduit le graphique pour ne montrer que le type - sauf pour le type Autre en mode visualisation, qui continue d\'afficher son commentaire à la place.',
+        '<strong>Dupliquer</strong> - dans la boîte de dialogue d\'édition, clone la Transaction (y compris ses périodes de police) juste en dessous, en repoussant les suivantes.'
       ] },
       { h: 'Périodes de police', p: [
-        'Les périodes de police sont les rectangles colorés sur le graphique d\'une ligne de transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
+        'Les périodes de police sont les rectangles colorés sur le graphique d\'une Transaction, alignées sur une grille d\'une demi-unité d\'échelle.'
       ], list: [
-        'Glissez la poignée Nouvelle période de police (le carré blanc dans l\'en-tête du cas d\'utilisation) sur le graphique pour y créer une nouvelle période et ouvrir immédiatement sa boîte de dialogue d\'édition - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche. Elle poursuit la numérotation sur cette ligne après la période la plus élevée existante (T1P1, puis T1P2, jusqu\'à T1P8, puis T2P1, et ainsi de suite) et sa couleur correspond à cette cellule Terme/Période de la palette de couleurs améliorée.',
-        'Glissez une période pour la déplacer. La déposer sur une autre période de la même ligne échange les deux, tant que cela ne crée pas de collision avec une troisième période ; sinon elle se positionne à l\'emplacement libre le plus proche de l\'endroit où vous l\'avez déposée.',
+        'Glissez la poignée Nouvelle période de police (le carré blanc dans l\'en-tête du cas d\'utilisation) sur le graphique pour y créer une nouvelle période et ouvrir immédiatement sa boîte de dialogue d\'édition - elle ne se posera pas sur une période existante, elle se cale sur l\'emplacement libre le plus proche. Elle poursuit la numérotation sur cette Transaction après la période la plus élevée existante (T1P1, puis T1P2, jusqu\'à T1P8, puis T2P1, et ainsi de suite) et sa couleur correspond à cette cellule Terme/Période de la palette de couleurs améliorée.',
+        'Glissez une période pour la déplacer. La déposer sur une autre période de la même Transaction échange les deux, tant que cela ne crée pas de collision avec une troisième période ; sinon elle se positionne à l\'emplacement libre le plus proche de l\'endroit où vous l\'avez déposée.',
         'Glissez son bord gauche ou droit pour la redimensionner - elle s\'arrête au bord de sa voisine et ne peut jamais chevaucher une autre période.',
         'Cliquez sur son icône crayon pour ouvrir sa boîte de dialogue d\'édition.'
       ], p2: [
@@ -215,16 +224,14 @@ const T = {
         'Une <strong>grille de couleurs</strong> de 8x8 : 8 colonnes (une par couleur de la palette) sur 8 lignes (variations claires à foncées, orientées vers le foncé pour plus de contraste). Modifier le Terme ou la Période sélectionne automatiquement la couleur à cette intersection colonne/ligne. Un grand carré à côté de la grille prévisualise la couleur sélectionnée. Le texte sur une période de couleur foncée passe automatiquement en blanc pour rester lisible.',
         'Bouton <strong>Supprimer</strong> (sans confirmation) et Appliquer/Annuler.'
       ] },
-      { h: 'Boîtes de dialogue', p: [
-        'Chaque boîte de dialogue (Transaction, Modifier la période de police, À propos, Préférences, et les confirmations) peut être déplacée : faites-la glisser par sa barre de titre n\'importe où à l\'écran.'
-      ] },
-      { h: 'Enregistrement et chargement', p: [
-        'Enregistrer et Enregistrer sous téléchargent le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs. Ouvrir en recharge un. Le sélecteur de fichiers habituel de votre navigateur est utilisé pour les deux, les fichiers peuvent donc se trouver n\'importe où.',
-        'Chaque propriété de ligne et de période - y compris l\'état réduit/développé, les couleurs, le statut d\'écart et les bordures de surlignage - est enregistrée et restaurée telle que vous l\'avez laissée.'
+      { h: 'Enregistrement et chargement', list: [
+        '<strong>Enregistrer</strong> / <strong>Enregistrer sous</strong> - télécharge le cas d\'utilisation actuel sous forme de fichier <code>.policycase</code> (JSON), incluant sa palette de couleurs.',
+        '<strong>Ouvrir</strong> - recharge un cas d\'utilisation, via le sélecteur de fichiers habituel de votre navigateur.'
+      ], p2: [
+        'Chaque propriété de Transaction et de période est enregistrée et restaurée telle que vous l\'avez laissée.'
       ] },
       { h: 'Partage par URL', p: [
-        'La barre d\'adresse reflète toujours le cas d\'utilisation actuel complet, compressé et encodé dans l\'URL. Copiez et envoyez cette URL à quelqu\'un d\'autre ; l\'ouvrir reproduit exactement le même cas d\'utilisation pour cette personne - aucun fichier ni serveur nécessaire.',
-        'Cela repose sur des fonctions de compression intégrées aux navigateurs modernes ; sur un très vieux navigateur, la barre d\'adresse peut simplement ne pas se mettre à jour, sans affecter le reste de l\'application.'
+        'La barre d\'adresse reflète toujours le cas d\'utilisation actuel complet, encodé dans l\'URL. Copiez et envoyez cette URL à quelqu\'un d\'autre ; l\'ouvrir reproduit exactement le même cas d\'utilisation pour cette personne - aucun fichier ni serveur nécessaire.'
       ] }
     ]
   },
@@ -232,39 +239,42 @@ const T = {
     pageTitle: 'PoliCycle - Ayuda',
     sections: [
       { h: 'Resumen', p: [
-        'Esta herramienta documenta un caso de uso de transacciones de pólizas de seguros como una sucesión de líneas de transacción, cada una mostrando períodos de póliza en un gráfico temporal.'
+        'Esta herramienta documenta un caso de uso de transacciones de póliza o de contrato como una sucesión de Transacciones, cada una mostrando períodos de póliza en un gráfico temporal. No se limita al seguro - la preferencia Dominio (vea Preferencias) también admite contratos generales o un conjunto totalmente personalizado de tipos de transacción.'
       ] },
-      { h: 'Menú principal', list: [
-        '<strong>Nuevo</strong> - borra el caso de uso actual y comienza uno nuevo con una sola línea de transacción por defecto (solicita confirmación), y pasa a modo edición.',
-        '<strong>Abrir</strong> - carga un caso de uso desde un archivo <code>.policycase</code>.',
-        '<strong>Guardar</strong> - guarda el caso de uso actual en un archivo <code>.policycase</code> usando su nombre actual.',
-        '<strong>Guardar como</strong> - guarda con un nuevo nombre (solicita un nombre de archivo).',
-        '<strong>Editar / Visualizar</strong> - alterna entre edición y visualización de solo lectura. La herramienta se abre en modo visualización.',
-        '<strong>Imprimir</strong> - imprime el caso de uso actual usando el cuadro de diálogo de impresión del navegador. Solo disponible en modo visualización.',
-        '<strong>Modo oscuro/claro</strong> - alterna el tema de color de la aplicación. El icono muestra una luna en modo claro y un sol en modo oscuro. Sigue por defecto la preferencia de su sistema/navegador hasta que lo alterne, tras lo cual su elección explícita se recuerda.',
-        '<strong>Compartir</strong> - copia la URL de la página actual (que codifica el caso de uso completo) al portapapeles, y muestra un breve mensaje de confirmación.',
-        '<strong>Preferencias</strong> - abre el cuadro de diálogo Preferencias, donde puede cambiar el idioma entre inglés, francés y español, y definir un Dominio (Seguro, Contrato o Personalizado; por defecto Seguro). Seguro y Contrato reducen cada uno la lista de tipos de transacción a un conjunto propio de ese dominio, mostrado ahí en modo de solo lectura, organizado en 3 columnas (tituladas Transacción, Evento, Varios) alineadas con los separadores de esa misma lista. Elegir Personalizado muestra en su lugar una lista con casillas para cada tipo de transacción (todas marcadas por defecto, organizadas en esas mismas 3 columnas tituladas, alineadas con los dos separadores de la lista desplegable) - solo las marcadas aparecen en la lista desplegable Tipo. Sus elecciones se recuerdan.',
-        '<strong>Ayuda</strong> - abre esta página.',
-        '<strong>Acerca de</strong> - muestra información de la aplicación.'
+      { h: 'Menú principal', iconList: true, list: [
+        '<span class="menu-icon"><i class="fa-solid fa-file-circle-plus"></i></span><strong>Nuevo</strong> - borra el caso de uso actual y comienza uno nuevo con una sola Transacción por defecto (solicita confirmación), y pasa a modo edición.',
+        '<span class="menu-icon"><i class="fa-solid fa-folder-open"></i></span><strong>Abrir</strong> - carga un caso de uso desde un archivo <code>.policycase</code>.',
+        '<span class="menu-icon"><i class="fa-solid fa-floppy-disk"></i></span><strong>Guardar</strong> - guarda el caso de uso actual en un archivo <code>.policycase</code> usando su nombre actual.',
+        '<span class="menu-icon"><i class="fa-solid fa-file-export"></i></span><strong>Guardar como</strong> - guarda con un nuevo nombre (solicita un nombre de archivo).',
+        '<span class="menu-icon"><i class="fa-solid fa-pen-to-square"></i></span><strong>Editar / Visualizar</strong> - alterna entre edición y visualización de solo lectura. La herramienta se abre en modo visualización.',
+        '<span class="menu-icon"><i class="fa-solid fa-print"></i></span><strong>Imprimir</strong> - imprime el caso de uso actual usando el cuadro de diálogo de impresión del navegador. Solo disponible en modo visualización.',
+        '<span class="menu-icon"><i class="fa-solid fa-moon"></i></span><strong>Modo oscuro/claro</strong> - alterna el tema de color de la aplicación, recordando su elección explícita una vez definida.',
+        '<span class="menu-icon"><i class="fa-solid fa-share-nodes"></i></span><strong>Compartir</strong> - copia la URL de la página actual (que codifica el caso de uso completo) al portapapeles.',
+        '<span class="menu-icon"><i class="fa-solid fa-gear"></i></span><strong>Preferencias</strong> - abre el cuadro de diálogo Preferencias para definir el idioma y un Dominio (Seguro, Contrato o Personalizado), que ajusta la lista de tipos de transacción disponible en otras partes.',
+        '<span class="menu-icon"><i class="fa-solid fa-circle-question"></i></span><strong>Ayuda</strong> - abre esta página.',
+        '<span class="menu-icon"><i class="fa-solid fa-info-circle"></i></span><strong>Acerca de</strong> - muestra información de la aplicación.'
       ] },
       { h: 'Encabezado del caso de uso', p: [
         'Defina un nombre de Caso de uso, una Descripción (mostrada en cursiva), una Fecha de inicio, una Escala de tiempo (Mes o Trimestre), y un Rango (cuántas unidades de escala se muestran - los casos de uso nuevos tienen un valor por defecto de 16).'
       ], list: [
-        'Asa de arrastre <strong>Nuevo período de póliza</strong> (se muestra solo en modo edición) - un simple cuadro blanco. Arrástrelo sobre el gráfico de una transacción para crear allí un nuevo período de póliza y abrir de inmediato su diálogo de edición. La paleta de 8 colores base usada para generar los colores de los períodos no es editable desde aquí.',
-        '<strong>Botón +</strong> - agrega una nueva línea de transacción. Clona la línea más reciente que no sea de tipo Comentario (mismo tipo, comentario y períodos de póliza) con su fecha avanzada un día - útil para una sucesión rápida de transacciones similares. Si no hay ninguna línea apta para clonar, agrega en su lugar una línea simple por defecto.',
-        '<strong>Contraer/Expandir todo</strong> (solo se muestra en modo edición) - contrae todas las líneas de transacción si alguna está expandida, o las expande todas si ya están todas contraídas.'
+        'Asa de arrastre <strong>Nuevo período de póliza</strong> (se muestra solo en modo edición) - un simple cuadro blanco. Arrástrelo sobre el gráfico de una Transacción para crear allí un nuevo período de póliza y abrir de inmediato su diálogo de edición. La paleta de 8 colores base usada para generar los colores de los períodos no es editable desde aquí.',
+        '<strong>Botón +</strong> - agrega una nueva Transacción. Clona la Transacción más reciente que no sea de tipo Comentario (mismo tipo, comentario y períodos de póliza) con su fecha avanzada un día. Si no hay ninguna Transacción apta para clonar, agrega en su lugar una Transacción simple por defecto.',
+        '<strong>Contraer/Expandir todo</strong> (solo se muestra en modo edición) - contrae todas las Transacciones si alguna está expandida, o las expande todas si ya están todas contraídas.'
       ] },
-      { h: 'Líneas de transacción', p: [
-        'Cada línea tiene un tipo (Solicitud, Emisión, Endoso, Modificación, Cancelación, Reinstalación, Reescritura, Renovación, Vinculación, Aprobación, Firma, Extracción, Carga, Transmisión, Recepción, Comentario, u Otro, con Comentario justo después de esa línea divisoria y Otro justo después de Comentario), una fecha de transacción (oculta en modo visualización cuando el tipo es Comentario), y un comentario - los saltos de línea que escriba se conservan. Siempre aparece una línea divisoria justo después de Renovación y justo antes de Comentario en la lista desplegable Tipo, sea cual sea el Dominio. Esta lista completa es también la lista con casillas del Dominio Personalizado que se muestra en Preferencias (todas marcadas por defecto - solo las marcadas terminan en la lista desplegable); Seguro y Contrato muestran cada uno en su lugar su propia lista fija más corta (vea Preferencias).',
-        'En modo edición, use los controles a la izquierda de cada línea para contraerla/expandirla, reordenarla (arrastrando el asa), abrir su cuadro de diálogo de edición (lápiz), o eliminarla (papelera, solicita confirmación). Contraer una línea oculta su comentario y reduce su gráfico, mostrando solo su tipo - excepto para el tipo Otro en modo visualización (y por lo tanto al imprimir), donde el comentario se muestra en lugar del tipo.',
-        'El cuadro de diálogo de edición (lápiz) también tiene un botón <strong>Duplicar</strong>, que clona la línea - incluyendo sus períodos de póliza - e inserta la copia justo debajo, desplazando hacia abajo las líneas siguientes.',
-        'Las líneas de tipo Comentario reemplazan su gráfico por un único recuadro centrado que muestra el texto del comentario en lugar de los períodos de póliza. En modo visualización (y al imprimir), su etiqueta de tipo también se oculta a la izquierda.'
+      { h: 'Transacciones', p: [
+        'Cada Transacción tiene un tipo, una fecha y un comentario.'
+      ], list: [
+        '<strong>Tipo</strong> - agrupado en tres categorías: Transacción, Evento y Varios. Los tipos ofrecidos dependen de la preferencia Dominio (vea Preferencias).',
+        '<strong>Fecha</strong> - oculta en modo visualización (y al imprimir) cuando el tipo es Comentario.',
+        '<strong>Comentario</strong> - multilínea; los saltos de línea se conservan. Para el tipo Comentario, reemplaza todo el gráfico, mostrado como un recuadro centrado en lugar de los períodos de póliza.',
+        '<strong>Contraer/Expandir</strong>, <strong>Mover</strong>, <strong>Editar</strong>, <strong>Eliminar</strong> - controles a la izquierda en modo edición. Contraer oculta el comentario y reduce el gráfico para mostrar solo el tipo - excepto para el tipo Otro en modo visualización, que sigue mostrando su comentario en su lugar.',
+        '<strong>Duplicar</strong> - en el diálogo de edición, clona la Transacción (incluyendo sus períodos de póliza) justo debajo, desplazando hacia abajo las siguientes.'
       ] },
       { h: 'Períodos de póliza', p: [
-        'Los períodos de póliza son los rectángulos coloreados en el gráfico de una línea de transacción, ajustados a una cuadrícula de media unidad de escala.'
+        'Los períodos de póliza son los rectángulos coloreados en el gráfico de una Transacción, ajustados a una cuadrícula de media unidad de escala.'
       ], list: [
-        'Arrastre el asa Nuevo período de póliza (el cuadro blanco en el encabezado del caso de uso) sobre el gráfico para crear allí un nuevo período y abrir de inmediato su diálogo de edición - no caerá encima de uno existente, se ajustará al espacio libre más cercano. Continúa la numeración en esa línea después del período más alto existente (T1P1, luego T1P2, hasta T1P8, luego T2P1, y así sucesivamente) y su color coincide con esa celda Término/Período de la paleta de colores mejorada.',
-        'Arrastre un período para moverlo. Soltarlo sobre otro período de la misma línea intercambia ambos, siempre que eso no provoque una colisión con un tercer período; de lo contrario, se ubicará en la posición libre más cercana a donde lo soltó.',
+        'Arrastre el asa Nuevo período de póliza (el cuadro blanco en el encabezado del caso de uso) sobre el gráfico para crear allí un nuevo período y abrir de inmediato su diálogo de edición - no caerá encima de uno existente, se ajustará al espacio libre más cercano. Continúa la numeración en esa Transacción después del período más alto existente (T1P1, luego T1P2, hasta T1P8, luego T2P1, y así sucesivamente) y su color coincide con esa celda Término/Período de la paleta de colores mejorada.',
+        'Arrastre un período para moverlo. Soltarlo sobre otro período de la misma Transacción intercambia ambos, siempre que eso no provoque una colisión con un tercer período; de lo contrario, se ubicará en la posición libre más cercana a donde lo soltó.',
         'Arrastre su borde izquierdo o derecho para redimensionarlo - se detiene en el borde de su vecino y nunca puede superponerse a otro período.',
         'Haga clic en su icono de lápiz para abrir su cuadro de diálogo de edición.'
       ], p2: [
@@ -284,16 +294,14 @@ const T = {
         'Una <strong>cuadrícula de colores</strong> de 8x8: 8 columnas (una por color de la paleta) por 8 filas (variaciones de claro a oscuro, orientadas hacia lo oscuro para más contraste). Cambiar el Término o el Período selecciona automáticamente el color en esa intersección de columna/fila. Un cuadrado grande junto a la cuadrícula muestra una vista previa del color seleccionado. El texto sobre un período de color oscuro cambia automáticamente a blanco para seguir siendo legible.',
         'Botón <strong>Eliminar</strong> (sin confirmación) y Aplicar/Cancelar.'
       ] },
-      { h: 'Cuadros de diálogo', p: [
-        'Todos los cuadros de diálogo (Transacción, Editar período de póliza, Acerca de, Preferencias, y las confirmaciones) se pueden mover: arrástrelos por su barra de título a cualquier parte de la pantalla.'
-      ] },
-      { h: 'Guardar y abrir', p: [
-        'Guardar y Guardar como descargan el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores. Abrir carga uno de vuelta. El selector de archivos habitual del navegador se usa para ambos, así que los archivos pueden estar en cualquier ubicación.',
-        'Cada propiedad de línea y período - incluyendo el estado contraído/expandido, los colores, el estado de vacío y los bordes de resaltado - se guarda y se restaura tal como la dejó.'
+      { h: 'Guardar y abrir', list: [
+        '<strong>Guardar</strong> / <strong>Guardar como</strong> - descarga el caso de uso actual como un archivo <code>.policycase</code> (JSON), incluyendo su paleta de colores.',
+        '<strong>Abrir</strong> - carga uno de vuelta, usando el selector de archivos habitual de su navegador.'
+      ], p2: [
+        'Cada propiedad de Transacción y de período se guarda y se restaura tal como la dejó.'
       ] },
       { h: 'Compartir mediante URL', p: [
-        'La barra de direcciones siempre refleja el caso de uso actual completo, comprimido y codificado en la URL. Copie y envíe esa URL a otra persona; al abrirla se reproduce exactamente el mismo caso de uso para ella - no se necesita archivo ni servidor.',
-        'Esto depende de funciones de compresión integradas en los navegadores modernos; en un navegador muy antiguo, la barra de direcciones puede simplemente no actualizarse, sin afectar al resto de la aplicación.'
+        'La barra de direcciones siempre refleja el caso de uso actual completo, codificado en la URL. Copie y envíe esa URL a otra persona; al abrirla se reproduce exactamente el mismo caso de uso para ella - no se necesita archivo ni servidor.'
       ] }
     ]
   }
@@ -319,7 +327,7 @@ function render(locale) {
   const content = document.getElementById('content');
   content.innerHTML = dict.sections.map(section => {
     const paras = (section.p || []).map(t => `<p>${t}</p>`).join('');
-    const list = section.list ? `<ul>${section.list.map(li => `<li>${li}</li>`).join('')}</ul>` : '';
+    const list = section.list ? `<ul${section.iconList ? ' class="icon-list"' : ''}>${section.list.map(li => `<li>${li}</li>`).join('')}</ul>` : '';
     const paras2 = (section.p2 || []).map(t => `<p>${t}</p>`).join('');
     return `<h2>${section.h}</h2>${paras}${list}${paras2}`;
   }).join('');
