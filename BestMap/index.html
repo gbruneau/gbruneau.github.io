@@ -10,8 +10,8 @@
   <link rel="apple-touch-icon" href="./app/apple-touch-icon.png" />
   <meta name="theme-color" content="#154657" />
   <title>BestMap</title>
-  <script type="module" crossorigin src="./assets/index-BZU2UV_7.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BnvZZT65.css">
+  <script type="module" crossorigin src="./assets/index-DyBIIWbE.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CEbI5v_K.css">
 </head>
 
 <body>
@@ -155,7 +155,10 @@
               <h2 data-label="maptools">Map Tools</h2>
               <div id="searchFld" class="BM-Input">
                 <label for="fGeoCode" data-label="search">Search:</label>
-                <input type="search" id="fGeoCode" name="fGeoCode" value="" data-placeholder="addrexample">
+                <input type="search" id="fGeoCode" name="fGeoCode" value="" data-placeholder="addrexample"
+                  autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list"
+                  aria-expanded="false" aria-controls="searchResults">
+                <ul id="searchResults" class="bm-search-results" role="listbox" hidden></ul>
               </div>
               <p data-label="weeelzoom"></p>
               <div class="BM-Button" id="btFlipMarker" title="Marker" data-title="marker"></div>
@@ -192,6 +195,14 @@
                 to</label>&nbsp;<span id="DefaultLayerName">???</span>
               <input type="checkbox" id="defaultToCurrentLayer" name="defaultToCurrentLayer">
               <br>
+              <label for="overviewDropdown" data-label="overviewmap">Overview map:</label>
+              <select id="overviewDropdown" name="overview">
+                <option value="-1" data-label="overviewnone">None</option>
+              </select>
+              <br>
+              <label for="overviewZoomOut" data-label="overviewzoomout">Overview zoom out (2-10):</label>
+              <input type="number" id="overviewZoomOut" name="overviewZoomOut" min="2" max="10" step="1">
+              <br>
               <hr>
               <div class="BM-Button BM-Small-Button" id="btPrefSave" data-title="savechange"><img
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAADqCAMAAACbSil8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURQAAABREWBRGVhVFVxU/VRVGVxcsURtWbCFmgiZ3lyyHrTWjj0XRq1X/x6nNcHEAAAAEdFJOUwBAgL+jVN0MAAAACXBIWXMAADLAAAAywAEoZFrbAAAEUUlEQVR4Xu3bcXuTMBSFcVqstG5+/68rkLM+lpElN3BCcznvP85Ve/MzgdZNu2SXW8P11wsYGTUtnbtCkqp96VjWzrqQZm2sE2mG1Y00eYYdSW89TOt5kv68rb6ktxtYK3mTxrfVnTR6tfqTxqgOpRGqR+n6fcmndI3qVLpC9Sr9TnUr/Ub1K11SHUsX1HzprwPDEqzBGDLs6e8DwxKsATlnOb2YekhYgjUop0zX6d8DwxKsgTlmuyNh6iFhCdbgtEpbphqlDVOt0napZmmzVLu0VWqBtFFqibRNapG0SWqZtEkqfrSGqehjpU88tn9YgrVdqJ/45EsfeHD/MMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNSQqKwywJmoyTA2JygoDrImaDFNDorLCAGuiJsPUkKisMMCaqMkwNXQiauWwBGuiJsPUQ8ISrImaDFMPCUuwJmoyTD0kLMGaqMkw9ZCwBGuiJsPUQ8ISrImaDFMPCUuwVkr9PDAswVoptcFE9ZioHhPVY6J6TFSPieoxUT0mqsdE9ZiovIbhHhrwiWrVpA7D489Ldb3VqMNj4UR3PM6vEnW5n/93r6StQv0JOvWogq1ATUGnalj51Ds0ifhYOjVjS0N0K5mac3ifkV95uNQBiMy4VirVKCVbmVSzlGslUgukVCuRarkjPXvgNxPiUTNfT5fxXnNo1EIp0UqjYuEF4Ql2j0Ut3lTe5UqibpDS7sLvSCVtK4e6Scra1rekcraVQ8WSi8PT7BuFunFTSSeYQo28JcQXgF9a/6WUE0yhYsGLVtcf+VPBo7vGoEbOr4XKOMFvSmWcYAbVsvzGqVjuMguVcbGKuqXYF1pMVMJ9SdQtnYgae1uoXV2P8BUmHeAtieqRqndLLqmR5Vuoq792YwzqDn+JY3w3g0GN3JcsVMJdiUI90RdcohfgSnhoEeW7cRRq7JU1u3aosZeb7PA0+8ahRs5lbpzvJnOoG08wnmXnONRt28rZVBZ107biOfaORN3yHSrSptKoG44wnmD3aNTiI8x4TzhHo5YeYdbxZVLLjjBPyqSWWBl/T/2KSbVbmVIu1WqlSslUm5UrZVMt92HiHWmOTc23sqV86m3Iwj5o7xye8alZG0vf0rEa1CS2BrQW9Sdsnf/mOFaLGrlmHxWu0a/qUade/k3hyKznHKtLnRvm8JOKHUA9KlE9JqrHRPWYqB4T1WOiekxUj4nqMVE9JqrHRPWYqB4T1WOiekxUj3U9PvDfeaj9eajX7oKP3HfpTnNf6rqzbOt1pJ7kap2k59jW8UqduuKnjpuP75R761Pq/Qz3OL3I8ca+QqcuV3+34r5/7mjX/QPoBGoX1Dx4ugAAAABJRU5ErkJggg==" class="Icon-Small"></div>
@@ -211,11 +222,6 @@
               <div class="BM-Input">
                 <label data-label="autor">Author:</label>
                 <input type="text" disabled="true" value="Guy Bruneau">
-              </div>
-
-              <div class="BM-Input">
-                <label>E-Mail:</label>
-                <a href="mailto:guy.bruneau@gmail.com?subject=BestMap">guy@gmail.com</a>
               </div>
 
               <div class="BM-Input">
