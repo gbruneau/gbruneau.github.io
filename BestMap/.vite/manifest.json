@@ -4,12 +4,12 @@
     "src": "assets/images/logo/BestMap-logo.png"
   },
   "index.html": {
-    "file": "assets/index-3oWQdmzo.js",
+    "file": "assets/index-WExGXUAH.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-CX0wxyWh.css"
+      "assets/index-CdTcRh8H.css"
     ],
     "assets": [
       "assets/BestMap-logo-CZZGZZcw.png"
