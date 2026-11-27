@@ -1,6 +1,6 @@
 Applications 
 
-* [BestMap](https://gbruneau.github.io/BestMap) 
+* [BestMap](https://bestmap.guybruneau.app) 
 * [ColorPkr](https://gbruneau.github.io/ColorPkr) 
 * [CartePapa](https://gbruneau.github.io/CartePapa) 
 * [Scale](https://gbruneau.github.io/Scale) 

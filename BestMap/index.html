@@ -1,22 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="./assets/BestMap-logo-CZZGZZcw.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Installable app (PWA): manifest, icons and theme color; see public/manifest.webmanifest and public/sw.js -->
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="./app/apple-touch-icon.png" />
-  <meta name="theme-color" content="#154657" />
-  <title>BestMap</title>
-  <script type="module" crossorigin src="./assets/index-BIGZm6p2.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bghj-zfz.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BestMap has moved</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://bestmap.guybruneau.app/">
+  <!-- BestMap moved to its own domain. Keep the map link's parameters
+       (?lat=…&lng=…) so shared links still open the same view. -->
+  <script>
+    location.replace("https://bestmap.guybruneau.app/" + location.search + location.hash);
+  </script>
+  <meta http-equiv="refresh" content="0; url=https://bestmap.guybruneau.app/">
+  <style>
+    body { font: 16px system-ui, sans-serif; margin: 3em 16px; text-align: center; }
+  </style>
 </head>
-
 <body>
-  <!-- The whole interface is rendered here by App.vue -->
-  <div id="app"></div>
+  <p>BestMap has moved to <a href="https://bestmap.guybruneau.app/">bestmap.guybruneau.app</a>.</p>
+  <p>BestMap a déménagé à <a href="https://bestmap.guybruneau.app/">bestmap.guybruneau.app</a>.</p>
 </body>
-
 </html>
