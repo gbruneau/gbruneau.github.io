@@ -1,0 +1,2 @@
+# Files in the build not uploaded to Cloudflare Workers (wrangler.jsonc).
+.vite
